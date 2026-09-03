@@ -1,0 +1,54 @@
+{
+  "title": "Trailer provenance anchors",
+  "style": "Cinematic, desaturated teal-and-amber grade, warm low sun against cool stone shadow, crushed blacks, filmic highlight rolloff, fine grain, shallow depth of field, dust in the light. Ancient Olympia. Photographic realism, natural skin texture, no stylisation, no modern detail, no text.",
+  "shots": [
+    {
+      "id": "s6",
+      "title": "B1 kotinos",
+      "carries": [],
+      "action": "B1 kotinos",
+      "framing": "artefact hero, already verified — do not restage",
+      "motion": "Very slow push in on the artefact. Movement: the camera advances a few centimetres over the whole clip. Speed: almost imperceptible. Framing: the object stays centred and every inscription stays exactly as rendered. End: fractionally closer, identical composition. The artefact itself does not move, rotate or change."
+    },
+    {
+      "id": "s3",
+      "title": "B2 Zappas medal reverse",
+      "carries": [],
+      "action": "B2 Zappas medal reverse",
+      "framing": "artefact hero, already verified — do not restage",
+      "motion": "Very slow push in on the artefact. Movement: the camera advances a few centimetres over the whole clip. Speed: almost imperceptible. Framing: the object stays centred and every inscription stays exactly as rendered. End: fractionally closer, identical composition. The artefact itself does not move, rotate or change."
+    },
+    {
+      "id": "s4",
+      "title": "B3 Marathon Cup",
+      "carries": [],
+      "action": "B3 Marathon Cup",
+      "framing": "artefact hero, already verified — do not restage",
+      "motion": "Very slow push in on the artefact. Movement: the camera advances a few centimetres over the whole clip. Speed: almost imperceptible. Framing: the object stays centred and every inscription stays exactly as rendered. End: fractionally closer, identical composition. The artefact itself does not move, rotate or change."
+    },
+    {
+      "id": "s1b",
+      "title": "B4 Tentoglou shoes",
+      "carries": [],
+      "action": "B4 Tentoglou shoes",
+      "framing": "artefact hero, already verified — do not restage",
+      "motion": "Very slow push in on the artefact. Movement: the camera advances a few centimetres over the whole clip. Speed: almost imperceptible. Framing: the object stays centred and every inscription stays exactly as rendered. End: fractionally closer, identical composition. The artefact itself does not move, rotate or change."
+    },
+    {
+      "id": "s5",
+      "title": "B4 épée",
+      "carries": [],
+      "action": "B4 épée",
+      "framing": "artefact hero, already verified — do not restage",
+      "motion": "Very slow push in on the artefact. Movement: the camera advances a few centimetres over the whole clip. Speed: almost imperceptible. Framing: the object stays centred and every inscription stays exactly as rendered. End: fractionally closer, identical composition. The artefact itself does not move, rotate or change."
+    },
+    {
+      "id": "s2",
+      "title": "B5 Berlin torch",
+      "carries": [],
+      "action": "B5 Berlin torch",
+      "framing": "artefact hero, already verified — do not restage",
+      "motion": "Very slow push in on the artefact. Movement: the camera advances a few centimetres over the whole clip. Speed: almost imperceptible. Framing: the object stays centred and every inscription stays exactly as rendered. End: fractionally closer, identical composition. The artefact itself does not move, rotate or change."
+    }
+  ]
+}

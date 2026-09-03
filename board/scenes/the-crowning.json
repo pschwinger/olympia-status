@@ -1,0 +1,124 @@
+{
+  "scene": "the-crowning",
+  "title": "Olympia - The Crowning",
+  "fps": 24,
+  "revision": "v2 — 2026-07-31, Philipp's notes after viewing v1",
+  "_revision_notes": [
+    "1. THE JUDGE STAYS IN FRAME. In v1 the judge vanished after shot 1 and the",
+    "   later shots read as isolated portraits — 'naked' was the word. He is now",
+    "   carried through k2 and k3, held in the near foreground out of focus, so",
+    "   his deep-red woollen sleeve and shoulder anchor the edge of frame. The",
+    "   victor is never alone until he turns to the crowd.",
+    "2. THE CROWD ARTEFACT. v1's wide grew a white cloud in the massed figures",
+    "   that read as a rendering fault, not weather. k4 now forbids it explicitly.",
+    "3. THE DRONE SHOT is new (k5) and sourced — see claim_ledger.events."
+  ],
+  "style": "Cinematic, desaturated teal-and-amber grade, warm low sun against cool stone shadow, crushed blacks, filmic highlight rolloff, fine grain, shallow depth of field, dust in the light. Ancient Olympia. Photographic realism, natural skin texture, no stylisation, no modern detail, no text.",
+  "shots": [
+    {
+      "id": "k1",
+      "title": "THE CROWNING",
+      "carries": [
+        "hellanodikes",
+        "victor",
+        "SM_RV_16"
+      ],
+      "action": "The older judge stands behind and above the young athlete, holding the olive wreath raised in both hands just above the young man's head, about to lower it. The young man faces camera with his head slightly bowed.",
+      "framing": "Medium two-shot, the young man in front, the older man behind him. Warm low sun from the left.",
+      "motion": "Camera slowly pushing in. The judge lowers the wreath the last few inches and settles it onto the athlete's head, then draws his hands slowly away. The young man stays still, head bowed, eyes down. Reverent, unhurried."
+    },
+    {
+      "id": "k2",
+      "title": "THE TEAR",
+      "carries": [
+        "victor",
+        "hellanodikes",
+        "SM_RV_16"
+      ],
+      "action": "Close on the young athlete. The olive wreath now RESTS on his head, seen from this angle and partly behind his damp curls. His eyes are closed, his jaw tight, overcome. A tear cutting a clean line through the dust on one cheek. THE JUDGE HAS NOT LEFT: his deep-red woollen sleeve and shoulder fill the near foreground at the edge of frame, close to camera and thrown well out of focus, a soft red mass against the stone. His face is not in shot.",
+      "framing": "Tight close-up. The out-of-focus red of the judge's sleeve occupies the foreground edge, giving the frame depth and keeping the athlete inside the rite rather than isolated in a portrait. Warm low sun raking from the left. The wreath is cropped by the frame but the leaves that ARE visible must be the referenced wreath.",
+      "motion": "Locked-off camera. He draws one slow breath. A single tear releases and runs down through the dust on his cheek. His jaw tightens. The red foreground shape shifts very slightly as the judge breathes. Almost no other movement."
+    },
+    {
+      "id": "k3",
+      "title": "THE LIGHT",
+      "carries": [
+        "victor",
+        "hellanodikes",
+        "SM_RV_16"
+      ],
+      "action": "The young athlete, THE WREATH STILL ON HIS HEAD, has raised his face to the sky, eyes open, mouth slightly open, transfigured. A shaft of hard golden sunlight breaks across his face from above. Dust and fine particles blaze in the beam. THE JUDGE REMAINS beside and below him, a dark silhouetted shoulder and the deep red of his chiton catching the low sun at the lower edge of frame, watching rather than participating. His face is not the subject.",
+      "framing": "Low angle looking up at him against open sky, with the judge's red-clad shoulder anchoring the bottom corner. Because the angle is from below, the wreath sits high in frame above his brow and MUST be present and visible - it does not leave his head between shots.",
+      "motion": "Camera slowly rising. He lifts his face further to the sky, eyes opening wide, breath catching. The shaft of sunlight strengthens across his face and the dust in the beam swirls slowly. The judge below him does not move. Nothing else moves."
+    },
+    {
+      "id": "k4",
+      "title": "THE CROWD",
+      "carries": [
+        "victor",
+        "SM_RV_16"
+      ],
+      "action": "The young athlete, THE WREATH STILL ON HIS HEAD, arms rising outward as he turns toward a vast crowd packed on the grassy embankments of the ancient stadium at Olympia. Thousands of figures, arms raised, blurred by distance and dust. Late golden sun flaring across the frame. The crowd is made of PEOPLE throughout - every part of the mass resolves into individual figures, robes and raised arms. NO white or pale cloud, NO smoke, NO fog bank, NO blank haze standing in for people. Airborne dust is fine and warm-toned and never gathers into a solid pale shape.",
+      "framing": "Epic wide from behind and to one side, shallow focus holding him sharp against the roaring crowd. He is small-ish in frame but the wreath must still read as the referenced object, not a generic laurel.",
+      "motion": "Camera slowly pushing in from behind. He raises his arms wider toward the crowd. The vast crowd surges and roars, thousands of arms lifting. Warm golden dust drifts through the low sun but never thickens into a white mass. Triumphant, overwhelming."
+    },
+    {
+      "id": "k5a",
+      "title": "THE GAMES GO ON — continuous only",
+      "carries": [],
+      "action": "High above the sanctuary of Olympia, the festival continues around the single crowned man below. In the stadium, runners are mid-race down the straight track - a plain rectangular running ground, no lanes and no curved oval. On the open ground beside it, two wrestlers are locked upright and grappling, ringed by watching men. Elsewhere people walk between the buildings, stand in groups and watch. Everything is dust, low sun and movement. Small figures, no faces readable. NOBODY IS THROWING ANYTHING. No javelin, no discus, no thrown or held projectile of any kind anywhere in frame. Every figure is either running, wrestling, walking or standing - actions that are CONTINUOUS, valid in any single frame, and require no release, no flight and no landing.",
+      "framing": "Very high aerial, slow drone descent and drift across the sanctuary, temple roofs and the treasury terrace passing beneath. Late golden hour, long shadows raking east.",
+      "motion": "Single continuous aerial move, slow forward drift while descending gently. The events below continue at their own pace. No cuts.",
+      "_note": "Deliberately carries NO artefact and NO identity — the figures are too small for either to be legible, so declaring them would be a claim the frame cannot support.",
+      "_why": "A throw is a discrete EVENT needing beginning, release and consequence; the generator renders the posture and never completes it. Running and grappling are continuous STATES and survive at this scale. Removing the throws makes the wide assert nothing it cannot deliver.",
+      "mentions_not_artefact": [
+        "SM_RV_19"
+      ],
+      "_why_not_artefact": "SM_RV_19 (Mygiakis wrestling shoes, Moscow 1980) added 2026-08-28: the shot describes ANCIENT wrestling; the 1980 shoe entered the registry after this scene was authored and is not in the shot."
+    },
+    {
+      "id": "k5b",
+      "title": "THE GAMES GO ON — with a real throwing sector",
+      "carries": [],
+      "action": "High above the sanctuary of Olympia, the festival continues around the single crowned man below. The stadium is a long plain rectangular running ground. Runners are mid-race down ONE SIDE of it. THE OTHER HALF OF THE STADIUM, ALONG ITS FULL LENGTH, IS COMPLETELY EMPTY GROUND - a long open corridor of bare earth with NO people standing in it, NO spectators at its far end, and NO other athletes crossing it. A single javelin thrower stands at the near end of that empty corridor, mid-run-up, and throws ALONG the corridor, away from the camera and away from every other person in frame - his javelin is IN THE AIR, clear of his hand, in flight low over the empty ground, with the whole length of the stadium ahead of it and nobody in its path. Far down that empty ground, well beyond where the javelin will fall, two officials stand well to the SIDE of the corridor, watching. Wrestlers and their ring of spectators are on the separate open ground BEYOND the stadium wall, never inside the throwing corridor. Late sun, dust, small figures, no faces readable.",
+      "framing": "Very high aerial, slow drone descent and drift across the sanctuary, temple roofs and the treasury terrace passing beneath. Late golden hour, long shadows raking east.",
+      "motion": "Single continuous aerial move, slow forward drift while descending gently. The events below continue at their own pace. No cuts.",
+      "_note": "Deliberately carries NO artefact and NO identity — the figures are too small for either to be legible, so declaring them would be a claim the frame cannot support.",
+      "_why": "Philipp's constraint: if a thrower is in the wide he must have the space to throw and must not throw toward other athletes. Historically sound - the pentathlon throws were contested in the stadium along its length. The test is whether the generator will honour a GLOBAL spatial constraint (a long empty corridor with nobody in it) when diffusion composes locally.",
+      "mentions_not_artefact": [
+        "SM_RV_19"
+      ],
+      "_why_not_artefact": "SM_RV_19 (Mygiakis wrestling shoes, Moscow 1980) added 2026-08-28: the shot describes ANCIENT wrestling; the 1980 shoe entered the registry after this scene was authored and is not in the shot."
+    },
+    {
+      "id": "k6",
+      "title": "THE THROW",
+      "carries": [],
+      "action": "Ground level, side on, a single ancient athlete throwing the javelin. He is alone in frame against open sunlit ground - no crowd, no other athletes, nothing behind him and nothing in front of him but empty earth and haze. Caught at the instant of RELEASE: the javelin has just left his hand and is clear of it, his throwing arm extended through and past the release point, his body still rotating with the effort, front foot planted and braked, dust kicked up at that foot. The javelin is IN THE AIR, unattached, angled upward and away. Bare earth, low sun behind him, long shadow.",
+      "framing": "Low, wide-ish single, the athlete around two thirds of frame height so the arm, the hand and the separation between hand and javelin are all clearly readable. Nothing else competing in frame.",
+      "motion": "Locked or barely drifting camera. The ONE action is the release and the javelin leaving the hand - it must visibly separate and travel. If the javelin stays in his hand the shot has failed; that is the single thing this shot exists to show.",
+      "_why": "The wide cannot complete a discrete event at that subject scale. Here the model has one action, one figure and enough pixels - nobody shoots the discus from a helicopter."
+    }
+  ],
+  "claim_ledger": {
+    "asserted": "The victor was crowned with a kotinos, an olive wreath, by the hellanodikai. Sourced (Pausanias, via Olympia Museum).",
+    "events": {
+      "claim": "The events shown in k5 - a foot race in the stadium, wrestling, discus and javelin - were all on the ancient Olympic programme. Stadion from 776 BCE; wrestling and the pentathlon (long jump, javelin, discus, foot race, wrestling) from 708 BCE.",
+      "source": "International Olympic Committee, ancient-Olympic-Games sports pages, read 2026-07-31. Registered shared.",
+      "confidence": 0.9,
+      "not_shown": [
+        "CHARIOT AND HORSE RACING, though both were on the programme (chariot racing from 688 BCE). They ran in the HIPPODROME, a separate ground from the stadium, so putting them in the same aerial frame would compress two locations into one and assert a geography the record does not support.",
+        "PANKRATION and BOXING, on the programme from 648 and 688 BCE. Omitted for framing economy, not because they are doubtful.",
+        "The exact architecture, crowd size and dress. Dramatisation."
+      ]
+    },
+    "not_asserted": [
+      "The faces of either man. The record does not describe them.",
+      "That the wreath in frame is ancient. It is the Athens 2004 kotinos, a modern revival of the form - see SM_RV_16.not_asserted.",
+      "THE ENTIRE ANCIENT SETTING IS DRAMATISATION. The Olympia Museum's digitised collection is modern throughout (1870-2020) - medals, torches, competition kit. Not one ancient object exists in the asset set. The provenance claim of this film rests on ONE real digitised artefact, correctly reused; everything around it is constructed.",
+      "The specific staging, the tear, the crowd's size."
+    ],
+    "caveat": "Pausanias wrote in the 2nd c. AD about rites he may not have witnessed. The film shows what was recorded, not what was witnessed."
+  },
+  "_k5_note": "k5 replaced 2026-08-04 on Philipp's instruction after reviewing k5.raw.mp4: the javelin thrower never released and was running at a crowd with no sector. k5a removes throws entirely; k5b keeps one throw but restages the ground so it is spatially legitimate; k6 shoots the throw properly as its own close shot. Generate all three and choose."
+}

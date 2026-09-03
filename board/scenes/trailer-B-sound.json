@@ -1,0 +1,206 @@
+{
+  "title": "TRAILER B — \"Every Sport Has a Sound\" (Unit 4 entire)",
+  "_thesis": "Not the historical spine. Unit 4 alone, at close range: the modern athletes' OWN equipment, worn and swung and struck, each object making its own noise. Percussive, fast, contemporary, cut on impact. Where Trailer A is ceremonial and chronological, this one is bodily and simultaneous — it does not tell a history, it makes a rhythm.",
+  "_hard_rule": "NO ARTEFACT APPEARS ALONE. Every shot declares its artefact in `carries` AND shows a body using it. Philipp's two named examples are shots b3 (the shoes on the athlete at the long-jump board) and b4 (two fencers engaged, mask worn and épée in hand).",
+  "_text_rule": "Several of these objects carry signatures, squad numbers or handwritten inscriptions. The 2026-08-04 route-list failure established that lists and handwriting do NOT survive generation — every letterform can be perfect while the content is duplicated or invented. NO SHOT HERE RESTS ON LEGIBLE TEXT. Every inscription is either out of frame, in motion, or under water.",
+  "style": "Contemporary sports cinematography, cool desaturated blue-grey with a warm skin note, crushed blacks, hard single-source key, shallow focus, fine grain, sweat and dust and spray visible in the light. Photographic realism, natural skin texture, no stylisation, no legible signage, no brand marks, no text or captions anywhere in frame. NO Olympic rings, NO national flags, NO federation emblems, NO sponsor boards, NO banners with lettering anywhere in frame including far background and out of focus: generated emblems come out malformed and the rings are a restricted mark, so a blurred approximation is a liability rather than set dressing.",
+  "shots": [
+    {
+      "id": "b1",
+      "title": "U4 · THE BELT — fourth place, cinched",
+      "carries": [
+        "SM_RV_22"
+      ],
+      "image_type": "Cinematic film still, photoreal, shot on a real location, no text or captions anywhere in frame.",
+      "subject_action": "A weightlifter's hands haul the wide cream leather belt tight around his own waist and drive the buckle tongue through the hole. His stomach is drawn in hard against the leather. The belt is ALREADY ON HIM — this is the tightening, not the picking up.",
+      "shot_type": "Tight close on the waist and hands only, no head in frame.",
+      "camera_angle": "Straight-on, level with the belt.",
+      "lens": "85mm, f/2.2 — the belt's stitched scallop line and the punched holes sharp, the platform behind gone.",
+      "spatial_composition": "The belt runs as a strong HORIZONTAL BAND across the CENTRE of frame, edge to edge. The hands work at CENTRE-RIGHT on the buckle. The area ABOVE the belt is bare torso and the area BELOW is singlet, both clean and uncluttered so the belt is the only detailed object in frame. Nothing else enters. THE SIGNATURES ARE NOT IN SHARP FOCUS.",
+      "environment": "The chalk-dusted back of a 1976 weightlifting platform, dark out-of-focus hall behind. NO Olympic rings, NO national flags, NO federation emblems, NO sponsor boards, NO banners with lettering anywhere in frame including far background and out of focus: generated emblems come out malformed and the rings are a restricted mark, so a blurred approximation is a liability rather than set dressing.",
+      "lighting": "Hard single key from high frame left raking across the leather so the scallop stitching and the punched holes throw their own shadows; deep shadow on the near side.",
+      "colour_grade": "Warm cream leather and tan against cool dark hall, chalk white, desaturated everything else.",
+      "mood": "Preparation, private, a body being braced for load.",
+      "technical": "35mm film emulation, Kodak Portra 400, fine grain, atmospheric haze with depth layering.",
+      "framing": "Tight close on the waist and hands only.",
+      "action": "A weightlifter's hands pull the belt tight around his waist and set the buckle.",
+      "motion": "Locked-off. Movement: fixed camera. Speed: still. Framing: unchanged. End: the buckle is set and the hands drop away, leaving the belt taut. The ONLY motion is the hands and the breath.",
+      "mentions_not_artefact": []
+    },
+    {
+      "id": "b2",
+      "title": "U4 · THE SHOES — red, on the mat",
+      "carries": [
+        "SM_RV_19"
+      ],
+      "image_type": "Cinematic film still, photoreal, shot on a real location, no text or captions anywhere in frame.",
+      "subject_action": "A Greco-Roman wrestler crouched low in stance, WEARING the faded red ankle-high wrestling boots, driving off the ball of one foot so the sole peels off the mat and the long white laces whip. Only legs and feet in frame; his opponent's feet are planted opposite.",
+      "shot_type": "Very low close shot at mat level, both wrestlers' feet in frame, the red boots filling the left two-thirds.",
+      "camera_angle": "Ground level, camera resting almost ON the mat, looking across it.",
+      "lens": "50mm, f/2.0 — the red boots and the peeling sole sharp, the far feet softening.",
+      "spatial_composition": "The red boots occupy the LEFT and CENTRE at mat level. The opponent's feet are a separate cluster in the RIGHT THIRD with a CLEAR GAP of empty mat between the two pairs, so the drive across that gap is legible. Nothing above knee height enters frame.",
+      "environment": "A 1980 Olympic wrestling mat, worn matting, dark blurred arena beyond. NO Olympic rings, NO national flags, NO federation emblems, NO sponsor boards, NO banners with lettering anywhere in frame including far background and out of focus: generated emblems come out malformed and the rings are a restricted mark, so a blurred approximation is a liability rather than set dressing.",
+      "lighting": "Hard overhead arena key throwing short sharp shadows straight down under each foot; hot specular on the scuffed red leather.",
+      "colour_grade": "Saturated faded red against a cool grey-blue mat, crushed blacks.",
+      "mood": "Coiled, low, everything happening below the knee.",
+      "technical": "35mm film emulation, Kodak Portra 400, fine grain, atmospheric haze with depth layering.",
+      "framing": "Very low close shot at mat level.",
+      "action": "A wrestler in the red boots drives off the ball of one foot, sole peeling off the mat, laces whipping.",
+      "motion": "Locked-off low angle. Movement: fixed camera on the mat. Speed: still. Framing: unchanged. End: the foot has driven forward and the gap has closed. The ONLY motion is the feet and the laces.",
+      "_why_not_artefact": "The registry holds TWO artefacts whose names contain 'shoes' — SM_RV_18 (Tentoglou, white, long jump, Tokyo 2020) and SM_RV_19 (Mygiakis, red, wrestling, Moscow 1980). The footwear in THIS shot is SM_RV_19 and it is carried. SM_RV_18 is a different object in a different sport four decades earlier and must NOT be threaded into this frame.",
+      "mentions_not_artefact": [
+        "SM_RV_18"
+      ]
+    },
+    {
+      "id": "b3",
+      "title": "U4 · THE BOARD — the shoes hit at 8.41",
+      "carries": [
+        "SM_RV_18"
+      ],
+      "image_type": "Cinematic film still, photoreal, shot on a real location. No captions, no signage, no scoreboard, no bib number.",
+      "_text_conflict_resolved": "SM_RV_18's registry invariant requires the athlete's handwritten ink ('8.41', the Greek name, 'TOKIO 2020') because on a STILL of the object that handwriting IS the hero detail. This shot is the opposite case: the shoe is on a moving foot at the instant of takeoff. Carrying the blanket 'no text anywhere in frame' rule here put two contradictory instructions in one prompt and the model returned no image at all. Resolved by scoping: the ink is PRESENT on the object and simply not resolvable at this scale and speed — which is true of a real photograph too — while captions, signage and bib numbers stay banned.",
+      "subject_action": "A long jumper at the instant of takeoff, WEARING the white competition shoes. The athlete's own handwritten ink is on the shoe but is NOT legible at this scale and speed — present, not readable; do not sharpen it and do not invent it. The planting foot is FLAT ON THE TAKEOFF BOARD with the shoe compressed under the load, the other leg already driving through. Ahead of him is the sand.",
+      "shot_type": "Low side-on shot, the athlete from the waist down, the takeoff board running across the lower frame.",
+      "camera_angle": "Low, near runway level, square to the runway so the board reads as a clean horizontal.",
+      "lens": "85mm, f/2.0 — the planted shoe and the board edge sharp, the runway behind and the sand ahead falling off.",
+      "spatial_composition": "The planted shoe and the board sit at LOWER CENTRE-LEFT. A CLEAR OPEN CORRIDOR of sand pit runs away to the RIGHT with nothing in it — the space he is about to travel through. No official, no marker, no other athlete anywhere in frame. No board markings, no scoreboard, no bib number.",
+      "environment": "A modern long-jump runway and sand pit, blurred stadium light far behind, no readable signage. NO Olympic rings, NO national flags, NO federation emblems, NO sponsor boards, NO banners with lettering anywhere in frame including far background and out of focus: generated emblems come out malformed and the rings are a restricted mark, so a blurred approximation is a liability rather than set dressing.",
+      "lighting": "Hard single key from frame right, rim-lighting the shoe's upper and the calf, deep shadow on the near side, fine sand dust catching the light.",
+      "colour_grade": "Cool desaturated blue-grey, warm skin note, the shoe reading bright white.",
+      "mood": "Maximum load through one small object.",
+      "technical": "35mm film emulation, Kodak Portra 400, fine grain, atmospheric haze with depth layering.",
+      "framing": "Low side-on shot, waist down, board across the lower frame.",
+      "action": "A long jumper's shoe plants flat on the takeoff board and compresses under the load as he drives through.",
+      "motion": "Locked-off. Movement: fixed camera square to the board. Speed: still. Framing: unchanged. End: the foot has left the board and sand is lifting. The ONLY motion is the athlete and the sand.",
+      "_why_not_artefact": "The mirror of b2. The footwear here is SM_RV_18 (Tentoglou, white, long jump) and it is carried. SM_RV_19 (Mygiakis, red, wrestling) is a different object and must NOT be threaded into this frame — a red wrestling boot on a long-jump board would be a provenance error the render would make look deliberate.",
+      "mentions_not_artefact": [
+        "SM_RV_19"
+      ]
+    },
+    {
+      "id": "b4",
+      "title": "U4 · THE BLADES — two fencers, engaged",
+      "carries": [
+        "SM_RV_13",
+        "SM_RV_17"
+      ],
+      "image_type": "Cinematic film still, photoreal, shot on a real location, no text or captions anywhere in frame.",
+      "subject_action": "TWO FENCERS ENGAGED ON THE PISTE. The near fencer WEARS the steel-mesh fencing mask with its cream padded bib and holds the épée extended in a lunge, her blade CROSSED against her opponent's blade with the two steel edges visibly touching. Her back arm is thrown out behind for counterweight. The opponent is driven back onto her rear foot.",
+      "shot_type": "Wide-medium two-shot side-on to the piste, both fencers full-length, the crossed blades at the centre.",
+      "camera_angle": "Slightly low, square to the piste, so the lunge reads as a long horizontal line.",
+      "lens": "50mm, f/2.8 — both fencers and the point of blade contact sharp, the hall behind dissolved.",
+      "spatial_composition": "The two fencers occupy the LEFT and RIGHT thirds respectively, facing each other along the piste. The CROSSED BLADES meet at the exact CENTRE of frame with CLEAR DARK SPACE behind them so the two steel lines read separately and the contact point is unmistakable. A CLEAR RUN of empty piste extends beyond each fencer. NO third figure, no official, no scoreboard, nothing crossing the blade line.",
+      "environment": "An Athens 2004 fencing piste, metal strip underfoot, dark blurred hall and indistinct spectators far behind. NO Olympic rings, NO national flags, NO federation emblems, NO sponsor boards, NO banners with lettering anywhere in frame including far background and out of focus: generated emblems come out malformed and the rings are a restricted mark, so a blurred approximation is a liability rather than set dressing.",
+      "lighting": "Hard single key from high frame left, throwing a hot specular line down the length of each blade and lighting the mesh dome of the mask so the weave reads; deep shadow between them.",
+      "colour_grade": "Cool steel blue-grey, cream in the mask bib and the whites, one warm skin note, crushed blacks.",
+      "mood": "Fast, precise, two people at full extension.",
+      "technical": "35mm film emulation, Kodak Portra 400, fine grain, atmospheric haze with depth layering.",
+      "framing": "Wide-medium two-shot side-on to the piste, crossed blades at centre.",
+      "action": "Two fencers engaged: the near one in the mask lunges with the épée, blades crossed and touching, the opponent driven back.",
+      "motion": "Locked-off. Movement: fixed camera square to the piste. Speed: still. Framing: unchanged. End: the lunge completes and the blades slide against each other. The ONLY motion is the two fencers and the blades.",
+      "mentions_not_artefact": []
+    },
+    {
+      "id": "b5",
+      "title": "U4 · THE ARROW — nocked, drawn, gone",
+      "carries": [
+        "SM_RV_9"
+      ],
+      "image_type": "Cinematic film still, photoreal, shot on a real location, no text or captions anywhere in frame.",
+      "subject_action": "An archer at FULL DRAW. The arrow is NOCKED ON THE STRING and drawn back past her jaw, the shaft running level beneath her eye, her three fingers hooked on the string against her chin. Her eye is open and fixed down the shaft.",
+      "shot_type": "Tight close from the side, her jaw, her drawing hand and the rear half of the arrow filling frame.",
+      "camera_angle": "Level with the arrow, square to her side, so the shaft reads as a dead-straight horizontal.",
+      "lens": "100mm, f/2.5 — the nock, the vanes and her fingers sharp, everything beyond the bow gone.",
+      "spatial_composition": "The arrow shaft runs as a hard HORIZONTAL LINE across the CENTRE of frame from edge to edge. Her jaw and drawing hand occupy the RIGHT THIRD. The LEFT THIRD is open soft field — the direction of release, empty. THE INSCRIPTION ON THE SHAFT IS NOT IN FRAME AND NOT LEGIBLE: frame the nock end and the vanes only.",
+      "environment": "An outdoor competition field, blurred green and sky, no readable signage. NO Olympic rings, NO national flags, NO federation emblems, NO sponsor boards, NO banners with lettering anywhere in frame including far background and out of focus: generated emblems come out malformed and the rings are a restricted mark, so a blurred approximation is a liability rather than set dressing.",
+      "lighting": "Hard low side key from frame left running the length of the shaft and catching the vane edges; deep shadow behind her jaw.",
+      "colour_grade": "Cool desaturated green-grey, warm skin, one bright line on the shaft.",
+      "mood": "Absolute stillness under maximum tension.",
+      "technical": "35mm film emulation, Kodak Portra 400, fine grain, atmospheric haze with depth layering.",
+      "framing": "Tight close from the side, jaw, drawing hand and rear of the arrow.",
+      "action": "An archer holds at full draw with the arrow nocked past her jaw, then releases.",
+      "motion": "Locked-off. Movement: fixed camera. Speed: still. Framing: unchanged. End: the string is released and the arrow is GONE from frame, leaving her fingers open and the string blurred. The ONLY motion is the release.",
+      "mentions_not_artefact": []
+    },
+    {
+      "id": "b6",
+      "title": "U4 · THE BALL — water polo, one hand out of the water",
+      "carries": [
+        "SM_RV_23"
+      ],
+      "image_type": "Cinematic film still, photoreal, shot on a real location, no text or captions anywhere in frame.",
+      "subject_action": "A water polo player rises out of the water with the yellow ball PALMED IN ONE RAISED HAND, arm cocked back to shoot, water sheeting off his shoulder and streaming from the ball. A defender's arm reaches up from the water toward him.",
+      "shot_type": "Medium close from water level, the player from the chest up, the ball at the top of frame.",
+      "camera_angle": "Water level, looking slightly up so the raised ball breaks against the light.",
+      "lens": "85mm, f/2.2 — the ball and the gripping hand sharp, the pool behind blown to bokeh.",
+      "spatial_composition": "The raised ball sits in the UPPER RIGHT in a CLEAR POCKET OF AIR with nothing behind it. The player's head and shoulder occupy the CENTRE. The defender's reaching arm enters from the LOWER LEFT and stops WELL SHORT of the ball, so the gap between them is legible. THE BALL IS WET AND IN MOTION — no moulded text or brand mark is relied on as legible.",
+      "environment": "An Olympic pool, bright water, blurred lane markers, no readable signage or scoreboard. NO Olympic rings, NO national flags, NO federation emblems, NO sponsor boards, NO banners with lettering anywhere in frame including far background and out of focus: generated emblems come out malformed and the rings are a restricted mark, so a blurred approximation is a liability rather than set dressing.",
+      "lighting": "Hard high key from behind and frame right, backlighting the sheeting water into bright droplets, hot specular arc across the wet ball.",
+      "colour_grade": "Cool pool blue and white spray, the ball reading warm yellow, crushed blacks in the shadowed water.",
+      "mood": "Explosive, wet, upward.",
+      "technical": "35mm film emulation, Kodak Portra 400, fine grain, atmospheric haze with depth layering.",
+      "framing": "Medium close from water level, chest up, ball at the top of frame.",
+      "action": "A water polo player rises from the water with the ball palmed in one raised hand, cocked to shoot.",
+      "motion": "Locked-off at water level. Movement: fixed camera. Speed: still. Framing: unchanged. End: the arm has begun to whip forward and the water is still falling. The ONLY motion is the player, the ball and the water.",
+      "mentions_not_artefact": [],
+      "trim_constraint": "CORRECTED 2026-09-03 (imagegen frame-by-frame transcription): the MIKASA mark is correct on BOTH sides of a 1-2 frame transient (f101 'MIKAEA', f102 blur; star present at f101). No onset, no degradation. Any cut simply must EXCLUDE f101-f102; f103 onward is usable - not 'clean through f60'."
+    },
+    {
+      "id": "b7",
+      "title": "U4 · THE CLUB — the drop",
+      "carries": [
+        "SM_RV_8"
+      ],
+      "image_type": "Cinematic film still, photoreal, shot on a real location, no text or captions anywhere in frame.",
+      "subject_action": "A young gymnast's hand reaches for the falling club and MISSES IT — the fingers close on air a few centimetres below the club, which is still falling. Her face is beyond her arm, already knowing.",
+      "shot_type": "Tight close on the reaching hand and the club, her face soft behind.",
+      "camera_angle": "Level with the hand, slightly favouring her side.",
+      "lens": "100mm, f/2.0 — the club and the fingertips sharp, her face and the arena soft.",
+      "spatial_composition": "The club sits at CENTRE-LEFT with a CLEAR VISIBLE GAP of empty air between it and the fingertips at CENTRE-RIGHT — the gap IS the shot and nothing may cross it. Her FACE IS OUT OF FRAME: the frame's top edge cuts at the shoulder; at most a blur of hair or collar in the UPPER RIGHT, never a face. The floor is out of frame.",
+      "environment": "The Sydney 2000 rhythmic gymnastics floor, blurred arena lights and indistinct crowd far behind. NO Olympic rings, NO national flags, NO federation emblems, NO sponsor boards, NO banners with lettering anywhere in frame including far background and out of focus: generated emblems come out malformed and the rings are a restricted mark, so a blurred approximation is a liability rather than set dressing.",
+      "lighting": "Hard arena key from high frame right, hot specular travelling the length of the club, deep shadow under the hand.",
+      "colour_grade": "Warm arena light, pale floor, cool shadow, crushed blacks.",
+      "mood": "The half-second the medal changed colour.",
+      "technical": "35mm film emulation, Kodak Portra 400, fine grain, atmospheric haze with depth layering.",
+      "framing": "Tight close on the reaching hand and the club — cropped at the shoulder so no face can enter frame (crop-not-instruct).",
+      "action": "A gymnast's hand closes on air below the falling club — the catch is missed.",
+      "motion": "Locked-off. Movement: fixed camera. Speed: still. Framing: unchanged. End: the club has fallen past the open hand and out of the bottom of frame. The ONLY motion is the club falling and the fingers closing.",
+      "_why_not_artefact": "The Sydney 2000 ensemble is digitised as THREE separate apparatus — SM_RV_8 club, SM_RV_11 ball, SM_RV_7 hoop. The word 'gymnastics' matches all three. The object that falls in this shot is the CLUB, SM_RV_8, and it is carried. The ball and hoop are not in frame and must not be threaded in: it was the club that was dropped. SM_RV_7 (Karyami hoop) added 2026-08-28: the word 'gymnastics' matches it since the registry grew to 23; the hoop is genuinely not in this shot.",
+      "mentions_not_artefact": [
+        "SM_RV_11",
+        "SM_RV_7"
+      ],
+      "asserts_identity": [],
+      "depicts_real_persons": {
+        "who": "a member of the Hellenic rhythmic group, Sydney 2000 — a real, named, findable team of six",
+        "policy": "no_face",
+        "why": "the ledger asserts no identity; a sharp rendered face would read as a portrait of one of six real people we have no reference for and make no claim about"
+      },
+      "fidelity_gate": "PERSON GATE: no sharp or identifiable face anywhere in frame, any candidate — a face composed in at legible scale is a REJECT regardless of everything else passing (b7 v1 rejected 2026-08-28 for exactly this).",
+      "revision": "v2 2026-08-28 — v1 rejected: face rendered sharp across the right third on a real documented team; face now composed out of frame"
+    },
+    {
+      "id": "b8",
+      "title": "U4 · THE RACKET — six Games, one contact",
+      "carries": [
+        "SM_RV_15"
+      ],
+      "image_type": "Cinematic film still, photoreal, shot on a real location, no text or captions anywhere in frame.",
+      "subject_action": "A table tennis player's hand drives the racket through a topspin loop, the rubber face MEETING THE BALL — the ball visibly compressed against the rubber at the moment of contact. His forearm is rotated over the top of the ball.",
+      "shot_type": "Extreme close on the racket face, the hand and the ball at the point of contact.",
+      "camera_angle": "Square to the racket face, level with the contact point.",
+      "lens": "100mm macro, f/2.8 — the rubber's pimpled surface, the compressed ball and the knuckles sharp; the hall gone.",
+      "spatial_composition": "The racket face and the ball form one tight cluster at CENTRE-LEFT. The RIGHT THIRD is open dark hall — the direction of travel, empty. Nothing else enters frame. NO SIGNATURE IS IN SHARP FOCUS.",
+      "environment": "A blurred dark competition hall, one bright table edge, no readable signage. NO Olympic rings, NO national flags, NO federation emblems, NO sponsor boards, NO banners with lettering anywhere in frame including far background and out of focus: generated emblems come out malformed and the rings are a restricted mark, so a blurred approximation is a liability rather than set dressing.",
+      "lighting": "Hard single key from frame left, hot specular across the wet rubber and one bright rim on the ball; deep shadow behind.",
+      "colour_grade": "Cool dark hall, warm wood in the blade, one bright white ball, crushed blacks.",
+      "mood": "Precision at the smallest possible scale.",
+      "technical": "35mm film emulation, Kodak Portra 400, fine grain, atmospheric haze with depth layering.",
+      "framing": "Extreme close on the racket face at the point of contact.",
+      "action": "A table tennis racket meets the ball in a topspin loop, the ball compressed against the rubber.",
+      "motion": "Locked-off macro. Movement: fixed camera. Speed: still. Framing: unchanged. End: the ball has left the rubber and is leaving frame right. The ONLY motion is the racket and the ball.",
+      "mentions_not_artefact": []
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "test": "character-sheets-with-and-without-artefacts",
+  "title": "TEST — production character sheets, and what a museum reference buys at the character level",
+  "revision": "v1 — 2026-08-22 · Philipp's proposal after seeing a production character-sheet example (turnaround + back view + detail callouts)",
+  "_why": [
+    "Our 1a sheets are 3-view turnarounds (front / 3/4 / profile). Philipp's example adds a BACK view and isolated",
+    "DETAIL CALLOUTS of worn/held items (collar, clasp, clutch, boot) — the production-grade format, and what the",
+    "Higgsfield 'character-sheet' workflow calls 'turnaround' (4 views incl. back) + 'triple panel' (detail close-ups).",
+    "",
+    "Two questions, two sub-tests:",
+    "  A. FORMAT: does the production format (back view + callouts) hold character + prop consistency better?",
+    "  B. THE PRODUCT QUESTION: when the held/worn object IS a museum artefact, what does injecting the registry",
+    "     reference buy us versus generating from the description alone? Side by side, same seed discipline,",
+    "     measured against the artefact's invariants. This is 'is it really the asset' at the character level.",
+    "",
+    "Higgsfield character-sheet workflow (loaded 2026-08-22): turnaround = 'front view, 3/4 view, side profile, and",
+    "back view'; triple panel = 'full body, chest-up portrait, and detail close-up of face and accessories';",
+    "'Consistency is the product'; negative tail 'no text, no watermark, no logos, no frame borders'; 'original",
+    "character only'; mature adult structure. DELIBERATE OVERRIDE: the workflow says 'no props' — for artefact",
+    "sheets the held object is the point, so props are allowed and the override is stated.",
+    "",
+    "Faces are never named persons (the victor is a composite, already in the registry identities)."
+  ],
+  "subtest_A_format": {
+    "subject": "the 1a Workman and Archaeologist (already approved 3-view sheets)",
+    "what": "Regenerate each as a PRODUCTION sheet: four-view turnaround (facing camera / turned 45° / side / from behind) PLUS a callout strip of the held and worn items isolated and enlarged — workman: the pick, the headcloth knot, the sash, the shoe; archaeologist: the bowler, the jacket front with its lapel/collar, the measuring staff, the boot.",
+    "consistency_method": "GenHQ method #1: @image = the approved 3-view sheet as the identity reference; text = the character description; layout described WITHOUT nameable words (no 'FRONT/BACK/PROFILE' — they become captions).",
+    "gate": "NEVER lists as before; exploratory pass; the callout items must be the SAME objects as in the views (pick head shape, bowler brim, staff length). Resolves the archaeologist's lapel inconsistency by making the jacket a callout.",
+    "measures": "prop consistency across 4 views + callouts (pass/fail per item); any text."
+  },
+  "subtest_B_artefact": {
+    "subject": "The Crowning's VICTOR (registry identity 'victor') wearing the KOTINOS (SM_RV_16)",
+    "why_this_one": "We have the registry invariants, the 3D model, an existing scene, and a known failure history — v1 of The Crowning invented fresh green wreaths in shots 2 and 4 when the reference did not travel. The artefact is distinctive (dried golden-brown, narrow lanceolate leaves, wire ties, cloth-bound join, OPEN ring). A generic 'olive wreath' is the exact cliché the reference must defeat.",
+    "arms": {
+      "WITHOUT": "Production sheet of the victor wearing 'an olive wreath' — the registry reference NOT injected; description of the wreath limited to what a model would assume. Callout of the wreath.",
+      "WITH": "Identical prompt + @image = the SM_RV_16 museum render injected as the wreath reference + the registry identity invariants (dried golden-brown, narrow pointed leaves densely packed, wire ties, pale cloth wrap at the join, open ring). Callout of the wreath."
+    },
+    "discipline": "Same character reference, same composition, same negative tail, same model; only the artefact reference + invariants differ. Best-of-N each, pick the best of each arm (not the worst of WITHOUT).",
+    "measures": {
+      "per_invariant": "dried golden-brown (not green) · narrow lanceolate leaves · dense packing · wire ties present · cloth-bound join · OPEN ring (not closed) — pass/fail each, both arms",
+      "callout_vs_reference": "the enlarged wreath callout beside the real SM_RV_16 render in the Review Room — the 'is it the same object' view",
+      "consistency": "is the wreath the same wreath in all four views + the callout"
+    },
+    "expected": "WITHOUT reverts to the cliché (fresh green, closed, no ties); WITH holds the invariants. If WITH does NOT hold, that is the more important result — it means the reference alone is insufficient at the character level and we need the deterministic/3D route for worn artefacts too.",
+    "not_asserted": "nothing about a real person; the victor is a composite. The kotinos is the Athens 2004 object, not ancient — stated in the ledger as always."
+  },
+  "optional_subtest_C": {
+    "subject": "Tentoglou's shoes (SM_RV_18) on a long-jumper; or the torch (SM_RV_12) in the runner's hand",
+    "why": "A worn object with an INSCRIPTION (8.41 / TOKIO) tests whether the reference keeps text faithful at character scale — the hardest case. Run only if B is clean.",
+    "note": "the torch in hand is Trailer A's a4/a6 problem in miniature."
+  },
+  "review": "All outputs into the Review Room under a new TEST section: each sheet beside its references; for B, the WITH and WITHOUT callouts beside the real SM_RV_16 render. Philipp judges. Ledger per image.",
+  "owner": "empirica-imagegen (generation + gates); storyboard (spec, review room, verdict)",
+  "cost_note": "Image-only; no video. Nano Banana Pro via Higgsfield.",
+  "RESULTS_2026-08-22": {
+    "B_product_question": "WITH 5/6 invariants (hue agreement 0.978 on all 3 candidates) vs WITHOUT 1/6 (stable fresh-green closed cliche). The reference carries the OBJECT. Verified by storyboard by eye.",
+    "A_format": "workman PASS; archaeologist v1 FAILED callout consistency (jacket) -> costume ruling: 1870s high-buttoned lapelled sack coat -> v2 PASS (sha 3f4921419247).",
+    "C_inscriptions": "REFUTES sheet-first for TEXT. Object held in every view; inscriptions LEGIBLE AND WRONG: 8.41 -> 8.71 (fabricated claim about a living athlete in his own hand), TOKIO vs TOKITO on the two shoes in one panel, Greek name garbled. Callout rescues legibility, not accuracy - worse, because legible-and-wrong reads as authoritative.",
+    "NEW_HAZARD": "The Greek name appeared although the prompt withheld it: the REFERENCE supplied text the prompt did not ask for (inverse of the torch). asserts_text:[] governs the prompt only; nothing yet guards the reference side.",
+    "STANDING_RULE_AS_CORRECTED": "Sheet-first for form/material/structure (proven). For any inscribed surface: TURN AWAY or CROP it, even inside the callout; inscriptions ride the ledger. Pre-crop reference images so they carry no inscribed surface the shot does not assert. Certify text only by character-level diff; never certify an ambiguous glyph."
+  }
+}

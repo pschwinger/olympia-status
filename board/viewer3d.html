@@ -1,0 +1,45 @@
+<!doctype html><html><head><meta charset="utf-8"><title>3D Viewer</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="module" src="lib/model-viewer.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Archivo:wght@500;700&display=swap">
+<style>
+  html,body{height:100%;margin:0;background:#0f110b;color:#dce0d2;font-family:"Archivo",system-ui,sans-serif;overflow:hidden}
+  model-viewer{width:100vw;height:100vh;background:radial-gradient(ellipse at 50% 60%,#1d2117 0%,#0f110b 70%);--progress-bar-color:#cf9748;--poster-color:transparent}
+  .hud{position:fixed;top:0;left:0;right:0;display:flex;align-items:center;gap:14px;padding:12px 18px;background:linear-gradient(rgba(15,17,11,.92),rgba(15,17,11,0));pointer-events:none}
+  .hud b{font-size:15px;font-weight:700}
+  .hud code{font-family:"IBM Plex Mono",monospace;font-size:11px;color:#9fb56b;letter-spacing:.06em}
+  .hud .tip{margin-left:auto;font-family:"IBM Plex Mono",monospace;font-size:10.5px;color:#7f846d;letter-spacing:.04em}
+  .hud .size{font-family:"IBM Plex Mono",monospace;font-size:10.5px;color:#cf9748}
+  .loading{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);text-align:center;font-family:"IBM Plex Mono",monospace;font-size:12px;color:#a7ad98;letter-spacing:.06em;pointer-events:none}
+  .loading .bar{width:240px;height:3px;background:#2b3023;border-radius:3px;margin:12px auto 0;overflow:hidden}
+  .loading .bar i{display:block;height:100%;width:0;background:#cf9748;transition:width .2s}
+  .btns{position:fixed;bottom:16px;left:50%;transform:translateX(-50%);display:flex;gap:8px}
+  .btns button{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.06em;padding:7px 12px;border-radius:7px;border:1px solid #363b2a;background:rgba(26,29,20,.85);color:#dce0d2;cursor:pointer}
+  .btns button:hover{border-color:#cf9748;color:#cf9748}
+</style></head><body>
+<div class="hud"><b id="name">3D model</b><code id="code"></code><span class="size" id="size"></span><span class="tip">drag to turn · scroll to zoom · right-drag to pan · Esc closes</span></div>
+<div class="loading" id="loading">LOADING MODEL<div class="bar"><i id="prog"></i></div><div id="pct" style="margin-top:6px"></div></div>
+<model-viewer id="mv" camera-controls auto-rotate auto-rotate-delay="2500" rotation-per-second="14deg" shadow-intensity="1" exposure="1.05" tone-mapping="neutral" interaction-prompt="none" touch-action="pan-y"></model-viewer>
+<div class="btns"><button onclick="mv.resetTurntableRotation();mv.cameraOrbit='0deg 75deg auto';mv.fieldOfView='auto'">reset view</button><button onclick="mv.autoRotate=!mv.autoRotate">toggle spin</button><button onclick="window.close()">close</button></div>
+<script>
+  var q=new URLSearchParams(location.search);
+  var src=q.get('src')||'', name=q.get('name')||'3D model', code=q.get('code')||'', mb=q.get('mb')||'';
+  document.title=name+' — 3D';
+  document.getElementById('name').textContent=name;
+  document.getElementById('code').textContent=code;
+  if(mb)document.getElementById('size').textContent=mb+' MB — may take a moment';
+  var mv=document.getElementById('mv');
+  mv.addEventListener('progress',function(e){var p=Math.round((e.detail.totalProgress||0)*100);document.getElementById('prog').style.width=p+'%';document.getElementById('pct').textContent=p+'%';});
+  function hideLoading(){document.getElementById('loading').style.display='none';}
+  mv.addEventListener('load',hideLoading);
+  mv.addEventListener('model-visibility',function(e){if(e.detail&&e.detail.visible)hideLoading();});
+  // belt-and-braces: if the model reports loaded but no event reached us, clear the overlay
+  var poll=setInterval(function(){if(mv.loaded){hideLoading();clearInterval(poll);}},500);
+  mv.addEventListener('error',function(e){document.getElementById('loading').innerHTML='COULD NOT LOAD MODEL<br><small>'+(e.detail&&e.detail.type||'')+'</small>';});
+  // give the element explicit pixel dimensions before loading so the WebGL canvas sizes correctly
+  function fit(){mv.style.width=window.innerWidth+'px';mv.style.height=window.innerHeight+'px';}
+  fit(); window.addEventListener('resize',fit);
+  mv.src=src;
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')window.close();});
+</script>
+</body></html>

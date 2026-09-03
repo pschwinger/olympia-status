@@ -1,0 +1,130 @@
+{
+  "scene": "the-first-flame",
+  "title": "Olympia - The First Flame",
+  "fps": 24,
+  "revision": "v1 — 2026-08-19, second self-contained artefact scene (The Crowning mould). One artefact — the Berlin 1936 torch, SM_RV_12 — carried through a complete scene. Design locked against videogen's torch motion-test (prop_holodtpg): the torch is animatable.",
+
+  "_authoring_notes": [
+    "MOULD: the-crowning.json — one museum artefact through one complete moment,",
+    "a single at-rest PROVENANCE shot that carries the claim + per-glyph verification,",
+    "context/motion shots composed AROUND it that carry NO fidelity burden.",
+    "",
+    "THE MOMENT: the first flame-lighting of the modern Games — Olympia, 20 July 1936.",
+    "Object -> born -> carried -> the country it crossed. Four shots.",
+    "",
+    "PROVENANCE SHOT (k1) IS DETERMINISTIC — primary, not fallback (imagegen prop_3ibfjnz62,",
+    "2026-08-20). The generative model can supply the legend/route UNPROMPTED (A2: 1-in-4",
+    "post-fix, zero strings in prompt), and a garbled route on a 1936 artefact mid-clip is",
+    "uninspectable at glyph scale across ~96 frames. The certified k1 still already exists,",
+    "and the only motion needed is a slow pull-back — so the ffmpeg zoompan pull-back over",
+    "k1.png (every frame a crop of the character-checked still, STRUCTURALLY zero fabrication)",
+    "is the right method, not the safe one. The generative pull-back buys marginal camera",
+    "realism at a real fidelity risk and is NOT used on the provenance-bearer. (Motion itself",
+    "is fine — videogen prop_holodtpg proved the torch animates; the constraint is fabrication,",
+    "not movement.) Generative videogen-direct is fine for k2-k4, which bear no artefact.",
+    "",
+    "FIDELITY BANDS (imagegen, measured): artefact at-rest + large = 0.85-0.92;",
+    "in-motion / odd-angle = ~0.65; small-in-wide = ~0.50. So the torch appears LARGE",
+    "and comparatively still ONLY in k1 (the provenance-bearer); in k2-k4 it is a soft",
+    "form / silhouette / tip and asserts nothing — a soft artefact in a motion frame is",
+    "acceptable because it proves nothing, exactly as the-crowning's weak wide did.",
+    "",
+    "INSCRIPTION STRATEGY (measured): the model NORMALISES inscriptions toward convention",
+    "and FABRICATES lists (the route becomes 14 dupes). So: the torch's real engraving",
+    "ships legibly ONLY in k1 and ONLY if it passes per-glyph QC in the OUTPUT; the",
+    "11-city route is NEVER rendered as a legible list anywhere; the true route rides in",
+    "the ledger. Lead with FORM. Never a mark the object lacks (ABSOLUTELY NO SWASTIKA).",
+    "",
+    "STANDING GATE (locked with videogen): every generated torch clip gets WHOLE-CLIP",
+    "per-glyph QC before ship — not just the keyframe — and the route must never reappear."
+  ],
+
+  "style": "Cinematic, desaturated teal-and-amber grade, hard warm sunlight against cool shadow, crushed blacks, filmic highlight rolloff, fine grain, shallow depth of field, dust and heat-haze hanging in the light. Photographic realism, natural metal and skin texture, no stylisation, no modern detail, no signage. NO legible lettering is asserted anywhere in this scene by default — the torch's engraving rides in the ledger and the certificate of provenance, not in rendered text. If any engraving falls legible in the provenance shot it ships ONLY after a character-level diff against the registry string exactly; otherwise it is turned out of the light or cropped. The model must never invent, complete or normalise any text (a partial legible arc is where 'ALS DANNK' came from), and the engraved eleven-city route is never rendered as a legible list.",
+
+  "shots": [
+    {
+      "id": "k1",
+      "title": "THE TORCH",
+      "role": "provenance",
+      "carries": ["SM_RV_12"],
+      "asserts_text": [],
+      "route": "keyframe",
+      "reuse_still": "NONE — s2 (sha 3435df1e) REJECTED: rim reads ALS DANNK (doubled N), a fabrication its 4 Aug 0.9 ledger missed. k1 needs a corrected re-roll (imagegen, best-of-N, character-diff per candidate, legend turned out of the light).",
+      "action": "The Berlin 1936 torch stands alone and upright, hero-lit against a dark ground — read as FORM: the broad flat disc rim, the slender shaft, the flared bell base, its whole distinctive silhouette. Polished steel, ~27 cm. A single warm key rakes down the metal. The eagle-and-rings emblem sits on the shaft exactly as on the object — a shallow, subtle line-etch, never magnified or thrown into high contrast. The metal holds the only light in frame.",
+      "framing": "FORM HERO: the whole torch — broad flat disc rim, slender shaft, flared bell base — hero-lit against dark ground, the distinctive silhouette carrying the shot (this is c3's framing, shaft rotated so the emblem faces the key rather than the specular). The eagle-and-rings emblem is present on the shaft AS ON THE OBJECT: a faint line etch, NOT enlarged and NOT the hero — making it the hero renders it more prominent than the object bears, which is FABRICATED PROMINENCE, the same fidelity-violation family as an invented inscription (c1 failed exactly this way). NO rim lettering is composed for legibility — the upper rim arc turned out of the light. THE ENGRAVED ROUTE BAND IS KEPT OUT OF FRAME THROUGHOUT — the crop never travels down to the eleven-city line. No swastika anywhere.",
+      "motion": "DETERMINISTIC ffmpeg zoompan PULL-BACK over the certified k1.png — every frame a crop of the character-checked still, structurally zero fabrication. This is THE method for the provenance-bearer, not a fallback: no generative pass on k1 (it would buy marginal camera realism at a real, uninspectable ~1-in-4 risk of writing a garbled legend/route onto a 1936 artefact mid-clip). Slow recede only, object dead still, one motion.",
+      "qc": "The QC question is NOT 'did my listed risks survive' — it is 'is there anything in frame that is NOT on the object, in content OR in prominence'. WHOLE-CLIP, every frame: no legend lettering asserted legible (turned out of the light); the eagle-and-rings present but SUBTLE as on the object, never magnified (fabricated prominence is a reject just as fabricated text is); correct silhouette incl. the flared bell base; ABSOLUTELY NO SWASTIKA; the route band never enters frame. Any engraved text that DOES fall legible in-frame must be character-diffed against the registry string exactly, or the shot is turned/cropped so it isn't. If any glyph appears, the emblem is exaggerated, or the route enters frame, reject and fall back to the ffmpeg pull-back over the CORRECTED still.",
+      "note": "The provenance-bearer. It carries the claim through FORM (the object's distinctive silhouette) — the legend, route AND the emblem's true subtlety ride in the ledger + certificate of provenance, NOT in rendered prominence. asserts_text=[] means no inscription is injected. DECISION (form vs emblem hero, mine — imagegen prop_34lqu37m): FORM hero (A), not emblem hero (B). 'Eagle as hero' was a spec error — on the object the emblem is a shallow subtle etch, so making it hero = fabricated prominence, against the practice's core (never render an object as it is not). c1 rendered a correct-but-over-prominent emblem on a wrong thin silhouette (rejected); c3 has the correct silhouette incl. flared base (accepted as the base framing). s2 (sha 3435df1e) also REJECTED (ALS DANNK). MECHANISM (imagegen, corrected prop_36amrun65): the old `invariants` injection COMMANDED the fabrication (dry-run prop_3gkotdgwkjgntflznrwcv7oqum), and the identity/inscriptions split (registry ff0d519) + build_keyframes 9e8c568 REMOVE that command — but they do NOT eliminate text fabrication. Candidate A2, with zero strings in the prompt, still rendered a garbled legend + route band (1-in-4 post-fix, was 2-in-2 pre-fix). The model holds its own prior for this famous object and supplies the engraving unprompted when the composition gives it enough shaft to write on. So the COMPOSITIONAL RULE — text zones out of the light / out of frame + whole-clip QC — is NECESSARY, not belt-and-braces; the split made fabrication rarer, not gone. k1 (sha d842fd20) is the accepted form-hero still."
+    },
+    {
+      "id": "k2",
+      "title": "THE LIGHTING",
+      "role": "context",
+      "carries": [],
+      "mentions_not_artefact": ["SM_RV_12"],
+      "route": "videogen-direct",
+      "action": "Olympia, high summer noon. A parabolic mirror gathers the sun to a single incandescent point; the flame catches and blooms in the bowl of a torch held into the focus. Hands, the curve of the mirror, the first hard flare of new fire. The ruined stone of ancient Olympia stands behind, thrown well out of focus.",
+      "framing": "Close on the mirror's focal point and the catching flame. The torch is a dark form entering the light, NOT hero-lit and NOT the provenance-bearer — its engraving is not asserted here and need not be legible.",
+      "motion": "Single action — the flame catches and blooms. Camera locked or barely drifting. No second motion.",
+      "note": "Dramatisation of a real event (see ledger): the first modern flame lit at Olympia, 20 July 1936. Carries no artefact fidelity burden."
+    },
+    {
+      "id": "k3",
+      "title": "THE FIRST RUNNER",
+      "role": "motion",
+      "carries": [],
+      "mentions_not_artefact": ["SM_RV_12"],
+      "route": "videogen-direct",
+      "action": "A single relay runner, seen close and from the side, lifts the lit torch and begins to run out of the sanctuary. The flame streams back in the wind of the run. Low sun behind him, long shadow, warm dust kicked from his stride. He is one figure against open sunlit ground.",
+      "framing": "Tight-to-medium single, the runner two-thirds of frame, the torch held aloft and reading as a lit form — a silhouette against the sun, NOT a legible object. His face is not the subject; no identity is asserted.",
+      "motion": "The run and the streaming flame — one continuous action. Camera tracks alongside or holds as he passes. The torch is in motion and therefore off the provenance band by design.",
+      "note": "The relay begins. Torch soft / silhouetted — proves nothing, and is meant to."
+    },
+    {
+      "id": "k4",
+      "title": "OLYMPIA TO BERLIN",
+      "role": "context",
+      "carries": [],
+      "route": "videogen-direct",
+      "action": "The country the flame crossed. A high, drifting montage of changing land — Greek mountains giving way to river plains and forest and finally a great city at dusk — a single point of moving fire drawn across it like a thread. The distance is the subject; the eleven waypoints are PLACES the light passes, never labels. NO city names, NO map lettering, NO drawn text of any kind anywhere in frame — airborne haze and low sun only, never resolving into a word.",
+      "framing": "Very high aerial / landscape drift, the moving flame small and warm against vast cool country. Late golden hour throughout.",
+      "motion": "Single continuous drift following the thread of fire from south to north. No cuts, no second motion.",
+      "note": "The route rides in the ledger (the eleven real cities), NEVER as rendered labels — the model fabricates lists (14 for 11), which is the exact failure the whole scene is built to avoid."
+    }
+  ],
+
+  "claim_ledger": {
+    "asserted": "The digitised object is the torch of the Berlin 1936 Olympic relay (SM_RV_12) — the FIRST torch relay and the first Olympic flame lit at Olympia in the modern Games, lit 20 July 1936 by parabolic mirror. Designed by Walter Lemcke, steel, made by Krupp. Its engraved route ran Olympia to Berlin through eleven cities: OLYMPIA, DELPHI, ATHEN, SALONIKI, SOFIA, BELGRAD, BUDAPEST, WIEN, PRAG, DRESDEN, BERLIN. The object bears an eagle gripping the Olympic rings and no swastika.",
+    "origin": {
+      "claim": "The torch relay was created FOR the 1936 Games — the Berlin Olympics staged by Nazi Germany. This is stated as an asserted fact, per Philipp's call, not hidden and not omitted.",
+      "confidence": 1.0,
+      "note": "The film shows the OBJECT, which carries no Nazi iconography, and STATES the relay's 1936 origin. It does not launder the history and it does not render the swastika the object does not bear."
+    },
+    "not_asserted": [
+      "The engraved eleven-city ROUTE is NOT rendered as legible text anywhere (k4). The model fabricates the list — 14 labels for 11 cities — so the true route is asserted in this ledger only.",
+      "The fuel was MAGNESIUM-based, NOT wax. The Museum caption's 'wax' is contradicted by independent sources and is not asserted.",
+      "The identity of any runner (k3) — no face is asserted; the figure is dramatisation.",
+      "The precise 1936 staging, mirror, crowd and landscape are DRAMATISATION. The provenance rests on the one real digitised object (SM_RV_12) and its verified per-glyph ledger; everything around it is constructed.",
+      "NO inscription is rendered legible anywhere in this scene, k1 included (asserts_text=[]); the legend and route ride in the ledger + certificate only. In k2-k4 the torch is a soft form and asserts nothing.",
+      "The eagle-and-rings emblem is a SHALLOW, SUBTLE line-etch on the real object; k1 renders it AS IT IS, present but not magnified. The scene does NOT assert the emblem as a prominent feature — making it the hero would be fabricated prominence, so k1 leads with the object's FORM (disc rim, slender shaft, flared bell base) instead.",
+      "The emblem's RING COUNT and three-over-two arrangement are NOT asserted. At the true etch depth on a curved polished surface, k1 confirms eagle-over-rings but cannot certify the exact configuration; the ledger states this rather than attaching a number (same discipline as the legend — the discipline whose absence produced ALS DANNK)."
+    ],
+    "source": "Olympic Museum, REEVALUATE Pilot 2 digitisation (Unit 1). Object invariants verified A10-A13, B9-B12 in VERIFICATION-RECORD_Olympia-six-artefacts_2026-08-04.md. The 'wax' contradiction and the eagle-and-rings/no-swastika confirmation are recorded there. NOTE: prior 'verified' still s2 (sha 3435df1e, imagegen 0.90, 4 Aug) is RETRACTED as ship-ready — its rim reads ALS DANNK (doubled N), a fabrication that certification missed; k1 rebuilds on a corrected re-roll. Motion (that the torch is animatable under a pull-back) verified by videogen (prop_holodtpg, 2026-08-19) and stands.",
+    "caveat": "The 1936 lighting-by-parabolic-mirror at Olympia carries the registry/record's confidence, surfaced here rather than buried. The scene depicts what is RECORDED of the first relay, staged as dramatisation, not documentary footage."
+  },
+
+  "deliverables": {
+    "master": "the-first-flame.mp4 — ~20s, 1080p, 24fps, the four shots cut in order (object -> lighting -> runner -> route).",
+    "fcp_xml": "the-first-flame.fcpxml — the cut, conformed, for hand-off.",
+    "certificate": "the-first-flame_certificate-of-provenance.{html,pdf} — the claim ledger + per-shot sidecar ledgers rendered as the provenance certificate; the answer to 'you are inventing things about our collection.'",
+    "stills": "per-shot keyframe stills + the verified provenance still (s2) with its sidecar ledger."
+  },
+
+  "standing_rules": {
+    "provenance_shot": "k1 only — torch large + at rest, carried by FORM (silhouette incl. flared bell base), emblem subtle not magnified, no legend rendered. Animated by DETERMINISTIC ffmpeg zoompan pull-back over the certified still (structurally zero fabrication) — the provenance-bearer is provably faithful, never a generative pass",
+    "torch_qc": "the QC question is 'is anything in frame NOT on the object', not 'did my listed risks survive' — a confirmatory checklist only catches imagined defects (ALS DANNK was outside all four listed targets). WHOLE-CLIP on every torch clip, never the keyframe alone; any legible engraving character-diffed against the registry string or turned out of the light; the route must never reappear",
+    "inscriptions": "form-forward; NO legend asserted legible by default (it rides in the ledger + certificate); if legible, character-level diff against the registry string exactly or turn it out of the light; the eleven-city route never rendered as a list; never a mark the object lacks (no swastika)",
+    "routing": "the torch shot = keyframe (the reuse demonstration); lighting / runner / landscape = videogen-direct",
+    "sidecar": "each generated asset ships <id>.ledger.json (registry_key, ref_sha256, per-item asserts, verified, not_asserted, corrections, verdict+confidence)"
+  }
+}

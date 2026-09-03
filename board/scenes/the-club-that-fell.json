@@ -1,0 +1,95 @@
+{
+  "scene": "the-club-that-fell",
+  "title": "Sydney 2000 - The Club That Fell",
+  "fps": 24,
+  "revision": "v1 - 2026-07-31, artefact-first (SM_RV_8), retarget of the held the-oath",
+
+  "_design_notes": [
+    "METHOD: artefact-FIRST. This scene exists because the artefact exists -",
+    "SM_RV_8, the specific rhythmic-gymnastics club the Hellenic group dropped at",
+    "Sydney 2000. The object is the protagonist, the drama is a physical fall, and",
+    "the claim is the Museum's own, crosschecked against the results record. This",
+    "is the REEVALUATE test: reuse a real digitised artefact and verify the",
+    "institution's claim about it.",
+    "THE DROP (k3) is deliberately the stress-test of the physical-fall capability",
+    "that failed in the Veo bake-off (shears that closed on a branch that never",
+    "severed). Gravity acting on the club IS the scene; if the model cannot make",
+    "the club leave the hand and strike the floor, imagegen should flag it.",
+    "MODERN scene - its own look (a 2000 arena), not the ancient-Olympia grade.",
+    "Only SM_RV_8 has a reference; the gymnasts have no identity ref and nothing",
+    "is asserted about any individual on screen.",
+    "CROSSCHECK VERDICT (full working in claim_ledger.events): the Museum's claim",
+    "that the drop cost the higher medal is SUPPORTED and if anything conservative",
+    "- Greece's entire deficit was in the clubs routine (19.550 vs 19.800), while",
+    "they OUTSCORED the gold/silver teams in the other routine."
+  ],
+
+  "style": "Cinematic, warm broadcast light in a modern Olympic arena, a pale sprung competition floor, deep bokeh of overhead floods and a blurred tiered crowd, shallow depth of field, crisp motion, fine grain, filmic highlight rolloff, gently desaturated. Sydney 2000. Photographic realism, natural skin texture. No on-screen text, no scoreboard graphics, no logos.",
+
+  "shots": [
+    {
+      "id": "k1",
+      "title": "THE CLUB",
+      "carries": ["SM_RV_8"],
+      "action": "A young woman's hand - one of the Greek national team, late teens to early twenties, slim, BARE with NO rings or jewellery of any kind - grips one of the wrapped clubs and holds it UP, poised and ready at the start of the routine. The club is RAISED in the hand, NOT resting on, pressed against or near the floor: this is the club in hand before the throw and must not look like the dropped club lying on the ground (that is k4, a different shot). The gold spiral bands, bright-red stripes and navy criss-cross lattice catch the arena light, and the club's red bulbous woven-tape base is visible in her grip. Only the hand, wrist and the raised club enter frame; the pale floor and the blurred crowd fall soft and far away behind. The object is the subject.",
+      "framing": "Tight close-up on the club and the gripping hand, arena bokeh soft behind. Provenance-bearing: the club's shape and wrapping must read exactly as the referenced object SM_RV_8.",
+      "motion": "Locked-off camera. The hand rotates the club a half-turn, ready, then stills. Only the club moves."
+    },
+    {
+      "id": "k2",
+      "title": "THE THROW",
+      "carries": ["SM_RV_8"],
+      "action": "The club is released spinning upward into the arena lights, turning end over end high above the floor, the gold and red wrapping flashing as it rotates against the dark upper stands and the floods. Below, a single blurred upturned figure - a young woman of the Greek team, dark-haired, in a competition leotard - and the pale sprung floor.",
+      "framing": "Low angle following the club up into the lights, the club sharp and central against soft lens flares. It must still read as the referenced object in motion.",
+      "motion": "Camera tilting up to follow the club's rise to its apex. The club spins end over end. That rise is the only emphasised motion."
+    },
+    {
+      "id": "k3",
+      "title": "THE DROP",
+      "carries": ["SM_RV_8"],
+      "action": "The club comes down and the reaching hand - the same young woman's, late teens to early twenties, slim, no rings - just misses it, fingertips grazing the wrapped neck, and the club falls past, striking the pale sprung floor and bouncing once, the gold-and-red wrapping and red base stark against the light floor. The single lost instant that cost the medal.",
+      "framing": "Tight and low on the floor where the club lands, the near-miss hand entering the top edge. Provenance-bearing and framed tight - the club stays centre-frame through the fall and the bounce.",
+      "motion": "Slight slow-motion. The club drops through frame, the hand misses, the club strikes the floor and bounces once, then settles. This fall is the only motion.",
+      "_note": "The deliberate stress-test of the physical-fall capability that failed in the Veo bake-off (shears that closed on a branch that never severed). If the model cannot make the club actually leave the hand, fall under gravity and strike the floor, that is the shot to flag back to storyboard - it is the scene's whole point."
+    },
+    {
+      "id": "k4",
+      "title": "THE ROUTINE GOES ON",
+      "carries": ["SM_RV_8"],
+      "action": "For one beat the dropped club lies still on the pale floor while, beyond it and out of focus, the group carries on the routine - bodies and ribbons moving in the blur. The team does not stop. The one still object in a moving frame is the club that fell.",
+      "framing": "The club sharp in the near foreground on the floor, the continuing routine soft and out of focus behind. No faces emphasised - the beat is about the object, not the individuals.",
+      "motion": "Locked-off camera. The club is motionless on the floor; only the blurred figures move behind it. Almost still."
+    },
+    {
+      "id": "k5",
+      "title": "THE SIGNATURE",
+      "carries": ["SM_RV_8"],
+      "action": "The same club, now still and lit like a museum object against a plain dark ground, turns slowly on its axis - the identical object, the competition club now preserved. NO text, NO legible letters, NO signature and NO inked marking of any kind are shown on the wrapping: the Museum records an autograph but the digitisation does not carry it, so it is kept out of frame, never invented. The turn lands on the object itself - the club just dropped in the arena is the same club now kept in the Museum.",
+      "framing": "Full-object view of the club at moderate size against a large plain dark ground, museum-lit - a full view chosen over a macro so the slow on-axis rotation reads legibly (detail holds at this scale anyway). The red woven-tape base and gold-navy wrapping catch the light. This is the referenced object exactly, at rest. No inscription in frame.",
+      "motion": "The club rotates slowly on its axis, the wrapping catching the light as it turns. Nothing else moves.",
+      "_note": "The 'turn' beat: the object just dropped in the arena is the same object now preserved in the Museum - provenance made literal through the OBJECT, not an inscription. v1 was REJECTED because the model inked a fabricated legible 'Sydney 2000'; the SM_RV_8 digitisation bears NO autograph, so the pipeline can only invent one, and an invented mark on a real museum object is the exact fabrication this project prevents. Rule for this shot: render NO letterforms, NO signature, NO text on the club. The museum-recorded autograph lives in the ledger as recorded-not-shown, never on screen."
+    }
+  ],
+
+  "claim_ledger": {
+    "asserted": "At the Sydney 2000 Olympics the Hellenic National Team's rhythmic group, among the favourites after qualification, dropped a club during their first routine and finished third - Greece's first and only Olympic medal in rhythmic gymnastics. The digitised object is that club. The Museum records it as autographed by team member Eirini Aindili, though the autograph is not visible in the digitisation and is therefore not shown on screen. Sourced (Olympic Museum) and crosschecked against the results record.",
+    "events": {
+      "claim": "The Museum states the drop of this club cost the team valuable points and placed them on the third step of the podium, implying a higher medal was within reach.",
+      "source": "Olympic Museum caption for SM_RV_8; Sydney 2000 women's rhythmic group all-around results (olympics.com and en.wikipedia.org), read 2026-07-31. Registered shared.",
+      "confidence": 0.9,
+      "crosscheck": "SUPPORTED, and if anything conservative. Final all-around: Russia and Belarus tied on 39.500 (Russia took gold on the qualification tie-break, Belarus silver); Greece bronze on 39.283 - a gap of 0.217 to the higher medals. The two routines were '5 clubs' and '3 ribbons + 2 hoops'. Greece's ENTIRE deficit was in the CLUBS routine - the routine with the drop - scoring 19.550 against 19.800 for both leaders (a 0.250 gap), while OUTSCORING both leaders in the other routine (19.733 vs 19.700). Recovering the ~0.25 lost in the clubs routine, consistent with a single club-drop deduction under the 2000 Code of Points, would have lifted Greece to about 39.533 - above the 39.500 tie. The Museum's claim is borne out by the record.",
+      "not_shown": [
+        "WHICH of the six gymnasts dropped the club. The record does not name the individual; the autograph identifies the object's signer (Aindili), not the person who dropped it. Not asserted.",
+        "The exact FIG judge's deduction for the drop. The ~0.25 figure is inferred from the routine-score difference, not read from a published deduction sheet. Assumption, confidence 0.6.",
+        "The precise qualification standing beyond 'among the favourites' - the Museum's phrasing; the qualification scores were not independently confirmed in the results source read here."
+      ]
+    },
+    "not_asserted": [
+      "THE APPEARANCE OF THE AUTOGRAPH. The Museum records the object as signed by Aindili, but the digitisation does not show the autograph, so the film renders NO signature, name or text on the club. An earlier keyframe that inked a legible 'Sydney 2000' was rejected: rendering an invented inscription on a real museum object is exactly the fabrication this project exists to prevent. The autograph is a documented fact of the object, not a shown feature.",
+      "The identities of the gymnasts on screen. No face reference exists and nothing is claimed about any individual. Where the scene depicts the real Greek women's team, sex/age/build are stated for plausibility only, not as claims about named persons.",
+      "The precise arena, crowd, leotards and the exact staging of the drop. Dramatisation.",
+      "That the club shown is ancient. It is a 2000 competition object - see SM_RV_8."
+    ],
+    "caveat": "Unlike the ancient scenes, this is a modern, checkable event: the claim is verifiable against a public results record, which is the point of it. Where the Museum's caption and the record might diverge, the ledger follows the record."
+  }
+}

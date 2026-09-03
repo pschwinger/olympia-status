@@ -1,0 +1,130 @@
+{
+  "deliverable": "trailer-olympia",
+  "title": "Olympia — REEVALUATE trailer",
+  "revision": "v1 — 2026-08-04, the reframe: beats that DO something, not artefact product shots",
+  "target_duration_s": [45, 75],
+  "fps": 24,
+
+  "_authoring_notes": [
+    "SPINE: STORYBOARD_Olympia_v0.1.md — five beats, one per unit, through-line = RHYTHM",
+    "(ancient stillness -> worldwide beat: aulos -> equipment -> footsteps). Do not invent structure.",
+    "",
+    "FIDELITY PRINCIPLE (imagegen, measured): an artefact woven into beat action sits at 0.5-0.65",
+    "fidelity (in motion / small-in-wide); at rest + large it is 0.85-0.92. So EACH BEAT gets ONE",
+    "PROVENANCE shot — artefact large + comparatively still — which carries the claim and is where",
+    "per-glyph / per-invariant verification happens. The MOTION and CONTEXT shots compose around it",
+    "and the artefact is NOT the provenance-bearing element there (a soft artefact in a motion frame",
+    "is acceptable — the-crowning's weak wide recovered during video gen — but it proves nothing).",
+    "",
+    "INSCRIPTION STRATEGY (measured): the model NORMALISES inscriptions toward convention (TOKIO->TOKYO),",
+    "erasing exactly the deviations that prove provenance. So provenance rides in the per-asset sidecar",
+    "ledger (verified per-glyph vs the reference crop), NOT in rendered legible text. An inscription",
+    "ships legibly ONLY if it passes per-glyph verification in the OUTPUT; otherwise soft / out of frame.",
+    "Lead with FORM. Never render an inscription the object does not bear; never a LIST as legible text.",
+    "",
+    "ROUTING: artefact-in-shot beats want a keyframe (the reuse demonstration). Landscape / crowds /",
+    "maps / parades gain nothing from a still -> videogen-direct.",
+    "",
+    "REUSE: the four verified stills already shipped are the provenance anchors for their beats —",
+    "kotinos(0.92)->B1, cup form-only(0.85)->B3, shoes(0.80,TOKIO-verified)+épée(0.90)->B4."
+  ],
+
+  "beats": [
+    {
+      "beat": 1,
+      "unit": 1,
+      "name": "ORIGINS",
+      "action": "Ancient Olympia: music inseparable from the Games, the kotinos the only prize. Then Olympia is lost to time and rediscovered. The first heartbeat — lyre/aulos, sparse.",
+      "beat_line": "For a thousand years, one prize. One rhythm.",
+      "shots": [
+        { "id": "b1_prov", "role": "provenance", "carries": ["SM_RV_16"], "route": "keyframe", "reuse_still": "s6 kotinos 0.92", "framing": "the kotinos large and still, hero-lit, dark ground; dried golden-brown, open ring", "motion": "slow rotate or slow push; artefact still", "note": "carries the claim; ancient form / physically-modern object" },
+        { "id": "b1_ctx", "role": "context", "carries": [], "route": "videogen-direct", "framing": "Olympia — temple ruins uncovered, archaeological drawings, low sun through dust", "motion": "slow reveal / drift; no artefact fidelity burden" }
+      ],
+      "claim_ledger": {
+        "asserted": "The kotinos (olive wreath) was the only prize of the ancient Games. The digitised object is the kotinos awarded to judoka Ilias Iliadis at Athens 2004 — first Greek Olympic judo medal, won at SEVENTEEN (youngest Olympic judo champion; the Museum's caption said eighteen, corrected in our favour).",
+        "not_asserted": "NOT an ancient artefact — a 2004 revival of the ancient form. The Fokianos Gymnastics Manual (treatment's Beat 1 secondary) has NO digitisation — not leaned on.",
+        "caveat": "The ancient setting is dramatisation; the provenance rests on the one real digitised object (SM_RV_16) + its verified ledger."
+      }
+    },
+    {
+      "beat": 2,
+      "unit": "1-2",
+      "name": "THE REVIVAL",
+      "action": "Zappas reignites the idea in Athens; the Games revive. The revival before the revival — and the medal's reverse bears a struck olive wreath that RHYMES straight back to Beat 1's kotinos. Romantic strings rising.",
+      "beat_line": "An idea, reborn.",
+      "shots": [
+        { "id": "b2_prov", "role": "provenance", "carries": ["SM_RV_1"], "route": "keyframe", "reuse_still": null, "needs_generation": "REVERSE face — reference SM_RV_1_Medal_Coin_1.png explicitly (per-face; the registry default ref is the obverse)", "framing": "the medal REVERSE large and still — the struck olive wreath enclosing the field; the visual rhyme to the kotinos is the shot", "motion": "slow rotate", "note": "the wreath FORM carries it; Greek legend ledger-borne (latinisation-risk), never render 'Β' (phantom) or 'George A'" },
+        { "id": "b2_ctx", "role": "context", "carries": [], "route": "videogen-direct", "framing": "the renovated Panathenaic Stadium, crowd, the flame lit", "motion": "crane / reveal" }
+      ],
+      "claim_ledger": {
+        "asserted": "The medal of the Second Zappeia Olympia, Athens 1870 — held 15 Nov 1870 in the Panathenaic Stadium (restored at Zappas' expense), over 30,000 attending. The reverse's struck olive wreath rhymes to the ancient kotinos.",
+        "not_asserted": "The field does NOT read 'Β'' (that was a catalogue folder-label 'B' transposed as if inscribed; the field reads ΑΩΟ′ = 1870). NEVER 'George A' — the obverse Α' is a numeral: GEORGE I.",
+        "caveat": "The 1896 partnership-medal escalation in the treatment is out of scope for the trailer's economy; the 1870 medal carries the beat."
+      }
+    },
+    {
+      "beat": 3,
+      "unit": 3,
+      "name": "A GREEK TRIUMPH",
+      "action": "The Intercalated Games, Athens 1906: continuity, the FIRST parade of nations, the cup as prize. Ceremonial, warm, building.",
+      "beat_line": "The world came to Athens.",
+      "shots": [
+        { "id": "b3_prov", "role": "provenance", "carries": ["SM_RV_14"], "route": "keyframe", "reuse_still": "s4 cup form-only 0.85", "framing": "the Marathon Cup large and still — KANTHAROS form, two high looping handles; an ancient drinking-vessel form holding a modern race", "motion": "slow rotate", "note": "FORM carries it; the Greek legend is engraved-texture not asserted-text (won't certify glyph-by-glyph); NO '1906' rendered" },
+        { "id": "b3_ctx", "role": "context", "carries": [], "route": "videogen-direct", "framing": "decorated Athens, the parade of nations, Sherring's marathon", "motion": "parade movement — videogen-direct, a still adds nothing" }
+      ],
+      "claim_ledger": {
+        "asserted": "The Marathon commemorative cup of the 1906 Intercalated Games in Athens — a kantharos form, the first parade of nations.",
+        "not_asserted": "NO '1906' on the object (not in the digitisation). The reverse inscription is unverified — not rendered. The cup's Greek legend is shown as form/texture, not asserted glyph-by-glyph.",
+        "caveat": "1906 setting is dramatisation."
+      }
+    },
+    {
+      "beat": 4,
+      "unit": 4,
+      "name": "THE RHYTHM OF SPORT",
+      "action": "The heart of the film. Sport and music as one — equipment becomes instruments, the values carried in movement and sound. Longest, most dynamic beat: slow-motion movement synced to beats, equipment sounds layered, a held breath before an eruption. Percussion-driven, global.",
+      "beat_line": "Every sport has a sound. Together, they make music.",
+      "shots": [
+        { "id": "b4_prov_shoes", "role": "provenance", "carries": ["SM_RV_18"], "route": "keyframe", "reuse_still": "s1 shoes 0.80 (TOKIO verified per glyph) — OR re-roll to get 8.41 + TOKIO both in frame, name out", "framing": "the shoes large and still; the athlete's own ink", "motion": "slow rotate", "note": "8.41 + TOKIO shown ONLY if per-glyph verified (model reverts TOKIO->TOKYO); personal NAME out of frame, asserted in ledger" },
+        { "id": "b4_prov_epee", "role": "provenance", "carries": ["SM_RV_13"], "route": "keyframe", "reuse_still": "s5 épée 0.90", "framing": "the épée large and still — bell guard, iridescent purple-gold tempered blade", "motion": "slow reveal along the blade", "note": "form-hero, no inscription; épée not foil/sabre" },
+        { "id": "b4_motion", "role": "motion", "carries": [], "route": "videogen-direct", "framing": "slow-motion sport — a long-jump take-off, a fencing lunge — synced to the beat; the held breath then eruption", "motion": "the eruption; artefacts are NOT the provenance-bearer here" }
+      ],
+      "claim_ledger": {
+        "asserted": "Tentoglou's shoes — Tokyo 2020 long-jump gold at 8.41 m, first to retain the title since Carl Lewis in 1996. Maganoudaki's épée — women's individual épée, Athens 2004.",
+        "not_asserted": "NEVER 'only the second in history' (unsupported) — 'first since Carl Lewis'. Shoe reads TOKIO not TOKYO (object wins). NOT a foil/sabre — an épée. The rhythmic-gymnastics apparatus (SM_RV_8, Sydney 2000) and the water-polo ball are treatment options but not in this cut's six.",
+        "caveat": "Movement is dramatisation; the equipment is the real digitised objects."
+      }
+    },
+    {
+      "beat": 5,
+      "unit": 5,
+      "name": "THE WORLD RUNS AS ONE",
+      "action": "Olympic Day: the global movement, running together, unity across cultures and generations. Greece the birthplace; the flame/torch relay the link. Uplifting, footsteps forming a collective beat, voices in many languages.",
+      "beat_line": "For a few kilometres, the world runs as one.",
+      "shots": [
+        { "id": "b5_prov", "role": "provenance", "carries": ["SM_RV_12"], "route": "keyframe", "reuse_still": null, "needs_generation": "torch RETRY (v1 failed stochastically; the old s2.png on disk is the REJECTED duplicated-cities torch — do not ship it)", "framing": "the torch large and still — polished steel, the eagle gripping the Olympic rings (NO swastika); rim legend + FACKEL-STAFFEL-LAUF may show if per-glyph clean; ROUTE CROPPED OUT", "motion": "slow rotate", "note": "the engraved 11-city route is NOT rendered as a legible list (the model fabricates it — 14 labels, dupes); ledger carries the true route" },
+        { "id": "b5_ctx", "role": "context", "carries": [], "route": "videogen-direct", "framing": "maps lighting up worldwide, runners of every age and continent, streets of Greece full of runners", "motion": "global montage — videogen-direct" }
+      ],
+      "claim_ledger": {
+        "asserted": "The Berlin 1936 torch — the FIRST Olympic flame-lighting ceremony in the modern Games (lit at Olympia, 20 July 1936). The relay was created for the 1936 Games — stated here as an asserted fact, not an omission (Philipp's call). The object itself bears no swastika; the emblem is an eagle gripping the Olympic rings. Its engraved route ran Olympia -> Berlin (11 cities).",
+        "not_asserted": "The fuel was magnesium-based, NOT wax (Museum 'wax' is contradicted). The route is NOT rendered as legible city labels (asserted in ledger only). The Photographic Album 'Berlin 1936' (treatment) has no digitisation.",
+        "caveat": "The relay's 1936 Nazi-Olympics origin is stated, not hidden; the object carries no Nazi iconography."
+      }
+    }
+  ],
+
+  "close": "For a few kilometres, the world runs as one. -> REEVALUATE / Olympic Museum lock-up.",
+
+  "options_for_philipp": [
+    "CUT A — tight 45s: one provenance beat-anchor + one motion/context shot per beat, fast rhythm accelerating ancient->global.",
+    "CUT B — 60-75s: the same anchors with Beat 4 (the heart) given a second motion shot and a longer held-breath-to-eruption.",
+    "Both cuts share the six verified provenance shots; they differ in how much motion/context breathes around them."
+  ],
+
+  "standing_rules": {
+    "provenance_per_beat": "each beat has one at-rest large-artefact shot that carries the claim + verification",
+    "inscriptions": "form-forward; inscriptions ledger-borne + per-glyph-verified-if-shown; never a list as legible text; never a mark the object lacks",
+    "routing": "artefact shots = keyframe; landscape/crowds/maps/parades = videogen-direct",
+    "sidecar": "each generated asset ships <id>.ledger.json (registry_key, ref_sha256, per-item asserts, verified, not_asserted, corrections, verdict+confidence)"
+  }
+}

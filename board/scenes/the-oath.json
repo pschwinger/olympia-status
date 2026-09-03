@@ -1,0 +1,104 @@
+{
+  "scene": "the-oath",
+  "title": "Olympia - The Oath",
+  "fps": 24,
+  "revision": "v1 - 2026-07-31, first scene under the chain-driver shape",
+  "_design_notes": [
+    "1. BEAT. Accepted autonomy's proposed beat (THE OATH). It is visually the",
+    "   inverse of The Crowning - interior, dark, close, tense against golden,",
+    "   open, exterior, triumphant - which proves the pipeline is not one-look-",
+    "   only. And it is the project's own subject: a rite whose entire purpose is",
+    "   verifying a claim before allowing someone to compete. No better beat found.",
+    "2. NO ANCIENT OBJECT. There is no digitised artefact for this scene - the",
+    "   Olympia Museum set is modern throughout (1870-2020); no bronze Zeus, no",
+    "   boar, nothing ancient survives. Chosen route: the sourced ACTION carries",
+    "   the claim. The bronze Zeus Horkios is a RECONSTRUCTION from Pausanias'",
+    "   description (a thunderbolt in each hand), flagged in the ledger as not-an-",
+    "   artefact. REJECTED bringing the kotinos in as 'the thing sworn for': it is",
+    "   awarded after the games and in another place, so its presence at the oath",
+    "   would assert a timeline and geography the record does not support - the",
+    "   same class of error k5 of The Crowning avoided with chariot racing.",
+    "3. LINK TO THE CROWNING. The two scenes are joined through IDENTITY, not an",
+    "   object: the victor who swears here is the same young man crowned later.",
+    "   This scene's provenance is therefore action + identity, not object, and",
+    "   the ledger says so plainly.",
+    "4. Only victor and hellanodikes may appear in 'carries' (real refs exist).",
+    "   The bronze Zeus, boar flesh and bouleuterion have no reference and are",
+    "   generated from description - kept in prose, never declared as artefacts."
+  ],
+  "style": "Cinematic, desaturated grade, low oil-lamp and torchlight against cold bronze and dark stone, deep crushed blacks, filmic highlight rolloff, fine grain, shallow depth of field, smoke and fine particulate hanging in still air. Interior of the bouleuterion at Olympia, dim and enclosed. Photographic realism, natural skin texture, no stylisation, no modern detail, no text. Grave, close, tense.",
+  "shots": [
+    {
+      "id": "k1",
+      "title": "THE THUNDERBOLTS",
+      "carries": [],
+      "action": "A bronze figure of Zeus stands in the dim chamber, larger than a man, a forked thunderbolt raised in each hand. The metal is dark and cold, catching only a thin line of oil-lamp light along one arm and across the knuckles gripping the bolts. The chamber around it is deep shadow. Nothing else is lit.",
+      "framing": "Low angle looking up at the bronze from below, so the two raised thunderbolts loom at the top of frame against black. Tight enough that the gripping hands and the two bolts fill the upper frame; the face is high and half-lost in shadow. Provenance-bearing: a thunderbolt in EACH hand is the sourced detail and must read clearly.",
+      "motion": "Camera slowly rising. The bronze is still; only the angle climbs until the two thunderbolts stand full against the dark. Nothing in the frame moves but the camera."
+    },
+    {
+      "id": "k2",
+      "title": "THE FLESH",
+      "carries": [
+        "victor"
+      ],
+      "action": "On a block of cold stone lie strips of freshly cut boar flesh, dark and wet. A young man's hand comes down and rests flat upon them, fingers spread, pressing. Only the hand and forearm enter frame; the end of a red woollen ribbon from his brow hangs just into the top edge. The flesh glistens in the low lamplight.",
+      "framing": "Tight, near top-down close-up on the stone, the boar flesh and the hand. Provenance-bearing and framed tight. The hand is the referenced victor - same skin, same red brow-ribbon.",
+      "motion": "Locked-off camera. The hand descends the last inch and presses flat onto the flesh, then stills. Nothing else moves."
+    },
+    {
+      "id": "k3",
+      "title": "THE OATH",
+      "carries": [
+        "victor"
+      ],
+      "action": "The young athlete - the same young man who will later be crowned - stands swearing before the looming bronze Zeus behind and above him. His face is lit low and hard by a single oil lamp, half in shadow, jaw set, eyes open and fixed upward on the bronze, lips parted mid-oath. Grave, resolute, under scrutiny - not triumphant. Behind him the dark mass of the bronze and one raised thunderbolt catch a thin highlight. NO wreath is present: he has not yet won.",
+      "framing": "Medium close on his face and shoulders, the bronze Zeus a looming dark presence filling the space behind and above him. Single hard side light, everything else crushed to black.",
+      "motion": "Locked-off camera. He draws one breath and speaks the oath, lips moving, eyes never leaving the bronze; his jaw tightens on the last word. Almost no other movement.",
+      "mentions_not_artefact": [
+        "SM_RV_16"
+      ],
+      "_why_not_artefact": "The prose names the wreath only to NEGATE it. The oath precedes the victory; the kotinos is deliberately absent."
+    },
+    {
+      "id": "k4",
+      "title": "THOSE WHO SWEAR TOO",
+      "carries": [
+        "hellanodikes"
+      ],
+      "action": "Beside and behind the young man, older men swear too - his father and his trainer, hands raised or resting on the stone - and the grey-bearded hellanodikes in his deep-red chiton presides, his own hand lifted in oath. A knot of grave, half-lit faces in the lamplight. Sourced: fathers, brothers and trainers swore alongside the athlete, and the hellanodikai swore to judge justly.",
+      "framing": "Group medium shot in the dim, the hellanodikes anchoring one side, the older men clustered close. Faces half-lost in shadow. The lower body of the bronze Zeus and one thunderbolt just enter the frame edge, presiding over all of them.",
+      "motion": "Locked-off camera. The men lift their hands and speak the oath together, a low collective murmur; the lamp flame wavers once. Restrained, almost still."
+    },
+    {
+      "id": "k5",
+      "title": "THE CHAMBER",
+      "carries": [],
+      "action": "The whole dim chamber of the bouleuterion: the small knot of swearing figures gathered at the foot of the towering bronze Zeus, the two thunderbolts raised over them all. Columns recede into black. Smoke and fine dust hang in the shafts of lamplight. The figures are small and no faces are readable. Enclosed, oppressive, still.",
+      "framing": "Interior wide from high and behind, the bronze dominating the frame, the men small below it. Deep shadow throughout.",
+      "motion": "Camera slowly pulling back and rising, the group shrinking beneath the bronze as the dark chamber closes around them. Nothing else moves.",
+      "_note": "Deliberately carries NO identity and NO artefact - the figures are too small to read, so declaring either would be a claim the frame cannot support. Mirrors k5 of The Crowning: an honest wide that asserts nothing it cannot show."
+    }
+  ],
+  "claim_ledger": {
+    "asserted": "Before the games, in the bouleuterion at Olympia, athletes swore before a bronze Zeus Horkios - 'Zeus who presides over oaths', holding a thunderbolt in each hand - on strips of freshly cut boar flesh, that they would compete fairly, would neither give nor take a bribe, and had trained for ten consecutive months. Their fathers, brothers and trainers swore too, and the hellanodikai swore to judge justly. Sourced (Pausanias, via Perseus).",
+    "events": {
+      "claim": "The oath rite as shown - location (bouleuterion), the bronze Zeus Horkios with a thunderbolt in each hand, the boar-flesh gesture, the substance of the oath (fair competition, no bribes, ten months' training), and that trainers and kin swore alongside the athlete while the hellanodikai swore to judge justly.",
+      "source": "Pausanias, Description of Greece 5.24.9-11, via Perseus Digital Library. Registered shared.",
+      "confidence": 0.85,
+      "not_shown": [
+        "The verbatim words of the oath beyond their substance - Pausanias records the content, not a transcript.",
+        "The ZANES - the row of bronze Zeus statues funded by fines levied on cheats, standing along the way into the stadium. A related sourced detail, omitted for scene economy, not doubt.",
+        "The exact architecture of the bouleuterion and the appearance of the bronze Zeus beyond 'bronze, a thunderbolt in each hand'. Reconstruction."
+      ]
+    },
+    "not_asserted": [
+      "THIS SCENE CONTAINS NO DIGITISED MUSEUM ARTEFACT. Unlike The Crowning, no real ancient object anchors it - none survives. Its provenance rests on the sourced ACTION (the recorded oath) and the reused IDENTITY (the victor), not on an object.",
+      "The bronze Zeus Horkios in frame is a RECONSTRUCTION from Pausanias' description (bronze, a thunderbolt in each hand). It is not a digitised artefact and is not claimed as one.",
+      "The kotinos is deliberately ABSENT. It is awarded after the games and in another place; showing it at the oath would assert a timeline and geography the record does not support. The two scenes are linked through the victor's identity instead - the same young man swears here and is crowned later.",
+      "The faces of any man, their dress, and the exact staging. Dramatisation.",
+      "The altar's form and the handling of the boar flesh beyond 'strips of freshly cut boar'. Left as recorded, not elaborated."
+    ],
+    "caveat": "Pausanias wrote in the 2nd c. AD about rites he may not have witnessed. The film shows what was recorded, not what was witnessed."
+  }
+}

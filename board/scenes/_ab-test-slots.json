@@ -1,0 +1,35 @@
+{
+  "title": "A/B slot test",
+  "style": "Cinematic, desaturated teal-and-amber grade, warm low sun against cool stone shadow, crushed blacks, filmic highlight rolloff, fine grain, shallow depth of field, dust in the light. Ancient Olympia. Photographic realism, natural skin texture, no stylisation, no modern detail, no text.",
+  "shots": [
+    {
+      "id": "A-old",
+      "title": "CONTROL — free prose",
+      "carries": [],
+      "action": "High above the sanctuary of Olympia, the festival continues around the single crowned man below. The stadium is a long plain rectangular running ground. Runners are mid-race down ONE SIDE of it. THE OTHER HALF OF THE STADIUM, ALONG ITS FULL LENGTH, IS COMPLETELY EMPTY GROUND - a long open corridor of bare earth with NO people standing in it, NO spectators at its far end, and NO other athletes crossing it. A single javelin thrower stands at the near end of that empty corridor, mid-run-up, and throws ALONG the corridor, away from the camera and away from every other person in frame - his javelin is IN THE AIR, clear of his hand, in flight low over the empty ground, with the whole length of the stadium ahead of it and nobody in its path. Far down that empty ground, well beyond where the javelin will fall, two officials stand well to the SIDE of the corridor, watching. Wrestlers and their ring of spectators are on the separate open ground BEYOND the stadium wall, never inside the throwing corridor. Late sun, dust, small figures, no faces readable.",
+      "framing": "Very high aerial, slow drone descent and drift across the sanctuary, temple roofs and the treasury terrace passing beneath. Late golden hour, long shadows raking east.",
+      "motion": "Single continuous aerial move, slow forward drift while descending gently. The events below continue at their own pace. No cuts."
+    },
+    {
+      "id": "B-slots",
+      "title": "VARIANT — GenHQ slots",
+      "carries": [],
+      "image_type": "Cinematic film still, photoreal, shot on a real location.",
+      "subject_action": "Runners are mid-race down one side of a long rectangular stadium. A single javelin thrower stands at the near end of the empty half, front foot planted and braked, throwing arm extended through the release — his javelin is IN THE AIR, clear of his hand, in flight low over open ground. Two more javelins already lie fallen far down the field. Beyond the stadium wall, wrestlers grapple inside a ring of standing spectators.",
+      "shot_type": "Very high wide aerial establishing shot of the whole sanctuary.",
+      "camera_angle": "Steep high angle looking down, roughly 60 degrees, the stadium running diagonally across frame.",
+      "lens": "24mm wide-angle, f/8, deep depth of field — everything from the near wall to the far end sharp.",
+      "spatial_composition": "THE DECISIVE ELEMENT. The stadium is divided lengthwise. Runners occupy ONE half only. THE OTHER HALF IS A COMPLETELY EMPTY CORRIDOR of bare earth running the full length of the stadium — NO people standing in it, NO spectators at its far end, NO athletes crossing it. The thrower is at the near end of that corridor and throws ALONG it, away from camera and away from every other person in frame. The two officials stand well OUTSIDE the corridor, to its side. The wrestling ring and its crowd are entirely BEYOND the stadium wall, never inside the throwing ground. Nothing and nobody is downrange of the javelin.",
+      "environment": "The sanctuary of Olympia in late afternoon. Temple roofs, a treasury terrace and stone boundary walls in the foreground, dry dust and parched earth, scattered olive and cypress beyond the walls.",
+      "lighting": "Low golden-hour sun raking from the west, long hard shadows thrown east across the dust, warm bounce off bare earth.",
+      "colour_grade": "Warm amber and dust-ochre, desaturated greens, crushed cool shadows.",
+      "mood": "Vast, unhurried, a whole festival continuing at its own pace — scale without spectacle.",
+      "technical": "35mm film emulation, Kodak Portra 400, fine grain, slight atmospheric haze with depth layering.",
+      "motion": "Single continuous aerial move, slow forward drift while descending gently. The events below continue at their own pace. No cuts.",
+      "mentions_not_artefact": [
+        "SM_RV_16"
+      ],
+      "_note": "ENVIRONMENT says \"scattered olive and cypress\" — olive TREES in the landscape, not the museum kotinos. Answered on the record rather than silenced."
+    }
+  ]
+}

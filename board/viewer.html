@@ -1,0 +1,46 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Viewer</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Archivo:wght@500;700&display=swap">
+<style>
+  html,body{height:100%;margin:0;background:#0b0d08;color:#dce0d2;font-family:"Archivo",system-ui,sans-serif}
+  .hud{position:fixed;top:0;left:0;right:0;z-index:5;display:flex;align-items:center;gap:14px;padding:11px 16px;background:linear-gradient(rgba(11,13,8,.94),rgba(11,13,8,0));pointer-events:none}
+  .hud b{font-size:14px}
+  .hud .tip{margin-left:auto;font-family:"IBM Plex Mono",monospace;font-size:10.5px;color:#7f846d;letter-spacing:.04em}
+  .stage{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;overflow:auto}
+  video{max-width:100vw;max-height:100vh;background:#000;outline:none}
+  .imgwrap{min-width:100%;min-height:100%;display:flex;align-items:center;justify-content:center;padding:48px 16px 16px}
+  img{max-width:96vw;max-height:92vh;cursor:zoom-in;transition:transform .12s;image-rendering:auto}
+  img.z2{max-width:none;max-height:none;width:200%;cursor:zoom-in}
+  img.z4{max-width:none;max-height:none;width:400%;cursor:zoom-out}
+  .btns{position:fixed;bottom:14px;left:50%;transform:translateX(-50%);z-index:5;display:flex;gap:8px}
+  .btns button{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.06em;padding:7px 12px;border-radius:7px;border:1px solid #363b2a;background:rgba(26,29,20,.88);color:#dce0d2;cursor:pointer}
+  .btns button:hover{border-color:#cf9748;color:#cf9748}
+</style></head><body>
+<div class="hud"><b id="name"></b><span class="tip" id="tip"></span></div>
+<div class="stage" id="stage"></div>
+<div class="btns" id="btns"></div>
+<script>
+  var q=new URLSearchParams(location.search);
+  var type=q.get('type')||'video', src=q.get('src')||'', name=q.get('name')||'';
+  document.title=name||type; document.getElementById('name').textContent=name;
+  var st=document.getElementById('stage'), tip=document.getElementById('tip'), btns=document.getElementById('btns');
+  if(type==='image'){
+    tip.textContent='click image to zoom 1x → 2x → 4x · scroll to pan · Esc closes';
+    st.innerHTML='<div class="imgwrap"><img id="im" src="'+src+'" alt=""></div>';
+    var im=document.getElementById('im'), lv=0;
+    im.addEventListener('click',function(){lv=(lv+1)%3;im.className=lv===1?'z2':lv===2?'z4':'';});
+    btns.innerHTML='<button onclick="document.getElementById(\'im\').className=\'\';lv=0">fit</button><button onclick="document.getElementById(\'im\').className=\'z2\';lv=1">2x</button><button onclick="document.getElementById(\'im\').className=\'z4\';lv=2">4x</button><button onclick="window.close()">close</button>';
+  } else {
+    tip.textContent='space = play/pause · ← → = step · Esc closes';
+    st.innerHTML='<video id="vd" controls autoplay playsinline src="'+src+'"></video>';
+    var vd=document.getElementById('vd');
+    btns.innerHTML='<button onclick="vd.currentTime=0;vd.play()">restart</button><button onclick="vd.playbackRate=vd.playbackRate===1?0.25:1;this.textContent=vd.playbackRate===1?\'slow-mo\':\'normal speed\'">slow-mo</button><button onclick="window.close()">close</button>';
+    document.addEventListener('keydown',function(e){
+      if(e.key===' '){e.preventDefault();vd.paused?vd.play():vd.pause();}
+      if(e.key==='ArrowRight'){vd.pause();vd.currentTime=Math.min(vd.duration||0,vd.currentTime+1/24);}
+      if(e.key==='ArrowLeft'){vd.pause();vd.currentTime=Math.max(0,vd.currentTime-1/24);}
+    });
+  }
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')window.close();});
+</script>
+</body></html>

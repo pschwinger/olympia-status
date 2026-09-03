@@ -1,0 +1,150 @@
+{
+  "title": "TRAILER A — \"The Flame Never Went Out\" (Units 1–3 + 5)",
+  "_thesis": "The historical spine. An idea is buried, dug up, restarted, carried, and handed to everybody. Ceremonial tempo, long holds, chronological.",
+  "_hard_rule": "NO ARTEFACT APPEARS ALONE. Every shot declares its artefact in `carries` AND shows a human hand or body using it — placed, pressed, gripped, carried, lifted. A shot where the object floats in clean space is a spec defect, not a style choice. This is the correction of the 2026-08-04 trailer, in which all eleven shots had carries:[] and zero shots put an artefact and a person in the same frame.",
+  "style": "Cinematic, desaturated teal-and-amber grade, warm low sun against cool stone shadow, crushed blacks, filmic highlight rolloff, fine grain, shallow depth of field, dust in the light. Photographic realism, natural skin texture, no stylisation, no modern detail, no text or captions anywhere in frame. NO Olympic rings, NO national flags, NO federation emblems, NO sponsor boards, NO banners with lettering anywhere in frame including far background and out of focus: generated emblems come out malformed and the rings are a restricted mark, so a blurred approximation is a liability rather than set dressing.",
+  "shots": [
+    {
+      "id": "a1",
+      "title": "U1 · THE ONLY PRIZE — the wreath is placed",
+      "carries": [
+        "SM_RV_16",
+        "victor",
+        "hellanodikes"
+      ],
+      "image_type": "Cinematic film still, photoreal, shot on a real location, no text or captions anywhere in frame.",
+      "subject_action": "An older judge lowers the olive wreath onto the head of a young athlete with both hands. The wreath is ALREADY TOUCHING his hair — the moment of contact, not the approach. The young man's eyes are closed. The judge's fingers are still on the ring, about to let go.",
+      "shot_type": "Tight two-shot, chest up, the wreath at the exact centre of frame.",
+      "camera_angle": "Slightly low, looking up past the young man's jaw to the wreath and the judge's hands above it.",
+      "lens": "85mm, f/2.2 — the wreath and the hands sharp, the sanctuary behind dissolved to warm bokeh.",
+      "spatial_composition": "The young man's head occupies the LOWER CENTRE. The wreath and the judge's two hands occupy the CENTRE BAND. The UPPER THIRD is open warm sky so the wreath reads in silhouette against light, never lost against the crowd. No third figure breaks the silhouette of either head.",
+      "environment": "The sanctuary of ancient Olympia in late afternoon, olive trees and pale limestone far behind, out of focus. NO Olympic rings, NO national flags, NO federation emblems, NO sponsor boards, NO banners with lettering anywhere in frame including far background and out of focus: generated emblems come out malformed and the rings are a restricted mark, so a blurred approximation is a liability rather than set dressing.",
+      "lighting": "Warm low sun from behind and frame right, rim-lighting the wreath's leaves so each one separates; soft bounce on the faces.",
+      "colour_grade": "Warm gold and bone, deep green in the leaves, cool shadow under the brow.",
+      "mood": "Reverent, quiet, the single instant a life changes.",
+      "technical": "35mm film emulation, Kodak Portra 400, fine grain, atmospheric haze with depth layering.",
+      "framing": "Tight two-shot, chest up, the wreath at the exact centre of frame.",
+      "action": "An older judge lowers the olive wreath onto the head of a young athlete with both hands, at the moment of contact.",
+      "motion": "Locked-off. Movement: the camera holds one fixed position. Speed: completely still. Framing: never changes. End: identical framing. The ONLY motion is the judge's hands releasing the wreath and settling away, and the young man's breath."
+    },
+    {
+      "id": "a2",
+      "title": "U1 · THE REVIVAL — the 1870 medal pressed into a hand",
+      "carries": [
+        "SM_RV_1"
+      ],
+      "image_type": "Cinematic film still, photoreal, shot on a real location, no text or captions anywhere in frame.",
+      "subject_action": "Two pairs of hands in 1870s dress. One presses the struck medal firmly into the other's open palm and closes the fingers over it. The receiving hand is calloused, an athlete's. Neither face is in frame.",
+      "shot_type": "Extreme close on the two pairs of hands, the medal filling the centre.",
+      "camera_angle": "Straight-on, level with the hands, chest height.",
+      "lens": "100mm macro, f/2.8 — the medal's relief sharp, the sleeves and the stadium beyond soft.",
+      "spatial_composition": "The two hands and the medal form a single tight cluster in the CENTRE THIRD. The LEFT and RIGHT thirds are open, softly-focused stadium light with no other figure intruding. The medal face is angled to catch the key so its relief reads as depth, never flat.",
+      "environment": "The renovated Panathenaic Stadium, Athens 1870, marble tiers and a packed crowd far behind and entirely out of focus. NO Olympic rings, NO national flags, NO federation emblems, NO sponsor boards, NO banners with lettering anywhere in frame including far background and out of focus: generated emblems come out malformed and the rings are a restricted mark, so a blurred approximation is a liability rather than set dressing.",
+      "lighting": "Hard afternoon key from frame left raking ACROSS the medal's surface so the struck relief throws its own micro-shadows.",
+      "colour_grade": "Warm bronze and skin, cool white marble haze behind.",
+      "mood": "Private, weighty, a transaction that matters more than it looks.",
+      "technical": "35mm film emulation, Kodak Portra 400, fine grain, atmospheric haze with depth layering.",
+      "framing": "Extreme close on the two pairs of hands, the medal filling the centre.",
+      "action": "One pair of hands presses the 1870 medal into another's palm and closes the fingers over it.",
+      "motion": "Locked-off macro. Movement: fixed camera. Speed: still. Framing: unchanged. End: the receiving fingers have fully closed over the medal, hiding it. The ONLY motion is the hands.",
+      "mentions_not_artefact": []
+    },
+    {
+      "id": "a3",
+      "title": "U2 · AN IDEA REBORN — the 1896 medal turned over",
+      "carries": [
+        "SM_RV_6"
+      ],
+      "image_type": "Cinematic film still, photoreal, shot on a real location, no text or captions anywhere in frame.",
+      "subject_action": "A young athlete in 1890s white kit stands holding the commemorative medal in both hands, head bowed over it, TURNING IT OVER slowly to look at the other face. His thumb rests on the rim.",
+      "shot_type": "Medium close, waist up, the athlete filling the right half, the medal held forward toward camera.",
+      "camera_angle": "Slightly high, looking down over his shoulder at what he is looking at.",
+      "lens": "50mm, f/2.0 — the medal and his hands sharp, his face softening, the stadium gone.",
+      "spatial_composition": "The athlete and his hands occupy the RIGHT HALF. The LEFT HALF is open bright marble, empty, so the eye lands on the medal first and the figure second. The medal sits on the upper-left diagonal of his hands, never edge-on, never centred dead flat.",
+      "environment": "The marble apron of the Panathenaic Stadium, 1896, bright stone and a blurred crowd far beyond. NO Olympic rings, NO national flags, NO federation emblems, NO sponsor boards, NO banners with lettering anywhere in frame including far background and out of focus: generated emblems come out malformed and the rings are a restricted mark, so a blurred approximation is a liability rather than set dressing.",
+      "lighting": "Bright bounced daylight off white marble, soft and even on the hands, one specular kick travelling across the medal's face.",
+      "colour_grade": "Bright bone-white marble, warm bronze in the medal, soft neutral skin.",
+      "mood": "Private wonder in the middle of a public event.",
+      "technical": "35mm film emulation, Kodak Portra 400, fine grain, atmospheric haze with depth layering.",
+      "framing": "Medium close, waist up, the athlete filling the right half.",
+      "action": "A young athlete turns the 1896 commemorative medal over in his hands, looking at it.",
+      "motion": "Very slow push in on the hands. Movement: the camera advances a short, steady distance toward the medal. Speed: slow and even. Framing: the medal stays in the upper-left of his hands throughout. End: the medal fills more of frame, still held. The athlete's hands keep turning it.",
+      "mentions_not_artefact": []
+    },
+    {
+      "id": "a4",
+      "title": "U2 · THE FLAME IS CARRIED — the torch at full stride",
+      "carries": [
+        "SM_RV_12"
+      ],
+      "image_type": "Cinematic film still, photoreal, shot on a real location, no text or captions anywhere in frame.",
+      "subject_action": "A relay runner at full stride, the steel torch gripped high in his right fist, flame streaming back over his knuckles. His arm is extended and locked, his body leaning into the run. Roadside spectators are a blurred wall behind him.",
+      "shot_type": "Medium tracking shot from the side, the runner from thigh to fist, the torch at the top of frame.",
+      "camera_angle": "Low three-quarter from the front-side, looking slightly up so the flame reads against open sky.",
+      "lens": "85mm, f/2.0 — the fist and the torch shaft sharp, the crowd smeared into motion blur.",
+      "spatial_composition": "The runner's raised fist and the torch occupy the UPPER RIGHT. A CLEAR BAND OF OPEN SKY fills the upper LEFT so the flame has empty space to stream into and never crosses a face or a building. The crowd is a low horizontal blur confined BELOW the torch. FRAME ENDS BELOW THE EAGLE-AND-RINGS: the engraved relay route down the shaft is OUT OF FRAME.",
+      "environment": "A dusty European road on the 1936 relay route, a low blurred crowd on both verges, open sky above. NO Olympic rings, NO national flags, NO federation emblems, NO sponsor boards, NO banners with lettering anywhere in frame including far background and out of focus: generated emblems come out malformed and the rings are a restricted mark, so a blurred approximation is a liability rather than set dressing.",
+      "lighting": "Hard low sun from behind, backlighting the flame so it glows translucent orange; the steel shaft catches one hard specular line.",
+      "colour_grade": "Cool steel and dust-grey, one hot orange flame, desaturated everything else.",
+      "mood": "Urgent, forward, something being handed across a continent.",
+      "technical": "35mm film emulation, Kodak Portra 400, fine grain, atmospheric haze with depth layering.",
+      "framing": "Medium tracking shot from the side, torch at the top of frame.",
+      "action": "A relay runner runs at full stride with the steel torch gripped high, flame streaming back.",
+      "motion": "Lateral tracking shot matching the runner's pace. Movement: the camera runs alongside him at his speed. Speed: fast and steady. Framing: his fist and the torch stay in the upper right for the whole shot. End: same framing, still running. No cuts.",
+      "mentions_not_artefact": []
+    },
+    {
+      "id": "a5",
+      "title": "U3 · THE WORLD CAME TO ATHENS — the cup lifted",
+      "carries": [
+        "SM_RV_14"
+      ],
+      "image_type": "Cinematic film still, photoreal, shot on a real location, no text or captions anywhere in frame.",
+      "subject_action": "Seen from BELOW and slightly behind: an exhausted marathon runner's raised arms and hands gripping the two handle loops of a cup held high above him. THE BOWL OF THE CUP IS CROPPED OFF THE TOP EDGE OF FRAME — only its STEMMED FOOT, its UNDERSIDE and the two HANDLE LOOPS are visible, together with his gripping hands and forearms. His upturned face is in the lower third, eyes closed, emptied. NO part of the cup's outer bowl face is in frame.",
+      "shot_type": "Low, tight, looking steeply upward past his face to his hands and the underside of the cup, the bowl cropped off the top of frame.",
+      "camera_angle": "Extreme low angle from almost directly beneath, looking up.",
+      "lens": "24mm wide from below, f/4 — hands, handles and the cup's underside sharp; the stadium a bright blur beyond.",
+      "spatial_composition": "The runner's upturned face sits in the LOWER THIRD. His forearms rise as two strong diagonals to the TOP CORNERS. His hands and the two HANDLE LOOPS occupy the UPPER BAND. The CUP'S BOWL IS CUT OFF BY THE TOP EDGE OF FRAME — only its stemmed foot and underside show, in the very top of frame against blown-out sky. THERE IS NO INSCRIBABLE SURFACE ANYWHERE IN FRAME: no bowl face, no engraved band, no rim legend, NO text, NO numerals, NO characters of any kind. The only cup surfaces visible are the smooth underside and the plain handle loops.",
+      "environment": "A packed 1906 Athens stadium, bunting on the rails, dust hanging in the air, hats and pale summer clothing. NO Olympic rings, NO national flags, NO federation emblems, NO sponsor boards, NO banners with lettering anywhere in frame including far background and out of focus: generated emblems come out malformed and the rings are a restricted mark, so a blurred approximation is a liability rather than set dressing.",
+      "lighting": "Hard sun almost directly behind the cup, blowing the sky white and rim-lighting his forearms and the handle loops; his face lit by bounce off the pale track.",
+      "colour_grade": "Blown white sky, the cup near-black, the runner warm and dusty, the crowd bleached — high contrast, deliberately losing all detail inside the cup's outline.",
+      "mood": "Depleted triumph — the cost is visible in the body.",
+      "technical": "35mm film emulation, Kodak Portra 400, fine grain, heavy backlit flare and halation around the cup's edge, atmospheric haze with depth layering.",
+      "framing": "Low wide shot, the runner full-length, the cup at the top of frame.",
+      "action": "From below, a marathon runner's hands grip the cup's handles overhead; only the foot, underside and handles are in frame.",
+      "motion": "Locked-off. Movement: fixed camera. Speed: still. Framing: unchanged. THE CUP'S BOWL STAYS CROPPED OFF THE TOP EDGE OF FRAME for the entire shot and NEVER descends into view. No engraved surface, lettering or numerals may appear at any point. The ONLY motion is his chest heaving, his fingers adjusting on the handles, and dust drifting. End: identical framing.",
+      "mentions_not_artefact": [],
+      "_legend_fix": "The first render put the cup's inscribed face square to camera and the model produced GARBLED GREEK: line 2 read ΑΓΩΝΕΣ correctly, line 1 read ΟΙΥΜΓΙΑΛΟΙ which is not a word (ΟΛΥΜΠΙΑΚΟΙ), line 3 unreadable. SM_RV_14 is graded FORM ONLY and its legend is explicitly not asserted, and the shot already carried a blanket no-text rule which the render ignored. An instruction layer cannot stop text appearing — only FRAMING can. So the fix is geometric, not verbal: the inscribed face is turned bodily away from camera and the cup is backlit into near-silhouette. There is no surface for a legend to be wrong on.",
+      "_legend_fix_v2": "FIRST FIX FAILED AT THE MOTION STAGE, NOT THE KEYFRAME. Turning the inscribed face away worked perfectly in the still — verified at 3x, no lettering anywhere. Then the video model ROTATED THE CUP toward camera across the five seconds, in direct contradiction of a motion prompt that said it must not, and re-synthesised the hidden face. What came back was worse than the original defect: 'ΟΛΥΜΠΙΑΚΟΣ' (wrong grammatical form), garbled Greek-Latin letterforms, and '196' — a mangled date on an object whose registry entry says '1906 is NOT visible, do NOT render it'. LESSON: framing the KEYFRAME is necessary and NOT sufficient. A hidden surface is not an absent surface — the motion model will invent whatever it rotates into view. The only fix that survives animation is to leave NO SURFACE DETAIL TO INVENT.",
+      "_fix_v3": "THIRD ATTEMPT. Turning the face away failed (motion rotated it back). Silhouetting failed WORSE — the model PAINTED GOLD LETTERING ONTO THE BLACK SHAPE ('OLYMIPACK CGWIS AGONES DIEHENIS E ATHNAIS', gibberish). It does not need surface detail to invent text; it needs only a plausible PLACE for text. So the only remaining move is to give it no place: the bowl — the entire inscribable surface — is CROPPED OUT OF FRAME. What remains is the stemmed foot, the underside, the handle loops and his hands. There is no inscribable region inside the frame, so no rotation, push-in or hallucination can put one there."
+    },
+    {
+      "id": "a6",
+      "title": "U5 · THE WORLD RUNS AS ONE — the flame reaches the crowd",
+      "carries": [
+        "SM_RV_12"
+      ],
+      "image_type": "Cinematic film still, photoreal, shot on a real location, no text or captions anywhere in frame.",
+      "subject_action": "PRESENT DAY, TWENTY-FIRST CENTURY. Hundreds of ordinary modern people of every age and background fill a wide city street on a mass fun-run, running toward camera, loose and unhurried, some talking, children among them. They wear CONTEMPORARY running clothes — technical t-shirts, vests and shorts, modern running shoes, caps, a few in leggings. In their midst ONE runner carries the lit steel torch at shoulder height. The people around her are not watching it; they are just running with her.",
+      "shot_type": "Wide low shot from the centre of the street, the torch-bearer in the front rank of an oncoming crowd.",
+      "camera_angle": "Low, just above road level, looking straight up the street into the oncoming mass.",
+      "lens": "35mm, f/4 — the torch-bearer and the front rank sharp, the mass behind softening into haze.",
+      "spatial_composition": "The torch-bearer runs slightly LEFT OF CENTRE with the flame in a CLEAR POCKET OF OPEN AIR above the heads — no other runner's head or arm crosses into that pocket. The crowd fills the CENTRE and MIDDLE DISTANCE. A CLEAR STRIP of open road stays in the immediate foreground so the crowd arrives into space. THE TORCH IS SMALL IN FRAME — it reads as a shape with a flame, not as an inscribed object. Its engraved rim, shaft legend and emblem are NOT resolvable at this distance and must not be rendered as legible detail.",
+      "environment": "A broad sunlit European city street TODAY: modern parked cars at the kerb, contemporary shopfronts with plain frontages, street furniture, plane trees. EXPLICITLY NOT PERIOD — no 1930s or 1940s dress anywhere, no flat caps, no fedoras, no vintage tailoring, no historic vehicles, no sepia treatment. This is the only contemporary shot in the film and it must read unmistakably as the present day. NO Olympic rings, NO national flags, NO federation emblems, NO sponsor boards, NO banners with lettering anywhere in frame including far background and out of focus: generated emblems come out malformed and the rings are a restricted mark, so a blurred approximation is a liability rather than set dressing. No legible signage or brand marks.",
+      "lighting": "Warm low sun straight down the street behind the crowd, backlighting everyone, the flame reading hot against the shaded near side.",
+      "colour_grade": "Golden warm highlights, soft neutral midtones, gently lifted shadows — a clean CONTEMPORARY digital grade, no sepia, no vintage film wash, no period colour treatment.",
+      "mood": "Uplifting, communal, present-tense — ordinary people of today at scale, the sacred thing carried casually among them.",
+      "technical": "35mm film emulation, Kodak Portra 400, fine grain, atmospheric haze with depth layering.",
+      "framing": "Wide low shot from the centre of the street, the torch-bearer in the front rank.",
+      "action": "In a present-day mass city fun-run, one runner carries the lit torch at shoulder height among hundreds of ordinary modern runners.",
+      "motion": "LOCKED OFF. Movement: the camera holds ONE fixed position and does NOT push in, dolly, crane, zoom or drift at any point. Speed: completely still. Framing: identical from first frame to last. THE TORCH MUST NOT GROW IN FRAME. It stays the same small size throughout, far enough away that its engraved rim and shaft NEVER resolve into readable or character-like marks — no letterforms, no numerals, no emblem detail. If any engraving becomes legible the shot has failed. The ONLY motion is the crowd running toward camera and the flame guttering. End: identical framing, the torch the same size it started. No cuts.",
+      "mentions_not_artefact": [
+        "SM_RV_18",
+        "SM_RV_19"
+      ],
+      "_period_fix": "The first render put the Unit 5 crowd in 1930s-40s dress, which inverts the whole film: the arc is supposed to ARRIVE at the present day and instead ended in the past. Not the model's error — five of the six shots around it are explicitly historical, so period was the overwhelming contextual prior and nothing in this shot contradicted it. The generator never sees the running order. A shot that breaks its sequence's period has to say so ITSELF.",
+      "_why_not_artefact": "Making this shot explicitly contemporary introduced the words 'modern running shoes', which match BOTH museum shoe artefacts. The footwear here is ordinary present-day trainers on hundreds of anonymous members of the public — it is NOT SM_RV_18 (Tentoglou, Tokyo 2020) and NOT SM_RV_19 (Mygiakis, Moscow 1980), and neither reference may be threaded into this frame. The only museum object in this shot is the torch.",
+      "_torch_legend_fix": "THIRD INSTANCE OF ONE DEFECT, and the pattern is now unmistakable. The b4 fencing shot rendered Olympic rings under a no-signage rule; a5 rendered a garbled Greek legend under a no-text rule; and here the SLOW PUSH-IN enlarged the torch until its engraved rim and shaft resolved into character-like marks that are not the verified legend. The keyframe was fine — the torch was small and unresolved. The MOTION broke it, exactly as it broke a5. GENERAL RULE, now applied rather than restated: a museum object carrying engraved text must be SILHOUETTED, OUT OF FRAME, or SMALL ENOUGH THAT NO CHARACTER-LIKE MARK RESOLVES — and the motion must be unable to change which of those is true. Instructions do not hold; geometry does, and only if the camera cannot undo it."
+    }
+  ]
+}

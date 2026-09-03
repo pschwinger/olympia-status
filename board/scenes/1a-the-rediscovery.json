@@ -1,0 +1,212 @@
+{
+  "scene": "1a-the-rediscovery",
+  "title": "Olympia — 1a · The Rediscovery of Olympia (the dig, 1875–81)",
+  "unit": "1a",
+  "fps": 24,
+  "revision": "v2 — 2026-08-22 · after Philipp's v1 review: drums bigger + more (per the 1875/76 photo + the 20.7 m temple), characters react to the block",
+  "_method": [
+    "ONE SCENE, THREE SHOTS — wide / medium / close — of the same moment: the German excavation",
+    "at the Temple of Zeus, 1875–81, with a large local workforce. Per Philipp: storyboard first,",
+    "character design sheet second, then ONE generation, gated.",
+    "",
+    "GENHQ CROSS-CHECK (empirica-workspace/.claude/skills/genhq-ai-image, from ffp-business/creative/genhq):",
+    "  • 'Hero Image First': create ONE perfect hero image, then derive every other angle from it with",
+    "    a consistent character. -> Our hero = the WIDE of the dig (it carries the characters); the",
+    "    medium and close are DERIVED from it, not generated independently.",
+    "  • Consistency method #1 = Nano Banana Pro single reference (Higgsfield; up to 8 refs).",
+    "    Reference each upload explicitly ('the man in @image1 is ...'); pair the reference with a",
+    "    written description; CHAIN: use each output as the next shot's reference (locks details; watch",
+    "    drift over many steps — we have only 3).",
+    "  • Aspect ratio is set by the FIRST reference image -> pre-size refs to 1920x1080 before upload.",
+    "  • 'Upscale before video' (Magnific / Topaz) — keyframes go to videogen upscaled, never raw.",
+    "  • 'Taste > tools': vary angles; avoid the straight-on default.",
+    "",
+    "CHARACTER DESIGN SHEET (to generate FIRST — this is the new step): a rendered reference of",
+    "our two character types, so imagegen has an image to keep consistent, not just prose.",
+    "The sheet is itself generated FROM the archival crops (refs 1a-ref1 crops) + the written",
+    "character sheet, then verified against the NEVER lists before it is allowed to seed anything.",
+    "",
+    "PROVENANCE RULE (unchanged): no face is a portrait of a named person; no find is staged;",
+    "every claim cites a ref; the real 1829 plate appears as itself. Context scene — carries no",
+    "museum artefact (SM_RV_*), so the artefact guard does not apply; the CHARACTER guard does."
+  ],
+  "references": {
+    "ref1": {
+      "file": "deliverables/olympia-trailer/refs/1a-sources/OlympiaGermanExcavation.jpg",
+      "what": "the 1875/76 dig photograph — composition, costume, scale, AND the background hillside",
+      "licence": "public domain"
+    },
+    "ref3": {
+      "file": "deliverables/olympia-trailer/refs/1a-sources/Hallwyl_104594_Panorama-des-ruines.jpg",
+      "what": "the uncovered sanctuary — terrain ground truth; right plate = the Kronos hill",
+      "licence": "CC0 / CC BY-SA (Hallwyl/LSH)"
+    },
+    "loc1": {
+      "file": "deliverables/olympia-trailer/refs/1a-sources/LoC_1897_Underwood_Temple-of-Zeus-and-Kronos-Hill.jpg",
+      "what": "THE MASTER LOCATION REFERENCE: 'Olympia, from Wall of Altis, showing Temple of Zeus and Kronos Hill' — the temple's fallen drums with the Kronos hill directly behind, 1897",
+      "holder": "Library of Congress, Underwood & Underwood, 1897, LC-DIG-stereo-1s26096",
+      "licence": "No known restrictions on publication (LoC)"
+    },
+    "loc2": {
+      "file": "deliverables/olympia-trailer/refs/1a-sources/Commons_2020_Aerial_Temple-of-Zeus_CC-BY-2.0.jpg",
+      "what": "aerial of the temple platform — the GEOMETRY: stylobate rectangle, drums lying in lines along the long sides where the earthquake dropped them",
+      "holder": "Wikimedia Commons / Flickr, 2020",
+      "licence": "CC BY 2.0"
+    },
+    "loc3": {
+      "file": "deliverables/olympia-trailer/refs/1a-sources/Commons_2019_Temple-of-Zeus_re-erected-column_CC-BY-SA-4.0.jpg",
+      "what": "ground level — the re-erected column (2004) over the tumbled drums and capitals: shell-limestone TEXTURE, drum diameter vs a person, tree-line behind",
+      "holder": "Wikimedia Commons, Annatsach, 2019",
+      "licence": "CC BY-SA 4.0"
+    },
+    "character_sheet": "deliverables/olympia-trailer/refs/1a-character-style-sheet.html",
+    "reference_sheet": "deliverables/olympia-trailer/refs/1a-rediscovery.html"
+  },
+  "location": {
+    "_principle": "The LOCATION is a reference-locked element exactly like the characters — it is never described into existence, it is matched to photographs of the real place. Three independent trustworthy holders (Commons 1875/76, Hallwyl pre-1896, Library of Congress 1897) agree on the background, and two modern CC photographs give the geometry and texture.",
+    "place": "The Temple of Zeus, in the Altis at Olympia, during the 1875–81 excavation.",
+    "geography_verified": {
+      "kronos_hill": "NORTH of the Altis, directly above the sanctuary — wooded, dome-shaped. The single most identifying landmark of Olympia. (Wikipedia 'Olympia, Greece')",
+      "alpheios_river": "SOUTH of the ruins. kladeos_river: WEST (a tributary).",
+      "temple": "Doric, 6 x 13 columns, ~20.7 m high, ramp on the EAST; destroyed by the earthquakes of AD 522 and 551 — which is why the drums lie in rows, toppled in one direction. (Wikipedia 'Temple of Zeus, Olympia')",
+      "consequence_for_camera": "A camera looking ACROSS the temple toward the Kronos hill is looking NORTH — that is the view that reads unmistakably as Olympia (loc1 is exactly this view). Shots with the hill behind the figures = camera on the south side looking north."
+    },
+    "background_elements": {
+      "far": "The Kronos hill: a rounded, pine- and scrub-wooded dome filling the upper third, darker than the foreground. NOT bare rock, NOT a mountain range, NOT the sea. (loc1, ref3 right plate)",
+      "mid": "The rest of the uncovered sanctuary: a sea of cut blocks and drums, a few pines and olives, the terraced stoa line at the hill's foot. Spoil heaps of the dig in the 1870s (ref1, ref3).",
+      "near": "The Temple of Zeus platform: the stylobate's straight edge; Doric drums over 2 m across and taller than a man, MANY - each column a stack that came apart - heaped in two long collapsed rows along the long sides; shell-limestone, pale, pitted, with lichen; fluting on the drums. (loc2 geometry, loc3 texture)",
+      "ground": "Raw earth trench walls with shovel marks, gravel spoil, bare dirt — in the 1870s the site is a DIG, not a lawn. No modern paths, ropes, signs, or the 2004 re-erected column (it did not exist until 2004 — loc3 shows it only for texture, it must NOT appear)."
+    },
+    "never": "No mountain range or snow peaks; no sea; no standing colonnade (the temple had no standing columns in 1875); no tidy lawn; no modern visitors, paths, rope barriers, signs; no Parthenon-style intact temple; no cypress avenue.",
+    "consistency_method": "Same as the characters (GenHQ method #1): generate ONE ENVIRONMENT PLATE first — the empty location, no people — from @image refs loc1 (the view) + loc2 (geometry) + ref1/ref3 (the 1870s state), gated against the NEVER list. That plate is then an @image reference in EVERY shot alongside the character sheets, so the background stays the same place across wide / medium / close. The k1 hero is composed ON this plate.",
+    "environment_plate": {
+      "what": "The empty excavation at the Temple of Zeus, 1870s, looking north toward the Kronos hill: drums in rows, trench cut, spoil heaps, no people.",
+      "owner": "empirica-imagegen",
+      "output": "out/1a-the-rediscovery/env_temple-of-zeus_1870s.png (+ ledger citing loc1/loc2/loc3/ref1/ref3)"
+    }
+  },
+  "style": "Olympia, 1870s, the excavation cut through the Temple of Zeus. Photographic realism, natural skin and cloth texture, no stylisation. Hard high Greek sun, short deep shadows under hat brims and column drums, fine dust hanging in the light. Bleached limestone and pale spoil dominate; the only strong darks are the archaeologists' wool suits and the trench shadow; the white fustanellas are the brightest thing in frame. Rubble, not lawn: HUGE tumbled column drums - each taller than a man, over two metres across, many dozens, a sea of them heaped where the twenty-metre temple fell, cut blocks, gravel spoil heaps, raw earth trench walls with shovel marks, low scrub, a few pines, the Kronos hill behind. People are SMALL against the drums. No text, no signage, no modern objects, no modern tools.",
+  "characters": {
+    "workman": {
+      "sheet_ref": "1a-character-style-sheet.html#workman",
+      "description": "A lean, sun-dark Greek labourer of about thirty, full dark moustache. A WORKING fustanella: white, heavily pleated, plain and dust-grubby, falling to the knee. A white shirt with wide loose sleeves pushed up, open at the neck. A dark cloth sash wound at the waist. A white cloth wound around his head against the sun. Bare lower legs, rough leather shoes on the rubble. A pick held across his body.",
+      "never": "NOT Evzone parade dress: no short 200-pleat skirt, no white hose, no pom-pommed tsarouchia, no embroidered waistcoat, no fez. No bare chest. No modern tools."
+    },
+    "archaeologist": {
+      "sheet_ref": "1a-character-style-sheet.html#archaeologist",
+      "description": "A German scholar of about fifty, full grey-flecked beard, in a dark three-piece wool suit worn in the trench — jacket buttoned high, waistcoat, white shirt collar — and a dark bowler hat. He holds a wooden measuring staff. He observes and points; he does not dig.",
+      "never": "No pith helmet, no khaki, no safari jacket, no fedora, no shorts."
+    }
+  },
+  "shots": [
+    {
+      "id": "k1",
+      "title": "THE DIG — WIDE (the hero image)",
+      "shot_type": "wide",
+      "role": "hero · generated FIRST · seeds k2 and k3",
+      "duration_s": 6,
+      "carries": [],
+      "characters": [
+        "workman",
+        "archaeologist"
+      ],
+      "composed_from": [
+        "environment_plate",
+        "ref1",
+        "ref3"
+      ],
+      "action": "The cut through the Temple of Zeus. In the foreground, left of centre, the WORKMAN stands on the rubble of the cut with his pick, facing three-quarters toward camera. Behind and right, a sea of huge fallen column drums, each taller than a man, runs away from camera. At the left edge, two ARCHAEOLOGISTS in dark suits and bowlers stand at the trench lip, one with a measuring staff, watching. Beyond, on the spoil heaps, a crowd of forty or more workmen in fustanellas and dark caps, a few seated boys at the front. Dust hangs in hard light. Staged to rhyme with the 1875/76 photograph.",
+      "framing": "Eye-level wide, slightly above, the workman two-fifths of frame height, the drums dwarfing the figures, the crowd small on the heaps. 16:9.",
+      "motion": "Locked-off; then ONE slow push toward the workman. THE ACTION: two men lever a huge block and it SETTLES with a dust drop - and both characters REACT: the workman turns his head toward the sound, the archaeologist steps forward and looks. The hero moment is SEEING.",
+      "claim": "The German excavations of 1875–81 uncovered the sanctuary of Olympia with a large local workforce. SOURCED (ref1, ref3; Curtius/Adler reports; DAI).",
+      "not_asserted": "No face is a named person (no 'Curtius' character). No specific find is staged — the Hermes is not lifted. No exact date. The crowd's size is from the photograph, not a census.",
+      "fidelity_gate": "Costume vs the character sheet NEVER lists (fustanella to the knee, no tsarouchia; bowlers, no pith helmets). Scale: the drums DWARF the men (foreground drum above the workman's head; a sea of drums, not two tidy lines) - per the 1875/76 photograph. Terrain: rubble, drums in rows (vs ref3). No text anywhere. LOCATION: background matches the environment plate (Kronos hill north, drums in rows, dig not lawn; no 2004 column, no modern paths). Characters must react to the action; static = reject."
+    },
+    {
+      "id": "k2",
+      "title": "THE DIG — MEDIUM (the archaeologist sees)",
+      "shot_type": "medium",
+      "role": "derived from k1 · reference = k1 output (@image1) + archaeologist description",
+      "duration_s": 4,
+      "carries": [],
+      "characters": [
+        "archaeologist",
+        "workman"
+      ],
+      "composed_from": [
+        "environment_plate",
+        "k1"
+      ],
+      "action": "Medium two-shot from inside the cut, low, looking up the trench wall. The ARCHAEOLOGIST — the same man as in k1 — crouches at the lip with his measuring staff laid along the exposed edge of a marble block, reading the line. Behind him, out of focus, the WORKMAN from k1 leans on his pick, waiting. A second suited figure's shoulder at the frame edge.",
+      "framing": "Medium, low angle from the trench floor; the archaeologist sharp, the workman soft; the raw earth wall and a drum's fluting fill the background. 16:9.",
+      "motion": "Locked-off. One action: he lifts his eyes from the staff to the block face and his hand stops — the moment of recognition. Nothing else moves but dust.",
+      "claim": "The excavation was a measured, recorded, scientific operation — surveyed and photographed from the first season. SOURCED (Curtius report titles; DAI).",
+      "not_asserted": "What he has found. No inscription is shown or implied on the block (no text).",
+      "fidelity_gate": "Same face and suit as k1 (GenHQ chaining: k1 output is the reference). No pith helmet. No text on the block. LOCATION: background matches the environment plate (Kronos hill north, drums in rows, dig not lawn; no 2004 column, no modern paths)."
+    },
+    {
+      "id": "k3",
+      "title": "THE DIG — CLOSE (the hands and the stone)",
+      "shot_type": "close-up",
+      "role": "derived from k1/k2 · reference = k2 output (@image1) + workman description",
+      "duration_s": 4,
+      "carries": [],
+      "characters": [
+        "workman"
+      ],
+      "composed_from": [
+        "environment_plate",
+        "k2"
+      ],
+      "action": "Close on the WORKMAN's hands — sun-dark, dusty, a dark sash and the pleated white cloth of the fustanella at the frame's edge — as he brushes dry earth from the fluted surface of a column drum with his palm. The stone's carved flute emerges from the soil under his hand. Dust falls in the hard light.",
+      "framing": "Tight close-up, eye-level with the stone, very shallow depth of field: the hand and the flute sharp, everything else soft. 16:9.",
+      "motion": "Locked-off. One action: the sweep of the palm and the flute revealed. Nothing else.",
+      "claim": "The temple was uncovered by hand, stone by stone. SOURCED (ref1, the excavation reports).",
+      "not_asserted": "Whose hands. No inscription or lettering on the stone — a plain fluted drum only.",
+      "fidelity_gate": "Fluting geometry consistent with a Doric drum (the Temple of Zeus was Doric). No text. Hands: check the known hand failures (extra fingers) per videogen's negative-prompt rule. LOCATION: background matches the environment plate (Kronos hill north, drums in rows, dig not lawn; no 2004 column, no modern paths)."
+    }
+  ],
+  "generation_plan": {
+    "step_0_character_design_sheet": {
+      "what": "Generate a rendered CHARACTER DESIGN SHEET for each type: front, three-quarter, profile, on a neutral ground — the workman and the archaeologist — using the archival crops (ref1 3x crops) as @image references + the written description. Model: Nano Banana Pro via Higgsfield (GenHQ method #1). Pre-size refs to 1920x1080.",
+      "gate": "Verify against the character sheet NEVER lists before it seeds anything. If it reaches for Evzone dress or a pith helmet, reject and re-roll with the NEVER list in the prompt.",
+      "owner": "empirica-imagegen",
+      "output": "out/1a-the-rediscovery/char_workman.png, char_archaeologist.png (+ ledgers)"
+    },
+    "step_0b_environment_plate": {
+      "what": "Generate the EMPTY location plate (see location.environment_plate): the excavation at the Temple of Zeus, 1870s, looking north at the Kronos hill, no people — @image refs loc1 (the 1897 view), loc2 (aerial geometry), ref3 (1870s terrain). Pre-size to 1920x1080 (it sets aspect ratio).",
+      "gate": "location.never (no standing colonnade, no mountains/sea, no lawn, no 2004 column, no modern paths); Kronos hill present and rounded/wooded; drums in lines.",
+      "owner": "empirica-imagegen",
+      "output": "out/1a-the-rediscovery/env_temple-of-zeus_1870s.png"
+    },
+    "step_1_hero_wide": {
+      "what": "Generate k1 (the wide) with @image1 = the ENVIRONMENT PLATE (first = aspect ratio), @image2 = workman design sheet, @image3 = archaeologist design sheet, @image4 = ref1 (the real dig photograph, for composition + crowd). Prompt: 'the location in @image1; the man in @image2 stands on the rubble ...'. Best-of-N, pick one.",
+      "gate": "k1 fidelity_gate + the background matches the plate (same hill, same drum rows)",
+      "owner": "empirica-imagegen"
+    },
+    "step_2_derive": {
+      "what": "Generate k2 with @image1 = k1 output; generate k3 with @image1 = k2 output (GenHQ chaining).",
+      "gate": "same characters as k1 (drift check)",
+      "owner": "empirica-imagegen"
+    },
+    "step_3_upscale": {
+      "what": "Upscale all three keyframes before video (GenHQ: never skip).",
+      "owner": "empirica-imagegen"
+    },
+    "step_4_motion": {
+      "what": "videogen: Kling 3.0, one motion per shot, the block-settle / the hand-stop / the palm-sweep as spelled-out physical consequences. Whole-clip QC.",
+      "owner": "empirica-videogen"
+    },
+    "one_generation_first": "Run ONLY step 0 (character design sheets) + step 0b (environment plate) + step 1 (hero wide composed on the plate) before anything else. Philipp reviews in the Review Room. Only then derive k2/k3."
+  },
+  "claim_ledger": {
+    "asserted": "The rediscovery of Olympia: identified by Chandler in 1766; first excavated by the French Expédition de Morée in May 1829 (Temple of Zeus identified); systematically uncovered by the German excavations of 1875–81 under Ernst Curtius, with a large local workforce and photography used from the first season. Sourced: Wikipedia 'Olympia, Greece'; DAI '150 Years of German Excavations at Olympia'; Curtius & Adler, 'Die Ausgrabungen zu Olympia' (Berlin 1876–81, UB Heidelberg); the 1875/76 excavation photograph; Hallwyl Museum plates 104594/104595; Blouet & Poirot 1829 plan.",
+    "record_grounding_note": "The Olympic Museum's text omits the 1829 French excavation, which first identified the Temple of Zeus. Added to the narration.",
+    "not_asserted": [
+      "No character is a portrait of a named person; faces are types drawn from the photograph.",
+      "No specific find is staged (the Hermes, the Nike).",
+      "The crowd size, exact date and exact location within the sanctuary are dramatisation within the photographed reality.",
+      "No inscription or lettering is shown anywhere in the scene."
+    ]
+  }
+}
