@@ -1,0 +1,39 @@
+{
+  "deliverable": "char_workman.png",
+  "scene": "1a-the-rediscovery",
+  "step": "ingredient (GenHQ Hero-Image-First: NOT a scene shot)",
+  "sha256": "cbf45f6c04c311e29c25054c3330cc5ac45e5299517e19ba91545103a2efb12f",
+  "verdict": {
+    "status": "SHIP",
+    "confidence": 0.85
+  },
+  "references_cited": [
+    "OlympiaGermanExcavation.jpg (characters)",
+    "LoC_1897_Underwood_Temple-of-Zeus-and-Kronos-Hill.jpg (location master)",
+    "Commons_2020_Aerial_Temple-of-Zeus_CC-BY-2.0.jpg (drum-row geometry)",
+    "Hallwyl_104594_Panorama-des-ruines.jpg (1870s terrain)"
+  ],
+  "reference_preprocessing": "The LoC master is a STEREOGRAPH: two frames on a printed mount with publisher text down both margins and a caption block. Fed whole it risked importing the card format or its lettering into a plate whose NEVER list forbids text. Cropped to ONE clean frame and resized to 1920x1080 before use; all refs pre-sized so the first sets the aspect ratio.",
+  "method_note": "Gated against the NEVER list AND an exploratory pass ('is anything in frame that is not specified'), because a NEVER list is confirmatory by construction and cannot catch what nobody listed. The exploratory pass is what caught the caption text on the rejected candidates.",
+  "subject": "WORKMAN — Greek excavation labourer, 1870s. A TYPE, not a portrait.",
+  "candidate": "cand/workman_1.png",
+  "rejected": "cand/workman_2.png",
+  "rejected_why": "Rendered caption text FRONT / THREE-QUARTER / PROFILE across the bottom, violating the no-text NEVER; also gave him leg wraps where the brief specifies BARE lower legs.",
+  "never_checked": [
+    "no Evzone parade dress (no 200-pleat ceremonial skirt, no white hose, no pom-pom tsarouchia, no embroidered waistcoat, no fez)",
+    "no bare chest",
+    "no modern tools",
+    "no text anywhere",
+    "no background scenery, props or other figures"
+  ],
+  "asserts": [
+    "three views front / three-quarter / profile, same man and clothing across all three",
+    "working fustanella: white, pleated, TO THE KNEE, plain, visibly dust-grubby",
+    "white wide-sleeved shirt, sleeves pushed up, open neck",
+    "dark cloth sash",
+    "white headcloth",
+    "bare lower legs, rough leather shoes",
+    "pick across the body",
+    "neutral mid-grey ground, flat even light"
+  ]
+}

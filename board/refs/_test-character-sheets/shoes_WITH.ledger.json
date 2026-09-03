@@ -1,0 +1,18 @@
+{
+  "deliverable": "shoes_WITH.png",
+  "test": "sub-test C — worn artefact WITH an inscription (SM_RV_18)",
+  "sha256": "40dcc759acdfe118c64d067920a8159d9f3d085fdd6494d585c7bb58002eb6b0",
+  "headline": "THE CALLOUT REGIME RESCUES LEGIBILITY BUT NOT ACCURACY. Text renders crisply, confidently, in convincing personal pen-ink — and says the wrong thing.",
+  "character_level_diff": {
+    "8.41": "FAIL — candidate 1 reads 8.71 at 7x: the third glyph is a clear 7, a horizontal top stroke with a descending diagonal, not a 4. Candidate 2's third glyph is AMBIGUOUS between 4 and 7 at the resolution available, which is itself disqualifying: a mark that cannot be read with certainty cannot be certified. 8.41 is Tentoglou's actual Tokyo gold-winning distance, so 8.71 is a fabricated sporting claim about a living athlete, written as his own hand.",
+    "TOKIO": "SPLIT WITHIN A SINGLE PANEL — in the overhead callout of candidate 1 the RIGHT shoe reads TOKIO correctly, five characters, while the LEFT shoe reads TOKITO, six characters. The same panel disagrees with itself.",
+    "Greek name": "GARBLED in both candidates — the lambda-tau of Μίλτος collapses into a z-form and the surname trails into unreadable strokes. Note it appeared UNPROMPTED: my prompt named only 8.41 and TOKIO and said invent no other lettering. The REFERENCE supplied it. That is the inverse of the torch case, where the prompt supplied the string."
+  },
+  "what_DID_hold": "Form, material and structure held well: correct white spike silhouette, correct sole and spike plate, plausible wear, consistent shoe across all four figure views and all three callouts. Consistent with sub-test B — the reference carries the OBJECT.",
+  "verdict": {
+    "status": "REJECT for any provenance use",
+    "confidence": 0.9
+  },
+  "consequence": "Qualifies the sheet-first standing order rather than supporting it. Sheet-first is proven for FORM, MATERIAL and STRUCTURE (B: 5 of 6). It is REFUTED for TEXT. Inscriptions must still be cropped or withheld even inside a callout — and the callout makes the failure MORE dangerous, not less, because legible-and-wrong reads as authoritative where illegible-and-wrong reads as a limitation.",
+  "prediction_outcome": "MY PREDICTION REFUTED. I pre-registered that the callout would hold legible and CORRECT marks while the worn views would not. The callout held legible marks that are WRONG. I had the regime right and the conclusion backwards."
+}

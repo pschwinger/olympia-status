@@ -1,0 +1,30 @@
+{
+  "shot": "k1 v2",
+  "title": "THE FIRST DRUM (v2)",
+  "scene": "1a-the-rediscovery",
+  "shipped_clip": null,
+  "verdict": {"status": "NO SHIP", "reason": "gate 3 (measured drum-to-man ratio) FAILS on all 3 candidates", "confidence": 0.85},
+  "model": "seedance_2_5", "mode": "omni_reference",
+  "params": {"duration_s": 6, "aspect_ratio": "16:9", "resolution": "1080p", "generate_audio": false, "plate": "v1 env_temple-of-zeus_1870s.png (unchanged, per correction prop_xkqba3x)"},
+  "prompt": "VERBATIM from scenes/1a-k1-hero-prompt.md v2 (huge+many drum language + both-characters-react beats)",
+  "gate3_measure": {
+    "definition": "adopted from imagegen (prop_7dqcnqim): pick one frame with the foreground workman standing beside his drum; require drum visible pixel-height > man pixel-height (he stands at the drum's foot, does not reach its top, as in the 1875/76 photo)",
+    "method": "measured off each candidate's opening frame (camera locked-off), ratio = adjacent-drum-visible-height / workman-standing-height",
+    "results": [
+      {"candidate": "v2cand1", "ratio": "~1.0 but INVALID", "result": "FAIL (pose)", "note": "workman is CROUCHED and back-to-camera behind the near drum, not standing at its foot; ratio only nears 1.0 because he is crouched. Pose wrong."},
+      {"candidate": "v2cand2", "man_px": 410, "drum_px": 160, "ratio": 0.39, "result": "FAIL", "note": "standing workman ~2.5x the adjacent drum"},
+      {"candidate": "v2cand3", "man_px": 430, "drum_px": 170, "ratio": 0.40, "result": "FAIL", "note": "standing workman ~2.5x the adjacent drum"}
+    ],
+    "conclusion": "ALL THREE FAIL gate 3. The moment a man stands beside a drum, Seedance shrinks that drum to ~0.4x his height — the object-shrinks-to-body failure (imagegen-measured elsewhere: kotinos ties, epee 0.15). The v2 prompt language ('dwarfed by the drum, rises above his head, stands at its foot') did NOT overcome it."
+  },
+  "other_gates": [
+    {"gate": "1 location", "result": "PASS", "note": "hill/drums/trench match plate; the FAR field is now a large collapsed sea of drums (huge+many reads at distance)"},
+    {"gate": "2 characters", "result": "PASS", "note": "costumes faithful, NEVERs respected"},
+    {"gate": "4 action+reaction", "result": "PASS (improved)", "note": "v2cand2/v2cand3: block settles with dust AND the archaeologist steps/leans+looks AND the workman turns — both react. This gate is fixed."},
+    {"gate": "5 text", "result": "PASS", "note": "zero lettering any frame"},
+    {"gate": "6 hands", "result": "PASS", "note": "no gross failure visible"}
+  ],
+  "recommendation": "Prompting alone will not fix the composite ratio — Seedance re-scales the foreground drum to the standing man regardless of language. Lever options: (A) STRONGEST — imagegen composites a START_IMAGE keyframe with the man correctly dwarfed at the drum's foot (omni_reference accepts start_image); Seedance then animates from a scale that is already right, so it cannot shrink the drum. (B) Reframe so no whole drum sits beside a standing man — man small and further back at the base of one towering drum that exceeds the top of frame. (C) Accept v1's framing (man slightly large but composition clean) if the ratio cannot be won. My recommendation: (A).",
+  "candidates_on_disk": ["v2cand1.mp4", "v2cand2.mp4", "v2cand3.mp4"],
+  "note": "v1 k1.mp4 untouched. No k1_v2.mp4 promoted — shipping a gate-3 failure as v2 would be a shipped miss."
+}

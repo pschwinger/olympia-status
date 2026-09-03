@@ -1,0 +1,36 @@
+{
+  "shot": "k1",
+  "title": "THE FIRST DRUM",
+  "scene": "1a-the-rediscovery",
+  "role": "hero (story shot — no museum artefact carried in 1a)",
+  "shipped_clip": "k1.mp4",
+  "selected_candidate": "cand1",
+  "model": "seedance_2_5",
+  "mode": "omni_reference",
+  "params": {"duration_s": 6, "aspect_ratio": "16:9", "resolution": "1080p", "generate_audio": false, "output": "1920x1080 24fps normalised"},
+  "prompt": "VERBATIM from storyboard scenes/1a-k1-hero-prompt.md (the-first-drum). Carries the NEVER lists + hand negatives. @Image1..6 mapped to the 6 refs below in order.",
+  "refs": [
+    {"tag": "@Image1", "file": "img1_environment-plate.png", "role": "setting (sets 16:9)"},
+    {"tag": "@Image2", "file": "img2_workman_sheet.png", "role": "the workman (identity+costume+pick)"},
+    {"tag": "@Image3", "file": "img3_archaeologist_sheet.png", "role": "the archaeologist (sack coat+staff)"},
+    {"tag": "@Image4", "file": "img4_1875-76_photograph.jpg", "role": "crowd + composition (real 1875/76 photo)"},
+    {"tag": "@Image5", "file": "img5_storyboard_panels.jpg", "role": "blocking only (Storyboard Mode, never on screen)"},
+    {"tag": "@Image6", "file": "img6_LoC1897_single-frame_1920x1080.jpg", "role": "the view + Kronos hill"}
+  ],
+  "gates": [
+    {"gate": "1 location", "result": "PASS", "note": "matches img1 — Kronos hill rounded+wooded fills upper third, drums in two long lines, trench at right, spoil heaps; NO standing column, NO intact temple, NO modern object"},
+    {"gate": "2 characters", "result": "PASS", "note": "workman = plain working fustanella + white headcloth + dark sash + pick; archaeologist = dark high-buttoned sack coat + bowler + wooden staff; costume NEVERs respected — no Evzone parade dress, no tsarouchia/pom-pom shoes, no pith helmet, no khaki, no fez; no invented third hero"},
+    {"gate": "3 scale", "result": "PASS", "note": "the workman stands beside a fluted drum roughly chest-height; drums read as man-scale as specified"},
+    {"gate": "4 action", "result": "PASS", "note": "THE CRUX — whole-clip: the mid-distance limestone block is levered with the timber bar, TIPS and SETTLES into the spoil with a strong visible dust bloom (peaks mid-clip, dust hangs then dissipates). A physical consequence, not a gesture. Camera locked-off first half then slow push toward the workman, as specified. cand2/cand3 also settled but with weaker/subtler dust — cand1 chosen for the clearest consequence"},
+    {"gate": "5 text", "result": "PASS", "note": "whole-clip, all frames: zero lettering, no signage, no watermark, nothing in frame that is not specified"},
+    {"gate": "6 hands", "result": "PASS", "note": "foreground workman's grip on the pick handle plausible (five fingers, no deformity); mid-ground levering workmen's hands small/occluded but no gross failure visible"}
+  ],
+  "candidates": [
+    {"id": "cand1", "verdict": "SELECTED — all 6 gates pass; clearest action-settle (strong dust bloom); workman three-quarters to camera as specified", "confidence": 0.85},
+    {"id": "cand2", "verdict": "not selected — all gates pass but action dust subtler; workman more in profile/away", "confidence": 0.78},
+    {"id": "cand3", "verdict": "not selected — all gates pass but action dust subtler; workman in profile", "confidence": 0.78}
+  ],
+  "notes_for_review": "One framing nuance for Philipp (not a gate failure): the foreground workman reads a touch larger than the prompt's 'two-fifths of frame tall' (closer to half). cand2/cand3 place him nearer two-fifths but with weaker action. Since ACTION is the explicit reject-criterion gate and cand1 nails it, cand1 was chosen; a re-roll biasing the workman smaller is available if the framing is preferred over the stronger settle.",
+  "not_asserted": ["Any named person (workman/archaeologist are types, not real people)", "Any specific find or exact date", "That this is THE very first drum (a representative morning)", "No text anywhere in frame (asserts_text=[])"],
+  "verdict": {"status": "SHIP", "confidence": 0.85, "clip": "k1.mp4"}
+}

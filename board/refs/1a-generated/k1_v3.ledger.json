@@ -1,0 +1,23 @@
+{
+  "shot": "k1 v3", "title": "THE FIRST DRUM (v3)", "scene": "1a-the-rediscovery",
+  "shipped_clip": "k1_v3.mp4", "selected_candidate": "v3cand2",
+  "model": "seedance_2_5", "mode": "omni_reference",
+  "start_image": {"file": "../../../empirica-imagegen/out/1a-the-rediscovery/k1_v3_start.png", "sha256_16": "5b4ed94794d0f2a6", "imagegen_ratio": "474/325 = 1.46 (verified by me: workman stands at the drum's foot, reaches ~2/3 up it)"},
+  "params": {"duration_s": 6, "aspect_ratio": "16:9", "resolution": "1080p", "generate_audio": false, "candidates": "best-of-3 (v3cand3 failed transiently server-side; 2/3 usable)"},
+  "prompt": "VERBATIM scenes/1a-k1-hero-prompt.md v2",
+  "gate3_ratio_across_clip": {
+    "definition": "drum visible px-height / workman px-height, measured at frame 0, ~3s (mid), and last frame; PASS only if >1.0 at all three (the question: does a correct start ratio HOLD through motion?)",
+    "v3cand2_SELECTED": {"frame0": 1.40, "mid_3s": 1.40, "last": 1.30, "result": "PASS — >1.0 at all three"},
+    "v3cand1": {"frame0": 1.40, "mid_3s": 1.40, "last": 1.30, "result": "PASS"},
+    "FINDING": "THE START-IMAGE RATIO HOLDS THROUGH 6s OF MOTION. Contrast v2 (prompt-only, no start_image): drum shrank to ~0.4x the man. Anchoring scale with a correct-ratio start_image DEFEATS the object-shrinks-to-body failure at the clip layer. This is the reusable fix for adjacent-object scale in generated motion."
+  },
+  "other_gates": [
+    {"gate": "1 location", "result": "PASS", "note": "huge+many drums, Kronos hill, trench, crowd on the spoil bank"},
+    {"gate": "2 characters", "result": "PASS", "note": "workman fustanella+headcloth+dark-vest+sash+pick; archaeologist dark sack coat+bowler+staff; NEVERs respected. Dark vest (period-correct sheet-drift, flagged by imagegen) present and kept consistent through the clip."},
+    {"gate": "4 action+reaction", "result": "PASS (with caveat)", "note": "block settles with dust in the mid-distance AND the archaeologist visibly turns/shifts toward the action across the clip — NOT a static tableau. CAVEAT: the foreground workman's reaction is RESTRAINED (a subtle shift, not an emphatic head-turn) because the posed start_image anchors him at the drum. Softer than v2's reactions — the scale fix traded a little reaction energy."},
+    {"gate": "5 text", "result": "PASS", "note": "zero lettering any frame"},
+    {"gate": "6 hands", "result": "PASS", "note": "pick grip plausible, no gross failure"}
+  ],
+  "verdict": {"status": "SHIP", "confidence": 0.85, "clip": "k1_v3.mp4"},
+  "notes_for_review": "v3 SOLVES the gate-3 scale problem that blocked v1/v2 (the headline). Trade-off for Philipp: the foreground reaction is more restrained than v2 because the start_image poses the workman. If a stronger head-turn is wanted, a follow-up could re-roll with a start_image caught mid-turn, or a prompt weighting the reaction harder — but scale (the blocker) is now solved. v1/v2 untouched; all three are version buttons."
+}

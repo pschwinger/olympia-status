@@ -1,0 +1,26 @@
+{
+  "deliverable": "victor_kotinos_WITH.png",
+  "test": "_test-character-sheets sub-test B (the product question)",
+  "sha256": "d6eb3f1bc316981e2f7ee932c90ca2554d47e7d79552bc02763a6d0e1ade73b0",
+  "subject": "the Crowning VICTOR wearing the kotinos",
+  "identity_ref": "empirica-storyboard/assets/faces/victor.png",
+  "control": "Both arms identical in prompt text, character reference, composition, negative tail, model and N. The ONLY difference is the injected SM_RV_16 reference plus its invariant paragraph.",
+  "instrument_note": "The colour invariant is INSTRUMENTED, not eyeballed: measure_fidelity.py's hue-based material agreement, validated previously on exactly this green-versus-dried kotinos discrimination. The other five invariants are pass/fail by eye at 3x with the crops available for contest.",
+  "verdict": {
+    "status": "TEST RESULT — not a deliverable for the film",
+    "confidence": 0.88
+  },
+  "arm": "WITH — SM_RV_16 museum render injected as @image + registry invariants in the prompt",
+  "candidate": "cand/with_1.png",
+  "selected": "best of three; all three WITH candidates scored identically on the instrumented colour invariant (hue 13.0, agreement 0.978)",
+  "per_invariant": {
+    "golden-brown (dried, not green)": "PASS — INSTRUMENTED: hue 13.0 against the reference's 12.0, material agreement 0.978",
+    "narrow pointed lanceolate leaves": "PASS",
+    "densely packed all round the ring": "PASS",
+    "thin dark wire ties": "FAIL — no dark wire visible anywhere; the binding at the join is pale cord/cloth, not wire ties along the stems",
+    "pale cloth strip at the join": "PASS — a pale cream band is clearly wound at the bottom join",
+    "OPEN ring where the ends overlap": "PASS — the ring is open at the bound join, ends overlapping rather than closing smoothly"
+  },
+  "score": "5 of 6",
+  "same_wreath_across_views": "YES — consistent golden-brown dried wreath in all four figure views and both isolated callouts; the pale binding is visible again at the back of the head in the rear view."
+}

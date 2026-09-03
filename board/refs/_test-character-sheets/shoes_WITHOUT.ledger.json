@@ -1,0 +1,10 @@
+{
+  "deliverable": "shoes_WITHOUT.png",
+  "test": "sub-test C control arm",
+  "sha256": "15390bb1ac046d15f102313cdd7df1182268b479d7fc4183361c4a8cb409be79",
+  "note": "No artefact reference. Scored for completeness; the headline of C is the WITH arm's failure, not this one.",
+  "verdict": {
+    "status": "TEST RESULT",
+    "confidence": 0.8
+  }
+}

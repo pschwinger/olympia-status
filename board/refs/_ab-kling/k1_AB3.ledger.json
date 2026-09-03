@@ -1,0 +1,14 @@
+{
+  "test": "kotinos Kling A/B x3 + shared performance line (RUN2, prop_y6tsjg)",
+  "keyframe": "the-crowning/k1.png (certified kotinos still)",
+  "design": "both arms (261w + 65w) got the SAME appended line: 'One unhurried, continuous lowering; as the wreath settles the young man lifts his face slightly, eyes opening.' 3x each to separate performance RATE from n=1 variance.",
+  "clips": ["k1_AB_long_r{1,2,3}.mp4", "k1_AB_short_r{1,2,3}.mp4"],
+  "face_lift_occurrence": {
+    "long_261w": {"r1": "yes", "r2": "yes", "r3": "yes", "rate": "3/3"},
+    "short_65w": {"r1": "yes", "r2": "no (eyes closed / not lifted)", "r3": "yes", "rate": "2/3"}
+  },
+  "wreath_fidelity": "all 6 faithful — dried golden-brown, no fresh-green, wreath settled on the head",
+  "verdict": "The appended PERFORMANCE LINE induced the face-lift in BOTH arms — performance comes from DIRECTION, not prompt length (the earlier n=1 preference for arm A was variance, not the 261w block). Long vs short face-lift rate: 3/3 vs 2/3 — a marginal gap well within n=3 noise; the long block buys no reliable performance advantage.",
+  "conclusion": "Reinforces the first A/B: the 261-word CONTINUITY block is REDUNDANT for Kling i2v on BOTH fidelity AND performance. The lever for performance is an explicit direction line, not length. Recommend: brief motion prompt + one explicit performance/direction line where a beat is wanted.",
+  "credits": "~60 (6 gens)"
+}

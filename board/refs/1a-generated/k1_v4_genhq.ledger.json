@@ -1,0 +1,15 @@
+{
+  "shot": "k1 v4 (GenHQ Seedance format)", "scene": "1a-the-rediscovery",
+  "shipped_clip": "k1_v4_genhq.mp4", "selected_candidate": "v4cand2",
+  "purpose": "like-for-like vs v3: does the GenHQ-correct format + 2K upscale change the result?",
+  "differences_from_v3": ["start image UPSCALED to 2K first (1376x768 -> 3856x2160, bytedance)", "THREE bound refs not six (@Image1=2K start, @Image2=workman sheet, @Image3=archaeologist sheet)", "prompt = GENHQ-PROMPT-AUDIT.md sec-2 verbatim: bracketed timestamp, subject-first, ~75 words, Final beat, diegetic audio"],
+  "model": "seedance_2_5 omni_reference, 6s, 16:9, 1080p, audio off, best-of-3 (v4cand1 transient net-fail; 2/3)",
+  "gate3_ratio_across_clip": {"v4cand2_SHIPPED": {"frame0": 1.40, "mid_3s": 1.40, "last": 1.30, "result": "PASS >1.0 all three"}, "vs_v3": "v3 was 1.40/1.40/1.30 — v4 EQUIVALENT. The GenHQ format + 2K upscale did not degrade or notably improve the ratio; the start_image drives it either way."},
+  "other_gates": [
+    {"gate": "4 action+reaction", "result": "PASS (caveat, same as v3)", "note": "settle + archaeologist turn present; foreground workman reaction restrained — the subject-first GenHQ prompt did NOT visibly strengthen the head-turn vs v3, because the posed start_image still anchors him"},
+    {"gate": "location/characters/text/hands", "result": "PASS"}
+  ],
+  "verdict": {"status": "SHIP (comparison asset)", "confidence": 0.85},
+  "comparison_conclusion": "v4 (GenHQ format, ~75w, 2K, 3 refs) is EQUIVALENT to v3 (prose ~459w, native, 6 refs) on every gate — ratio identical, reactions similarly restrained. So for a START-IMAGE-anchored shot the prompt format barely moves the needle (the frame drives it), but the GenHQ format gets the same result at 1/6 the words + cleaner refs + 2K crispness = strictly better to ADOPT going forward. Philipp reviews v3 | v4 side by side.",
+  "note": "v1/v2/v3 untouched. Best v4 (v4cand2) is the comparison shot."
+}

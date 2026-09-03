@@ -1,0 +1,23 @@
+{
+  "shot": "1a WHOLE SCENE — one Seedance 2.5 multishot", "scene": "1a-the-rediscovery",
+  "clip": "1a_multishot_20s.mp4", "experiment": "does 2.5 honour FIVE hard cuts in 20s? (undocumented above 2.0's 15s/3-shot)",
+  "model": "seedance_2_5 omni_reference, 20s, 16:9, 1080p, audio off, best-of-1 (180cr, storyboard-approved)",
+  "refs": "5 bound: @Image1 2K hero start · @Image2 workman · @Image3 archaeologist · @Image4 env plate · @Image5 storyboard panels (blocking)",
+  "prompt": "VERBATIM scenes/1a-multishot-whole-scene.md fenced block (5 timestamped shots)",
+  "gates": [
+    {"gate": "1 cuts at timestamps (THE CORE QUESTION)", "result": "PASS — CLEAN", "detected_vs_specified": "cuts at 4.17/9.88/13.79/16.75s vs specified 4/10/14/17s — all four within 0.1-0.25s. Seedance 2.5 HONOURS five hard cuts in 20s."},
+    {"gate": "2 character consistency across shots", "result": "PASS", "note": "same workman (fustanella+headcloth) in shots 2-4; same archaeologist (dark sack coat, bowler, beard) in shots 2 and 5"},
+    {"gate": "3 ratio >1.0 shots 2-3", "result": "PASS", "note": "shot 2 the drum towers over the workman at its foot (>1.0); shot 3 is a close-up (ratio n/a, drum edge large)"},
+    {"gate": "4 each action on its named object", "result": "PASS", "note": "shot2 block levered + dust; shot3 hands heave the timber bar under the drum edge; shot4 hand sweeps earth off the flute"},
+    {"gate": "5 NEVERs / text / hands", "result": "PASS", "note": "costumes clean, no text, hands OK (shot4 hand 5 fingers, clear)"}
+  ],
+  "shot_content_observed": {
+    "s1_0-4s": "empty excavation, fallen drums in trench, wooded hill, NO people — matches @Image4",
+    "s2_4-10s": "workman at foot of towering drum, archaeologist left, crowd + levering behind — the hero shot, ratio holds",
+    "s3_10-14s": "close-up, hands heaving the timber bar, shallow focus",
+    "s4_14-17s": "low-angle macro, dusty hand sweeping earth off the fluting",
+    "s5_17-20s": "archaeologist takes off his bowler, looks down the colonnade — the Invented hat-off final beat"
+  },
+  "verdict": {"status": "SHIP / STRONG PASS", "confidence": 0.88},
+  "finding": "Seedance 2.5 delivers a whole 5-shot 20s scene in ONE generation with the cuts landing at the timestamps and characters consistent across shots. The multishot ceiling is at least 5 shots / 20s (well above the corpus's documented 2.0 limit of 3 shots / 15s). CONSEQUENCE: a 3-5 shot scene can be one generation — in-clip consistency for free, no per-shot start-image stitching needed — a major pipeline simplification worth adopting where a scene's shots share one world."
+}

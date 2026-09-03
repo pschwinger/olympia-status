@@ -1,0 +1,10 @@
+{
+  "deliverable": "archaeologist_prod.png",
+  "test": "_test-character-sheets sub-test A (production format)",
+  "sha256": "8a0b597b000b824d5e3fca8d9e9a6b0cda2538da9b7f7c2e300d42183c447c4a",
+  "format_source": "deliverables/olympia-trailer/refs/_format/character-sheet-format-example.webp — read before prompting, so the layout is matched to an observed example",
+  "layout_method": "Layout described with NO nameable view words. Enforced by a mechanical grep of the prompt for front/back/profile/three-quarter before generating, which caught 'jacket front' and forced a reword. This is the prevention for the caption failure I caused yesterday.",
+  "gate": "FAIL — callout-consistency",
+  "notes": "Four views and no text, but the JACKET CALLOUT IS NOT THE SAME GARMENT AS THE FIRST VIEW: the callout shows a high collarless mandarin closure while the facing-camera view shows lapels over a waistcoat with a white collar. The callout was meant to RESOLVE my earlier lapel flag; instead it made the disagreement explicit and asserted the collarless side. arch_prod_2 shows the same disagreement and additionally drops a view (three panels, not four).",
+  "override_declared": "Same 'no props' override."
+}

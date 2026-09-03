@@ -1,0 +1,10 @@
+{
+  "deliverable": "workman_prod.png",
+  "test": "_test-character-sheets sub-test A (production format)",
+  "sha256": "46472b855713a38b2638253aa0e89d68887a0994b3394ba3d1a46dd726377b27",
+  "format_source": "deliverables/olympia-trailer/refs/_format/character-sheet-format-example.webp — read before prompting, so the layout is matched to an observed example",
+  "layout_method": "Layout described with NO nameable view words. Enforced by a mechanical grep of the prompt for front/back/profile/three-quarter before generating, which caught 'jacket front' and forced a reword. This is the prevention for the caption failure I caused yesterday.",
+  "gate": "PASS",
+  "notes": "Four views incl. a genuine rear view; four callouts (pick head, knotted headcloth, wound sash, shoe) matching the worn/held items; NO text anywhere; all 1a NEVERs hold.",
+  "override_declared": "Higgsfield character-sheet workflow's 'no props' rule DELIBERATELY OVERRIDDEN — for an artefact sheet the held object is the point. Declared per the brief."
+}

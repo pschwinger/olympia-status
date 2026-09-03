@@ -1,0 +1,12 @@
+{
+  "deliverable": "archaeologist_prod_v2.png",
+  "test": "sub-test A re-roll under storyboard's jacket ruling",
+  "sha256": "3f49214192471b9a448ed06abc11708116763b48a79d987c650ce196f04ce450",
+  "gate": "PASS",
+  "ruling_applied": "1870s SACK COAT: narrow lapels, buttoned high to near the collarbone, a sliver of waistcoat and white collar at the throat. Stated as an invariant in every view AND the isolated panel.",
+  "notes": "Four views plus four callouts, no text anywhere. The jacket now reads as the same high-buttoned lapelled coat across all five panels; lapel visibility varies with viewing angle, which is physical rather than a garment change. This resolves the inconsistency v1 exposed.",
+  "verdict": {
+    "status": "SHIP",
+    "confidence": 0.85
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "deliverable": "victor_kotinos_WITHOUT.png",
+  "test": "_test-character-sheets sub-test B (the product question)",
+  "sha256": "e89c06d2fe2c29d2bfba9fbd33bae38daaf40d99a2e45f3e4902fc80cfeaa849",
+  "subject": "the Crowning VICTOR wearing the kotinos",
+  "identity_ref": "empirica-storyboard/assets/faces/victor.png",
+  "control": "Both arms identical in prompt text, character reference, composition, negative tail, model and N. The ONLY difference is the injected SM_RV_16 reference plus its invariant paragraph.",
+  "instrument_note": "The colour invariant is INSTRUMENTED, not eyeballed: measure_fidelity.py's hue-based material agreement, validated previously on exactly this green-versus-dried kotinos discrimination. The other five invariants are pass/fail by eye at 3x with the crops available for contest.",
+  "verdict": {
+    "status": "TEST RESULT — not a deliverable for the film",
+    "confidence": 0.88
+  },
+  "arm": "WITHOUT — no artefact reference; wreath described only as 'an olive wreath'",
+  "candidate": "cand/without_3.png",
+  "selected": "BEST of three by the instrumented colour metric (0.622 vs 0.511 and 0.489) — deliberately not the worst, per the brief",
+  "per_invariant": {
+    "golden-brown (dried, not green)": "FAIL — INSTRUMENTED: hue 29.0 against 12.0, material agreement 0.622. Fresh silver-green living olive.",
+    "narrow pointed lanceolate leaves": "PASS — olive leaves are lanceolate by nature, so this is arguably a freebie rather than a hit",
+    "densely packed all round the ring": "FAIL — sparse, bare stem visible between leaves throughout",
+    "thin dark wire ties": "FAIL — none; stems twisted, no wire",
+    "pale cloth strip at the join": "FAIL — none",
+    "OPEN ring where the ends overlap": "FAIL — reads as a closed continuous ring, no discernible open join"
+  },
+  "score": "1 of 6",
+  "same_wreath_across_views": "YES, consistently the cliché in all views — the failure is stable, not noisy."
+}

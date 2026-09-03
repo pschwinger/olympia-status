@@ -1,0 +1,41 @@
+{
+  "deliverable": "env_temple-of-zeus_1870s.png",
+  "scene": "1a-the-rediscovery",
+  "step": "ingredient (GenHQ Hero-Image-First: NOT a scene shot)",
+  "sha256": "370c46b9060ff532f826ef7e3488bdbd093456c01728c5eadf3d526aaccbdc77",
+  "verdict": {
+    "status": "SHIP",
+    "confidence": 0.85
+  },
+  "references_cited": [
+    "OlympiaGermanExcavation.jpg (characters)",
+    "LoC_1897_Underwood_Temple-of-Zeus-and-Kronos-Hill.jpg (location master)",
+    "Commons_2020_Aerial_Temple-of-Zeus_CC-BY-2.0.jpg (drum-row geometry)",
+    "Hallwyl_104594_Panorama-des-ruines.jpg (1870s terrain)"
+  ],
+  "reference_preprocessing": "The LoC master is a STEREOGRAPH: two frames on a printed mount with publisher text down both margins and a caption block. Fed whole it risked importing the card format or its lettering into a plate whose NEVER list forbids text. Cropped to ONE clean frame and resized to 1920x1080 before use; all refs pre-sized so the first sets the aspect ratio.",
+  "method_note": "Gated against the NEVER list AND an exploratory pass ('is anything in frame that is not specified'), because a NEVER list is confirmatory by construction and cannot catch what nobody listed. The exploratory pass is what caught the caption text on the rejected candidates.",
+  "subject": "ENVIRONMENT PLATE — the 1870s excavation at the Temple of Zeus, empty.",
+  "candidate": "cand/env_1.png",
+  "rejected": "none — cand/env_2.png also passes every NEVER and is a valid alternate with a denser drum field",
+  "rejected_why": "env_1 selected because its TWO parallel drum rows flanking a central trench read as the temple's two LONG SIDES, the architectural claim in the brief; env_2's drums mass centre-left instead.",
+  "never_checked": [
+    "no standing colonnade and no upright columns — every drum lies fallen",
+    "no 2004 re-erected column",
+    "no mountain range, snow or sea",
+    "no tidy lawn",
+    "no modern paths, ropes, signs or barriers",
+    "no visitors or any human figure",
+    "no cypress avenue",
+    "no text anywhere"
+  ],
+  "asserts": [
+    "Kronos hill present, rounded, densely wooded, filling the upper third",
+    "fallen Doric drums in long lines along the temple's long sides",
+    "stylobate edge visible",
+    "shell-limestone: pale, coarse, pitted",
+    "raw earth trench walls with tool marks, gravel spoil heaps, bare dirt — a working dig",
+    "hard high sun, strong shadows, dust"
+  ],
+  "exploratory_note": "A pale vertical form in the midground was checked at 3x in case it was an upright column — it is a squat rectangular block on the trench lip with others beside it. Not a column. Checked because it is the NEVER that matters most for 1875."
+}

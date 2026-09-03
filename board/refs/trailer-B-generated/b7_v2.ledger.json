@@ -1,0 +1,27 @@
+{
+  "deliverable": "b7_v2.png",
+  "scene": "trailer-B-sound",
+  "shot": "b7 THE CLUB — the drop",
+  "supersedes": "b7.png (v1) — REJECTED as an implied portrait; kept on disk as the rejected reference",
+  "sha256": "2eb031c968e4c21522df2f45d016e4b09b3e52e1f5b5cbc7ebe933f5fc5fb377",
+  "candidate": "cand/b7v2_3.png (of three)",
+  "spec": "scenes/trailer-B-sound.json b7 v2, storyboard commit 66a0a3b; declarations completed at de05ed4",
+  "PERSON_GATE_PER_CANDIDATE": {
+    "b7v2_1": "PASS — upper right carries dark hair only, no jaw, chin or facial feature at 3x. Frame cut above the shoulder. Rejected for a different reason: the frame is PILLARBOXED with black bars, so it is not full-bleed.",
+    "b7v2_2": "FAIL — jaw, chin and neck rendered in focus at the top right. Not identifiable (no eyes, nose or mouth in frame) but well beyond the spec's permitted maximum of 'a blur of hair or collar'. This is instructed-soft again, which is exactly what v2 replaced, so it fails on the gate's own terms: any legible face is a reject regardless of other gates.",
+    "b7v2_3": "PASS, and by COMPOSITION rather than by softening — she is turned away, back of head and neck to camera, zero facial features present. 'Turn the head away' is one of the permitted compositions named in the guard. SELECTED."
+  },
+  "gates": {
+    "person": "PASS — no face anywhere in frame; the subject is turned away",
+    "club_invariants": "PASS — red woven-tape base, gold spiral bands, navy lattice on the neck, pale head tip, matte textile never glossy (SM_RV_8 hold_invariants)",
+    "the_gap": "PASS — club at centre-left, open hand at centre-right, a clear visible gap of empty air between them, nothing crossing it",
+    "text": "PASS with a precise caveat: text-SHAPED forms are present in the heavily defocused background signage, and NO glyph is legible at 3x. Nothing is asserted. Recorded this way rather than as a bare 'zero text' because the honest claim is illegibility, not absence.",
+    "hands": "PASS — five fingers, correct anatomy, chalk visible",
+    "autograph": "PASS — none rendered. The Museum records SM_RV_8 as signed but the digitisation does not show it; an earlier keyframe was rejected for inking a fabricated legible 'Sydney 2000'."
+  },
+  "method_note": "First shot generated under the PERSON GUARD (imagegen enforcement of storyboard's 66a0a3b declarations). The guard injected an explicit no-face prohibition with its reason into the prompt: compose it out rather than soften it, crop above the shoulder, turn the head away, or keep the person out of shot. Candidate 3 took the turn-away option. Note that 1 of 3 candidates still produced a partial face despite the prohibition — the guard reduces the rate, it does not eliminate it, which is the same relationship measured for injected text on 2026-08-22.",
+  "verdict": {
+    "status": "SHIP",
+    "confidence": 0.88
+  }
+}
