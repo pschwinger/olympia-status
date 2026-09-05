@@ -48,6 +48,7 @@
   .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:15px}
   .card{background:var(--surface);border:1px solid var(--hair);border-radius:11px;overflow:hidden;display:flex;flex-direction:column;box-shadow:var(--shadow)}
   .card.flag{border-color:var(--flag)}
+  .shotnum{display:inline-block;background:#8a6d1f;color:#fff;border-radius:5px;font-size:11px;font-weight:700;padding:1px 6px;vertical-align:1px}
   .trio{display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px;background:var(--hair-2);position:relative}
   .trio.duo{grid-template-columns:1fr 1fr}
   .trio.solo{grid-template-columns:1fr}
@@ -186,7 +187,7 @@
     <p>The system running this pipeline is <b>Empirica</b>, a startup financed by FFP, currently in testing. It was not built for REEVALUATE; that it does what the enablers set out to enable is a happy coincidence. The core is open source, with a proprietary paid coordination layer (<b>Cortex</b>). What it is and how it helps us: see the <a href="../index.html">main page</a>.</p>
     <h2 class="intro-h">What we are doing</h2>
     <p>Building the film <b>chapter by chapter from the Olympic Museum's own document</b> — one chapter per unit, each scene grounded in real, licensed sources (the <span class="fam-chip" style="--fc:#a07a1e">Chapters</span> below). Everything else on this page is what came before or what taught us the rules: the <span class="fam-chip" style="--fc:#bc5a22">finished scenes</span>, the <span class="fam-chip" style="--fc:#2e7d78">earlier trailer cuts</span>, and the <span class="fam-chip" style="--fc:#6b5f8a">tests</span>. Colours are consistent everywhere: a heading's colour tells you which of the four it belongs to.</p>
-    <p class="how"><b>How to use it:</b> click a shot to play it · click an asset image to zoom · click the 3D tile to turn the model · version buttons swap takes (v1, v2 …) · type feedback in any card — it saves itself — then <b>Copy all feedback</b> and paste it to me.</p>
+    <p class="how"><b>How to use it:</b> every clip carries a number (<span class="shotnum">#N</span>); quote it in feedback · click a shot to play it · click an asset image to zoom · click the 3D tile to turn the model · version buttons swap takes (v1, v2 …) · type feedback in any card — it saves itself — then <b>Copy all feedback</b> and paste it to me.</p>
   </div>
   <div class="toolbar">
     <button class="btn" id="copybtn" onclick="copyAll()">Copy all feedback</button>
@@ -310,7 +311,7 @@
     var h='<div class="'+cls+'" data-key="'+sh.key+'"><div class="ubar" style="background:'+(sec.color||'var(--muted)')+'"></div>';
     h+='<div class="'+trioCls+'"><span class="bt">'+sh.key+'</span><span class="st '+stc+'">'+stl+'</span>';
     if(hasVid){
-      h+='<div class="pane shot" data-vid="'+first.src+'" data-label="'+esc(sh.title+' — '+first.label)+'"><img src="'+poster(first.src)+'" alt=""><span class="pl">'+esc(first.label)+' ▶</span></div>';
+      h+='<div class="pane shot" data-vid="'+first.src+'" data-label="'+esc((sh.num?'#'+sh.num+' ':'')+sh.title+' — '+first.label)+'"><img src="'+poster(first.src)+'" alt=""><span class="pl">'+esc(first.label)+' ▶</span></div>';
     } else {
       h+='<div class="pane empty"><span>'+esc(sh.note||'no clip')+'</span></div>';
     }
@@ -319,9 +320,9 @@
       var vurl='viewer3d.html?src='+encodeURIComponent(a.glb)+'&name='+encodeURIComponent(a.name)+'&code='+encodeURIComponent(a.code)+'&mb='+encodeURIComponent(a.mb);
       h+='<div class="pane m3d" data-href="'+vurl+'"><img src="'+a.img+'" alt="" style="object-fit:contain;opacity:.55"><span class="pl d">3D ↻ open</span><span class="m3dhint">'+(a.mb?a.mb+' MB':'')+'</span></div>';
     }
-    h+='</div><div class="cb"><span class="ct">'+esc(sh.title)+'</span>'+(sh.desc?'<span class="ca">'+sh.desc+'</span>':'')+'<div class="crow">'+(a?'<code>'+a.code+'</code>':'')+(sh.flag?'<span class="fl">'+esc(sh.flag)+'</span>':'')+(sh.prompt?'<button class="pbtn" data-src="'+sh.prompt+'" data-kind="md" onclick="togglePanel(this)">📄 prompt ▾</button>':'')+(sh.ledger?'<button class="pbtn" data-src="'+sh.ledger+'" data-kind="json" onclick="togglePanel(this)">🧾 ledger ▾</button>':'')+'</div><div class="ppanel" hidden></div>';
+    h+='</div><div class="cb"><span class="ct">'+(sh.num?'<span class="shotnum">#'+sh.num+'</span> ':'')+esc(sh.title)+'</span>'+(sh.desc?'<span class="ca">'+sh.desc+'</span>':'')+'<div class="crow">'+(a?'<code>'+a.code+'</code>':'')+(sh.flag?'<span class="fl">'+esc(sh.flag)+'</span>':'')+(sh.prompt?'<button class="pbtn" data-src="'+sh.prompt+'" data-kind="md" onclick="togglePanel(this)">📄 prompt ▾</button>':'')+(sh.ledger?'<button class="pbtn" data-src="'+sh.ledger+'" data-kind="json" onclick="togglePanel(this)">🧾 ledger ▾</button>':'')+'</div><div class="ppanel" hidden></div>';
     if(sh.versions&&sh.versions.length>1){
-      h+='<div class="vers">'; sh.versions.forEach(function(v,i){ h+='<button data-vid="'+v.src+'" data-label="'+esc(sh.title+' — '+v.label)+'">'+esc(v.label)+'</button>'; }); h+='</div>';
+      h+='<div class="vers">'; sh.versions.forEach(function(v,i){ h+='<button data-vid="'+v.src+'" data-label="'+esc((sh.num?'#'+sh.num+' ':'')+sh.title+' — '+v.label)+'">'+esc(v.label)+'</button>'; }); h+='</div>';
     }
     h+='<textarea class="fb" data-shot="'+sh.key+'" placeholder="first feedback…"></textarea></div></div>';
     return h;
