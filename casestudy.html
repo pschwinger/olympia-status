@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
+<title>Case Study — One Shot, Fully Measured</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+</head>
+<body>
+<div id="olynav" style="position:sticky;top:0;z-index:999;display:flex;gap:8px;align-items:center;background:#1e2418;padding:8px 14px;border-bottom:1px solid #3a4030"><a href="" style="text-decoration:none;font:600 12.5px Archivo,system-ui,sans-serif;padding:5px 12px;border-radius:7px;background:#54682f;color:#fff">⌂ Home</a><a href="board/review.html" style="text-decoration:none;font:600 12.5px Archivo,system-ui,sans-serif;padding:5px 12px;border-radius:7px;color:#cfd3c0">🎬 Production board</a><a href="v1/" style="text-decoration:none;font:600 12.5px Archivo,system-ui,sans-serif;padding:5px 12px;border-radius:7px;color:#cfd3c0">V1 · 31 Aug</a><a href="casestudy.html" style="text-decoration:none;font:600 12.5px Archivo,system-ui,sans-serif;padding:5px 12px;border-radius:7px;color:#cfd3c0">Case study</a><span style="margin-left:auto;font:600 10px 'IBM Plex Mono',monospace;letter-spacing:.1em;color:#8b8f80">OLYMPIA · REEVALUATE</span></div>
+<style>
+:root{--bg:#edeee6;--surface:#f6f6f1;--surface-2:#e7e9df;--ink:#191c15;--steel:#454a3c;--muted:#6d7261;--hair:#d3d5c8;--hair-2:#c0c3b3;--olive:#54682f;--bronze:#a06a24;--flame:#ba5a1e;--good:#3f7a4c;--warn:#a07a1e;--none:#8b8f80;--shadow:0 1px 0 rgba(0,0,0,.04)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#13150e;--surface:#1a1d14;--surface-2:#20241a;--ink:#dce0d2;--steel:#a7ad98;--muted:#7f846d;--hair:#282c1f;--hair-2:#363b2a;--olive:#9fb56b;--bronze:#cf9748;--flame:#d9743a;--good:#77b183;--warn:#c79a3e;--none:#6e7263}}
+:root[data-theme="dark"]{--bg:#13150e;--surface:#1a1d14;--surface-2:#20241a;--ink:#dce0d2;--steel:#a7ad98;--muted:#7f846d;--hair:#282c1f;--hair-2:#363b2a;--olive:#9fb56b;--bronze:#cf9748;--flame:#d9743a;--good:#77b183;--warn:#c79a3e;--none:#6e7263}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Archivo",system-ui,sans-serif;font-size:15.5px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1060px;margin:0 auto;padding:clamp(24px,4vw,56px) clamp(16px,3vw,36px) 100px}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--bronze);margin:0 0 12px}
+h1{font-family:"Fraunces",serif;font-weight:500;font-size:clamp(2rem,5vw,3.1rem);line-height:1.04;letter-spacing:-.015em;margin:0 0 10px;text-wrap:balance}
+.sub{font-style:italic;color:var(--steel);font-size:1.05rem;max-width:70ch;margin:0 0 6px}
+h2{font-family:"Fraunces",serif;font-weight:500;font-size:1.6rem;letter-spacing:-.01em;margin:0 0 6px;text-wrap:balance}
+section{margin-top:56px}
+.k{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--bronze);margin:0 0 8px}
+p{margin:0 0 12px;max-width:74ch}
+.lede{font-size:1.06rem;color:var(--steel)}
+.chain{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin:16px 0}
+.step{background:var(--surface);border:1px solid var(--hair);border-radius:10px;overflow:hidden}
+.step img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;background:var(--surface-2)}
+.step figcaption{padding:8px 10px;font-size:.78rem;color:var(--muted);line-height:1.35}
+.step figcaption b{display:block;color:var(--ink);font-size:.82rem;margin-bottom:2px}
+figure{margin:0}
+.tag{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;padding:1px 7px;border-radius:5px;margin-right:5px}
+.t-src{background:var(--good);color:var(--bg)} .t-gen{background:var(--bronze);color:var(--bg)} .t-blk{background:var(--none);color:var(--bg)}
+pre{background:var(--surface);border:1px solid var(--hair);border-radius:12px;padding:18px 20px;font-family:"IBM Plex Mono",monospace;font-size:12.5px;line-height:1.6;overflow-x:auto;white-space:pre-wrap;color:var(--steel)}
+table{border-collapse:collapse;width:100%;margin-top:12px;font-size:.92rem}
+th{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-align:left;padding:6px 10px;border-bottom:2px solid var(--hair-2)}
+td{padding:8px 10px;border-bottom:1px solid var(--hair);color:var(--steel);vertical-align:top}
+td b{color:var(--ink)}
+.pass{color:var(--good);font-weight:700}.fail{color:var(--flame);font-weight:700}.pend{color:var(--muted);font-style:italic}
+.vbars{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;margin-top:12px}
+.vb{background:var(--surface);border:1px solid var(--hair);border-radius:8px;padding:8px 10px;font-size:.8rem;color:var(--muted)}
+.vb b{display:block;color:var(--ink);font-family:"IBM Plex Mono",monospace;font-size:.95rem}
+.bar{height:4px;background:var(--surface-2);border-radius:2px;margin-top:5px}.bar i{display:block;height:4px;border-radius:2px;background:var(--olive)}
+.callout{background:var(--surface);border:1px solid var(--hair);border-left:4px solid var(--bronze);border-radius:12px;padding:18px 22px;margin-top:16px;box-shadow:var(--shadow)}
+.status{background:var(--surface);border:1px solid var(--hair);border-left:4px solid var(--warn);border-radius:12px;padding:14px 20px;margin-top:20px;font-size:.95rem;color:var(--steel)}
+.foot{margin-top:70px;padding-top:16px;border-top:1px solid var(--hair);font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--muted)}
+ol.loop{margin:10px 0 0;padding-left:20px}
+ol.loop li{margin-bottom:7px;color:var(--steel)}
+ol.loop li b{color:var(--ink)}
+</style>
+<div class="wrap">
+
+<p class="eyebrow">Empirica case study · live document</p>
+<h1>One shot, fully measured</h1>
+<p class="sub">Every AI video pipeline says "trust us." This page shows one 20-second generation with every rule, belief, check and correction on the record — before, during and after the money is spent.</p>
+
+<section>
+<p class="k">The loop being demonstrated</p>
+<ol class="loop">
+<li><b>Declare the skills</b> that govern the prompt, and flag the prompt against their rules.</li>
+<li><b>Show the ingredients:</b> every reference image, with its provenance typed.</li>
+<li><b>State beliefs before running:</b> the practitioner's calibration vectors and a written prediction per quality gate.</li>
+<li><b>Run once</b> on the real model.</li>
+<li><b>Re-verify the video against the prompt,</b> gate by gate, with measurements — not vibes.</li>
+<li><b>Correct and re-run</b> until at least 90% of gates pass (or the reviewer accepts earlier).</li>
+</ol>
+<p style="margin-top:10px">The subject: Shot "1a whole scene v2" of the Olympia trailer — the 1875 rediscovery of Olympia, five shots in one generation, with a new aerial opening over the Alpheios river.</p>
+</section>
+
+<section>
+<p class="k">1 · Skills declared, prompt flagged</p>
+<h2>The rules came first — and they caught an error</h2>
+<p>Two skills govern this prompt: <b>seedance-genhq</b> (the multishot prompt format: timestamped shots, subject first, 10-15 words per second, one event per shot, a living final beat, diegetic audio only) and <b>ai-camera-movements</b> (the drone push-in block for the aerial, kept as its own instruction separate from the scene).</p>
+<table>
+<tr><th>Rule (seedance-genhq)</th><th>Result</th></tr>
+<tr><td>Timestamps tile 0-20 s contiguously, hard-cut brackets</td><td class="pass">PASS</td></tr>
+<tr><td>Subject + action in the first 20-30 words of every shot</td><td class="pass">PASS (5/5)</td></tr>
+<tr><td>10-15 words per second of directing text</td><td><span class="fail">Shot 1 FAILED at 18.0 w/s</span> — trimmed to exactly 15.0. Shot 2: 14.8 after exempting the blocking/cut lines. Shots 3-5 pass raw.</td></tr>
+<tr><td>One primary event per shot</td><td class="pass">PASS — the background crew is continuous activity, not a second event</td></tr>
+<tr><td><code>Final beat:</code> with motion alive, no freeze language</td><td class="pass">PASS</td></tr>
+<tr><td>The word "fast" absent (known jitter trigger)</td><td class="pass">PASS</td></tr>
+<tr><td>Audio diegetic only, never music</td><td class="pass">PASS</td></tr>
+<tr><td>References bound to roles and scoped, max 7</td><td class="pass">PASS (6)</td></tr>
+</table>
+<div class="callout"><b>Why this matters:</b> the violation was caught and fixed by the checklist <i>before</i> a single credit was spent. That is the point of running rules before generations.</div>
+</section>
+
+<section>
+<p class="k">2 · The ingredients</p>
+<h2>Six references, each with a typed provenance</h2>
+<div class="chain">
+<figure class="step"><img src="board/refs/1a-generated/k1_v3_start.png" alt="Composited start frame"><figcaption><b>@Image1 · start frame</b><span class="tag t-gen">generated + certified</span>Scale composited before generation (drum-to-man ratio 1.46), upscaled to 2K. Governs scene, light, stone.</figcaption></figure>
+<figure class="step"><img src="board/refs/_test-character-sheets/workman_prod.png" alt="Workman character sheet"><figcaption><b>@Image2 · the workman</b><span class="tag t-gen">generated from archive</span>Character sheet built from the 1875/76 photograph. Governs every labourer's dress exactly.</figcaption></figure>
+<figure class="step"><img src="board/refs/_test-character-sheets/archaeologist_prod_v2.png" alt="Archaeologist character sheet"><figcaption><b>@Image3 · the archaeologist</b><span class="tag t-gen">generated from archive</span>Sack coat, bowler, staff — verified against the record.</figcaption></figure>
+<figure class="step"><img src="board/refs/1a-generated/env_temple-of-zeus_1870s.png" alt="Environment plate"><figcaption><b>@Image4 · the dig</b><span class="tag t-gen">generated + verified</span>The empty 1870s excavation, geography matched to the 1897 Kronos-hill view.</figcaption></figure>
+<figure class="step"><img src="board/refs/1a-storyboard/1a_storyboard_panels.jpg" alt="Storyboard panels"><figcaption><b>@Image5 · storyboard</b><span class="tag t-blk">blocking only</span>Frames shots 2-4; never appears on screen.</figcaption></figure>
+<figure class="step"><img src="board/refs/1a-sources/Hallwyl_104595_Fleuve-Alpheios.jpg" alt="Hallwyl photograph of the Alpheios"><figcaption><b>@Image6 · the river</b><span class="tag t-src">museum source</span>"Olympia. Fleuve Alpheios" — period albumen photograph, Hallwyl Museum. Governs the river's look in the new aerial.</figcaption></figure>
+</div>
+<p style="font-size:.9rem;color:var(--muted)">The aerial <i>viewpoint</i> itself is typed <b>Invented</b> in the claim ledger — no aerial photograph of Olympia existed in 1875 and the shot does not pretend one did. The river's course (Blouet 1829 plan) and look (Hallwyl photo) are <b>Sourced</b>.</p>
+</section>
+
+<section>
+<p class="k">3 · Model + connection</p>
+<h2>What actually runs</h2>
+<table>
+<tr><th>Layer</th><th>Value</th></tr>
+<tr><td>Model</td><td><b>Seedance 2.5</b>, omni-reference (multiple image refs, no start-image lock)</td></tr>
+<tr><td>Parameters</td><td>20 s · 16:9 · 1080p · audio off · one take per iteration</td></tr>
+<tr><td>Transport</td><td>Higgsfield platform, driven by the <b>empirica-videogen</b> practice via CLI</td></tr>
+<tr><td>Who does what</td><td>storyboard writes and audits the spec · videogen translates nothing (the prompt is final) and runs + measures · every step logged in Empirica</td></tr>
+<tr><td>Spec of record</td><td><code>scenes/1a-multishot-whole-scene-v2.md</code> @ commit <code>fcc4d68</code></td></tr>
+</table>
+</section>
+
+<section>
+<p class="k">4 · The prompt (final, audited)</p>
+<h2>What the model was told — verbatim</h2>
+<pre>[00:00-00:04] Shot 1: High aerial wide over the Olympia plain: the Alpheios river from @Image6 curves broad and sandy through the valley, the wooded Kronos hill at the far edge, the half-dug excavation from @Image4 small below with drum rows readable; no people yet. Drone push in, gliding toward the excavation, gently descending. Hard noon light, albumen tone. Hard cut to Shot 2.
+[00:04-00:10] Shot 2: The workman from @Image2 at the foot of the towering drum, opening on @Image1, brushes dust from his hands as two labourers behind him lever a limestone block with a timber bar; the block tips and settles with a drop of dust; the workman turns his head toward the block, and the archaeologist from @Image3 steps forward on the trench lip. Behind them the dig works on: more labourers dressed as @Image2 swing picks and carry earth along the trench. Match Panel 1 in @Image5. Locked-off wide, then one slow push toward the workman. Hard cut to Shot 3.
+[00:10-00:14] Shot 3: Two labourers dressed as @Image2, waist-up in profile, heave down together on the timber bar under the edge of the fluted drum; the drum's edge lifts a hand's width, rocks, and settles back with dust off its face as their shoulders drop. Close-up, shallow focus on hands and stone. Match Panel 2 in @Image5. Hard cut to Shot 4.
+[00:14-00:17] Shot 4: The workman's dusty hands from @Image2 sweep earth off the flute of a buried drum, the fluting emerging under his palm. Low angle from the trench floor, macro, very shallow focus. Match Panel 3 in @Image5. Hard cut to Shot 5.
+[00:17-00:20] Shot 5: Final beat: the archaeologist from @Image3 on the trench lip, medium three-quarter, takes off his bowler and looks down the uncovered colonnade; dust keeps drifting through the light past him through the closing frame.
+Audio: Natural diegetic sound only — wind over the plain and the faint wash of the river under Shot 1; picks on limestone, the timber bar creaking, the dull settle of stone into gravel, breath, distant voices. Full sound design. No music, no score.
+
+No bare chests, no Evzone parade dress, no pith helmet, no standing column, no modern object, no buildings, no roads, no text or lettering anywhere. Faces are not any real person.</pre>
+</section>
+
+<section>
+<p class="k">5 · Calibration, before the run</p>
+<h2>What the practitioner believed, on the record</h2>
+<p>Empirica opens every piece of work with a self-assessment (0 to 1) that is stored <i>before</i> the outcome is known. These are the actual numbers from this run's opening measurement — they cannot be edited after the fact:</p>
+<div class="vbars">
+<div class="vb"><b>know 0.85</b>domain understanding<div class="bar"><i style="width:85%"></i></div></div>
+<div class="vb"><b>do 0.88</b>ability to execute<div class="bar"><i style="width:88%"></i></div></div>
+<div class="vb"><b>context 0.88</b>surrounding state<div class="bar"><i style="width:88%"></i></div></div>
+<div class="vb"><b>clarity 0.85</b>path forward<div class="bar"><i style="width:85%"></i></div></div>
+<div class="vb"><b>signal 0.87</b>information quality<div class="bar"><i style="width:87%"></i></div></div>
+<div class="vb"><b>uncertainty 0.25</b>what is NOT known<div class="bar"><i style="width:25%"></i></div></div>
+</div>
+<p style="margin-top:14px">And a written prediction per quality gate — the honest odds, stated before spending:</p>
+<table id="gates">
+<tr><th>#</th><th>Gate (measured against the prompt)</th><th>Predicted</th><th>Run 1</th><th>Run 2</th></tr>
+<tr><td>G1</td><td>Five cuts land on their timestamps (±0.5 s)</td><td>0.85</td><td class="pend">pending</td><td></td></tr>
+<tr><td>G2</td><td>Same workman + same archaeologist across all five shots</td><td>0.80</td><td class="pend">pending</td><td></td></tr>
+<tr><td>G3</td><td>Drum-to-man scale ratio &gt; 1.0 in shots 2-3</td><td>0.75</td><td class="pend">pending</td><td></td></tr>
+<tr><td>G4</td><td>Each shot's primary event happens on the named object (block · drum edge · flute)</td><td>0.70</td><td class="pend">pending</td><td></td></tr>
+<tr><td>G5</td><td>Costume rules hold in every checked frame (no vest, no pith helmet, no bare chest)</td><td>0.80</td><td class="pend">pending</td><td></td></tr>
+<tr><td>G6</td><td>Zero text or lettering anywhere</td><td>0.90</td><td class="pend">pending</td><td></td></tr>
+<tr><td>G7</td><td>Shot 1: no people, no modern features</td><td>0.75</td><td class="pend">pending</td><td></td></tr>
+<tr><td>G8</td><td>Shot 1: the river reads like the Hallwyl photograph (broad + sandy, not a gorge)</td><td>0.70</td><td class="pend">pending</td><td></td></tr>
+<tr><td>G9</td><td>Shot 2: background crew present and working from the first frame</td><td>0.60</td><td class="pend">pending</td><td></td></tr>
+<tr><td>G10</td><td>Hands render correctly in the close-ups (shots 3-4)</td><td>0.65</td><td class="pend">pending</td><td></td></tr>
+</table>
+<div class="callout"><b>The honest prediction:</b> these odds sum to an expected <b>7.5 of 10 gates</b> on the first run — below the 90% satisfaction bar. In plain words: we expect run 1 to need one correction round, and we are saying so before the result exists. Whether that prediction itself was right is part of what this page measures.</div>
+</section>
+
+<section>
+<p class="k">6 · The runs</p>
+<h2>Iterations</h2>
+<div class="status" id="runstatus"><b>Run 1 dispatched 2026-09-05</b> — one take, Seedance 2.5 via videogen. Awaiting generation. Results, measurements and the video will appear here; if fewer than 9 of 10 gates pass, the correction and run 2 follow.</div>
+</section>
+
+<p class="foot">REEVALUATE · Empirica case study · the working room with every version and ledger: <a href="board/review.html" style="color:var(--bronze)">production board</a> · what Empirica is: <a href="index.html" style="color:var(--bronze)">main page</a></p>
+</div>
+</body>
+</html>
