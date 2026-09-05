@@ -9,7 +9,7 @@
     "at the Temple of Zeus, 1875–81, with a large local workforce. Per Philipp: storyboard first,",
     "character design sheet second, then ONE generation, gated.",
     "",
-    "GENHQ CROSS-CHECK (empirica-workspace/.claude/skills/genhq-ai-image, from ffp-business/creative/genhq):",
+    "IMAGE-METHOD CROSS-CHECK:",
     "  • 'Hero Image First': create ONE perfect hero image, then derive every other angle from it with",
     "    a consistent character. -> Our hero = the WIDE of the dig (it carries the characters); the",
     "    medium and close are DERIVED from it, not generated independently.",
@@ -78,7 +78,7 @@
       "ground": "Raw earth trench walls with shovel marks, gravel spoil, bare dirt — in the 1870s the site is a DIG, not a lawn. No modern paths, ropes, signs, or the 2004 re-erected column (it did not exist until 2004 — loc3 shows it only for texture, it must NOT appear)."
     },
     "never": "No mountain range or snow peaks; no sea; no standing colonnade (the temple had no standing columns in 1875); no tidy lawn; no modern visitors, paths, rope barriers, signs; no Parthenon-style intact temple; no cypress avenue.",
-    "consistency_method": "Same as the characters (GenHQ method #1): generate ONE ENVIRONMENT PLATE first — the empty location, no people — from @image refs loc1 (the view) + loc2 (geometry) + ref1/ref3 (the 1870s state), gated against the NEVER list. That plate is then an @image reference in EVERY shot alongside the character sheets, so the background stays the same place across wide / medium / close. The k1 hero is composed ON this plate.",
+    "consistency_method": "Same as the characters (our sheet-first method): generate ONE ENVIRONMENT PLATE first — the empty location, no people — from @image refs loc1 (the view) + loc2 (geometry) + ref1/ref3 (the 1870s state), gated against the NEVER list. That plate is then an @image reference in EVERY shot alongside the character sheets, so the background stays the same place across wide / medium / close. The k1 hero is composed ON this plate.",
     "environment_plate": {
       "what": "The empty excavation at the Temple of Zeus, 1870s, looking north toward the Kronos hill: drums in rows, trench cut, spoil heaps, no people.",
       "owner": "empirica-imagegen",
@@ -142,7 +142,7 @@
       "motion": "Locked-off. One action: he lifts his eyes from the staff to the block face and his hand stops — the moment of recognition. Nothing else moves but dust.",
       "claim": "The excavation was a measured, recorded, scientific operation — surveyed and photographed from the first season. SOURCED (Curtius report titles; DAI).",
       "not_asserted": "What he has found. No inscription is shown or implied on the block (no text).",
-      "fidelity_gate": "Same face and suit as k1 (GenHQ chaining: k1 output is the reference). No pith helmet. No text on the block. LOCATION: background matches the environment plate (Kronos hill north, drums in rows, dig not lawn; no 2004 column, no modern paths)."
+      "fidelity_gate": "Same face and suit as k1 (chaining: k1 output is the reference). No pith helmet. No text on the block. LOCATION: background matches the environment plate (Kronos hill north, drums in rows, dig not lawn; no 2004 column, no modern paths)."
     },
     {
       "id": "k3",
@@ -168,7 +168,7 @@
   ],
   "generation_plan": {
     "step_0_character_design_sheet": {
-      "what": "Generate a rendered CHARACTER DESIGN SHEET for each type: front, three-quarter, profile, on a neutral ground — the workman and the archaeologist — using the archival crops (ref1 3x crops) as @image references + the written description. Model: Nano Banana Pro via Higgsfield (GenHQ method #1). Pre-size refs to 1920x1080.",
+      "what": "Generate a rendered CHARACTER DESIGN SHEET for each type: front, three-quarter, profile, on a neutral ground — the workman and the archaeologist — using the archival crops (ref1 3x crops) as @image references + the written description. Model: Nano Banana Pro via Higgsfield (our sheet-first method). Pre-size refs to 1920x1080.",
       "gate": "Verify against the character sheet NEVER lists before it seeds anything. If it reaches for Evzone dress or a pith helmet, reject and re-roll with the NEVER list in the prompt.",
       "owner": "empirica-imagegen",
       "output": "out/1a-the-rediscovery/char_workman.png, char_archaeologist.png (+ ledgers)"
@@ -185,12 +185,12 @@
       "owner": "empirica-imagegen"
     },
     "step_2_derive": {
-      "what": "Generate k2 with @image1 = k1 output; generate k3 with @image1 = k2 output (GenHQ chaining).",
+      "what": "Generate k2 with @image1 = k1 output; generate k3 with @image1 = k2 output (chaining).",
       "gate": "same characters as k1 (drift check)",
       "owner": "empirica-imagegen"
     },
     "step_3_upscale": {
-      "what": "Upscale all three keyframes before video (GenHQ: never skip).",
+      "what": "Upscale all three keyframes before video (never skip).",
       "owner": "empirica-imagegen"
     },
     "step_4_motion": {

@@ -1,7 +1,7 @@
 {
   "deliverable": "char_archaeologist.png",
   "scene": "1a-the-rediscovery",
-  "step": "ingredient (GenHQ Hero-Image-First: NOT a scene shot)",
+  "step": "ingredient (Hero-Image-First: NOT a scene shot)",
   "sha256": "61132601e2a6d833badee9f540699154717c528635e3aaef7cebff81f852a555",
   "verdict": {
     "status": "SHIP",

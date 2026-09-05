@@ -1,5 +1,5 @@
 {
-  "test": "kotinos Kling prompt-length A/B (GenHQ audit)",
+  "test": "kotinos Kling prompt-length A/B (format audit)",
   "keyframe": "the-crowning/k1.png (certified kotinos still)",
   "model": "kling3_0 pro, 5s, 16:9, --sound off, best-of-1 per arm",
   "arms": {
@@ -11,7 +11,7 @@
     "invented_wreath_elements": {"A_long": "none — dried golden-brown, narrow lanceolate leaves, no fresh-green, no fabricated closed ring", "B_short": "none — same; dried golden-brown, narrow leaves, faithful", "verdict": "no difference — both faithful"},
     "word_count": {"A": 261, "B": 65}
   },
-  "verdict": "NO MEASURABLE DIFFERENCE. The 65-word motion-only prompt held the kotinos fidelity as well as the 261-word CONTINUITY block. The keyframe drove the fidelity (GenHQ 'frames drive the output'), so the long invariant-restatement is REDUNDANT — not harmful, but not earning its length.",
-  "recommendation": "Adopt the brief Kling motion format (motion + one hold line, ~40-65 words). Since B matches A at 1/4 the words and is GenHQ-correct, this supports the per-model motion-emitter change. CAVEAT: n=1 per arm (stochastic generation) — the direction is clear (redundant, not harmful) but a 3x-each repeat would harden it if wanted before changing the emitter.",
+  "verdict": "NO MEASURABLE DIFFERENCE. The 65-word motion-only prompt held the kotinos fidelity as well as the 261-word CONTINUITY block. The keyframe drove the fidelity (Kling guidance: 'frames drive the output'), so the long invariant-restatement is REDUNDANT — not harmful, but not earning its length.",
+  "recommendation": "Adopt the brief Kling motion format (motion + one hold line, ~40-65 words). Since B matches A at 1/4 the words and is format-correct, this supports the per-model motion-emitter change. CAVEAT: n=1 per arm (stochastic generation) — the direction is clear (redundant, not harmful) but a 3x-each repeat would harden it if wanted before changing the emitter.",
   "credits": "~20 (2 arms)"
 }

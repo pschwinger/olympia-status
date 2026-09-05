@@ -1,5 +1,5 @@
 {
-  "shot": "1a k1 v4b (GenHQ format + referent fix)", "scene": "1a-the-rediscovery",
+  "shot": "1a k1 v4b (timestamped format + referent fix)", "scene": "1a-the-rediscovery",
   "shipped_clip": "k1_v4b_genhq.mp4", "selected_candidate": "v4bcand1",
   "fix": "v4 prompt named 'it tips and settles' -> 'it' bound to the nearest noun (the foreground drum), so v4's dust erupted at the WRONG object. v4b names 'THE BLOCK' explicitly (x2: 'THE BLOCK tips and settles... turns his head toward THE BLOCK').",
   "model": "seedance_2_5 omni_reference, 6s, 1080p, 2K start, 3 refs, best-of-3",
@@ -10,6 +10,6 @@
     {"gate": "location/characters/text/hands", "result": "PASS"}
   ],
   "verdict": {"status": "SHIP — best version", "confidence": 0.88},
-  "conclusion": "v4b is the best k1 to date: v3/v4 scale fidelity + the CORRECT settle location. Confirms the GenHQ 'name every referent, no pronouns' rule with a measured before/after (v4 dust-at-drum -> v4b dust-at-block). Recommend v4b as the k1 of record for 1a.",
+  "conclusion": "v4b is the best k1 to date: v3/v4 scale fidelity + the CORRECT settle location. Confirms the 'name every referent, no pronouns' rule with a measured before/after (v4 dust-at-drum -> v4b dust-at-block). Recommend v4b as the k1 of record for 1a.",
   "lesson": "pronouns bind to the nearest noun in the frame — always name the acting object explicitly in a multi-object shot."
 }

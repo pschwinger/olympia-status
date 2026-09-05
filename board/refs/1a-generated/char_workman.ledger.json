@@ -1,7 +1,7 @@
 {
   "deliverable": "char_workman.png",
   "scene": "1a-the-rediscovery",
-  "step": "ingredient (GenHQ Hero-Image-First: NOT a scene shot)",
+  "step": "ingredient (Hero-Image-First: NOT a scene shot)",
   "sha256": "cbf45f6c04c311e29c25054c3330cc5ac45e5299517e19ba91545103a2efb12f",
   "verdict": {
     "status": "SHIP",

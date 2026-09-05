@@ -1,7 +1,7 @@
 {
   "deliverable": "env_temple-of-zeus_1870s.png",
   "scene": "1a-the-rediscovery",
-  "step": "ingredient (GenHQ Hero-Image-First: NOT a scene shot)",
+  "step": "ingredient (Hero-Image-First: NOT a scene shot)",
   "sha256": "370c46b9060ff532f826ef7e3488bdbd093456c01728c5eadf3d526aaccbdc77",
   "verdict": {
     "status": "SHIP",

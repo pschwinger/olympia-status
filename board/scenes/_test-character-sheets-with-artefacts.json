@@ -24,7 +24,7 @@
   "subtest_A_format": {
     "subject": "the 1a Workman and Archaeologist (already approved 3-view sheets)",
     "what": "Regenerate each as a PRODUCTION sheet: four-view turnaround (facing camera / turned 45° / side / from behind) PLUS a callout strip of the held and worn items isolated and enlarged — workman: the pick, the headcloth knot, the sash, the shoe; archaeologist: the bowler, the jacket front with its lapel/collar, the measuring staff, the boot.",
-    "consistency_method": "GenHQ method #1: @image = the approved 3-view sheet as the identity reference; text = the character description; layout described WITHOUT nameable words (no 'FRONT/BACK/PROFILE' — they become captions).",
+    "consistency_method": "our sheet-first method: @image = the approved 3-view sheet as the identity reference; text = the character description; layout described WITHOUT nameable words (no 'FRONT/BACK/PROFILE' — they become captions).",
     "gate": "NEVER lists as before; exploratory pass; the callout items must be the SAME objects as in the views (pick head shape, bowler brim, staff length). Resolves the archaeologist's lapel inconsistency by making the jacket a callout.",
     "measures": "prop consistency across 4 views + callouts (pass/fail per item); any text."
   },

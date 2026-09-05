@@ -2,9 +2,9 @@
 
 **Philipp (2026-08-22):** "why don't we use Seedance and create the whole video? … just say what we want in different scenes and see what happens."
 
-**What we know:** Seedance 2.5 on Higgsfield = **4–30 s per generation**, 1080p, omni-reference (image refs + optional start image). The `seedance-genhq` skill's multishot format — timestamped `[t–t] Shot N:` lines, one action per shot, 1–4 s each, `Final beat:` last — makes the model **cut between shots inside one clip**, so lens, grade and characters stay consistent for free. The GenHQ corpus documents this for 2.0 only (15 s cap, "up to 3 shots in one scene"); **five shots in 20 s on 2.5 is untested. That's the experiment.**
+**What we know:** Seedance 2.5 on Higgsfield = **4–30 s per generation**, 1080p, omni-reference (image refs + optional start image). The multishot format — timestamped `[t–t] Shot N:` lines, one action per shot, 1–4 s each, `Final beat:` last — makes the model **cut between shots inside one clip**, so lens, grade and characters stay consistent for free. Public documentation covers this for 2.0 only (15 s cap, "up to 3 shots in one scene"); **five shots in 20 s on 2.5 is untested. That's the experiment.**
 
-**Format checklist (GenHQ / seedance-genhq):** bracketed timestamps tiling the runtime · subject + action in the first 20–30 words of every shot · 10–15 words per second · every referent named (no pronouns — the v4 lesson) · `Final beat:` with motion alive · never "fast" · one diegetic Audio line · ≤ 7 refs.
+**Format checklist:** bracketed timestamps tiling the runtime · subject + action in the first 20–30 words of every shot · 10–15 words per second · every referent named (no pronouns — the v4 lesson) · `Final beat:` with motion alive · never "fast" · one diegetic Audio line · ≤ 7 refs.
 
 ## References (5, bound + scoped)
 
