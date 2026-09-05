@@ -101,6 +101,11 @@
   .fb{margin-top:auto;width:100%;min-height:42px;resize:vertical;font-family:"Archivo";font-size:12.5px;line-height:1.4;color:var(--ink);background:var(--surface-2);border:1px solid var(--hair-2);border-radius:7px;padding:7px 9px}
   .fb::placeholder{color:var(--muted)}
   .fb:focus{outline:none;border-color:var(--olive);background:var(--bg)}
+  .marks{display:flex;gap:5px;margin:7px 0 5px}
+  .mbtn{font-size:11px;font-weight:600;letter-spacing:.03em;padding:2px 10px;border:1px solid var(--hair);border-radius:6px;background:transparent;color:var(--muted);cursor:pointer}
+  .mbtn[data-m="keep"].on{background:#1d7a3e;border-color:#1d7a3e;color:#fff}
+  .mbtn[data-m="change"].on{background:#a87616;border-color:#a87616;color:#fff}
+  .mbtn[data-m="no"].on{background:#a33636;border-color:#a33636;color:#fff}
   .ubar{height:3px}
   /* sourced-reference cards (archival images with citation) */
   .refcard .pane{aspect-ratio:16/10;cursor:pointer}
@@ -324,6 +329,7 @@
     if(sh.versions&&sh.versions.length>1){
       h+='<div class="vers">'; sh.versions.forEach(function(v,i){ h+='<button data-vid="'+v.src+'" data-label="'+esc((sh.num?'#'+sh.num+' ':'')+sh.title+' — '+v.label)+'">'+esc(v.label)+'</button>'; }); h+='</div>';
     }
+    h+='<div class="marks" data-shot="'+sh.key+'"'+(sh.num?' data-num="'+sh.num+'"':'')+'><button class="mbtn" data-m="keep">keep</button><button class="mbtn" data-m="change">change</button><button class="mbtn" data-m="no">no</button></div>';
     h+='<textarea class="fb" data-shot="'+sh.key+'" placeholder="first feedback…"></textarea></div></div>';
     return h;
   }
@@ -371,5 +377,19 @@
   document.addEventListener('input',function(e){if(e.target.classList&&e.target.classList.contains('fb'))persist();});
   function copyAll(){var d=collect();var out='Olympia review — feedback ('+new Date().toISOString().slice(0,10)+')\n\n';var any=false;document.querySelectorAll('textarea.fb').forEach(function(t){var k=t.dataset.shot;if(d[k]){out+='['+k+'] '+d[k]+'\n';any=true;}});if(!any)out+='(no feedback entered yet)';var b=document.getElementById('copybtn');function ok(){b.textContent='Copied ✓';setTimeout(function(){b.textContent='Copy all feedback';},1600);}if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(out).then(ok,function(){window.prompt('Copy your feedback:',out);});}else{window.prompt('Copy your feedback:',out);}}
   function clearAll(){if(!window.confirm('Clear all feedback?'))return;document.querySelectorAll('textarea.fb').forEach(function(t){t.value='';});try{localStorage.removeItem(KEY);}catch(e){}}
-  restore();
+  var MKEY='olympia-marks-v1';
+  function mload(){try{return JSON.parse(localStorage.getItem(MKEY)||'{}');}catch(e){return{};}}
+  function msave(d){try{localStorage.setItem(MKEY,JSON.stringify(d));}catch(e){}}
+  function mrestore(){var d=mload();document.querySelectorAll('.marks').forEach(function(row){var v=d[row.dataset.shot];row.querySelectorAll('.mbtn').forEach(function(b){b.classList.toggle('on',b.dataset.m===v);});});}
+  document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('.mbtn');if(!b)return;var row=b.closest('.marks');var d=mload();var k=row.dataset.shot;if(d[k]===b.dataset.m){delete d[k];}else{d[k]=b.dataset.m;}msave(d);row.querySelectorAll('.mbtn').forEach(function(x){x.classList.toggle('on',d[k]===x.dataset.m);});});
+  var _copyAll=copyAll;
+  copyAll=function(){var fb=collect();var mk=mload();var rows=[];document.querySelectorAll('.marks').forEach(function(row){var k=row.dataset.shot,n=row.dataset.num;var m=mk[k],f=fb[k];if(m||f){rows.push({n:n?parseInt(n,10):9999,line:(n?'#'+n+' ':'')+'['+k+'] '+(m?m.toUpperCase():'')+(m&&f?' — ':'')+(f||'')});}});
+    document.querySelectorAll('textarea.fb').forEach(function(t){var k=t.dataset.shot;if(fb[k]&&!document.querySelector('.marks[data-shot="'+CSS.escape(k)+'"]')){rows.push({n:9999,line:'['+k+'] '+fb[k]});}});
+    rows.sort(function(a,b){return a.n-b.n;});
+    var out='Olympia review — marks + feedback ('+new Date().toISOString().slice(0,10)+')\n\n'+(rows.length?rows.map(function(r){return r.line;}).join('\n'):'(nothing marked yet)');
+    var b=document.getElementById('copybtn');function ok(){b.textContent='Copied ✓';setTimeout(function(){b.textContent='Copy all feedback';},1600);}
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(out).then(ok,function(){window.prompt('Copy:',out);});}else{window.prompt('Copy:',out);}};
+  var _clearAll=clearAll;
+  clearAll=function(){if(!window.confirm('Clear all feedback AND marks?'))return;document.querySelectorAll('textarea.fb').forEach(function(t){t.value='';});document.querySelectorAll('.mbtn').forEach(function(b){b.classList.remove('on');});try{localStorage.removeItem(KEY);localStorage.removeItem(MKEY);}catch(e){}};
+  restore();mrestore();
 </script>
