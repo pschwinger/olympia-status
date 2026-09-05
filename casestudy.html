@@ -142,16 +142,16 @@ No bare chests, no Evzone parade dress, no pith helmet, no standing column, no m
 <p style="margin-top:14px">And a written prediction per quality gate — the honest odds, stated before spending:</p>
 <table id="gates">
 <tr><th>#</th><th>Gate (measured against the prompt)</th><th>Predicted</th><th>Run 1</th><th>Run 2</th></tr>
-<tr><td>G1</td><td>Five cuts land on their timestamps (±0.5 s)</td><td>0.85</td><td class="pass">PASS <span style="font-size:.8rem;color:var(--muted)">cuts at 3.92/10.08/13.67/16.71 s, max off by 0.33 s</span></td><td></td></tr>
-<tr><td>G2</td><td>Same workman + same archaeologist across all five shots</td><td>0.80</td><td class="pass">PASS</td><td></td></tr>
-<tr><td>G3</td><td>Drum-to-man scale ratio &gt; 1.0 in shots 2-3</td><td>0.75</td><td class="pass">PASS</td><td></td></tr>
-<tr><td>G4</td><td>Each shot's primary event happens on the named object (block · drum edge · flute)</td><td>0.70</td><td class="fail">PARTIAL <span style="font-size:.8rem;color:var(--muted)">shots 3-5 clear; shot 2 event weak; shot 1 event failed</span></td><td></td></tr>
-<tr><td>G5</td><td>Costume rules hold in every checked frame (no vest, no pith helmet, no bare chest)</td><td>0.80</td><td class="pass">PASS</td><td></td></tr>
-<tr><td>G6</td><td>Zero text or lettering anywhere</td><td>0.90</td><td class="pass">PASS <span style="font-size:.8rem;color:var(--muted)">sampled ~60 frames, not yet full-scan</span></td><td></td></tr>
-<tr><td>G7</td><td>Shot 1: no people, no modern features</td><td>0.75</td><td class="pass">PASS*</td><td></td></tr>
-<tr><td>G8</td><td>Shot 1: the river reads like the Hallwyl photograph (broad + sandy, not a gorge)</td><td>0.70</td><td class="pass">PASS*</td><td></td></tr>
-<tr><td>G9</td><td>Shot 2: background crew present and working from the first frame</td><td>0.60</td><td class="fail">FAIL <span style="font-size:.8rem;color:var(--muted)">crew present but posed, not working</span></td><td></td></tr>
-<tr><td>G10</td><td>Hands render correctly in the close-ups (shots 3-4)</td><td>0.65</td><td class="pass">PASS</td><td></td></tr>
+<tr><td>G1</td><td>Five cuts land on their timestamps (±0.5 s)</td><td>0.85</td><td class="pass">PASS <span style="font-size:.8rem;color:var(--muted)">cuts at 3.92/10.08/13.67/16.71 s, max off by 0.33 s</span></td><td class="pass">PASS</td></tr>
+<tr><td>G2</td><td>Same workman + same archaeologist across all five shots</td><td>0.80</td><td class="pass">PASS</td><td class="pass">PASS</td></tr>
+<tr><td>G3</td><td>Drum-to-man scale ratio &gt; 1.0 in shots 2-3</td><td>0.75</td><td class="pass">PASS</td><td class="pass">PASS</td></tr>
+<tr><td>G4</td><td>Each shot's primary event happens on the named object (block · drum edge · flute)</td><td>0.70</td><td class="fail">PARTIAL <span style="font-size:.8rem;color:var(--muted)">shots 3-5 clear; shot 2 event weak; shot 1 event failed</span></td><td class="fail">PARTIAL</td></tr>
+<tr><td>G5</td><td>Costume rules hold in every checked frame (no vest, no pith helmet, no bare chest)</td><td>0.80</td><td class="pass">PASS</td><td class="pass">PASS</td></tr>
+<tr><td>G6</td><td>Zero text or lettering anywhere</td><td>0.90</td><td class="pass">PASS <span style="font-size:.8rem;color:var(--muted)">sampled ~60 frames, not yet full-scan</span></td><td class="pass">PASS</td></tr>
+<tr><td>G7</td><td>Shot 1: no people, no modern features</td><td>0.75</td><td class="pass">PASS*</td><td class="pass">PASS*</td></tr>
+<tr><td>G8</td><td>Shot 1: the river reads like the Hallwyl photograph (broad + sandy, not a gorge)</td><td>0.70</td><td class="pass">PASS*</td><td class="pass">PASS*</td></tr>
+<tr><td>G9</td><td>Shot 2: background crew present and working from the first frame</td><td>0.60</td><td class="fail">FAIL <span style="font-size:.8rem;color:var(--muted)">crew present but posed, not working</span></td><td class="fail">FAIL</td></tr>
+<tr><td>G10</td><td>Hands render correctly in the close-ups (shots 3-4)</td><td>0.65</td><td class="pass">PASS</td><td class="pass">PASS</td></tr>
 </table>
 <p style="font-size:.85rem;color:var(--muted)">* G7/G8 pass on a technicality: the shot's formal rules held while its design intent failed - see Run 1 below.</p>
 <div class="callout"><b>The honest prediction:</b> these odds sum to an expected <b>7.5 of 10 gates</b> on the first run — below the 90% satisfaction bar. In plain words: we expect run 1 to need one correction round, and we are saying so before the result exists. Whether that prediction itself was right is part of what this page measures.</div>
@@ -164,7 +164,8 @@ No bare chests, no Evzone parade dress, no pith helmet, no standing column, no m
 <h2 style="margin-top:28px">Run 1 — the take</h2>
 <video controls preload="metadata" src="casestudy_media/run1_take1.mp4" style="width:100%;max-width:880px;border-radius:12px;border:1px solid var(--hair);background:#000"></video>
 <div class="callout" style="border-left-color:var(--flame)"><b>What actually failed, in plain words:</b> the new aerial opening came out as a beautiful but <i>static</i> river image — the model anchored so hard on the museum's river photograph that it reproduced it instead of flying over it, and the excavation never appears. And the background crew in the wide shot stands posed like figures in an 1875 photograph instead of working. The close-ups (the levering bar, the hand on the fluting, the archaeologist removing his hat) all animate properly. Pattern worth keeping: <b>wide shots bound to still references reproduce the stillness; close-ups with one clear action move correctly.</b></div>
-<div class="status"><b>Next:</b> take 2 (identical prompt, ordered by the reviewer) measures how much of this is systematic vs dice roll — then the correction: stronger motion language for the aerial and working-verbs for the crew, or a deterministic composited opening. The loop continues until 9 of 10 gates pass.</div>
+<div class="callout"><b>Take 2 (identical prompt, fresh seed): 10 of 10 gates agree with take 1.</b> Both failures reproduced exactly — they are <b>deterministic, not dice</b>. That is the variance measurement: on this model, an identical prompt buys you nearly the same film twice (only cut timings drift by fractions of a second). So a re-roll cannot fix these misses; only a better prompt — or a different method — can. Cost of both takes: 360 credits.</div>
+<div class="status"><b>Correction v2.2 dispatched (2026-09-06):</b> the aerial rewritten with the camera's motion as the grammatical subject and the excavation as the object of that motion ("the camera glides and sinks toward the dig, its drum rows growing from small to large"), the river demoted to a side clause; the crew given positive continuous working-verbs ("picks rise and fall, two carry a barrow") with negations deliberately avoided. Both re-audited to the word-budget rule. If the aerial fails a third time, Shot 1 goes deterministic: a real camera move composited over a certified plate. The loop continues until 9 of 10 gates pass.</div>
 </section>
 
 <p class="foot">REEVALUATE · Empirica case study · the working room with every version and ledger: <a href="board/review.html" style="color:var(--bronze)">production board</a> · what Empirica is: <a href="index.html" style="color:var(--bronze)">main page</a></p>
