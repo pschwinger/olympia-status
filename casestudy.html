@@ -107,7 +107,7 @@ ol.loop li b{color:var(--ink)}
 <table>
 <tr><th>Layer</th><th>Value</th></tr>
 <tr><td>Model</td><td><b>Seedance 2.5</b>, omni-reference (multiple image refs, no start-image lock)</td></tr>
-<tr><td>Parameters</td><td>20 s · 16:9 · 1080p · audio off · one take per iteration</td></tr>
+<tr><td>Parameters</td><td>20 s · 16:9 · 1080p · audio off · one take per iteration (take 2 ordered by the reviewer for variance)</td></tr>
 <tr><td>Transport</td><td>Higgsfield platform, driven by the <b>empirica-videogen</b> practice via CLI</td></tr>
 <tr><td>Who does what</td><td>storyboard writes and audits the spec · videogen translates nothing (the prompt is final) and runs + measures · every step logged in Empirica</td></tr>
 <tr><td>Spec of record</td><td><code>scenes/1a-multishot-whole-scene-v2.md</code> @ commit <code>fcc4d68</code></td></tr>
@@ -142,24 +142,29 @@ No bare chests, no Evzone parade dress, no pith helmet, no standing column, no m
 <p style="margin-top:14px">And a written prediction per quality gate — the honest odds, stated before spending:</p>
 <table id="gates">
 <tr><th>#</th><th>Gate (measured against the prompt)</th><th>Predicted</th><th>Run 1</th><th>Run 2</th></tr>
-<tr><td>G1</td><td>Five cuts land on their timestamps (±0.5 s)</td><td>0.85</td><td class="pend">pending</td><td></td></tr>
-<tr><td>G2</td><td>Same workman + same archaeologist across all five shots</td><td>0.80</td><td class="pend">pending</td><td></td></tr>
-<tr><td>G3</td><td>Drum-to-man scale ratio &gt; 1.0 in shots 2-3</td><td>0.75</td><td class="pend">pending</td><td></td></tr>
-<tr><td>G4</td><td>Each shot's primary event happens on the named object (block · drum edge · flute)</td><td>0.70</td><td class="pend">pending</td><td></td></tr>
-<tr><td>G5</td><td>Costume rules hold in every checked frame (no vest, no pith helmet, no bare chest)</td><td>0.80</td><td class="pend">pending</td><td></td></tr>
-<tr><td>G6</td><td>Zero text or lettering anywhere</td><td>0.90</td><td class="pend">pending</td><td></td></tr>
-<tr><td>G7</td><td>Shot 1: no people, no modern features</td><td>0.75</td><td class="pend">pending</td><td></td></tr>
-<tr><td>G8</td><td>Shot 1: the river reads like the Hallwyl photograph (broad + sandy, not a gorge)</td><td>0.70</td><td class="pend">pending</td><td></td></tr>
-<tr><td>G9</td><td>Shot 2: background crew present and working from the first frame</td><td>0.60</td><td class="pend">pending</td><td></td></tr>
-<tr><td>G10</td><td>Hands render correctly in the close-ups (shots 3-4)</td><td>0.65</td><td class="pend">pending</td><td></td></tr>
+<tr><td>G1</td><td>Five cuts land on their timestamps (±0.5 s)</td><td>0.85</td><td class="pass">PASS <span style="font-size:.8rem;color:var(--muted)">cuts at 3.92/10.08/13.67/16.71 s, max off by 0.33 s</span></td><td></td></tr>
+<tr><td>G2</td><td>Same workman + same archaeologist across all five shots</td><td>0.80</td><td class="pass">PASS</td><td></td></tr>
+<tr><td>G3</td><td>Drum-to-man scale ratio &gt; 1.0 in shots 2-3</td><td>0.75</td><td class="pass">PASS</td><td></td></tr>
+<tr><td>G4</td><td>Each shot's primary event happens on the named object (block · drum edge · flute)</td><td>0.70</td><td class="fail">PARTIAL <span style="font-size:.8rem;color:var(--muted)">shots 3-5 clear; shot 2 event weak; shot 1 event failed</span></td><td></td></tr>
+<tr><td>G5</td><td>Costume rules hold in every checked frame (no vest, no pith helmet, no bare chest)</td><td>0.80</td><td class="pass">PASS</td><td></td></tr>
+<tr><td>G6</td><td>Zero text or lettering anywhere</td><td>0.90</td><td class="pass">PASS <span style="font-size:.8rem;color:var(--muted)">sampled ~60 frames, not yet full-scan</span></td><td></td></tr>
+<tr><td>G7</td><td>Shot 1: no people, no modern features</td><td>0.75</td><td class="pass">PASS*</td><td></td></tr>
+<tr><td>G8</td><td>Shot 1: the river reads like the Hallwyl photograph (broad + sandy, not a gorge)</td><td>0.70</td><td class="pass">PASS*</td><td></td></tr>
+<tr><td>G9</td><td>Shot 2: background crew present and working from the first frame</td><td>0.60</td><td class="fail">FAIL <span style="font-size:.8rem;color:var(--muted)">crew present but posed, not working</span></td><td></td></tr>
+<tr><td>G10</td><td>Hands render correctly in the close-ups (shots 3-4)</td><td>0.65</td><td class="pass">PASS</td><td></td></tr>
 </table>
+<p style="font-size:.85rem;color:var(--muted)">* G7/G8 pass on a technicality: the shot's formal rules held while its design intent failed - see Run 1 below.</p>
 <div class="callout"><b>The honest prediction:</b> these odds sum to an expected <b>7.5 of 10 gates</b> on the first run — below the 90% satisfaction bar. In plain words: we expect run 1 to need one correction round, and we are saying so before the result exists. Whether that prediction itself was right is part of what this page measures.</div>
 </section>
 
 <section>
 <p class="k">6 · The runs</p>
 <h2>Iterations</h2>
-<div class="status" id="runstatus"><b>Run 1 dispatched 2026-09-05</b> — one take, Seedance 2.5 via videogen. Awaiting generation. Results, measurements and the video will appear here; if fewer than 9 of 10 gates pass, the correction and run 2 follow.</div>
+<div class="status" id="runstatus"><b>Run 1 measured (2026-09-06 00:21):</b> <b>8 of 10 gates passed</b>, one failed, one partial — below the 90% bar, <i>as the pre-run prediction said it would be</i> (expected 7.5). Cost: 180 credits. The prediction was sharp where it mattered: the gate given the lowest odds (G9, the working crew, 0.60) is the one that failed; the second-lowest of the content gates (G4, 0.70) is the partial. Everything predicted at 0.75+ passed.</div>
+<h2 style="margin-top:28px">Run 1 — the take</h2>
+<video controls preload="metadata" src="casestudy_media/run1_take1.mp4" style="width:100%;max-width:880px;border-radius:12px;border:1px solid var(--hair);background:#000"></video>
+<div class="callout" style="border-left-color:var(--flame)"><b>What actually failed, in plain words:</b> the new aerial opening came out as a beautiful but <i>static</i> river image — the model anchored so hard on the museum's river photograph that it reproduced it instead of flying over it, and the excavation never appears. And the background crew in the wide shot stands posed like figures in an 1875 photograph instead of working. The close-ups (the levering bar, the hand on the fluting, the archaeologist removing his hat) all animate properly. Pattern worth keeping: <b>wide shots bound to still references reproduce the stillness; close-ups with one clear action move correctly.</b></div>
+<div class="status"><b>Next:</b> take 2 (identical prompt, ordered by the reviewer) measures how much of this is systematic vs dice roll — then the correction: stronger motion language for the aerial and working-verbs for the crew, or a deterministic composited opening. The loop continues until 9 of 10 gates pass.</div>
 </section>
 
 <p class="foot">REEVALUATE · Empirica case study · the working room with every version and ledger: <a href="board/review.html" style="color:var(--bronze)">production board</a> · what Empirica is: <a href="index.html" style="color:var(--bronze)">main page</a></p>
