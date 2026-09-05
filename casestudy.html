@@ -38,6 +38,8 @@ table{border-collapse:collapse;width:100%;margin-top:12px;font-size:.92rem}
 th{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-align:left;padding:6px 10px;border-bottom:2px solid var(--hair-2)}
 td{padding:8px 10px;border-bottom:1px solid var(--hair);color:var(--steel);vertical-align:top}
 td b{color:var(--ink)}
+.tbtn{font-family:"Archivo";font-size:.9rem;font-weight:600;padding:6px 16px;border:1px solid var(--hair);border-radius:8px;background:var(--surface);color:var(--steel);cursor:pointer}
+.tbtn.on{background:var(--olive);border-color:var(--olive);color:#fff}
 .pass{color:var(--good);font-weight:700}.fail{color:var(--flame);font-weight:700}.pend{color:var(--muted);font-style:italic}
 .vbars{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;margin-top:12px}
 .vb{background:var(--surface);border:1px solid var(--hair);border-radius:8px;padding:8px 10px;font-size:.8rem;color:var(--muted)}
@@ -161,8 +163,21 @@ No bare chests, no Evzone parade dress, no pith helmet, no standing column, no m
 <p class="k">6 · The runs</p>
 <h2>Iterations</h2>
 <div class="status" id="runstatus"><b>Run 1 measured (2026-09-06 00:21):</b> <b>8 of 10 gates passed</b>, one failed, one partial — below the 90% bar, <i>as the pre-run prediction said it would be</i> (expected 7.5). Cost: 180 credits. The prediction was sharp where it mattered: the gate given the lowest odds (G9, the working crew, 0.60) is the one that failed; the second-lowest of the content gates (G4, 0.70) is the partial. Everything predicted at 0.75+ passed.</div>
-<h2 style="margin-top:28px">Run 1 — the take</h2>
-<video controls preload="metadata" src="casestudy_media/run1_take1.mp4" style="width:100%;max-width:880px;border-radius:12px;border:1px solid var(--hair);background:#000"></video>
+<h2 style="margin-top:28px">Run 1 — both takes, identical prompt</h2>
+<div id="takebar" style="display:flex;gap:8px;margin:10px 0 8px">
+<button class="tbtn on" data-src="casestudy_media/run1_take1.mp4" data-info="<b>Take 1</b> · 180 credits · 8/10 gates + 1 partial · cuts at 3.92 / 10.08 / 13.67 / 16.71 s (max 0.33 s off the script) · generated 00:11">Take 1</button>
+<button class="tbtn" data-src="casestudy_media/run1_take2.mp4" data-info="<b>Take 2</b> · 180 credits · identical verdicts on all 10 gates · cuts at 4.13 / 10.04 / 13.54 / 16.92 s (max 0.46 s off) · fresh seed, near-identical compositions">Take 2</button>
+</div>
+<video id="takevid" controls preload="metadata" src="casestudy_media/run1_take1.mp4" style="width:100%;max-width:880px;border-radius:12px;border:1px solid var(--hair);background:#000"></video>
+<p id="takeinfo" style="font-size:.9rem;color:var(--steel);max-width:880px;margin-top:8px"><b>Take 1</b> · 180 credits · 8/10 gates + 1 partial · cuts at 3.92 / 10.08 / 13.67 / 16.71 s (max 0.33 s off the script) · generated 00:11</p>
+<script>
+document.querySelectorAll('#takebar .tbtn').forEach(function(b){b.addEventListener('click',function(){
+  document.querySelectorAll('#takebar .tbtn').forEach(function(x){x.classList.remove('on');});
+  b.classList.add('on');
+  var v=document.getElementById('takevid'); v.src=b.dataset.src; v.load();
+  document.getElementById('takeinfo').innerHTML=b.dataset.info;
+});});
+</script>
 <div class="callout" style="border-left-color:var(--flame)"><b>What actually failed, in plain words:</b> the new aerial opening came out as a beautiful but <i>static</i> river image — the model anchored so hard on the museum's river photograph that it reproduced it instead of flying over it, and the excavation never appears. And the background crew in the wide shot stands posed like figures in an 1875 photograph instead of working. The close-ups (the levering bar, the hand on the fluting, the archaeologist removing his hat) all animate properly. Pattern worth keeping: <b>wide shots bound to still references reproduce the stillness; close-ups with one clear action move correctly.</b></div>
 <div class="callout"><b>Take 2 (identical prompt, fresh seed): 10 of 10 gates agree with take 1.</b> Both failures reproduced exactly — they are <b>deterministic, not dice</b>. That is the variance measurement: on this model, an identical prompt buys you nearly the same film twice (only cut timings drift by fractions of a second). So a re-roll cannot fix these misses; only a better prompt — or a different method — can. Cost of both takes: 360 credits.</div>
 <div class="status"><b>Correction v2.2 dispatched (2026-09-06):</b> the aerial rewritten with the camera's motion as the grammatical subject and the excavation as the object of that motion ("the camera glides and sinks toward the dig, its drum rows growing from small to large"), the river demoted to a side clause; the crew given positive continuous working-verbs ("picks rise and fall, two carry a barrow") with negations deliberately avoided. Both re-audited to the word-budget rule. If the aerial fails a third time, Shot 1 goes deterministic: a real camera move composited over a certified plate. The loop continues until 9 of 10 gates pass.</div>
