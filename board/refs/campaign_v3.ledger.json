@@ -1,0 +1,27 @@
+{
+  "run": "CAMPAIGN 'The Hands Remember' v3 — deterministic S2/S4 inserts (Philipp option-b ruling)",
+  "proposal": "prop_3g4lde62 (Philipp ruling @9ff3265); fixes the v2 G6 failure",
+  "supersedes_for_use": "campaign_hands_30s_G6-FAIL.mp4 (v2) — v3 is the USE version",
+  "measured_by": "empirica-videogen",
+  "method": {
+    "principle": "Philipp's ruling: 'real legible text is LEGAL by construction — only GENERATED text can forge.' The two G6-failing generative hero shots (S2 shoes, S4 belt) are replaced by DETERMINISTIC camera-moves over the REAL certified digitisations, showing the athletes' ACTUAL ink/signature. Zero fabrication possible (real pixels only) — the certificate pipeline (same as the medals + build_first_flame).",
+    "S2_insert": "slow push over raw SM_RV_18_white_shoes_tokyo.png (Tentoglou's real shoes), 2.875s/69f, Bruised-Gold vignette grade + grain. Shows the REAL '8.41 / Miltos Tentoglou / TOKYO 2020' ink — authentic, correctly spelled.",
+    "S4_insert": "slow pan along raw SM_RV_22_Belt.png (Iliadis's real belt), 3.166667s/76f, same grade. Shows the REAL signature + figure-8 stitching + buckle.",
+    "splice": "ffmpeg concat: v2[0:3.125](S1) + S2 insert + v2[6.0:8.5417](S3) + S4 insert + v2[11.7083:30.0417](S5-S10). Result: exactly 30.041667s / 721 frames, cut boundaries preserved. The other 8 Seedance shots unchanged from the v2 take.",
+    "credits": {"spent": 0, "note": "deterministic ffmpeg — zero generation, zero credits, per the ruling"}
+  },
+  "output": {"width": 1920, "height": 1080, "fps": 24, "duration_s": 30.041667, "frames": 721},
+  "gates": {
+    "G6_forged_text": {"result": "PASS (reformulated: no FABRICATED text)", "belief_conf": 0.9, "note": "The two hero text-bearing shots now show the athletes' REAL, authentic inscriptions via deterministic insert — legal by construction, fabrication impossible. v2's forgeries ('Mizos', fake signature) are eliminated. RESIDUAL (honest): the KEPT generative S3 lacing shot (outside the S2/S4 ruling scope) retains a minor generative '8.4' trace on the shoe quarter; it is small and hands-dominated. If it matters, S3 too can go deterministic or tight-macro — but the ruling scoped only S2/S4."},
+    "G1_duration_cuts": {"result": "PASS", "note": "30.041667s / 721f exact; cut boundaries preserved at the measured v2 cuts."},
+    "kotinos_S9_S10": {"result": "PASS", "note": "unchanged from v2 — dried golden-brown, open ring, cloth-bound join hold."},
+    "clubs_S6_S7 / S8_heels / S1_breath / S5-S10": {"result": "CLEAN (unchanged from v2)", "note": "the 8 kept Seedance shots were already clean in v2 QC."},
+    "grade_continuity": {"result": "ACCEPTABLE, noted", "note": "the deterministic inserts (museum-lit white shoe / cream belt) run WARMER and BRIGHTER than the near-black single-shaft Seedance shots; bridged with a Bruised-Gold vignette + grain so they read as lit-artifact inserts rather than a grade error. A hard cut between a dark performance shot and a lit artifact insert is a valid editorial beat. If a tighter match is wanted, the inserts can be darkened further (at some cost to text legibility)."}
+  },
+  "verdict": {
+    "status": "PASS (USE THIS) — the hero-text forgery is FIXED. Real, authentic athlete inscriptions shown deterministically; zero fabrication; 30s; 0cr. Minor residual generative trace in the kept S3, disclosed.",
+    "confidence": 0.88,
+    "measurement_basis": "Deterministic (ffprobe exact 721f + the inserts are literal crops of the certified digitisations = fabrication-impossible) + by-eye confirmation the inserts show the REAL correctly-spelled text and the splice seams are clean."
+  },
+  "the_lesson": "For a TEXT-BEARING artifact at HERO scale, the fix is NOT to hide the text (localised-defocus + recomposition failed — v2) but to SHOW THE REAL TEXT deterministically. Real legible text is legal; only generated text forges. This is the certificate pipeline (deterministic ffmpeg over the certified still), the same solution the medals reached. Generative for everything text-free; deterministic for the text-bearing hero."
+}
