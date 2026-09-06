@@ -1,0 +1,17 @@
+{
+  "cut": "morning-cut_v1.mp4",
+  "assembled_by": "empirica-storyboard, deterministic ffmpeg concat (trim + scale + fps only - pixel arithmetic on measured clips, zero fabrication by construction)",
+  "date": "2026-09-06",
+  "design": "REAL-EPIC alternation: the certified museum object (deterministic moves over verified renders, real legible legends) intercut with the Hollywood-epic staged world - the with/without provenance argument as editing",
+  "sequence": [
+    {"n": 1, "src": "SM_RV_16_S3_v1.mp4", "trim": "0-4.0", "beat": "EPIC wide - kotinos on ancient stone, god-rays"},
+    {"n": 2, "src": "SM_RV_6_S1_v1.mp4", "trim": "0.2-3.7", "beat": "REAL - 1896 medal, certified render, genuine legend"},
+    {"n": 3, "src": "SM_RV_16_S3_v2.mp4", "trim": "0-3.5", "beat": "EPIC medium - kotinos closer"},
+    {"n": 4, "src": "SM_RV_3_S1_v1.mp4", "trim": "0.2-3.7", "beat": "REAL - 1906 medal, certified render"},
+    {"n": 5, "src": "SM_RV_16_S2_v2.mp4", "trim": "1.0-4.0", "beat": "REAL-adjacent - kotinos macro from the certified photo"},
+    {"n": 6, "src": "SM_RV_16_S3_v3.mp4", "trim": "0-5.04", "beat": "EPIC close finale, motion alive through the end"}
+  ],
+  "duration_s": 22.54, "resolution": "1920x1080", "fps": 24, "audio": "none (by design, all sources audio-off)",
+  "source_gates": "every source clip individually ledgered PASS by videogen; the two medal beats are ship-safe deterministic clips",
+  "credits_spent_on_assembly": 0
+}

@@ -29,6 +29,11 @@ var FAMILIES = [
 ];
 
 var MANIFEST = [
+  { id:'night-cut', family:'cut', tag:'NIGHT RUN · 06 SEP', title:'The first epic cut — real museum objects inside a Hollywood frame', sub:'assembled deterministically from the overnight artifact matrix', color:'#2e7d78',
+    scenes:[{ title:'Morning cut v1 — REAL/EPIC alternation', shots:[
+      {num:72, key:'night-cut', title:'Morning cut v1 · 22.5 s', desc:'<b>The argument as editing:</b> the Hollywood-epic staged world (kotinos on ancient stone, god-rays) intercut with the <em>certified real thing</em> — deterministic camera moves over the museum renders of the 1896 and 1906 medals, their genuine legends legible because the pixels are real. Six beats, hard cuts, zero-fabrication assembly (ffmpeg trim+concat on individually gated clips). Sources: overnight run, 9 kotinos + 6 deterministic medal clips all gates PASS; the failed generative medal takes are preserved separately as documented failures.', asset:null, status:'final', versions:[{label:'cut v1 · 22.5s', src:V+'night-run/morning-cut_v1.mp4'}], ledger:'refs/'+'night-run_morning-cut_v1.ledger.json'}
+    ]}]},
+
   { id:'u1a', family:'chapter', tag:'CHAPTER 1a', title:'The Rediscovery of Olympia', sub:'Unit 1 · the museum\'s opening movement', color:'#a07a1e',
     story:'<b>The chapter:</b> Olympia lost to time under the Alpheios\' silt, found again — Chandler 1766, the French in 1829, the German excavations of 1875–81. Every scene in this chapter is grounded in real archival images with verified licences; nothing is invented. Open a scene, watch the shots; the research behind each scene is one tab over.',
     buttons:[{label:'📜 Reference sheet', href:S+'1a-rediscovery.html', ghost:true},{label:'👤 Character sheet + style guide', href:S+'1a-character-style-sheet.html', ghost:true},{label:'🎞 Storyboard panels', href:S+'1a-storyboard/1a_storyboard_panels.jpg', ghost:true}],
