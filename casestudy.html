@@ -244,6 +244,29 @@ document.querySelectorAll('#takebar .tbtn').forEach(function(b){b.addEventListen
 <div class="callout"><b>The numbers:</b> 24 ship-safe clips + the cut · 499.5 of 4,500 budgeted credits (deterministic clips cost zero) · two design decisions made and executed by the AI practitioners mid-run, inside the rules · every human approval still human: the one generation whose accept never arrived (the Shot-1 correction above) simply did not run. The gate held while everyone slept.</div>
 </section>
 
+<section>
+<p class="k">Part 3 · the day — the chain proven, the cap reached</p>
+<h2>Three more experiments, all measured, chapter 1 closed</h2>
+
+<h3 style="margin-top:18px">The chain test: does the last frame of one generation glue to the next?</h3>
+<p style="max-width:80ch">Part 2 of the scene ("The Measuring", 24 s) was generated twice: once <b>chained</b> from part 1's final frame, once from <b>references only</b>. Both seams were then butt-cut against part 1 — watch them side by side:</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px;max-width:920px">
+<div><video controls preload="metadata" src="board/media/v/day-run/1a_part2_seam_A_part1-to-armA.mp4" style="width:100%;border-radius:10px;border:1px solid var(--hair);background:#000"></video><p style="font-size:.88rem;color:var(--steel);margin-top:6px"><b>Seam A — chained: PASS.</b> Same man, same pose, bowler still in hand, same light. Reads as one take split in two.</p></div>
+<div><video controls preload="metadata" src="board/media/v/day-run/1a_part2_seam_B_part1-to-armB.mp4" style="width:100%;border-radius:10px;border:1px solid var(--hair);background:#000"></video><p style="font-size:.88rem;color:var(--steel);margin-top:6px"><b>Seam B — references only: FAIL.</b> Same recognisable character, but the bowler teleports hand-to-head, the pose resets, the grade steps.</p></div>
+</div>
+<p style="max-width:80ch;margin-top:10px">The rule this bought, now in the playbook: <b>the chain frame buys the seam; the references buy the character.</b> Both are needed — they solve different problems.</p>
+
+<h3 style="margin-top:26px">Part 2, the keeper (arm A, 24 s)</h3>
+<video controls preload="metadata" src="board/media/v/day-run/1a_part2_armA.mp4" style="width:100%;max-width:880px;border-radius:12px;border:1px solid var(--hair);background:#000"></video>
+<p style="font-size:.9rem;color:var(--steel);max-width:880px;margin-top:8px">The story continues: the descent, the walk down the colonnade, the measuring cord, a mass-movement high wide over the whole dig, and the hand on the stone. 7 of 8 gates (the crowd, as ever, partial). 216 credits.</p>
+
+<h3 style="margin-top:26px">The full-cap dailies roll (30 s, 8 shots, 8/8 gates)</h3>
+<video controls preload="metadata" src="board/media/v/day-run/1a_full_coverage_30s.mp4" style="width:100%;max-width:880px;border-radius:12px;border:1px solid var(--hair);background:#000"></video>
+<p style="font-size:.9rem;color:var(--steel);max-width:880px;margin-top:8px">The first generation at Seedance 2.5's full 30-second cap: every story beat delivered in <b>two sizes</b> (wide + medium, close + insert, macro + two-shot) inside one generation — cross-size consistency free, all seven cuts on their marks, and the edit gets real choices. 270 credits; the cost line stays perfectly linear at ~9 credits per second.</p>
+
+<div class="callout"><b>Chapter 1, closed as a method:</b> story locked → 30-second chunks with double coverage → chunks chained at every seam → one reference set carrying identity → gates at every step. Total spend across all chapter-1 experiments, night and day: under 2,000 credits — with every failure preserved, every rule written down, and every claim traceable to a ledger.</div>
+</section>
+
 <p class="foot">REEVALUATE · Empirica case study · the working room with every version and ledger: <a href="board/review.html" style="color:var(--bronze)">production board</a> · what Empirica is: <a href="index.html" style="color:var(--bronze)">main page</a></p>
 </div>
 </body>
