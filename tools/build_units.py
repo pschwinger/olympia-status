@@ -307,8 +307,8 @@ def build():
         must = str(r.get("identity") or r.get("invariants") or "")
         holds = r.get("hold_invariants") or []
         if holds: must += " Checked every frame: " + " · ".join(holds) + "."
-        inv = html.escape(must[:700])
-        na = html.escape(str(r.get("not_asserted",""))[:400])
+        inv = html.escape(must)
+        na = html.escape(str(r.get("not_asserted","")))
         insc = r.get("inscriptions") or {}
         insc_html = ""
         if insc:
@@ -320,7 +320,7 @@ def build():
 <p class="k">Artifact · {code}</p><h1>{html.escape(r.get('name',code))}</h1>
 {hero}
 <p class="k">What it is</p>
-<p>{html.escape(str(r.get('claim',''))[:500])}</p>
+<p>{html.escape(str(r.get('claim','')))}</p>
 <div class="musdoc"><b>What a generated frame must hold:</b> <span class="muted">{inv}</span></div>
 {insc_html}
 {f'<div class="musdoc" style="border-color:rgba(186,90,30,.4)"><b>Never asserted:</b> <span class="muted">{na}</span></div>' if na else ''}
