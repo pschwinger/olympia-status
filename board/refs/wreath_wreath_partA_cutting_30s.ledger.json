@@ -1,0 +1,36 @@
+{
+  "run": "WREATH · PART A 'The Cutting' — 30s/8-shot, the proven method on the kotinos scene",
+  "proposal": "prop_2eacefignzdmfoo4dj3okj7454 (storyboard, ECO Philipp)",
+  "spec": "empirica-storyboard/scenes/wreath-partA-the-cutting-30s.md @ 8acd1bb (prompt VERBATIM)",
+  "measured_by": "empirica-videogen",
+  "model": "seedance_2_5 omni_reference, 30s, 16:9, 1080p, audio off, ONE take",
+  "generated": "2026-09-06T12:15:23Z → 12:22:26Z (~7.1 min)",
+  "clip": "wreath_partA_cutting_30s.mp4",
+  "output": {"width": 1920, "height": 1080, "fps": 24, "duration_s": 30.041667, "frames": 721, "normalisation": "none needed — native 1920x1080 24fps"},
+  "credits": {"pool_before": 12268.5, "spent": 270, "pool_after": 11998.5},
+  "refs_bound": ["@Image1 SM_RV_16_Olive_Crown.png (Pilot-2 certified crown)", "@Image2 faces/hellanodikes.png (registry identity, deep-red chiton)"],
+  "cuts": {"measured_s": [3.96, 7.04, 10.71, 13.79, 18.0, 20.88, 25.21], "specified_s": [4, 7, 11, 14, 18, 21, 25], "max_delta_s": 0.29, "note": "all 7 cuts within +-0.5s. 8-in-30 density honored again."},
+  "HEADLINE": "7/8 gates PASS, but G3 (boy-face hard person-guard) FAILS. The clip is cinematically strong and the kotinos turn (G2) is exact, BUT the boy's face is visible in every frame of Shot 3, violating the hard guard. This clip CANNOT be used for the boy-guard requirement as-is — Shot 3 needs a re-approach (see G3 + recommendation). Delivered as a MEASURED result, not a clean pass.",
+  "gates": {
+    "G1_cuts_on_stamps": {"result": "PASS", "measured": "3.96/7.04/10.71/13.79/18.0/20.88/25.21 vs 4/7/11/14/18/21/25; max delta 0.29s."},
+    "G2_kotinos_invariants_S7_S8_every_frame": {"result": "PASS", "belief_conf": 0.9, "note": "DENSE 20-frame scan of S7-S8 (20.9-30s): the kotinos holds every invariant across every checked frame — dried GOLDEN-BROWN (never fresh-green), OPEN RING (clear C-shape, never a closed circle), cloth-bound join visible at the base, dense narrow dried leaves. The certified SM_RV_16 ref carried the identity faithfully. Evidence: wreath_partA_s7s8_kotinos_scan_G2-PASS.png."},
+    "G3_boy_face_absent_S3_S4_every_frame": {"result": "FAIL", "belief_conf": 0.9, "severity": "HARD person-guard", "note": "DENSE 20-frame scan of S3-S4 (7.0-13.8s): the boy's FACE IS VISIBLE in EVERY frame of Shot 3 (7.04-10.71s) — soft-focus behind the olive branch but unmistakably a boy's face with visible eyes, brows, nose, hair. The prompt clause 'his face never enters the frame' did NOT hold: naming the boy and staging the cut at his eye-line made the model frame him face-and-all behind the branch. Shot 4 (macro insert, 10.71-13.79s) is CLEAN — no face. So the guard fails on S3 only. Evidence: wreath_partA_s3s4_boyface_scan_G3-FAIL.png."},
+    "G4_events_on_named_objects": {"result": "PASS", "note": "branch cut with golden shears (S3/S4), branches laid on the gold-and-ivory table (S5/S6), the kotinos lifted (S7/S8). All named-object events read."},
+    "G5_coverage_pairs_same_moment_two_sizes": {"result": "PASS", "note": "1/2 (wide olive tree + medium olive crown), 3/4 (boy-cutting + macro blades-on-stem), 5/6 (table wide + hand-places-branch close) each read as the same moment from two sizes."},
+    "G6_zero_text": {"result": "PASS (sample)", "note": "no text/lettering in sampled frames; no text surfaces in the scene."},
+    "G7_hands_S3_S4_S6_S7": {"result": "PASS", "belief_conf": 0.8, "note": "boy's hands on the shears (S3), hand placing the branch (S6), hellanodikes hands lifting the wreath (S7) all read anatomically natural — no extra/deformed fingers observed across the dense scans. (S4 is macro on the blades, minimal hand.)"},
+    "G8_one_film_grade": {"result": "PASS", "note": "consistent teal-and-amber cinematic grade, crushed blacks, fine grain across all 8 shots (S1-S2 cooler teal, S5-S8 warmer amber — within the graded look). Grades as one film."}
+  },
+  "spec_intent_deviations_not_gate_fails": [
+    "S7-S8 shows the hellanodikes' FACE and torso, whereas the spec intended 'hands only in frame' for him. His face is a bound ref (@Image2), so it is his identity not a fabricated face — but it deviates from the hands-only staging.",
+    "S8's lifting hands read as BARE forearms, not the specced 'red-sleeved hands' of the deep-red chiton.",
+    "Environments (olive grove, Temple of Hera interior) are prompt-only (no plate) — they read atmospherically plausible; per the spec this gates atmosphere not archaeology, noted as expected drift."
+  ],
+  "verdict": {
+    "status": "MEASURED — 7/8 PASS (G1,G2,G4,G5,G6,G7,G8), 1 HARD FAIL (G3 boy-face in Shot 3). Not a clean pass; the boy-guard blocks Shot 3 as-is.",
+    "confidence": 0.87,
+    "measurement_basis": "ffprobe + scene-change (deterministic) + DENSE frame scans (~0.35-0.5s) on the two hard-guard shot ranges (S3-S4, S7-S8) + contact-sheet belief on the rest. The guard checks were dense, not sampled, as the spec required."
+  },
+  "G3_failure_mode_and_recommendation": "PROMPT-TEXT FACE-SUPPRESSION IS INSUFFICIENT. 'His face never enters the frame' does not keep a NAMED, described person's face out — the model frames the person it was told about, face included. This is the same failure family as negation-based suppression (you cannot instruct a thing away; you must frame/crop it away). To actually guard the boy's face out of Shot 3, the fix is COMPOSITIONAL, one of: (a) re-prompt S3 as a TIGHT MACRO on only the hands + shears + branch at a framing where no face physically fits (drop the word 'boy', describe only 'hands closing golden shears on the branch, tight macro, no face in frame' — but even 'no face' may not hold, so frame it out); (b) generate S3 at a low/over-the-shoulder or from-behind angle where the face is turned away; (c) deterministically CROP the existing S3 to the lower third (hands + branch) — a provenance-safe ffmpeg crop over the real frames that physically excludes the face, at 0cr, the crop-not-instruct approach applied to a person-guard. Option (c) can salvage THIS clip's Shot 3 without a re-generation. S1-S2, S4-S8 are strong and reusable; the kotinos turn (S7-S8) is exactly on-invariant.",
+  "note": "This does NOT grade whether the clip cuts into the trailer — that is empirica-edit's lane. The G3 fail is a hard-guard measurement, reported honestly; the clip is delivered as measured (like the night-run's documented-failure clips), not as a clean pass."
+}

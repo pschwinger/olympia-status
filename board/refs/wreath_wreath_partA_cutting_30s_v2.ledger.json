@@ -1,0 +1,34 @@
+{
+  "run": "WREATH · PART A 'The Cutting' — v2 (Shot-3 positive-framing fix + deterministic splice)",
+  "proposal": "prop_c5s4vjru2jbqpgsdjaz4ksy33i (storyboard S3-fix, responsive to videogen's v1 G3-fail measurement)",
+  "supersedes_for_use": "wreath_partA_cutting_30s.mp4 (v1) — kept as documented evidence of the G3 failure; v2 is the pass version",
+  "spec": "empirica-storyboard/scenes/wreath-partA-the-cutting-30s.md @ 8752876 (Shot 3 v2 positive framing); rest of clip unchanged from v1 @ 8acd1bb",
+  "measured_by": "empirica-videogen",
+  "fix_method": {
+    "root_cause": "v1 Shot 3 used a NEGATION guard ('his face never enters the frame') — prose negation does not suppress a named person's face (finding 3e6bd114). Storyboard logged the mistake on their side.",
+    "regen": "Shot 3 regenerated ALONE as a 5.04s seedance_2_5 t2v take (NO refs), POSITIVE chest-down framing @8752876: 'Framed from the chest down... hands, shears and branch fill the frame' + teal-and-amber grade tokens. 45cr. Take 1 passed the face gate first try (no best-of-3 needed).",
+    "splice": "Deterministic ffmpeg concat: original[0:7.0417] + new-S3[trim 0.4:4.0667 = 3.6667s] + original[10.7083:30.0417], re-encoded libx264 crf17. Result: exactly 30.041667s / 721 frames, cut points IDENTICAL to v1 (3.96/7.04/10.71/13.79/18.0/20.88/25.21).",
+    "credits": {"regen_spent": 45, "pool_before": 11998.5, "pool_after": 11953.5}
+  },
+  "output": {"width": 1920, "height": 1080, "fps": 24, "duration_s": 30.041667, "frames": 721},
+  "gates_delta_from_v1": {
+    "G3_boy_face_absent_S3_S4": {"v1": "FAIL (face every frame of S3)", "v2": "PASS", "belief_conf": 0.92, "note": "DENSE every-frame scan (20 frames at 4fps across the 5s regen, AND re-scanned in the spliced 6.0-11.4s context): the new Shot 3 is framed CHEST-DOWN — the boy's torso (teal tunic), forearms and hands on the golden shears cutting the olive branch fill the frame; the head/face is above the frame line in EVERY frame, physically excluded. The positive composition structurally excludes the face where the negation clause failed. Evidence: wreath_partA_S3fix_facescan_PASS.png."},
+    "seams": {"result": "CLEAN", "note": "S2->newS3 cut at 7.04s (olive crown -> hands cutting) and newS3->S4 cut at 10.71s (hands -> macro blades) are clean hard cuts. New S3 grade (teal-and-amber, warm gold shears) sits within the film's look; a slight tonal shift across the hard cut is normal for an edit, not a blend artefact."}
+  },
+  "gates_carried_from_v1_unchanged": {
+    "G1_cuts": "PASS (identical cut points)",
+    "G2_kotinos_invariants_S7_S8": "PASS (S7-S8 untouched by the splice — dried golden-brown, open ring, cloth-bound join every frame)",
+    "G4_events": "PASS",
+    "G5_coverage_pairs": "PASS",
+    "G6_zero_text": "PASS (sample)",
+    "G7_hands": "PASS (new S3 hands on shears anatomically natural; rest unchanged)",
+    "G8_one_film_grade": "PASS (new S3 within the teal-and-amber grade)"
+  },
+  "verdict": {
+    "status": "PASS — 8/8 gates. The G3 boy-face hard guard is now met via positive-framing regen + deterministic splice; all other gates carried from v1 unchanged. USE THIS (v2) version, not v1.",
+    "confidence": 0.9,
+    "measurement_basis": "ffprobe + scene-change (deterministic) + dense every-frame face scan on the regen and the spliced context. The splice is deterministic ffmpeg (real frames, no generation over the seam)."
+  },
+  "spec_intent_deviations_still_present": "The v1 deviations in S7-S8 remain (hellanodikes face/torso visible vs 'hands only'; S8 hands read bare not red-sleeved) — the fix touched only Shot 3. Flag if either matters for the cut; a separate S7/S8 pass would address them.",
+  "finding_confirmed": "3e6bd114 CONFIRMED by this fix: compositional framing (chest-down, subject fills frame) reliably guards a face out where prose negation ('face never enters') does not. The reliable person-guard is positive composition, measured every-frame."
+}
