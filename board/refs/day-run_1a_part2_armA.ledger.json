@@ -1,0 +1,42 @@
+{
+  "run": "1a PART 2 'The Measuring' — ARM A (chain)",
+  "proposal": "prop_stf5hcvkejbm5op2nnyrufrz7q (storyboard, ECO-accepted eco-phone 2026-09-06T08:54Z)",
+  "spec": "empirica-storyboard/scenes/1a-part2-the-measuring.md @ 8b9ebc0 (prompt VERBATIM)",
+  "arm": "A — chain: Shot 1 continues @Image1 (the extracted+2K final frame of part-1 Shot 5) as --start-image (i2v continuation)",
+  "measured_by": "empirica-videogen",
+  "model": "seedance_2_5 omni_reference, 24s, 16:9, 1080p, audio off, ONE take",
+  "generated": "2026-09-06T09:09:28Z → 09:15:49Z (~6.3 min)",
+  "clip": "1a_part2_armA.mp4",
+  "output": {"width": 1920, "height": 1080, "fps": 24, "duration_s": 24.041667, "frames": 577, "normalisation": "none needed — native 1920x1080 24fps"},
+  "credits": {"pool_before": 13150.5, "spent_this_arm_est": 216, "note": "432cr total for both arms (13150.5 -> 12718.5); ~216/arm at 24s/1080p, ~9cr/s (vs 180cr at 20s)"},
+  "refs_bound": [
+    "@Image1 = 1a_part2_chain_frame_2k.png (part-1 Shot5 final frame, deterministic lanczos 1920x1080 -> 2560x1440) — ALSO passed as --start-image",
+    "@Image2 = _test-character-sheets/workman_prod.png",
+    "@Image3 = _test-character-sheets/archaeologist_prod_v2.png",
+    "@Image4 = 1a-generated/env_temple-of-zeus_1870s.png"
+  ],
+  "cuts": {"measured_s": [4.29, 9.08, 12.88, 19.96], "specified_s": [4, 9, 13, 20], "max_delta_s": 0.29, "note": "all within +-0.3s (scene-change detection, threshold 0.3). G1 STRUCK by Philipp — reported for information, not graded."},
+  "gates": {
+    "G2_same_two_men_as_PART1": {"result": "PASS", "belief_conf": 0.85, "note": "archaeologist (dark sack coat, bowler, beard, staff) carries directly from the chain frame / part-1; workman (white shirt, headcloth, moustache) consistent with @Image2 across shots 2-5. Cross-scene identity holds."},
+    "G3_drum_to_man_ratio_gt1": {"result": "PASS", "note": "drums tower over men in Shot 1 (drum dwarfs the descending man) and Shot 3 close-up; ratio >>1.0."},
+    "G4_event_on_named_object": {"result": "PASS", "note": "descent into trench (S1, real downward motion), walk trailing hand along stone (S2), knotted measuring cord stretched across the drum face (S3, clear), mass work rhythm (S4), hand on drum (S5). All named-object events read."},
+    "G5_costume_NEVERs": {"result": "PASS", "note": "no bare chest, no pith helmet, no Evzone parade dress, no standing column, no modern object in any sampled frame."},
+    "G6_zero_text": {"result": "PASS (sample)", "note": "no text/lettering in ~24 frames sampled across all 5 shots; scene carries no text surfaces (negative prompt forbids notebook/paper/lettering). Method caveat: sampled montages, NOT a literal 577-frame scan; risk low as there is nothing to letter."},
+    "G7_crew_working_in_shot2": {"result": "PARTIAL", "belief_conf": 0.75, "note": "Shot 2 reads as the archaeologist's WALK down the colonnade with one workman engaged at the drums — better than part-1's idle standers, but NOT the bustling 'labourers working the length of it, picks rising, barrow moving' the spec asked for. The working-crew density migrated to Shot 4 (which is strong). This is the chain-frame trade-off: the single-man start frame biases the early shots toward sparse two-principal framing (see ARM B, which populated Shot 2 more)."},
+    "G8_hands_shot3_cord_grip": {"result": "PASS", "belief_conf": 0.8, "note": "workman's fist-grip on the measuring cord is anatomically natural — fingers curled around the cord, thumb natural, no extra/sixth finger or fused digits observed."},
+    "G9_shot1_continuity_same_moment_and_angle": {"result": "PASS", "belief_conf": 0.95, "note": "STRONG. ARM A Shot 1 first frame is near-identical to part-1 Shot 5 last frame: same archaeologist, bowler IN HAND at the same lowered position, staff in same hand, same drum on the right, same spoil bank, same sky, same grade, same camera angle/framing. Because the chain frame was the --start-image, Shot 1 literally continues it. The seam reads as one unbroken moment. See 1a_part2_seam_compare_3panel.png (left vs middle panel)."}
+  },
+  "seam_test": {
+    "cut": "1a_part2_seam_A_part1-to-armA.mp4 (part-1 Shot5 last 2s butt-cut to ARM A Shot1 first 4s)",
+    "identity_match": "MATCH — same archaeologist across the cut",
+    "grade_light_match": "MATCH — same sepia grade, same hazy sky, same key light",
+    "same_moment_read": "YES — pose, bowler-in-hand position, staff, drum position and camera angle are continuous; reads as a single take split by a cut",
+    "verdict": "SEAM CONTINUOUS. The chain frame delivers same-moment continuation."
+  },
+  "verdict": {
+    "status": "STRONG — 7 gates PASS (G2,G3,G4,G5,G6,G8,G9), 1 PARTIAL (G7 crew-working in Shot 2). Seam continuity excellent.",
+    "confidence": 0.85,
+    "measurement_basis": "Deterministic observations (ffprobe duration/dims/frames, scene-change cut times) + BELIEF from reading frames (identity, physics, seam continuity). Neither metric catches a causality or continuity failure — those are judgement calls, reported as belief with confidence."
+  },
+  "playbook_note": "See ARM B ledger for the A-vs-B conclusion. Headline: the chain frame BUYS the seam (same-moment continuity) that shared references alone do NOT."
+}

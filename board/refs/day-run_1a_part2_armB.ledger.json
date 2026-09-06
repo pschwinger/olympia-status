@@ -1,0 +1,47 @@
+{
+  "run": "1a PART 2 'The Measuring' — ARM B (references-only)",
+  "proposal": "prop_stf5hcvkejbm5op2nnyrufrz7q (storyboard, ECO-accepted eco-phone 2026-09-06T08:54Z)",
+  "spec": "empirica-storyboard/scenes/1a-part2-the-measuring.md @ 8b9ebc0 (prompt = spec with chain clause removed + tokens remapped, see below)",
+  "arm": "B — references-only: NO --start-image, NO chain frame. Only the character sheets + env plate carry continuity.",
+  "measured_by": "empirica-videogen",
+  "model": "seedance_2_5 omni_reference, 24s, 16:9, 1080p, audio off, ONE take",
+  "generated": "2026-09-06T09:13:13Z → 09:20:19Z (~7.1 min)",
+  "clip": "1a_part2_armB.mp4",
+  "output": {"width": 1920, "height": 1080, "fps": 24, "duration_s": 24.041667, "frames": 577, "normalisation": "none needed — native 1920x1080 24fps"},
+  "credits": {"pool_before": 13150.5, "spent_this_arm_est": 216, "note": "432cr total both arms; ~216/arm at 24s/1080p"},
+  "prompt_delta_from_ARM_A": "Shot 1 chain clause 'continuing from @Image1, ' REMOVED. Because the chain frame (@Image1) is dropped, the 3 refs [workman,arch,env] renumber positionally, so prompt tokens were remapped: @Image2(workman)->@Image1, @Image3(archaeologist)->@Image2. VIDEOGEN DECISION (flag for PLAYBOOK): the spec's literal ARM-B Shot-1 text kept '@Image3=archaeologist', which would misbind under positional @ImageN numbering after the chain is dropped; remapped down so workman/arch bind correctly. If a different numbering was intended, say so and it re-runs.",
+  "refs_bound": [
+    "@Image1 = _test-character-sheets/workman_prod.png",
+    "@Image2 = _test-character-sheets/archaeologist_prod_v2.png",
+    "@Image3 = 1a-generated/env_temple-of-zeus_1870s.png"
+  ],
+  "cuts": {"measured_s": [3.88, 8.88, 13.17, 19.63], "specified_s": [4, 9, 13, 20], "max_delta_s": 0.38, "note": "all within +-0.4s. G1 STRUCK by Philipp — reported, not graded."},
+  "gates": {
+    "G2_same_two_men_as_PART1": {"result": "PASS", "belief_conf": 0.8, "note": "character + costume identity holds: recognisably the same archaeologist (bowler, beard, dark sack coat) and workman (white shirt, headcloth). Shared references carry WHO the men are. NOTE: identity of the CHARACTER holds, but the exact end-state at the seam does not — see G9 and seam_test."},
+    "G3_drum_to_man_ratio_gt1": {"result": "PASS", "note": "drums dominate over men in Shot 1, 3, 4."},
+    "G4_event_on_named_object": {"result": "PASS", "note": "descent (S1, he climbs into the trench, real motion), walk (S2), knotted cord across the drum (S3, clear), dense mass work (S4, very strong), two men at the trench lip (S5). Named-object events read."},
+    "G5_costume_NEVERs": {"result": "PASS", "note": "no bare chest, no pith helmet, no Evzone dress, no modern object sampled."},
+    "G6_zero_text": {"result": "PASS (sample)", "note": "no text in ~24 sampled frames; no text surfaces in the scene. Same sampled-not-full-scan caveat as ARM A."},
+    "G7_crew_working_in_shot2": {"result": "PASS", "belief_conf": 0.8, "note": "STRONGER than ARM A. Shot 2 shows MULTIPLE labourers actively working the drum row (a man with a tool, figures bending to blocks, a barrow on the ramp). Shot 4 mass-work is dense and excellent. Unanchored by a single-man start frame, ARM B populated the working crew per the prompt — the G9-lesson working-verbs landed."},
+    "G8_hands_shot3_cord_grip": {"result": "PASS", "belief_conf": 0.75, "note": "foreground hand wraps the knotted cord and pulls taut; fingers around the cord read natural, no extra/deformed digits. The foreground forearm is exaggerated by close perspective (composition, not deformity)."},
+    "G9_shot1_continuity_same_moment_and_angle": {"result": "FAIL", "belief_conf": 0.9, "note": "ARM B Shot 1 opens with the archaeologist BOWLER ON HIS HEAD (hand to hat brim), bending/stepping DOWN into the trench, higher camera angle, darker/warmer grade — a DIFFERENT moment and action from part-1 Shot 5's end (bowler in hand, standing at the drum). References alone do NOT carry the previous shot's exact end-state (pose, prop position, camera, grade). The seam reads as a hard cut to a new moment, not a continuation. See 1a_part2_seam_compare_3panel.png (left vs RIGHT panel)."}
+  },
+  "seam_test": {
+    "cut": "1a_part2_seam_B_part1-to-armB.mp4 (part-1 Shot5 last 2s butt-cut to ARM B Shot1 first 4s)",
+    "identity_match": "MATCH (character) — recognisably the same archaeologist",
+    "grade_light_match": "PARTIAL — ARM B Shot 1 is darker/warmer than part-1's hazy-bright end; a visible grade step at the cut",
+    "same_moment_read": "NO — bowler teleports hand->head, pose resets from standing-at-drum to descending-into-trench, camera angle changes; reads as a cut to a new moment",
+    "verdict": "SEAM DISCONTINUOUS. References-only preserves the character but breaks same-moment continuity."
+  },
+  "verdict": {
+    "status": "STRONG as a fresh scene (8 gates: G2,G3,G4,G5,G6,G7,G8 PASS — and G7 BETTER than ARM A) but G9 seam-continuity FAILS by design.",
+    "confidence": 0.85,
+    "measurement_basis": "ffprobe + scene-change (deterministic) + frame-reading BELIEF for identity/continuity."
+  },
+  "playbook_conclusion_A_vs_B": {
+    "question": "Does the chain FRAME buy anything beyond what shared references already give?",
+    "answer": "YES — the chain frame buys the SEAM (same-moment continuation). Shared references carry CHARACTER + COSTUME + LOCATION identity (both arms hold those). Only the chain frame carries the EXACT END-STATE — pose, prop position (the bowler), camera angle, and precise grade — needed for a cut to read as a continuation of the same moment. ARM A's seam is continuous; ARM B's is a hard cut to a new moment.",
+    "trade_off": "The chain-frame start-image slightly SUPPRESSES immediate crowd density: ARM A's Shot 2 working-crew was sparser than ARM B's, because the single-man start frame's composition propagates into the following shots.",
+    "recommendation": "Use the chain frame when the cut must read as CONTINUOUS (mid-action continuation of the same moment). Use references-only when the next shot is a FRESH beat where only character/location continuity matters and fuller staging freedom is wanted. For 1a part-2 specifically: ARM A is the correct choice IF part-2 is meant to continue directly from part-1 Shot 5; ARM B is preferable if part-2 opens as a new beat. This is empirica-edit's call, not videogen's — both arms delivered for that decision."
+  }
+}

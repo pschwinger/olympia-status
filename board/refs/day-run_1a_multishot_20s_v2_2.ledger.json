@@ -1,0 +1,34 @@
+{
+  "run": "CASE-STUDY RUN 3 — 1a whole-scene v2.2 CORRECTION take",
+  "proposal": "prop_5ondzokw25edhhobcvtmzmgrqe (storyboard, ECO Philipp; supersedes prop_tygqxagry RUN 2)",
+  "spec": "empirica-storyboard/scenes/1a-multishot-whole-scene-v2.md @ 36d45cc (prompt VERBATIM)",
+  "purpose": "Correct the two DETERMINISTIC failures measured across v2.1 t1+t2: Shot-1 aerial rendered a static river plate, and Shot-2 crew read idle (G9 FAIL). v2.2 changes ONLY Shot 1 (camera-motion-as-subject) + Shot 2 crowd line (positive working-verbs); shots 3/4/5 verbatim from v2.1.",
+  "measured_by": "empirica-videogen",
+  "model": "seedance_2_5 omni_reference, 20s, 16:9, 1080p, audio off, ONE take (per supersede rule)",
+  "generated": "2026-09-06T09:35:04Z → 09:41:07Z (~6.3 min)",
+  "clip": "1a_multishot_20s_v2_2.mp4",
+  "output": {"width": 1920, "height": 1080, "fps": 24, "duration_s": 20.041667, "frames": 481, "normalisation": "none needed — native 1920x1080 24fps"},
+  "credits": {"pool_before": 12718.5, "spent": 180, "pool_after": 12538.5},
+  "refs_bound": ["@Image1 k1_v3_start", "@Image2 workman_prod", "@Image3 archaeologist_prod_v2", "@Image4 env_temple-of-zeus_1870s", "@Image5 1a_storyboard_panels", "@Image6 Hallwyl_Alpheios"],
+  "cuts": {"measured_s": [4.17, 10.5, 14.17, 16.75], "specified_s": [4, 10, 14, 17], "max_delta_s": 0.5, "note": "all within +-0.5s"},
+  "gates": {
+    "G1_cuts_on_timestamps": {"result": "PASS", "measured": "4.17/10.5/14.17/16.75 vs 4/10/14/17; max delta 0.5s"},
+    "G2_identity_across_shots": {"result": "PASS", "note": "workman (fustanella + headcloth) consistent shots 2-4; archaeologist (dark sack coat + bowler + staff) consistent shots 2 and 5"},
+    "G3_drum_to_man_ratio": {"result": "PASS", "note": "the fluted drum TOWERS over the workman at its foot in Shot 2 (ratio >>1.0)"},
+    "G4_event_on_named_object": {"result": "PASS", "note": "FIXED vs v2.1. Shot 1 aerial descent onto the dig now HAPPENS (see G7/headline); Shot 3 timber-bar levering (drum edge lifts+settles+dust); Shot 4 hand sweeps earth off the flute (fluting emerging); Shot 5 archaeologist removes bowler. All named-object events read."},
+    "G5_costume_NEVERs": {"result": "PASS", "note": "working fustanella + headcloth (labourers), sack coat + bowler (archaeologist); no bare chest, no pith helmet, no Evzone PARADE dress, no modern object. Consistent with v2.1's costume ruling."},
+    "G6_zero_text": {"result": "PASS (sample)", "note": "no text/lettering in ~26 sampled frames; scene carries no text surfaces. Sampled-not-full-scan caveat (low risk, nothing to letter)."},
+    "G7_shot1_no_people_no_modern": {"result": "PASS", "note": "Shot 1 aerial (0-2.5s) shows NO people; people appear only at the Shot1->2 boundary (~3.5s). No buildings, roads, or modern objects."},
+    "G8_shot1_river_reads_hallwyl": {"result": "FAIL (by design-trade)", "note": "The Alpheios river is NOT visibly present in v2.2 Shot 1 — the aerial glides over the dry excavation + wooded hill + plain, no broad sandy river reads. This is the DELIBERATE consequence of demoting the river to a secondary clause to kill v2.1's static-river-plate over-anchoring: the fix that made the camera move ALSO dropped the river from frame. Storyboard's call: accept the dig-only aerial, or iterate toward river-present-but-not-dominant (which risks re-triggering the static plate)."},
+    "G9_shot2_crew_working": {"result": "PASS", "note": "FIXED vs v2.1 (which FAILED — crew idle/posed). v2.2 Shot 2 shows a large crew of labourers arrayed along the trenches WORKING — picks rising, a block being levered with a timber bar, active mid-ground labour. The positive continuous working-verbs ('keep moving: picks rise and fall, two carry a barrow'), with the negation dropped, landed. Minor: the deep-background crowd is somewhat static/arrayed, but the mid-ground work reads clearly active."},
+    "G10_hands_shots_3_4": {"result": "PASS", "note": "Shot 3 levering grip on the timber bar is natural; Shot 4 macro dusty hand sweeping the flute is anatomically correct — four fingers + thumb, natural proportions, no extra/deformed digits."}
+  },
+  "verdict": {
+    "status": "STRONG SUCCESS on the correction's purpose. 9 gates PASS (G1-G7, G9, G10), 1 FAIL (G8 river-absent, by design-trade). The two DETERMINISTIC v2.1 failures are BOTH fixed: static aerial -> genuine aerial glide+descent (drum rows growing small->large); idle crew -> working crew.",
+    "confidence": 0.85,
+    "vs_v2.1": "v2.1 (t1=t2, 10/10 gate agreement): G9 FAIL (crew idle) + Shot-1 aerial FAIL (static river plate) + G4 PARTIAL. v2.2: G9 PASS, Shot-1 aerial PASS, G4 PASS — the corrections landed. New cost: G8 river no longer visible (was 'arguably TOO faithful' in v2.1; now absent).",
+    "measurement_basis": "ffprobe + scene-change (deterministic) + frame-reading BELIEF for motion/identity/crew-activity. The aerial-motion judgement is belief from reading the 6-frame Shot-1 progression (parallax + drum-rows-growing), not a metric."
+  },
+  "shot1_failure_mode_note": "REQUESTED IF AERIAL FAILS AGAIN: it did NOT fail — the aerial now moves. The residual issue is the OPPOSITE of v2.1: over-correction dropped the river entirely. Recommended next iteration IF the river is wanted: keep camera-as-subject phrasing but add one concrete river anchor low in frame ('the sandy Alpheios crossing the lower third') rather than 'slides past beneath' — give the model a compositional slot for the river without letting it become the whole plate.",
+  "recommendation": "Ships as the Run-3 case-study column: the correction method (motion-as-subject + positive working-verbs) is validated. Whether THIS take is the 1a opener depends on whether storyboard wants the river present — that is storyboard's/edit's call, not videogen's."
+}

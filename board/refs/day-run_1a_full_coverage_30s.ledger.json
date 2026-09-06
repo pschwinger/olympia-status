@@ -1,0 +1,37 @@
+{
+  "run": "1a FULL COVERAGE — 30s, 8 shots, double coverage (the last chapter-1 test)",
+  "proposal": "prop_hmbrnea4pnbd5egyzzbx6nax6u (storyboard, ECO Philipp)",
+  "spec": "empirica-storyboard/scenes/1a-full-coverage-30s.md @ 5577103 (prompt VERBATIM)",
+  "measured_by": "empirica-videogen",
+  "model": "seedance_2_5 omni_reference, 30s, 16:9, 1080p, audio off, ONE take",
+  "generated": "2026-09-06T09:49:50Z → 09:58:29Z (~8.7 min)",
+  "clip": "1a_full_coverage_30s.mp4",
+  "output": {"width": 1920, "height": 1080, "fps": 24, "duration_s": 30.041667, "frames": 721, "normalisation": "none needed — native 1920x1080 24fps"},
+  "credits": {"pool_before": 12538.5, "spent": 270, "pool_after": 12268.5, "note": "~9cr/s linear holds: 180@20s, 216@24s, 270@30s"},
+  "milestone": "FIRST 30s generation — the documented Seedance 2.5 duration cap's first live test. Duration ACCEPTED (validated pre-spend) AND rendered exactly 30.041667s in-output, NOT coerced. Extends the confirmed ceiling: 20.04s (5 shots) -> 24.04s (part-2, 5 shots) -> 30.04s (8 shots).",
+  "refs_bound": ["@Image1 k1_v3_start", "@Image2 workman_prod", "@Image3 archaeologist_prod_v2", "@Image4 env_temple-of-zeus_1870s", "@Image5 1a_storyboard_panels", "@Image6 Hallwyl_Alpheios"],
+  "cuts": {"measured_s": [4.08, 8.33, 11.92, 16.08, 18.63, 21.96, 25.0], "specified_s": [4, 8, 12, 16, 19, 22, 25], "max_delta_s": 0.37, "note": "ALL 7 cuts within +-0.5s. 8-shots-in-30s density HONORED — extends the proven 5-cuts-in-20s multishot ceiling. This density was explicitly part of the test."},
+  "coverage_map": {
+    "S1": "aerial establish (0-4)", "S2": "WIDE on dig (4-8)", "S3": "MEDIUM reaction (8-12)",
+    "S4": "CLOSE on lever (12-16)", "S5": "MACRO insert bar-bite (16-19)", "S6": "MACRO hands on flute (19-22)",
+    "S7": "MEDIUM two-shot brushing (22-25)", "S8": "final beat bowler-off (25-30)",
+    "pairs": "2/3 wide+medium · 4/5 close+macro · 6/7 macro+two-shot"
+  },
+  "gates": {
+    "G1_cuts_on_stamps": {"result": "PASS", "measured": "4.08/8.33/11.92/16.08/18.63/21.96/25.0 vs 4/8/12/16/19/22/25; max delta 0.37s. 8-in-30 density honored."},
+    "G2_identity_all_8": {"result": "PASS", "note": "workman (fustanella + headcloth + moustache) consistent shots 2-8; archaeologist (dark sack coat + bowler + beard + staff) consistent shots 3,7,8. Same two men across all 8 shots."},
+    "G3_drum_to_man_ratio": {"result": "PASS", "note": "the fluted drum TOWERS over the workman at its foot (S2 wide); close/macro shots the stone dominates."},
+    "G4_event_on_named_object": {"result": "PASS", "note": "aerial descent onto dig (S1); block levered with timber bar (S2/S4); bar biting under the drum edge (S5 macro); hand sweeping earth off the flute (S6); brushing the fluting (S7); bowler-off (S8). All named-object events read."},
+    "G5_costume_NEVERs": {"result": "PASS", "note": "working fustanella + headcloth, sack coat + bowler; no bare chest, no pith helmet, no Evzone PARADE dress, no modern object/building/road."},
+    "G6_zero_text": {"result": "PASS (sample)", "note": "no text/lettering in ~28 sampled frames; no text surfaces. Sampled-not-full-scan caveat (low risk)."},
+    "G7_hands_shots_5_7": {"result": "PASS", "belief_conf": 0.85, "note": "S5 macro is bar-on-stone (no hand risk); S6 macro hands sweeping/spread on the flute are anatomically correct — five natural digits, natural proportions, no extra/deformed fingers; S7 two-shot hands less framed, no deformity."},
+    "G8_coverage_pairs_same_moment_two_sizes_AND_one_film_grade": {"result": "PASS", "belief_conf": 0.8, "note": "The explicit 'look preserved' ask. PAIR 4/5 (close lever -> macro bar-bite) and PAIR 6/7 (macro hand-on-flute -> two-shot brushing) read STRONGLY as the same moment from two sizes. PAIR 2/3 (wide dig -> medium reaction) reads as the same scene/moment/grade from two sizes with a MINOR action variance (the medium S3 foregrounds the workman with a pick, not prominent in the wide S2) — cuts together as coverage but not a frame-exact match. ONE-FILM GRADE: consistent sepia/albumen tone and light across all 8 shots — grades as one film. The double-coverage-in-one-generation strategy works: the edit gets wide+medium / close+macro / macro+two-shot of each beat, all consistent because consistency is free inside one omni_reference generation."}
+  },
+  "verdict": {
+    "status": "STRONG SUCCESS — 8/8 gates PASS. First 30s generation succeeded (30.04s in-output, 8 cuts honored). Double coverage delivers the edit real choices with cross-size consistency held in one generation.",
+    "confidence": 0.85,
+    "measurement_basis": "ffprobe + scene-change (deterministic) + frame-reading BELIEF for identity/coverage-pair-sameness/grade. Coverage-pair and one-film-grade judgements are belief from reading the shots, not metrics."
+  },
+  "notable_finding_river_context_sensitivity": "Shot 1 here uses the IDENTICAL text to RUN 3 (v2.2), but the Alpheios river IS prominently present in this generation whereas it was ABSENT in RUN 3. Same Shot-1 prompt -> river present in one generation, absent in another. So the river's manifestation is CONTEXT-SENSITIVE / stochastic (the surrounding 8-shot prompt differs from v2.2's 5-shot prompt, and Shot-1 rendering depends on the whole prompt context) — it is NOT a deterministic drop from demoting the river. This moderates RUN 3's 'river absent by design' read: the river CAN appear with the camera-as-subject phrasing; RUN 3 happened to drop it. If the river is required every time, it still needs a firmer compositional anchor.",
+  "recommendation": "Ships as the chapter-1 full-coverage test: the 30s/8-shot double-coverage capability is CONFIRMED. Which coverage the film uses is empirica-edit's call. videogen does not grade whether the shots cut into the final trailer — that is edit's lane."
+}
