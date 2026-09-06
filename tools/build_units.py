@@ -25,10 +25,10 @@ def all_cards(man):
 
 import hashlib
 def poster_for(src):
-    """Board poster rule: posters/md5(pref+rel)[:10].jpg ; generate from local media if absent."""
+    """EXACT board rule: pref = V if src starts with media/v/ else R; rel = src minus V/R prefix; posters/md5(pref+rel)[:10].jpg."""
     if src.startswith("media/v/"): pref, rel = "V", src[len("media/v/"):]
     elif src.startswith("media/r/"): pref, rel = "R", src[len("media/r/"):]
-    else: return None
+    else: pref, rel = "R", src
     h = hashlib.md5((pref+rel).encode()).hexdigest()[:10]
     p = f"{ROOT}/board/posters/{h}.jpg"
     if not os.path.exists(p):
@@ -233,8 +233,8 @@ def card_section(code):
     return f"""<p class="k">The proof — same prompt, with and without the collection</p>
 <p class="muted" style="font-size:.92rem">{cap} · the only difference between the two images is the museum digitisation attached as reference.</p>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px;max-width:920px">
-<div><a href="board/media/cards/{k}_without.jpg" target="_blank"><img class="thumb" style="max-height:200px;width:100%;object-fit:cover" src="board/media/cards/{k}_without.jpg" alt="without the collection"></a><p style="font-size:.85rem;color:var(--steel)"><b style="color:var(--flame)">WITHOUT:</b> the AI invents a generic object.</p></div>
-<div><a href="board/media/cards/{k}_with.jpg" target="_blank"><img class="thumb" style="max-height:200px;width:100%;object-fit:cover" src="board/media/cards/{k}_with.jpg" alt="with the collection"></a><p style="font-size:.85rem;color:var(--steel)"><b style="color:var(--good)">WITH:</b> the real object survives, invariants gated.</p></div>
+<div><a href="board/media/cards/{k}_without.jpg" target="_blank"><img class="thumb" style="aspect-ratio:16/9;width:100%;object-fit:cover" src="board/media/cards/{k}_without.jpg" alt="without the collection"></a><p style="font-size:.85rem;color:var(--steel)"><b style="color:var(--flame)">WITHOUT:</b> the AI invents a generic object.</p></div>
+<div><a href="board/media/cards/{k}_with.jpg" target="_blank"><img class="thumb" style="aspect-ratio:16/9;width:100%;object-fit:cover" src="board/media/cards/{k}_with.jpg" alt="with the collection"></a><p style="font-size:.85rem;color:var(--steel)"><b style="color:var(--good)">WITH:</b> the real object survives, invariants gated.</p></div>
 </div>{n}
 """
 
