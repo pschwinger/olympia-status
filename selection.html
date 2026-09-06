@@ -69,6 +69,7 @@ document.addEventListener('input',function(e){if(e.target.classList&&e.target.cl
   var d=floadd();var k=e.target.dataset.shot;if(e.target.value.trim())d[k]=e.target.value.trim();else delete d[k];
   try{localStorage.setItem(FKEY,JSON.stringify(d))}catch(e2){}}});
 window.addEventListener('DOMContentLoaded',function(){
+  document.querySelectorAll('.card .muted').forEach(function(d){if(d.scrollHeight<=d.clientHeight+4)d.classList.add('open');});
   var m=mload(),f=floadd();
   document.querySelectorAll('.marks').forEach(function(r){var v=m[r.dataset.shot];r.querySelectorAll('.mbtn').forEach(function(b){b.classList.toggle('on',b.dataset.m===v)})});
   document.querySelectorAll('.fb').forEach(function(t){if(f[t.dataset.shot])t.value=f[t.dataset.shot]});

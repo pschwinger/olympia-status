@@ -167,6 +167,7 @@ document.addEventListener('input',function(e){if(e.target.classList&&e.target.cl
   var d=floadd();var k=e.target.dataset.shot;if(e.target.value.trim())d[k]=e.target.value.trim();else delete d[k];
   try{localStorage.setItem(FKEY,JSON.stringify(d))}catch(e2){}}});
 window.addEventListener('DOMContentLoaded',function(){
+  document.querySelectorAll('.card .muted').forEach(function(d){if(d.scrollHeight<=d.clientHeight+4)d.classList.add('open');});
   var m=mload(),f=floadd();
   document.querySelectorAll('.marks').forEach(function(r){var v=m[r.dataset.shot];r.querySelectorAll('.mbtn').forEach(function(b){b.classList.toggle('on',b.dataset.m===v)})});
   document.querySelectorAll('.fb').forEach(function(t){if(f[t.dataset.shot])t.value=f[t.dataset.shot]});
@@ -278,9 +279,11 @@ def build():
 
     # artifact pages + index
     art_tiles = ""
-    for code, rows in sorted(by_art.items()):
+    all_codes = sorted(set(by_art) | set(CARDS))
+    for code in all_codes:
+        rows = by_art.get(code, [])
         r = REG.get(code, {})
-        rows = sorted({sh["num"]:(sec,sh) for sec,sh in rows}.values(), key=lambda t:t[1]["num"])
+        rows = sorted({sh["num"]:(sec,sh) for sec,sh in rows}.values(), key=lambda t:t[1]["num"]) if rows else []
         vids = "".join(render_card(sec, sh) for sec, sh in rows)
         hero = ""
         for _sec,_sh in rows:
@@ -298,7 +301,7 @@ def build():
 {f'<div class="musdoc" style="border-color:rgba(186,90,30,.4)"><b>Not asserted:</b> <span class="muted">{na}</span></div>' if na else ''}
 {card_section(code)}
 <p class="k">Every video this artifact appears in</p>
-<div class="cardgrid">{vids}</div>""" + BAR + FOOT
+{f'<div class="cardgrid">{vids}</div>' if vids else '<p class="muted">No videos of this object yet — the proof card above is its first appearance.</p>'}""" + BAR + FOOT
         open(f"{ROOT}/artifact-{code}.html","w").write(page)
         art_tiles += f'<a class="tile" href="artifact-{code}.html"><b>{html.escape(r.get("name",code))}</b><span>{code} · {len(rows)} videos</span></a>'
     open(f"{ROOT}/artifacts.html","w").write(head("The Artifacts") + f"""
