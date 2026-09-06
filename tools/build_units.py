@@ -293,25 +293,44 @@ def build():
         r = REG.get(code, {})
         rows = sorted({sh["num"]:(sec,sh) for sec,sh in rows}.values(), key=lambda t:t[1]["num"]) if rows else []
         vids = "".join(render_card(sec, sh) for sec, sh in rows)
-        hero = ""
-        for _sec,_sh in rows:
-            _vs=_sh.get("versions") or []
-            if _vs:
-                _po = poster_for(_vs[0]["src"])
-                if _po: hero = f'<img class="thumb" src="{_po}" alt="" style="max-width:300px;margin:6px 0 10px">'; break
-        inv = html.escape(str(r.get("invariants",""))[:600])
+        render_rel = f"board/media/renders/{code}.jpg"
+        if os.path.exists(f"{ROOT}/{render_rel}"):
+            hero = (f'<a class="lb" href="{render_rel}"><img class="thumb" src="{render_rel}" alt="the digitised object" style="max-width:320px;margin:6px 0 2px"></a>'
+                    f'<p class="muted" style="font-size:.8rem;margin:2px 0 10px">The Museum&rsquo;s digitisation &middot; the reference every generated frame is measured against.</p>')
+        else:
+            hero = ""
+            for _sec,_sh in rows:
+                _vs=_sh.get("versions") or []
+                if _vs:
+                    _po = poster_for(_vs[0]["src"])
+                    if _po: hero = f'<img class="thumb" src="{_po}" alt="" style="max-width:300px;margin:6px 0 10px">'; break
+        must = str(r.get("identity") or r.get("invariants") or "")
+        holds = r.get("hold_invariants") or []
+        if holds: must += " Checked every frame: " + " · ".join(holds) + "."
+        inv = html.escape(must[:700])
         na = html.escape(str(r.get("not_asserted",""))[:400])
+        insc = r.get("inscriptions") or {}
+        insc_html = ""
+        if insc:
+            lis = "".join(f'<li><b>{html.escape(str(k))}:</b> {html.escape(str(v))}</li>' for k,v in insc.items())
+            insc_html = ('<div class="musdoc" style="border-color:rgba(140,125,60,.45)"><b>Real text on the object:</b> '
+                         '<span class="muted">recorded here, never re-rendered by the model - generated frames keep these surfaces below reading size.</span>'
+                         f'<ul style="margin:6px 0 0;padding-left:18px;font-size:.88rem;color:var(--steel)">{lis}</ul></div>')
         page = head(f"{r.get('name',code)}") + f"""
 <p class="k">Artifact · {code}</p><h1>{html.escape(r.get('name',code))}</h1>
 {hero}
+<p class="k">What it is</p>
 <p>{html.escape(str(r.get('claim',''))[:500])}</p>
-<div class="musdoc"><b>What a generated image must hold:</b> <span class="muted">{inv}</span></div>
-{f'<div class="musdoc" style="border-color:rgba(186,90,30,.4)"><b>Not asserted:</b> <span class="muted">{na}</span></div>' if na else ''}
+<div class="musdoc"><b>What a generated frame must hold:</b> <span class="muted">{inv}</span></div>
+{insc_html}
+{f'<div class="musdoc" style="border-color:rgba(186,90,30,.4)"><b>Never asserted:</b> <span class="muted">{na}</span></div>' if na else ''}
 {card_section(code)}
 <p class="k">Every video this artifact appears in</p>
 {f'<div class="cardgrid">{vids}</div>' if vids else '<p class="muted">No videos of this object yet — the proof card above is its first appearance.</p>'}""" + BAR + FOOT
         open(f"{ROOT}/artifact-{code}.html","w").write(page)
-        art_tiles += f'<a class="tile" href="artifact-{code}.html"><b>{html.escape(r.get("name",code))}</b><span>{code} · {len(rows)} videos</span></a>'
+        timg = (f'<img src="{render_rel}" alt="" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:8px;margin-bottom:8px">'
+                if os.path.exists(f"{ROOT}/{render_rel}") else "")
+        art_tiles += f'<a class="tile" href="artifact-{code}.html">{timg}<b>{html.escape(r.get("name",code))}</b><span>{code} · {len(rows)} videos</span></a>'
     open(f"{ROOT}/artifacts.html","w").write(head("The Artifacts") + f"""
 <h1>The artifacts</h1><p class="muted">One page per museum object we have used: the registry card (what it is, what a generated frame must hold, what is never asserted) and every video it appears in.</p>
 <div class="grid">{art_tiles}</div>""" + FOOT)
