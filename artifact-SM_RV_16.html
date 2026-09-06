@@ -45,6 +45,10 @@ p{max-width:76ch}.muted{color:var(--steel)}
 .bar button{font:600 12.5px Archivo;padding:8px 14px;border-radius:9px;border:1px solid var(--hair);background:var(--olive);color:#fff;cursor:pointer}
 .jump{margin-left:8px}.jump input{width:70px;font-size:12px;padding:4px 8px;border:1px solid var(--hair);border-radius:6px;background:var(--surface);color:var(--ink)}
 img.thumb{max-width:100%;border-radius:8px;border:1px solid var(--hair)}
+#lb{position:fixed;inset:0;background:rgba(10,12,8,.92);display:none;align-items:center;justify-content:center;z-index:1000;cursor:zoom-out}
+#lb.on{display:flex}
+#lb img{max-width:94vw;max-height:92vh;border-radius:10px}
+#lb .x{position:fixed;top:14px;right:18px;font:700 26px Archivo;color:#fff;background:rgba(0,0,0,.5);border:1px solid #666;border-radius:10px;padding:2px 14px;cursor:pointer}
 .foot{margin-top:60px;padding-top:14px;border-top:1px solid var(--hair);font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted)}
 </style><div class="wrap">
 <p class="k">Artifact · SM_RV_16</p><h1>Kotinos - olive wreath, Athens 2004</h1>
@@ -138,12 +142,15 @@ img.thumb{max-width:100%;border-radius:8px;border:1px solid var(--hair)}
 <textarea class="fb" data-shot="wreath-a" placeholder="feedback for #102…"></textarea></div><div class="card" id="v103"><span class="num">#103</span><b>The Hands Remember · v3 — SHIPS</b>
 <p class="muted" style="font-size:.92rem"><b>EDIT · 3 sources:</b> the single 30s generated take (shots kept for 0-3, 6-9 and 12-30s - watch it whole under the G6-FAIL button) + deterministic insert A at 3.0-6.0s (the shoes, computed from the digitisation) + deterministic insert B at 9.0-12.0s (the belt). <b>Four real artifacts, one ritual arc:</b> the breath, Tentoglou's shoes, the 1976 belt, the Sydney clubs, and the kotinos lowered onto a bowed head. The two ink closeups are DETERMINISTIC inserts — computed camera moves over the certified digitisations, so the handwriting on screen is the athlete's REAL ink (legible because it is true; only generated text can forge). The failed generative take is preserved beside it: it forged the same ink, and that comparison is the product argument in 30 seconds. First seedance-25 production prompt; the 30s platform cap confirmed the same afternoon for 0 credits.</p><video controls preload="none" poster="board/posters/d3853fbb29.jpg" src="board/media/v/campaign/campaign_hands_30s_v3.mp4"></video><div class="vers"><button data-src="board/media/v/campaign/campaign_hands_30s_v3.mp4" class="on">v3 ✓ SHIPS</button><button data-src="board/media/v/campaign/campaign_hands_30s_G6-FAIL.mp4" class="">G6-FAIL · evidence</button></div><div class="meta"><a href="board/refs/campaign_v3.ledger.json" target="_blank">ledger (model · measurements · cost)</a></div>
 <div class="marks" data-shot="campaign-v3" data-num="103"><button class="mbtn" data-m="keep">keep</button><button class="mbtn" data-m="change">change</button><button class="mbtn" data-m="no">no</button></div>
-<textarea class="fb" data-shot="campaign-v3" placeholder="feedback for #103…"></textarea></div></div><div class="bar"><span class="jump"><input id="jn" placeholder="#nr"><button onclick="jumpN()">Jump</button></span><button id="cpy" onclick="copyAll()">Copy my marks</button></div><p class="foot">REEVALUATE · every claim traceable to a ledger · full archive in the <a href="board/review.html" style="color:var(--bronze)">working room</a></p></div><script>
+<textarea class="fb" data-shot="campaign-v3" placeholder="feedback for #103…"></textarea></div></div><div class="bar"><span class="jump"><input id="jn" placeholder="#nr"><button onclick="jumpN()">Jump</button></span><button id="cpy" onclick="copyAll()">Copy my marks</button></div><div id="lb"><span class="x">✕ close</span><img src="" alt=""></div><p class="foot">REEVALUATE · every claim traceable to a ledger · full archive in the <a href="board/review.html" style="color:var(--bronze)">working room</a></p></div><script>
 var MKEY='olympia-marks-v1', FKEY='olympia-review-v1';
 function mload(){try{return JSON.parse(localStorage.getItem(MKEY)||'{}')}catch(e){return{}}}
 function msave(d){try{localStorage.setItem(MKEY,JSON.stringify(d))}catch(e){}}
 function floadd(){try{return JSON.parse(localStorage.getItem(FKEY)||'{}')}catch(e){return{}}}
 document.addEventListener('click',function(e){
+  var L=e.target.closest&&e.target.closest('a.lb');
+  if(L){e.preventDefault();var lb=document.getElementById('lb');lb.querySelector('img').src=L.getAttribute('href');lb.classList.add('on');return;}
+  if(e.target.closest&&e.target.closest('#lb')){document.getElementById('lb').classList.remove('on');return;}
   var d=e.target.closest&&e.target.closest('.card .muted');
   if(d&&!e.target.closest('a')){d.classList.toggle('open');return;}
   var b=e.target.closest&&e.target.closest('.mbtn');
@@ -169,6 +176,7 @@ function copyAll(){var m=mload(),f=floadd(),rows=[];
   rows.sort(function(a,b){return a.n-b.n});
   var out='Olympia review — marks ('+new Date().toISOString().slice(0,10)+')\n\n'+(rows.length?rows.map(function(r){return r.line}).join('\n'):'(nothing marked)');
   if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(out).then(function(){var b=document.getElementById('cpy');b.textContent='Copied ✓';setTimeout(function(){b.textContent='Copy my marks'},1500)})}else{window.prompt('Copy:',out)}}
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){var lb=document.getElementById('lb');if(lb)lb.classList.remove('on');}});
 function jumpN(){var n=document.getElementById('jn').value.replace('#','');var el=document.getElementById('v'+n);
   if(el){el.scrollIntoView({behavior:'smooth'});el.style.outline='3px solid var(--bronze)';setTimeout(function(){el.style.outline=''},2500)}else{alert('#'+n+' is not on this page — try the Working room (full archive).')}}
 </script></body></html>

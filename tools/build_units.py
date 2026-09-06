@@ -144,6 +144,10 @@ p{max-width:76ch}.muted{color:var(--steel)}
 .bar button{font:600 12.5px Archivo;padding:8px 14px;border-radius:9px;border:1px solid var(--hair);background:var(--olive);color:#fff;cursor:pointer}
 .jump{margin-left:8px}.jump input{width:70px;font-size:12px;padding:4px 8px;border:1px solid var(--hair);border-radius:6px;background:var(--surface);color:var(--ink)}
 img.thumb{max-width:100%;border-radius:8px;border:1px solid var(--hair)}
+#lb{position:fixed;inset:0;background:rgba(10,12,8,.92);display:none;align-items:center;justify-content:center;z-index:1000;cursor:zoom-out}
+#lb.on{display:flex}
+#lb img{max-width:94vw;max-height:92vh;border-radius:10px}
+#lb .x{position:fixed;top:14px;right:18px;font:700 26px Archivo;color:#fff;background:rgba(0,0,0,.5);border:1px solid #666;border-radius:10px;padding:2px 14px;cursor:pointer}
 .foot{margin-top:60px;padding-top:14px;border-top:1px solid var(--hair);font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted)}
 </style>"""
 
@@ -153,6 +157,9 @@ function mload(){try{return JSON.parse(localStorage.getItem(MKEY)||'{}')}catch(e
 function msave(d){try{localStorage.setItem(MKEY,JSON.stringify(d))}catch(e){}}
 function floadd(){try{return JSON.parse(localStorage.getItem(FKEY)||'{}')}catch(e){return{}}}
 document.addEventListener('click',function(e){
+  var L=e.target.closest&&e.target.closest('a.lb');
+  if(L){e.preventDefault();var lb=document.getElementById('lb');lb.querySelector('img').src=L.getAttribute('href');lb.classList.add('on');return;}
+  if(e.target.closest&&e.target.closest('#lb')){document.getElementById('lb').classList.remove('on');return;}
   var d=e.target.closest&&e.target.closest('.card .muted');
   if(d&&!e.target.closest('a')){d.classList.toggle('open');return;}
   var b=e.target.closest&&e.target.closest('.mbtn');
@@ -178,6 +185,7 @@ function copyAll(){var m=mload(),f=floadd(),rows=[];
   rows.sort(function(a,b){return a.n-b.n});
   var out='Olympia review — marks ('+new Date().toISOString().slice(0,10)+')\\n\\n'+(rows.length?rows.map(function(r){return r.line}).join('\\n'):'(nothing marked)');
   if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(out).then(function(){var b=document.getElementById('cpy');b.textContent='Copied ✓';setTimeout(function(){b.textContent='Copy my marks'},1500)})}else{window.prompt('Copy:',out)}}
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){var lb=document.getElementById('lb');if(lb)lb.classList.remove('on');}});
 function jumpN(){var n=document.getElementById('jn').value.replace('#','');var el=document.getElementById('v'+n);
   if(el){el.scrollIntoView({behavior:'smooth'});el.style.outline='3px solid var(--bronze)';setTimeout(function(){el.style.outline=''},2500)}else{alert('#'+n+' is not on this page — try the Working room (full archive).')}}
 </script>"""
@@ -190,7 +198,7 @@ def head(title):
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
 </head><body>{NAV}{STYLE}<div class="wrap">"""
 
-FOOT = """<p class="foot">REEVALUATE · every claim traceable to a ledger · full archive in the <a href="board/review.html" style="color:var(--bronze)">working room</a></p></div>""" + JS + "</body></html>"
+FOOT = """<div id="lb"><span class="x">✕ close</span><img src="" alt=""></div><p class="foot">REEVALUATE · every claim traceable to a ledger · full archive in the <a href="board/review.html" style="color:var(--bronze)">working room</a></p></div>""" + JS + "</body></html>"
 
 def render_card(sec, sh, prefix="board/"):
     vs = sh.get("versions") or []
@@ -238,8 +246,8 @@ def card_section(code):
     return f"""<p class="k">The proof — same prompt, with and without the collection</p>
 <p class="muted" style="font-size:.92rem">{cap} · the only difference between the two images is the museum digitisation attached as reference.</p>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px;max-width:920px">
-<div><a href="board/media/cards/{k}_without.jpg" target="_blank"><img class="thumb" style="aspect-ratio:16/9;width:100%;object-fit:cover" src="board/media/cards/{k}_without.jpg" alt="without the collection"></a><p style="font-size:.85rem;color:var(--steel)"><b style="color:var(--flame)">WITHOUT:</b> the AI invents a generic object.</p></div>
-<div><a href="board/media/cards/{k}_with.jpg" target="_blank"><img class="thumb" style="aspect-ratio:16/9;width:100%;object-fit:cover" src="board/media/cards/{k}_with.jpg" alt="with the collection"></a><p style="font-size:.85rem;color:var(--steel)"><b style="color:var(--good)">WITH:</b> the real object survives, invariants gated.</p></div>
+<div><a class="lb" href="board/media/cards/{k}_without.jpg"><img class="thumb" style="aspect-ratio:16/9;width:100%;object-fit:cover" src="board/media/cards/{k}_without.jpg" alt="without the collection"></a><p style="font-size:.85rem;color:var(--steel)"><b style="color:var(--flame)">WITHOUT:</b> the AI invents a generic object.</p></div>
+<div><a class="lb" href="board/media/cards/{k}_with.jpg"><img class="thumb" style="aspect-ratio:16/9;width:100%;object-fit:cover" src="board/media/cards/{k}_with.jpg" alt="with the collection"></a><p style="font-size:.85rem;color:var(--steel)"><b style="color:var(--good)">WITH:</b> the real object survives, invariants gated.</p></div>
 </div>{n}
 """
 

@@ -45,15 +45,22 @@ p{max-width:76ch}.muted{color:var(--steel)}
 .bar button{font:600 12.5px Archivo;padding:8px 14px;border-radius:9px;border:1px solid var(--hair);background:var(--olive);color:#fff;cursor:pointer}
 .jump{margin-left:8px}.jump input{width:70px;font-size:12px;padding:4px 8px;border:1px solid var(--hair);border-radius:6px;background:var(--surface);color:var(--ink)}
 img.thumb{max-width:100%;border-radius:8px;border:1px solid var(--hair)}
+#lb{position:fixed;inset:0;background:rgba(10,12,8,.92);display:none;align-items:center;justify-content:center;z-index:1000;cursor:zoom-out}
+#lb.on{display:flex}
+#lb img{max-width:94vw;max-height:92vh;border-radius:10px}
+#lb .x{position:fixed;top:14px;right:18px;font:700 26px Archivo;color:#fff;background:rgba(0,0,0,.5);border:1px solid #666;border-radius:10px;padding:2px 14px;cursor:pointer}
 .foot{margin-top:60px;padding-top:14px;border-top:1px solid var(--hair);font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted)}
 </style><div class="wrap">
 <h1>The five units</h1><p class="muted">The Museum's own structure. Each page: what the Museum wrote, what we decided to try, the research, and every video — numbered, with prompts and measurements.</p>
-<div class="grid"><a class="tile" href="unit-1.html"><b>Unit 1 — From Discovery to Revival</b><span>41 videos · Revival of the Olympic Games</span></a><a class="tile" href="unit-2.html"><b>Unit 2 — The First Modern Games &amp; the Olympic Symbols</b><span>16 videos · Symbols &amp; ceremonies</span></a><a class="tile" href="unit-3.html"><b>Unit 3 — The Mesolympic Games, Athens 1906</b><span>8 videos · Victory &amp; honour (old card)</span></a><a class="tile" href="unit-4.html"><b>Unit 4 — Olympic Values through Sports &amp; Music</b><span>13 videos · Athletes &amp; their objects</span></a><a class="tile" href="unit-5.html"><b>Unit 5 — International Olympic Day, a Global Movement</b><span>6 videos · Legacy</span></a></div><p class="foot">REEVALUATE · every claim traceable to a ledger · full archive in the <a href="board/review.html" style="color:var(--bronze)">working room</a></p></div><script>
+<div class="grid"><a class="tile" href="unit-1.html"><b>Unit 1 — From Discovery to Revival</b><span>41 videos · Revival of the Olympic Games</span></a><a class="tile" href="unit-2.html"><b>Unit 2 — The First Modern Games &amp; the Olympic Symbols</b><span>16 videos · Symbols &amp; ceremonies</span></a><a class="tile" href="unit-3.html"><b>Unit 3 — The Mesolympic Games, Athens 1906</b><span>8 videos · Victory &amp; honour (old card)</span></a><a class="tile" href="unit-4.html"><b>Unit 4 — Olympic Values through Sports &amp; Music</b><span>13 videos · Athletes &amp; their objects</span></a><a class="tile" href="unit-5.html"><b>Unit 5 — International Olympic Day, a Global Movement</b><span>6 videos · Legacy</span></a></div><div id="lb"><span class="x">✕ close</span><img src="" alt=""></div><p class="foot">REEVALUATE · every claim traceable to a ledger · full archive in the <a href="board/review.html" style="color:var(--bronze)">working room</a></p></div><script>
 var MKEY='olympia-marks-v1', FKEY='olympia-review-v1';
 function mload(){try{return JSON.parse(localStorage.getItem(MKEY)||'{}')}catch(e){return{}}}
 function msave(d){try{localStorage.setItem(MKEY,JSON.stringify(d))}catch(e){}}
 function floadd(){try{return JSON.parse(localStorage.getItem(FKEY)||'{}')}catch(e){return{}}}
 document.addEventListener('click',function(e){
+  var L=e.target.closest&&e.target.closest('a.lb');
+  if(L){e.preventDefault();var lb=document.getElementById('lb');lb.querySelector('img').src=L.getAttribute('href');lb.classList.add('on');return;}
+  if(e.target.closest&&e.target.closest('#lb')){document.getElementById('lb').classList.remove('on');return;}
   var d=e.target.closest&&e.target.closest('.card .muted');
   if(d&&!e.target.closest('a')){d.classList.toggle('open');return;}
   var b=e.target.closest&&e.target.closest('.mbtn');
@@ -79,6 +86,7 @@ function copyAll(){var m=mload(),f=floadd(),rows=[];
   rows.sort(function(a,b){return a.n-b.n});
   var out='Olympia review — marks ('+new Date().toISOString().slice(0,10)+')\n\n'+(rows.length?rows.map(function(r){return r.line}).join('\n'):'(nothing marked)');
   if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(out).then(function(){var b=document.getElementById('cpy');b.textContent='Copied ✓';setTimeout(function(){b.textContent='Copy my marks'},1500)})}else{window.prompt('Copy:',out)}}
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){var lb=document.getElementById('lb');if(lb)lb.classList.remove('on');}});
 function jumpN(){var n=document.getElementById('jn').value.replace('#','');var el=document.getElementById('v'+n);
   if(el){el.scrollIntoView({behavior:'smooth'});el.style.outline='3px solid var(--bronze)';setTimeout(function(){el.style.outline=''},2500)}else{alert('#'+n+' is not on this page — try the Working room (full archive).')}}
 </script></body></html>
