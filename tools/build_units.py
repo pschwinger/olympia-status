@@ -22,6 +22,22 @@ def all_cards(man):
         for sh in pools:
             if sh.get("num"): yield sec, sh
 
+
+import hashlib
+def poster_for(src):
+    """Board poster rule: posters/md5(pref+rel)[:10].jpg ; generate from local media if absent."""
+    if src.startswith("media/v/"): pref, rel = "V", src[len("media/v/"):]
+    elif src.startswith("media/r/"): pref, rel = "R", src[len("media/r/"):]
+    else: return None
+    h = hashlib.md5((pref+rel).encode()).hexdigest()[:10]
+    p = f"{ROOT}/board/posters/{h}.jpg"
+    if not os.path.exists(p):
+        local = f"{ROOT}/board/{src}"
+        if os.path.exists(local):
+            subprocess.run(["ffmpeg","-loglevel","error","-y","-ss","1.5","-i",local,"-frames:v","1","-q:v","4","-vf","scale=560:-1",p])
+        if not os.path.exists(p): return None
+    return f"board/posters/{h}.jpg"
+
 REG = json.load(open(f"{SB}/assets/registry.json"))["artefacts"]
 
 # ---------- unit definitions (museum text marked verbatim) ----------
@@ -171,7 +187,11 @@ FOOT = """<p class="foot">REEVALUATE · every claim traceable to a ledger · ful
 def render_card(sec, sh, prefix="board/"):
     vs = sh.get("versions") or []
     first = vs[0] if vs else None
-    vid = f'<video controls preload="none" poster="" src="{prefix}{html.escape(first["src"])}"></video>' if first else ""
+    vid = ""
+    if first:
+        po = poster_for(first["src"])
+        pa = f' poster="{po}"' if po else ""
+        vid = f'<video controls preload="none"{pa} src="{prefix}{html.escape(first["src"])}"></video>' 
     btns = ""
     if len(vs) > 1:
         btns = '<div class="vers">' + "".join(
@@ -227,10 +247,17 @@ def build():
         r = REG.get(code, {})
         rows = sorted({sh["num"]:(sec,sh) for sec,sh in rows}.values(), key=lambda t:t[1]["num"])
         vids = "".join(render_card(sec, sh) for sec, sh in rows)
+        hero = ""
+        for _sec,_sh in rows:
+            _vs=_sh.get("versions") or []
+            if _vs:
+                _po = poster_for(_vs[0]["src"])
+                if _po: hero = f'<img class="thumb" src="{_po}" alt="" style="max-width:520px;margin:6px 0 10px">'; break
         inv = html.escape(str(r.get("invariants",""))[:600])
         na = html.escape(str(r.get("not_asserted",""))[:400])
         page = head(f"{r.get('name',code)}") + f"""
 <p class="k">Artifact · {code}</p><h1>{html.escape(r.get('name',code))}</h1>
+{hero}
 <p>{html.escape(str(r.get('claim',''))[:500])}</p>
 <div class="musdoc"><b>What a generated image must hold:</b> <span class="muted">{inv}</span></div>
 {f'<div class="musdoc" style="border-color:rgba(186,90,30,.4)"><b>Not asserted:</b> <span class="muted">{na}</span></div>' if na else ''}
