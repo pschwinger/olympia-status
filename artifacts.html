@@ -1,0 +1,76 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="robots" content="noindex,nofollow">
+<title>The Artifacts</title><meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+</head><body><div id="olynav" style="position:sticky;top:0;z-index:999;display:flex;gap:6px;flex-wrap:wrap;align-items:center;background:#1e2418;padding:8px 14px;border-bottom:1px solid #3a4030">
+<a href="index.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;background:#54682f;color:#fff">⌂ Home</a>
+<a href="units.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;color:#cfd3c0">🏛 Units</a>
+<a href="artifacts.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;color:#cfd3c0">🏺 Artifacts</a>
+<a href="selection.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;color:#cfd3c0">★ Selection</a>
+<a href="casestudy.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;color:#cfd3c0">🔬 Method</a>
+<a href="board/review.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;color:#cfd3c0">🗄 Working room</a>
+<span style="margin-left:auto;font:600 10px 'IBM Plex Mono',monospace;letter-spacing:.1em;color:#8b8f80">OLYMPIA · REEVALUATE</span></div><style>
+:root{--bg:#edeee6;--surface:#f6f6f1;--surface-2:#e7e9df;--ink:#191c15;--steel:#454a3c;--muted:#6d7261;--hair:#d3d5c8;--olive:#54682f;--bronze:#a06a24;--good:#3f7a4c;--flame:#ba5a1e}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#13150e;--surface:#1a1d14;--surface-2:#20241a;--ink:#dce0d2;--steel:#a7ad98;--muted:#7f846d;--hair:#282c1f;--olive:#9fb56b;--bronze:#cf9748;--good:#77b183;--flame:#d9743a}}
+:root[data-theme="dark"]{--bg:#13150e;--surface:#1a1d14;--surface-2:#20241a;--ink:#dce0d2;--steel:#a7ad98;--muted:#7f846d;--hair:#282c1f;--olive:#9fb56b;--bronze:#cf9748;--good:#77b183;--flame:#d9743a}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Archivo,system-ui,sans-serif;font-size:15.5px;line-height:1.55}
+.wrap{max-width:1060px;margin:0 auto;padding:clamp(20px,3vw,44px) clamp(14px,3vw,32px) 90px}
+h1{font-family:Fraunces,serif;font-weight:500;font-size:clamp(1.8rem,4.5vw,2.7rem);line-height:1.06;margin:0 0 8px}
+h2{font-family:Fraunces,serif;font-weight:500;font-size:1.45rem;margin:34px 0 6px}
+.k{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--bronze);margin:24px 0 6px}
+p{max-width:76ch}.muted{color:var(--steel)}
+.mtag{display:inline-block;font-size:.65rem;letter-spacing:.08em;text-transform:uppercase;background:rgba(138,109,31,.12);color:#8a6d1f;border:1px solid rgba(138,109,31,.4);border-radius:4px;padding:0 6px;margin-right:6px}
+.musdoc{background:rgba(138,109,31,.06);border:1px solid rgba(138,109,31,.25);border-radius:10px;padding:12px 16px;margin:10px 0;font-size:.95rem}
+.card{background:var(--surface);border:1px solid var(--hair);border-radius:12px;padding:14px 16px;margin:14px 0}
+.card video{width:100%;max-width:820px;border-radius:10px;border:1px solid var(--hair);background:#000;display:block}
+.num{display:inline-block;background:#8a6d1f;color:#fff;border-radius:5px;font-size:11px;font-weight:700;padding:1px 7px;margin-right:7px}
+.fl{display:inline-block;font-size:.72rem;color:#fff;background:var(--flame);border-radius:5px;padding:1px 7px;margin-left:6px}
+.vers{display:flex;gap:5px;flex-wrap:wrap;margin:8px 0}
+.vers button{font-size:12px;padding:3px 10px;border:1px solid var(--hair);border-radius:6px;background:var(--surface-2);color:var(--steel);cursor:pointer}
+.vers button.on{background:var(--olive);color:#fff;border-color:var(--olive)}
+.meta{font-size:.85rem;color:var(--muted);margin-top:6px}
+.meta a{color:var(--bronze)}
+.marks{display:flex;gap:5px;margin-top:8px}
+.mbtn{font-size:11px;font-weight:600;padding:2px 10px;border:1px solid var(--hair);border-radius:6px;background:transparent;color:var(--muted);cursor:pointer}
+.mbtn[data-m="keep"].on{background:#1d7a3e;border-color:#1d7a3e;color:#fff}.mbtn[data-m="change"].on{background:#a87616;border-color:#a87616;color:#fff}.mbtn[data-m="no"].on{background:#a33636;border-color:#a33636;color:#fff}
+.fb{width:100%;max-width:820px;min-height:36px;margin-top:6px;font-size:12.5px;border:1px solid var(--hair);border-radius:8px;background:var(--surface-2);color:var(--ink);padding:6px 9px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
+.tile{background:var(--surface);border:1px solid var(--hair);border-radius:12px;padding:14px 16px;text-decoration:none;color:var(--ink)}
+.tile b{display:block;margin-bottom:4px}.tile span{font-size:.85rem;color:var(--steel)}
+.bar{position:fixed;bottom:14px;right:14px;display:flex;gap:8px;z-index:99}
+.bar button{font:600 12.5px Archivo;padding:8px 14px;border-radius:9px;border:1px solid var(--hair);background:var(--olive);color:#fff;cursor:pointer}
+.jump{margin-left:8px}.jump input{width:70px;font-size:12px;padding:4px 8px;border:1px solid var(--hair);border-radius:6px;background:var(--surface);color:var(--ink)}
+img.thumb{max-width:100%;border-radius:8px;border:1px solid var(--hair)}
+.foot{margin-top:60px;padding-top:14px;border-top:1px solid var(--hair);font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted)}
+</style><div class="wrap">
+<h1>The artifacts</h1><p class="muted">One page per museum object we have used: the registry card (what it is, what a generated frame must hold, what is never asserted) and every video it appears in.</p>
+<div class="grid"><a class="tile" href="artifact-SM_RV_1.html"><b>Medal, Second Zappeia Olympia 1870</b><span>SM_RV_1 · 2 videos</span></a><a class="tile" href="artifact-SM_RV_12.html"><b>Olympic torch, Berlin 1936</b><span>SM_RV_12 · 9 videos</span></a><a class="tile" href="artifact-SM_RV_13.html"><b>Competition épée, Dimitra Maganoudaki, Athens 2004</b><span>SM_RV_13 · 2 videos</span></a><a class="tile" href="artifact-SM_RV_14.html"><b>Marathon Cup, Intercalated Games Athens 1906</b><span>SM_RV_14 · 2 videos</span></a><a class="tile" href="artifact-SM_RV_15.html"><b>Competition table tennis racket, Panagiotis Gionis</b><span>SM_RV_15 · 1 videos</span></a><a class="tile" href="artifact-SM_RV_16.html"><b>Kotinos - olive wreath, Athens 2004</b><span>SM_RV_16 · 26 videos</span></a><a class="tile" href="artifact-SM_RV_18.html"><b>Competition shoes, Miltiadis Tentoglou, Tokyo 2020</b><span>SM_RV_18 · 3 videos</span></a><a class="tile" href="artifact-SM_RV_22.html"><b>Competition belt, Nikolaos Iliadis, Montreal 1976</b><span>SM_RV_22 · 1 videos</span></a><a class="tile" href="artifact-SM_RV_23.html"><b>Competition water polo ball, Hellenic national team, Rio 2016</b><span>SM_RV_23 · 1 videos</span></a><a class="tile" href="artifact-SM_RV_3.html"><b>Participation commemorative medal, Athens 1906 Intercalated Games</b><span>SM_RV_3 · 7 videos</span></a><a class="tile" href="artifact-SM_RV_6.html"><b>Participation commemorative medal, Athens 1896</b><span>SM_RV_6 · 9 videos</span></a><a class="tile" href="artifact-SM_RV_8.html"><b>Rhythmic gymnastics clubs - Hellenic National Team, Sydney 2000</b><span>SM_RV_8 · 3 videos</span></a><a class="tile" href="artifact-SM_RV_9.html"><b>Competition arrow, Evangelia Psarra, London 2012</b><span>SM_RV_9 · 1 videos</span></a></div><p class="foot">REEVALUATE · every claim traceable to a ledger · full archive in the <a href="board/review.html" style="color:var(--bronze)">working room</a></p></div><script>
+var MKEY='olympia-marks-v1', FKEY='olympia-review-v1';
+function mload(){try{return JSON.parse(localStorage.getItem(MKEY)||'{}')}catch(e){return{}}}
+function msave(d){try{localStorage.setItem(MKEY,JSON.stringify(d))}catch(e){}}
+function floadd(){try{return JSON.parse(localStorage.getItem(FKEY)||'{}')}catch(e){return{}}}
+document.addEventListener('click',function(e){
+  var b=e.target.closest&&e.target.closest('.mbtn');
+  if(b){var row=b.closest('.marks'),d=mload(),k=row.dataset.shot;
+    if(d[k]===b.dataset.m){delete d[k]}else{d[k]=b.dataset.m}
+    msave(d);row.querySelectorAll('.mbtn').forEach(function(x){x.classList.toggle('on',d[k]===x.dataset.m)});return;}
+  var v=e.target.closest&&e.target.closest('.vers button');
+  if(v){var card=v.closest('.card'),vid=card.querySelector('video');vid.src=v.dataset.src;vid.load();
+    card.querySelectorAll('.vers button').forEach(function(x){x.classList.remove('on')});v.classList.add('on');}
+});
+document.addEventListener('input',function(e){if(e.target.classList&&e.target.classList.contains('fb')){
+  var d=floadd();var k=e.target.dataset.shot;if(e.target.value.trim())d[k]=e.target.value.trim();else delete d[k];
+  try{localStorage.setItem(FKEY,JSON.stringify(d))}catch(e2){}}});
+window.addEventListener('DOMContentLoaded',function(){
+  var m=mload(),f=floadd();
+  document.querySelectorAll('.marks').forEach(function(r){var v=m[r.dataset.shot];r.querySelectorAll('.mbtn').forEach(function(b){b.classList.toggle('on',b.dataset.m===v)})});
+  document.querySelectorAll('.fb').forEach(function(t){if(f[t.dataset.shot])t.value=f[t.dataset.shot]});
+});
+function copyAll(){var m=mload(),f=floadd(),rows=[];
+  document.querySelectorAll('.marks').forEach(function(r){var k=r.dataset.shot,n=r.dataset.num,mm=m[k],ff=f[k];
+    if(mm||ff)rows.push({n:parseInt(n||9999),line:'#'+(n||'?')+' ['+k+'] '+(mm?mm.toUpperCase():'')+(mm&&ff?' — ':'')+(ff||'')});});
+  rows.sort(function(a,b){return a.n-b.n});
+  var out='Olympia review — marks ('+new Date().toISOString().slice(0,10)+')\n\n'+(rows.length?rows.map(function(r){return r.line}).join('\n'):'(nothing marked)');
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(out).then(function(){var b=document.getElementById('cpy');b.textContent='Copied ✓';setTimeout(function(){b.textContent='Copy my marks'},1500)})}else{window.prompt('Copy:',out)}}
+function jumpN(){var n=document.getElementById('jn').value.replace('#','');var el=document.getElementById('v'+n);
+  if(el){el.scrollIntoView({behavior:'smooth'});el.style.outline='3px solid var(--bronze)';setTimeout(function(){el.style.outline=''},2500)}else{alert('#'+n+' is not on this page — try the Working room (full archive).')}}
+</script></body></html>
