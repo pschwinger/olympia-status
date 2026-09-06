@@ -1,0 +1,107 @@
+{
+  "session_id": "942ff833-1a3e-4156-8010-4367b9e7fa4d",
+  "phase": "POSTFLIGHT",
+  "round": 56,
+  "timestamp": "2026-09-06T12:45:54.782403+00:00",
+  "vectors": {
+    "know": 0.94,
+    "do": 0.93,
+    "context": 0.94,
+    "clarity": 0.94,
+    "coherence": 0.94,
+    "signal": 0.94,
+    "density": 0.9,
+    "state": 0.94,
+    "change": 0.3,
+    "completion": 0.95,
+    "impact": 0.92,
+    "engagement": 0.95,
+    "uncertainty": 0.12
+  },
+  "overall_confidence": 0.937,
+  "meta": {
+    "reasoning": "Wreath Part A complete at 8/8 after the positive-framing fix worked first take; published as chapter-2 opener #102; the positive-composition guard rule now proven in production.",
+    "task_summary": "Wreath Part A complete at 8/8 after the positive-framing fix worked first take; published as chapter-2 opener #102; the positive-composition guard rule now proven in production.",
+    "postflight_confidence": 0.88,
+    "internal_consistency": "good",
+    "deltas": {
+      "know": 0.01,
+      "do": 0.0,
+      "context": 0.0,
+      "clarity": 0.01,
+      "coherence": 0.0,
+      "signal": 0.01,
+      "density": 0.0,
+      "state": 0.0,
+      "change": 0.28,
+      "completion": 0.85,
+      "impact": 0.02,
+      "engagement": 0.0,
+      "uncertainty": -0.08
+    },
+    "trajectory_issues": [],
+    "transaction_id": "229a531b-e84e-4821-978d-c0041160d88e",
+    "tool_call_count": 2,
+    "work_type": "audit",
+    "phase_tool_counts": {
+      "noetic_tool_calls": 0,
+      "praxic_tool_calls": 2
+    },
+    "avg_turns_at_start": 3,
+    "context_shifts": null,
+    "entity_context": null,
+    "tool_trace": [
+      [
+        "Bash",
+        "cd",
+        "p"
+      ],
+      [
+        "Bash",
+        "cd",
+        "p"
+      ]
+    ],
+    "retrospective": {
+      "artifact_counts": {
+        "findings": 0,
+        "unknowns": 0,
+        "dead_ends": 0,
+        "mistakes": 0,
+        "assumptions": 0,
+        "decisions": 0
+      },
+      "claims": {
+        "declared": 1,
+        "held": 1,
+        "refuted": 0,
+        "untested": 0,
+        "gaps": []
+      },
+      "ser_ack_check": "skipped (no canonical_seat in project.yaml)",
+      "untriaged_notes": [
+        {
+          "text": "Qdrant refresh after gardening: my rebuild died contending with the fleet-wide rebuild loop (PIDs 42041/42045, other session, covers storyboard). Verify after it finishes: project-search should no longer surface resolved findings (e.g. master-storyboard-artifact era). If stale ones still surface, re-run 'empirica rebuild --qdrant-only' once, alone.",
+          "tag": "followup"
+        }
+      ],
+      "untriaged_notes_hint": "1 untriaged note(s)-to-self for this project. Promote any worth keeping to a finding/decision/goal, then `empirica note --clear`."
+    },
+    "coverage": null,
+    "git_commit_sha": "225b68cb32b6713a7640e7bf12c6cbe64f0ea388",
+    "git_notes_ref": "empirica/session/942ff833-1a3e-4156-8010-4367b9e7fa4d/POSTFLIGHT/56"
+  },
+  "epistemic_tags": {},
+  "git_state": {
+    "head_commit": "2827ea1257d3ed7f2019296c17a5543a696a6ec9",
+    "commits_since_last_checkpoint": [],
+    "uncommitted_changes": {
+      "files_modified": [],
+      "files_added": [],
+      "files_deleted": [],
+      "diff_stat": ""
+    }
+  },
+  "learning_delta": {},
+  "token_count": 345
+}

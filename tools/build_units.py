@@ -207,6 +207,34 @@ def render_card(sec, sh, prefix="board/"):
 <div class="marks" data-shot="{sh["key"]}" data-num="{sh["num"]}"><button class="mbtn" data-m="keep">keep</button><button class="mbtn" data-m="change">change</button><button class="mbtn" data-m="no">no</button></div>
 <textarea class="fb" data-shot="{sh["key"]}" placeholder="feedback for #{sh["num"]}…"></textarea></div>"""
 
+
+CARDS = {  # artifact -> (card_key, scenario caption, note)
+ "SM_RV_18":("c1","long jumper lacing at the board",""), "SM_RV_23":("c2","water polo shot",""),
+ "SM_RV_8":("c3","clubs crossed overhead",""), "SM_RV_19":("c4","wrestler on the mat, 1980",""),
+ "SM_RV_9":("c5","archer at full draw",""), "SM_RV_17":("c6","fencer en garde (with the epee)",""),
+ "SM_RV_13":("c6","fencer en garde (with the mask)",""), "SM_RV_7":("c7","gymnast framed in the hoop",""),
+ "SM_RV_11":("c8","balance pose",""), "SM_RV_22":("c9","hands tying the belt",""),
+ "SM_RV_10":("c10","open-water start",""), "SM_RV_20":("c11","glove open for the catch",""),
+ "SM_RV_21":("c11","glove open for the catch",""), "SM_RV_15":("c12","low over the table",""),
+ "SM_RV_1":("m1","the 1870 medal in hand","NOTE: shown as a LEGACY image (marble stadium, today) - the researched 1870 period card (pre-marble stadium, male athlete type) is being regenerated; both will stand."),
+ "SM_RV_2":("m2","Greco-Roman wrestler, Moscow 1980 (neutral backdrop)",""),
+ "SM_RV_3":("m3","athlete in the marble Panathenaic, 1906",""),
+ "SM_RV_4":("m4","weightlifter at the platform, Sydney 2000",""),
+ "SM_RV_5":("m5","taekwondo athlete, Beijing 2008",""),
+ "SM_RV_6":("m6","athlete at the first modern Games, 1896",""),
+}
+def card_section(code):
+    if code not in CARDS: return ""
+    k, cap, note = CARDS[code]
+    n = f'<p style="font-size:.85rem;color:var(--flame);max-width:80ch">{note}</p>' if note else ""
+    return f"""<p class="k">The proof — same prompt, with and without the collection</p>
+<p class="muted" style="font-size:.92rem">{cap} · the only difference between the two images is the museum digitisation attached as reference.</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px;max-width:920px">
+<div><img class="thumb" src="board/media/cards/{k}_without.jpg" alt="without the collection"><p style="font-size:.85rem;color:var(--steel)"><b style="color:var(--flame)">WITHOUT:</b> the AI invents a generic object.</p></div>
+<div><img class="thumb" src="board/media/cards/{k}_with.jpg" alt="with the collection"><p style="font-size:.85rem;color:var(--steel)"><b style="color:var(--good)">WITH:</b> the real object survives, invariants gated.</p></div>
+</div>{n}
+"""
+
 def build():
     man = load_manifest()
     cards = list(all_cards(man))
@@ -261,6 +289,7 @@ def build():
 <p>{html.escape(str(r.get('claim',''))[:500])}</p>
 <div class="musdoc"><b>What a generated image must hold:</b> <span class="muted">{inv}</span></div>
 {f'<div class="musdoc" style="border-color:rgba(186,90,30,.4)"><b>Not asserted:</b> <span class="muted">{na}</span></div>' if na else ''}
+{card_section(code)}
 <p class="k">Every video this artifact appears in</p>
 {vids}""" + BAR + FOOT
         open(f"{ROOT}/artifact-{code}.html","w").write(page)
