@@ -1,0 +1,2 @@
+{"clip":"1a_V1.mp4","kind":"1a angle variant","model":"seedance_2_5 i2v (omni_reference, start-image=2K-upscaled t1 beat frame)","style":"1a albumen (spec exception)",
+ "gates":{"identity_costume":"PASS — fustanella/coat correct, no vest/bare-chest/pith","no_text":"PASS (sampled)","motion_occurred":"PASS","reangle":"re-angle PARTIAL — reframed (legs+bar+stone) but not a dramatic low angle"},"verdict":"PASS (partial re-angle)","best_of":1,"spec":"night-run @ 4ad4f30"}

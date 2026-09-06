@@ -1,0 +1,3 @@
+{"clip":"SM_RV_3_S1_v2.mp4","artifact":"SM_RV_3 medal","shot":"S1 hero orbit","framing":"v2","model":"DETERMINISTIC ffmpeg camera move over certified museum render (no generation)","style":"provenance / certificate treatment",
+ "gates":{"identity_invariants":"PASS by construction — every frame is a crop of the real digitised photo","no_fabricated_text":"PASS by construction — legend is REAL (zero invention possible); text is genuine, not generated","motion_occurred":"PASS (ffmpeg drift)","locked_style_reads":"n/a (certificate treatment, not Hollywood-epic)"},
+ "verdict":"PASS — deterministic, ship-safe","credits":0,"spec":"night-run @ 28ffcf5 (deterministic-first)"}
