@@ -20,8 +20,11 @@ h2{font-family:Fraunces,serif;font-weight:500;font-size:1.45rem;margin:34px 0 6p
 p{max-width:76ch}.muted{color:var(--steel)}
 .mtag{display:inline-block;font-size:.65rem;letter-spacing:.08em;text-transform:uppercase;background:rgba(138,109,31,.12);color:#8a6d1f;border:1px solid rgba(138,109,31,.4);border-radius:4px;padding:0 6px;margin-right:6px}
 .musdoc{background:rgba(138,109,31,.06);border:1px solid rgba(138,109,31,.25);border-radius:10px;padding:12px 16px;margin:10px 0;font-size:.95rem}
-.card{background:var(--surface);border:1px solid var(--hair);border-radius:12px;padding:14px 16px;margin:14px 0}
-.card video{width:100%;max-width:820px;border-radius:10px;border:1px solid var(--hair);background:#000;display:block}
+.cardgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:12px;margin:14px 0}
+.card{background:var(--surface);border:1px solid var(--hair);border-radius:12px;padding:12px 14px;margin:0;font-size:.92rem}
+.card b{font-size:.95rem}
+.card .muted{font-size:.84rem;max-height:5.2em;overflow:hidden}
+.card video{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:10px;border:1px solid var(--hair);background:#000;display:block}
 .num{display:inline-block;background:#8a6d1f;color:#fff;border-radius:5px;font-size:11px;font-weight:700;padding:1px 7px;margin-right:7px}
 .fl{display:inline-block;font-size:.72rem;color:#fff;background:var(--flame);border-radius:5px;padding:1px 7px;margin-left:6px}
 .vers{display:flex;gap:5px;flex-wrap:wrap;margin:8px 0}
@@ -32,7 +35,7 @@ p{max-width:76ch}.muted{color:var(--steel)}
 .marks{display:flex;gap:5px;margin-top:8px}
 .mbtn{font-size:11px;font-weight:600;padding:2px 10px;border:1px solid var(--hair);border-radius:6px;background:transparent;color:var(--muted);cursor:pointer}
 .mbtn[data-m="keep"].on{background:#1d7a3e;border-color:#1d7a3e;color:#fff}.mbtn[data-m="change"].on{background:#a87616;border-color:#a87616;color:#fff}.mbtn[data-m="no"].on{background:#a33636;border-color:#a33636;color:#fff}
-.fb{width:100%;max-width:820px;min-height:36px;margin-top:6px;font-size:12.5px;border:1px solid var(--hair);border-radius:8px;background:var(--surface-2);color:var(--ink);padding:6px 9px}
+.fb{width:100%;min-height:30px;margin-top:6px;font-size:12.5px;border:1px solid var(--hair);border-radius:8px;background:var(--surface-2);color:var(--ink);padding:6px 9px}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
 .tile{background:var(--surface);border:1px solid var(--hair);border-radius:12px;padding:14px 16px;text-decoration:none;color:var(--ink)}
 .tile b{display:block;margin-bottom:4px}.tile span{font-size:.85rem;color:var(--steel)}
@@ -43,13 +46,13 @@ img.thumb{max-width:100%;border-radius:8px;border:1px solid var(--hair)}
 .foot{margin-top:60px;padding-top:14px;border-top:1px solid var(--hair);font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted)}
 </style><div class="wrap">
 <p class="k">Artifact · SM_RV_12</p><h1>Olympic torch, Berlin 1936</h1>
-<img class="thumb" src="board/posters/e3ca506527.jpg" alt="" style="max-width:520px;margin:6px 0 10px">
+<img class="thumb" src="board/posters/e3ca506527.jpg" alt="" style="max-width:300px;margin:6px 0 10px">
 <p>The torch of the Berlin 1936 relay - the FIRST Olympic flame-lighting ceremony in the modern Games (lit at Olympia 20 July 1936 by parabolic mirror). Designed by Walter Lemcke, steel, made by Krupp. Its engraved Olympia-to-Berlin route (11 cities) is Beat 5&#x27;s shot.</p>
 <div class="musdoc"><b>What a generated image must hold:</b> <span class="muted"></span></div>
 <div class="musdoc" style="border-color:rgba(186,90,30,.4)"><b>Not asserted:</b> <span class="muted">The base&#x27;s fuel was MAGNESIUM-based, NOT wax (the Museum&#x27;s &#x27;wax&#x27; is CONTRADICTED by independent sources - do not assert wax). The relay was created FOR the 1936 Nazi Olympics: per Philipp, keep the torch and STATE the relay&#x27;s 1936 origin in the ledger as an asserted fact, not an omission. The object itself bears no swastika.</span></div>
 
 <p class="k">Every video this artifact appears in</p>
-<div class="card" id="v28"><span class="num">#28</span><b>The Flame Is Carried</b><span class="fl">inscription</span>
+<div class="cardgrid"><div class="card" id="v28"><span class="num">#28</span><b>The Flame Is Carried</b><span class="fl">inscription</span>
 <p class="muted" style="font-size:.92rem">Relay runner, torch high. <b>Engraving mismatch — adopt the First Flame treatment.</b></p><video controls preload="none" poster="board/posters/e3ca506527.jpg" src="board/media/v/trailer-A/a4.mp4"></video><div class="meta"></div>
 <div class="marks" data-shot="a4" data-num="28"><button class="mbtn" data-m="keep">keep</button><button class="mbtn" data-m="change">change</button><button class="mbtn" data-m="no">no</button></div>
 <textarea class="fb" data-shot="a4" placeholder="feedback for #28…"></textarea></div><div class="card" id="v30"><span class="num">#30</span><b>The World Runs as One</b><span class="fl">inscription</span>
@@ -76,7 +79,7 @@ img.thumb{max-width:100%;border-radius:8px;border:1px solid var(--hair)}
 <textarea class="fb" data-shot="ff-k4" placeholder="feedback for #51…"></textarea></div><div class="card" id="v66"><span class="num">#66</span><b>Torch motion test</b>
 <p class="muted" style="font-size:.92rem">Does motion garble the engraving? Pull-back vs push-in vs deterministic — the test that unblocked the torch.</p><video controls preload="none" poster="board/posters/9eed821a91.jpg" src="board/media/v/torch-motion-test/kling_pullback.mp4"></video><div class="vers"><button data-src="board/media/v/torch-motion-test/kling_pullback.mp4" class="on">Kling pull-back</button><button data-src="board/media/v/torch-motion-test/kling_pushin.mp4" class="">Kling push-in</button><button data-src="board/media/v/torch-motion-test/det_pullback.mp4" class="">deterministic</button></div><div class="meta"></div>
 <div class="marks" data-shot="t-torch" data-num="66"><button class="mbtn" data-m="keep">keep</button><button class="mbtn" data-m="change">change</button><button class="mbtn" data-m="no">no</button></div>
-<textarea class="fb" data-shot="t-torch" placeholder="feedback for #66…"></textarea></div><div class="bar"><span class="jump"><input id="jn" placeholder="#nr"><button onclick="jumpN()">Jump</button></span><button id="cpy" onclick="copyAll()">Copy my marks</button></div><p class="foot">REEVALUATE · every claim traceable to a ledger · full archive in the <a href="board/review.html" style="color:var(--bronze)">working room</a></p></div><script>
+<textarea class="fb" data-shot="t-torch" placeholder="feedback for #66…"></textarea></div></div><div class="bar"><span class="jump"><input id="jn" placeholder="#nr"><button onclick="jumpN()">Jump</button></span><button id="cpy" onclick="copyAll()">Copy my marks</button></div><p class="foot">REEVALUATE · every claim traceable to a ledger · full archive in the <a href="board/review.html" style="color:var(--bronze)">working room</a></p></div><script>
 var MKEY='olympia-marks-v1', FKEY='olympia-review-v1';
 function mload(){try{return JSON.parse(localStorage.getItem(MKEY)||'{}')}catch(e){return{}}}
 function msave(d){try{localStorage.setItem(MKEY,JSON.stringify(d))}catch(e){}}

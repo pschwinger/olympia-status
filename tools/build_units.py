@@ -119,8 +119,11 @@ h2{font-family:Fraunces,serif;font-weight:500;font-size:1.45rem;margin:34px 0 6p
 p{max-width:76ch}.muted{color:var(--steel)}
 .mtag{display:inline-block;font-size:.65rem;letter-spacing:.08em;text-transform:uppercase;background:rgba(138,109,31,.12);color:#8a6d1f;border:1px solid rgba(138,109,31,.4);border-radius:4px;padding:0 6px;margin-right:6px}
 .musdoc{background:rgba(138,109,31,.06);border:1px solid rgba(138,109,31,.25);border-radius:10px;padding:12px 16px;margin:10px 0;font-size:.95rem}
-.card{background:var(--surface);border:1px solid var(--hair);border-radius:12px;padding:14px 16px;margin:14px 0}
-.card video{width:100%;max-width:820px;border-radius:10px;border:1px solid var(--hair);background:#000;display:block}
+.cardgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:12px;margin:14px 0}
+.card{background:var(--surface);border:1px solid var(--hair);border-radius:12px;padding:12px 14px;margin:0;font-size:.92rem}
+.card b{font-size:.95rem}
+.card .muted{font-size:.84rem;max-height:5.2em;overflow:hidden}
+.card video{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:10px;border:1px solid var(--hair);background:#000;display:block}
 .num{display:inline-block;background:#8a6d1f;color:#fff;border-radius:5px;font-size:11px;font-weight:700;padding:1px 7px;margin-right:7px}
 .fl{display:inline-block;font-size:.72rem;color:#fff;background:var(--flame);border-radius:5px;padding:1px 7px;margin-left:6px}
 .vers{display:flex;gap:5px;flex-wrap:wrap;margin:8px 0}
@@ -131,7 +134,7 @@ p{max-width:76ch}.muted{color:var(--steel)}
 .marks{display:flex;gap:5px;margin-top:8px}
 .mbtn{font-size:11px;font-weight:600;padding:2px 10px;border:1px solid var(--hair);border-radius:6px;background:transparent;color:var(--muted);cursor:pointer}
 .mbtn[data-m="keep"].on{background:#1d7a3e;border-color:#1d7a3e;color:#fff}.mbtn[data-m="change"].on{background:#a87616;border-color:#a87616;color:#fff}.mbtn[data-m="no"].on{background:#a33636;border-color:#a33636;color:#fff}
-.fb{width:100%;max-width:820px;min-height:36px;margin-top:6px;font-size:12.5px;border:1px solid var(--hair);border-radius:8px;background:var(--surface-2);color:var(--ink);padding:6px 9px}
+.fb{width:100%;min-height:30px;margin-top:6px;font-size:12.5px;border:1px solid var(--hair);border-radius:8px;background:var(--surface-2);color:var(--ink);padding:6px 9px}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
 .tile{background:var(--surface);border:1px solid var(--hair);border-radius:12px;padding:14px 16px;text-decoration:none;color:var(--ink)}
 .tile b{display:block;margin-bottom:4px}.tile span{font-size:.85rem;color:var(--steel)}
@@ -230,8 +233,8 @@ def card_section(code):
     return f"""<p class="k">The proof — same prompt, with and without the collection</p>
 <p class="muted" style="font-size:.92rem">{cap} · the only difference between the two images is the museum digitisation attached as reference.</p>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px;max-width:920px">
-<div><img class="thumb" src="board/media/cards/{k}_without.jpg" alt="without the collection"><p style="font-size:.85rem;color:var(--steel)"><b style="color:var(--flame)">WITHOUT:</b> the AI invents a generic object.</p></div>
-<div><img class="thumb" src="board/media/cards/{k}_with.jpg" alt="with the collection"><p style="font-size:.85rem;color:var(--steel)"><b style="color:var(--good)">WITH:</b> the real object survives, invariants gated.</p></div>
+<div><a href="board/media/cards/{k}_without.jpg" target="_blank"><img class="thumb" style="max-height:200px;width:100%;object-fit:cover" src="board/media/cards/{k}_without.jpg" alt="without the collection"></a><p style="font-size:.85rem;color:var(--steel)"><b style="color:var(--flame)">WITHOUT:</b> the AI invents a generic object.</p></div>
+<div><a href="board/media/cards/{k}_with.jpg" target="_blank"><img class="thumb" style="max-height:200px;width:100%;object-fit:cover" src="board/media/cards/{k}_with.jpg" alt="with the collection"></a><p style="font-size:.85rem;color:var(--steel)"><b style="color:var(--good)">WITH:</b> the real object survives, invariants gated.</p></div>
 </div>{n}
 """
 
@@ -259,7 +262,7 @@ def build():
 <p class="k">The artefacts of this unit</p><p>{arts}</p>
 <p class="k">Every video · numbered · mark and comment freely</p>
 <p class="muted" style="font-size:.9rem">Everything is shown — finals, tests and documented failures alike. Prompt and ledger (model, measurements, cost) are one click on each card. Quote a number and everyone knows which video you mean.</p>
-{vids if vids else '<p class="muted">Nothing produced for this unit yet — honestly stated.</p>'}
+<div class="cardgrid">{vids}</div>{"" if vids else '<p class="muted">Nothing produced for this unit yet — honestly stated.</p>'}
 """ + BAR + FOOT
         open(f"{ROOT}/unit-{u}.html","w").write(page)
 
@@ -280,7 +283,7 @@ def build():
             _vs=_sh.get("versions") or []
             if _vs:
                 _po = poster_for(_vs[0]["src"])
-                if _po: hero = f'<img class="thumb" src="{_po}" alt="" style="max-width:520px;margin:6px 0 10px">'; break
+                if _po: hero = f'<img class="thumb" src="{_po}" alt="" style="max-width:300px;margin:6px 0 10px">'; break
         inv = html.escape(str(r.get("invariants",""))[:600])
         na = html.escape(str(r.get("not_asserted",""))[:400])
         page = head(f"{r.get('name',code)}") + f"""
@@ -291,7 +294,7 @@ def build():
 {f'<div class="musdoc" style="border-color:rgba(186,90,30,.4)"><b>Not asserted:</b> <span class="muted">{na}</span></div>' if na else ''}
 {card_section(code)}
 <p class="k">Every video this artifact appears in</p>
-{vids}""" + BAR + FOOT
+<div class="cardgrid">{vids}</div>""" + BAR + FOOT
         open(f"{ROOT}/artifact-{code}.html","w").write(page)
         art_tiles += f'<a class="tile" href="artifact-{code}.html"><b>{html.escape(r.get("name",code))}</b><span>{code} · {len(rows)} videos</span></a>'
     open(f"{ROOT}/artifacts.html","w").write(head("The Artifacts") + f"""
