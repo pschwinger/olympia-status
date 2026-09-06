@@ -130,6 +130,20 @@ No bare chests, no Evzone parade dress, no pith helmet, no standing column, no m
 </section>
 
 <section>
+<p class="k">4b · What changed between versions — the exact words</p>
+<h2>v2.1 vs v2.2: only the failing parts moved</h2>
+<p>The prompt above is <b>v2.2</b> (the correction). Only Shot 1 and one crowd sentence in Shot 2 changed; shots 3-5 are untouched. Open both to compare:</p>
+<details style="margin-bottom:10px"><summary style="cursor:pointer;font-weight:600">Shot 1 — v2.1 (ran in takes 1+2, FAILED its intent)</summary>
+<pre>[00:00-00:04] Shot 1: High aerial wide over the Olympia plain: the Alpheios river from @Image6 curves broad and sandy through the valley, the wooded Kronos hill at the far edge, the half-dug excavation from @Image4 small below with drum rows readable; no people yet. Drone push in, gliding toward the excavation, gently descending. Hard noon light, albumen tone. Hard cut to Shot 2.</pre></details>
+<details style="margin-bottom:10px"><summary style="cursor:pointer;font-weight:600">Shot 1 — v2.2 (the correction, running now)</summary>
+<pre>[00:00-00:04] Shot 1: Flying high over the Olympia plain, the camera glides steadily forward and sinks toward the half-dug excavation from @Image4, its drum rows growing from small to large below; the Alpheios river, broad and sandy as in @Image6, slides past beneath the camera; the wooded Kronos hill ahead; no people yet. Hard noon light, albumen tone. Hard cut to Shot 2.</pre></details>
+<details style="margin-bottom:10px"><summary style="cursor:pointer;font-weight:600">Shot 2 crowd line — v2.1 vs v2.2</summary>
+<pre>v2.1: Behind them the dig works on: more labourers dressed as @Image2 swing picks and carry earth along the trench.
+v2.2: Behind them labourers dressed as @Image2 keep moving: picks rise and fall, two carry a barrow along the trench.</pre></details>
+<p style="font-size:.92rem;color:var(--steel)">Why these words: in v2.1 the <i>river</i> was the subject and the camera move an afterthought, so the model anchored on the river photograph and stood still. In v2.2 the <b>camera's motion is the grammatical subject</b> and the excavation is the object of that motion with visible change written in ("growing from small to large"). The crowd line swaps a summary ("the dig works on") for <b>continuous, positive working-verbs</b>; negations are deliberately avoided because video models handle them poorly.</p>
+</section>
+
+<section>
 <p class="k">5 · Calibration, before the run</p>
 <h2>What the practitioner believed, on the record</h2>
 <p>Empirica opens every piece of work with a self-assessment (0 to 1) that is stored <i>before</i> the outcome is known. These are the actual numbers from this run's opening measurement — they cannot be edited after the fact:</p>
@@ -157,6 +171,34 @@ No bare chests, no Evzone parade dress, no pith helmet, no standing column, no m
 </table>
 <p style="font-size:.85rem;color:var(--muted)">* G7/G8 pass on a technicality: the shot's formal rules held while its design intent failed - see Run 1 below.</p>
 <div class="callout"><b>The honest prediction:</b> these odds sum to an expected <b>7.5 of 10 gates</b> on the first run — below the 90% satisfaction bar. In plain words: we expect run 1 to need one correction round, and we are saying so before the result exists. Whether that prediction itself was right is part of what this page measures.</div>
+</section>
+
+<section>
+<p class="k">5b · Calibration, after the runs — the loop closing</p>
+<h2>Were the beliefs any good? Measured.</h2>
+<table>
+<tr><th>Belief stated before spending</th><th>What happened</th><th>Verdict</th></tr>
+<tr><td>Expected gates passed: <b>7.5 of 10</b> (below the bar)</td><td>8 of 10 + 1 partial, both takes</td><td class="pass">HELD — within half a gate</td></tr>
+<tr><td>Weakest gate: G9 working crew, odds 0.60</td><td>G9 was the one clean FAIL, both takes</td><td class="pass">HELD</td></tr>
+<tr><td>Second doubt: G4 events-on-objects, odds 0.70</td><td>G4 was the one PARTIAL, both takes</td><td class="pass">HELD</td></tr>
+<tr><td>Every gate rated 0.75+</td><td>all passed, both takes</td><td class="pass">HELD</td></tr>
+<tr><td>Practitioner uncertainty opened at 0.25</td><td>two real unknowns surfaced (aerial anchoring, crew stillness): the uncertainty was pointing at something</td><td class="pass">HELD</td></tr>
+<tr><td>Side assumption: credit pool "roughly 100-118"</td><td>real pool 14,118 units — wrong scale entirely</td><td class="fail">FALSIFIED — retracted in the graph, on the record</td></tr>
+</table>
+<p style="font-size:.92rem;color:var(--steel)">This is the point of the system: the beliefs were written down first, so they can be graded honestly afterwards — including the one that was wrong.</p>
+</section>
+
+<section>
+<p class="k">5c · Learnings so far — bought and paid for</p>
+<h2>What these 360 credits taught</h2>
+<ul style="max-width:80ch;padding-left:20px;color:var(--steel);line-height:1.7">
+<li><b>Wide shots bound to still references inherit the stillness; close-ups with one clear action animate correctly.</b> The single most useful model truth of the run.</li>
+<li><b>The model is highly deterministic given identical prompt + references.</b> Two takes agreed on all ten gates; re-rolling does not fix a structural miss. Spend on prompt changes, not repeats.</li>
+<li><b>Grammar is direction:</b> whatever is the grammatical subject of the sentence is what the model serves. A camera move written as an afterthought is an afterthought.</li>
+<li><b>Cut timestamps are reliable:</b> five hard cuts landed within half a second of the script in both takes.</li>
+<li><b>The rule check before spending caught a real violation</b> (a shot 20% over the word budget) at zero cost.</li>
+<li><b>Predictions written before the result made the failure useful:</b> the two lowest-rated gates were exactly the two misses.</li>
+</ul>
 </section>
 
 <section>
