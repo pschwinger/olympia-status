@@ -225,14 +225,14 @@ def render_card(sec, sh, prefix="board/"):
 
 
 CARDS = {  # artifact -> (card_key, scenario caption, note)
- "SM_RV_18":("c1","long jumper lacing at the board",""), "SM_RV_23":("c2","water polo shot",""),
+ "SM_RV_18":("c1","long jumper lacing at the board",""), "SM_RV_23":("c2","water polo shot","NOTE: the one pair the text rule cannot close - the pair holds (same person, same scene), but the ball's printed branding resists every treatment: the model's prior for this scene summons the brand with no help from the reference, and one attempt even INVENTED a near-brand wordmark. Shown as delivered, defect declared - the strongest evidence we have that some objects need deterministic treatment."),
  "SM_RV_8":("c3","clubs crossed overhead",""), "SM_RV_19":("c4","wrestler on the mat, 1980",""),
  "SM_RV_9":("c5","archer at full draw",""), "SM_RV_17":("c6","fencer en garde (with the epee)",""),
  "SM_RV_13":("c6","fencer en garde (with the mask)",""), "SM_RV_7":("c7","gymnast framed in the hoop",""),
  "SM_RV_11":("c8","balance pose",""), "SM_RV_22":("c9","hands tying the belt",""),
  "SM_RV_10":("c10","open-water start",""), "SM_RV_20":("c11","glove open for the catch",""),
  "SM_RV_21":("c11","glove open for the catch",""), "SM_RV_15":("c12","low over the table",""),
- "SM_RV_1":("m1","the 1870 medal in hand","NOTE: shown as a LEGACY image (marble stadium, today) - the researched 1870 period card (pre-marble stadium, male athlete type) is being regenerated; both will stand."),
+ "SM_RV_1":("m1","the 1870 medal in hand","NOTE: the period question stands (this stages the marble stadium of today, not the 1870 pre-marble ground) but the pair itself is now locked - only the medal differs between the arms."),
  "SM_RV_2":("m2","Greco-Roman wrestler, Moscow 1980 (neutral backdrop)",""),
  "SM_RV_3":("m3","athlete in the marble Panathenaic, 1906",""),
  "SM_RV_4":("m4","weightlifter at the platform, Sydney 2000",""),
@@ -244,7 +244,7 @@ def card_section(code):
     k, cap, note = CARDS[code]
     n = f'<p style="font-size:.85rem;color:var(--flame);max-width:80ch">{note}</p>' if note else ""
     return f"""<p class="k">The proof — same prompt, with and without the collection</p>
-<p class="muted" style="font-size:.92rem">{cap} · first-round pair: the two arms were generated independently and may differ in person, pose or grade - a pair-locked regeneration (the with-arm derived from the without-arm, so ONLY the object can change) is in production and will replace this. Until then, compare the OBJECT, not the scene.</p>
+<p class="muted" style="font-size:.92rem">{cap} · pair-locked: the WITH arm is an edit of the WITHOUT arm, so the ONLY difference between the two images is the object itself - same person, same pose, same light.</p>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px;max-width:920px">
 <div><a class="lb" href="board/media/cards/{k}_without.jpg"><img class="thumb" style="aspect-ratio:16/9;width:100%;object-fit:cover" src="board/media/cards/{k}_without.jpg" alt="without the collection"></a><p style="font-size:.85rem;color:var(--steel)"><b style="color:var(--flame)">WITHOUT:</b> the AI invents a generic object.</p></div>
 <div><a class="lb" href="board/media/cards/{k}_with.jpg"><img class="thumb" style="aspect-ratio:16/9;width:100%;object-fit:cover" src="board/media/cards/{k}_with.jpg" alt="with the collection"></a><p style="font-size:.85rem;color:var(--steel)"><b style="color:var(--good)">WITH:</b> the real object survives, invariants gated.</p></div>
