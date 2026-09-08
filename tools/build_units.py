@@ -269,7 +269,10 @@ def build():
         rows = sorted(by_unit[u], key=lambda t: t[1]["num"])
         vids = "".join(render_card(sec, sh) for sec, sh in rows)
         arts = " · ".join(f'<a href="artifact-{a}.html" style="color:var(--bronze)">{html.escape(REG.get(a,{}).get("name",a))}</a>' for a in d["artifacts"]) or "no physical artefacts in this unit"
-        page = head(f"Unit {u} — {d['title']}") + f"""
+        chips = " ".join(f'<a href="unit-{x}.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:4px 10px;border-radius:7px;{"background:#54682f;color:#fff" if x==u else "color:var(--bronze);border:1px solid var(--hair)"}">Unit {x}</a>' for x in UNITS)
+        prev_u, next_u = (u-1 if u>1 else 5), (u+1 if u<5 else 1)
+        subnav = f'<div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin:10px 0 18px"><a href="units.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:4px 10px;border-radius:7px;color:var(--steel);border:1px solid var(--hair)">← All units</a> {chips} <a href="unit-{prev_u}.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:4px 10px;border-radius:7px;color:var(--steel);border:1px solid var(--hair)">‹ previous</a><a href="unit-{next_u}.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:4px 10px;border-radius:7px;color:var(--steel);border:1px solid var(--hair)">next ›</a></div>'
+        page = head(f"Unit {u} — {d['title']}") + subnav + f"""
 <p class="k">Unit {u} of 5 · the Museum's structure</p><h1>{html.escape(d['title'])}</h1>
 <p class="muted">(our working name: “{html.escape(d['ours'])}”)</p>
 <div class="musdoc"><span class="mtag">Museum</span><i>Unit title above is the Museum's own. Visuals the Museum's document asks for: {html.escape(d['museum_visuals'])}.</i></div>
@@ -318,7 +321,10 @@ def build():
             insc_html = ('<div class="musdoc" style="border-color:rgba(140,125,60,.45)"><b>Real text on the object:</b> '
                          '<span class="muted">recorded here, never re-rendered by the model - generated frames keep these surfaces below reading size.</span>'
                          f'<ul style="margin:6px 0 0;padding-left:18px;font-size:.88rem;color:var(--steel)">{lis}</ul></div>')
-        page = head(f"{r.get('name',code)}") + f"""
+        _i = all_codes.index(code)
+        _prev, _next = all_codes[_i-1], all_codes[(_i+1) % len(all_codes)]
+        asub = f'<div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin:10px 0 18px"><a href="artifacts.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:4px 10px;border-radius:7px;color:var(--steel);border:1px solid var(--hair)">← All artifacts</a><a href="artifact-{_prev}.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:4px 10px;border-radius:7px;color:var(--steel);border:1px solid var(--hair)">‹ {html.escape(REG.get(_prev,{}).get("name",_prev)[:22])}</a><a href="artifact-{_next}.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:4px 10px;border-radius:7px;color:var(--steel);border:1px solid var(--hair)">{html.escape(REG.get(_next,{}).get("name",_next)[:22])} ›</a></div>'
+        page = head(f"{r.get('name',code)}") + asub + f"""
 <p class="k">Artifact · {code}</p><h1>{html.escape(r.get('name',code))}</h1>
 {hero}
 <p class="k">What it is</p>
