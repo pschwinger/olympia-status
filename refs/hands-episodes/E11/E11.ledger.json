@@ -1,0 +1,21 @@
+{
+  "run": "HANDS E11 — THE JUDOKA / THE CROWNING (overnight run finale, prop_vird2fwm), 30s Seedance 2.5",
+  "spec": "scenes/hands-remember-prompts.md @ 47f87a2, E11 block VERBATIM",
+  "measured_by": "empirica-videogen",
+  "model": "seedance_2_5 omni_reference — @Image1 S11, @Image2 SM_RV_16 kotinos; 30s/16:9/1080p/audio-on",
+  "generated": "2026-09-08T00:00:28Z → ~00:09Z",
+  "clip": "E11_the-judoka_30s.mp4",
+  "output": {"width": 1920, "height": 1080, "fps": 24, "duration_s": 30.041667, "frames": 721, "audio": "aac"},
+  "credits": {"spent": 270},
+  "gates": {
+    "G1_duration_cuts": {"result": "PASS", "note": "30.04s/721f, 8 shots (dark/still content, few detector cuts)."},
+    "kotinos_invariants_every_frame": {"result": "PASS", "belief_conf": 0.88, "note": "THE tightest gate. DENSE scan of the S8 crowning (00:25.5-30, 11 frames): the kotinos is DRIED GOLDEN-BROWN (never fresh-green), an OPEN RING (C-shape, ends held apart, never a closed circle), with the CLOTH-BOUND JOIN visible as the pale wrap at the front-center — every frame. Kotinos appears only in S8; invariants hold throughout it."},
+    "crowd_faces_soft_bokeh": {"result": "PASS", "note": "the arena crowd (S6-S8) stays soft bokeh — no sharp faces."},
+    "older_hands_hands_only": {"result": "PASS", "note": "the crowning hands (dark gold-trimmed official's sleeves) enter as HANDS ONLY — no face of the crowner shown."},
+    "G4_person_S11": "PASS",
+    "G6_grade": "PASS (warm dojo tungsten -> bright arena, Bruised-Gold)",
+    "G7_final_beat_alive": "PASS (the wreath lowered onto the bowed head — the crowning is the live final beat)",
+    "G8_one_film": "PASS"
+  },
+  "verdict": {"status": "PASS (USE) — the run's tightest invariant (kotinos dried/open/cloth-bound EVERY frame) holds; crowd bokeh + hands-only crowning both hold. Clean finale.", "confidence": 0.86}
+}

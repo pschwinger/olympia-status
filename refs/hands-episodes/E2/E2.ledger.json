@@ -1,0 +1,38 @@
+{
+  "run": "HANDS E2 — THE WEIGHTLIFTER 1976, 30s Seedance 2.5, serial ep 2/11 (generation-only pass 1)",
+  "proposal": "prop_b3gb2pl7qbchtcsgxhqlaoq7jy (storyboard); Philipp authorized 22:19 (E1 approved, serial continues)",
+  "spec": "empirica-storyboard/scenes/hands-remember-prompts.md @ bb8b3e5, E2 block VERBATIM",
+  "measured_by": "empirica-videogen",
+  "model": "seedance_2_5 omni_reference, 30s, 16:9, 1080p, audio ON (diegetic), ONE take",
+  "generated": "2026-09-07T20:32:22Z → 20:39:53Z (~7.5 min)",
+  "clip": "E2_the-weightlifter-1976_30s.mp4",
+  "output": {"width": 1920, "height": 1080, "fps": 24, "duration_s": 30.041667, "frames": 721, "audio": "aac, 30.05s"},
+  "credits": {"spent": 270},
+  "refs_bound": [
+    "@Image1 = refs/hands-sheets/S02.png (weightlifter person sheet)",
+    "@Image2 = imagegen/assets/pretreated-refs/SM_RV_22.local.png (LOCALISED belt — signature ghosted; NOT the raw SM_RV_22 with Iliadis MONTREAL 1976 signature)"
+  ],
+  "HEADLINE": "7 of 8 gates PASS. G2 (belt zero-text) is BORDERLINE — at the S3 hero close-up the belt panel reconstructed a CURSIVE SIGNATURE-SHAPED MARK: stylized, NOT letter-legible (does not resolve to a readable 'Iliadis' or a date), so far softer than campaign v2's crisp forgery — but not the clean absence E1's shoe achieved. The localised ref pushed it from crisp-forgery down to an illegible impression, yet a signature-shape still formed at hero scale. THIS IS THE CASE THE E2 DETERMINISTIC BELT-INSERT SLOT EXISTS FOR.",
+  "gates": {
+    "G1_duration_and_cuts": {"result": "PASS", "belief_conf": 0.9, "measurement": "ffprobe 30.041667s / 721f / 24fps; 8 shots tile 0-30. Detected cuts 3.25/6.79/15.21/17.63/22.0/25.67 within ~0.4s of stamps; S3->S4 (~11s) below the 0.3 detector but present."},
+    "G2_belt_zero_text": {"result": "BORDERLINE (soft-fail, Philipp's call)", "belief_conf": 0.75, "severity": "the text-forgery gate", "measurement": "Dense every-frame scan of S3-S4 (00:07-00:15). The belt panel at the S3 hero close-up shows a CURSIVE SIGNATURE-SHAPED MARK in the upper panel — it reads as 'a signature is here' but does NOT resolve into legible letters or a date (unlike campaign v2's readable '8.4/Miltos/TOKYO'). The buckle (S4) is plain, no text. So: NOT a crisp forgery, NOT clean-absent — an illegible signature-shaped impression. JUDGMENT: if the prompt's 'faint illegible mark' intent accepts an illegible scrawl, this passes; if the gate wants NO signature-shape at all, it needs the deterministic real-belt-panel insert (E2 insert slot: replace ~1.5s inside Shot 3 over the certified SM_RV_22 panel — same certificate pipeline as the campaign fix)."},
+    "G3_crowd_silhouette_only": {"result": "PASS", "belief_conf": 0.88, "measurement": "Dense scan S5-S6 (00:15-00:22): the crowd stays DARK SILHOUETTES / abstract ranks in shadow, one pool of warm light on the platform. No legible flags, symbols, or signage. The 'close dark ranks of spectators' reads as intended (mitigate-class held)."},
+    "weight_discs_plain": {"result": "PASS", "belief_conf": 0.85, "measurement": "S8 scan: the barbell's red discs are plain solid colour — no numerals or text (the 'plain colored discs' guard held)."},
+    "G4_person_S02_type": {"result": "PASS", "belief_conf": 0.82, "measurement": "consistent heavier weightlifter, dark singlet, throughout corridor -> chalk -> belt -> platform -> lift."},
+    "G5_hands": {"result": "PASS", "belief_conf": 0.8, "measurement": "chalk work (S2), belt handling (S3-S4), knurled-bar grip (S7), overhead hold (S8) — anatomically clean, natural."},
+    "G6_opening_block_one_grade_halation_grain": {"result": "PASS", "belief_conf": 0.85, "measurement": "single tungsten Bruised-Gold grade (deep umber, warm platform wood, chalk dust in the light), halation, grain, consistent across all 8 shots."},
+    "G7_final_beat_alive": {"result": "PASS", "belief_conf": 0.85, "measurement": "S8 overhead lift is live — arms locking, straining face, chalk drifting through the tungsten glow; no freeze."},
+    "G8_one_film": {"result": "PASS", "belief_conf": 0.8, "measurement": "coherent arc, consistent person + grade + diegetic audio."}
+  },
+  "verdict": {
+    "status": "7/8 PASS, G2 BORDERLINE — deliverable as pass 1, but the belt (S3) needs Philipp's judgment: accept the illegible signature-shaped mark as 'a faint illegible mark', or apply the deterministic belt-insert. Recommend the insert if any signature-shape is disqualifying.",
+    "confidence": 0.8,
+    "measurement_basis": "Deterministic (ffprobe 721f/30.04s + AAC) + dense every-frame reads on the E2-specific hazards (G2 belt S3-S4, G3 crowd S5-S6, discs S8)."
+  },
+  "calibration": "videogen PREFLIGHT predicted G2 belt-text was AT RISK at S3 and 'may hold as E1's shoe did'. PARTIALLY held: the localised ref + positive 'faint illegible mark' phrasing got it to ILLEGIBLE (softer than campaign v2) but did NOT get it to clean-absent (a signature-shape still reconstructed at hero scale). Data point: a text-bearing object HELD IN HAND AND HEROED (belt in S3) is harder to keep clean than one framed away (E1 shoe toe-end); the belt panel faces camera by the action's nature. Consistent with the hero-scale finding: localised-defocus necessary-but-not-sufficient at hero scale — belt needs positive-framing-that-excludes OR the deterministic insert.",
+  "honest_notes": [
+    "The belt-mark is genuinely in the grey zone: not a readable forgery, not absent. I am flagging it rather than passing or failing it because the 'faint illegible mark' intent is Philipp's to adjudicate.",
+    "If E2 gets the deterministic belt insert, it is the exact campaign-v3 certificate pipeline (ffmpeg move over the certified SM_RV_22 panel, real pixels, spliced ~1.5s inside Shot 3) — 0cr, fabrication-impossible, shows the REAL Iliadis signature legally.",
+    "Everything else (crowd silhouette, discs, person, hands, grade, final beat) is clean."
+  ]
+}

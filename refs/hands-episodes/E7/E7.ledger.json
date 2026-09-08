@@ -1,0 +1,21 @@
+{
+  "run": "HANDS E7 — THE MARATHON SWIMMER (overnight run, prop_vird2fwm), 30s Seedance 2.5",
+  "spec": "scenes/hands-remember-prompts.md @ 47f87a2, E7 block VERBATIM",
+  "measured_by": "empirica-videogen",
+  "model": "seedance_2_5 omni_reference — @Image1 S07, @Image2 SM_RV_10.sheet (goggles); 30s/16:9/1080p/audio-on",
+  "generated": "2026-09-07T23:13:04Z → ~23:20Z",
+  "clip": "E7_the-marathon-swimmer_30s.mp4",
+  "output": {"width": 1920, "height": 1080, "fps": 24, "duration_s": 30.041667, "frames": 721, "audio": "aac"},
+  "credits": {"spent": 270},
+  "gates": {
+    "G1_duration_cuts": {"result": "PASS", "note": "30.04s/721f, 5 cuts near stamps, 8 shots."},
+    "goggles_temple_clean": {"result": "PASS", "belief_conf": 0.85, "note": "DENSE goggles scan (00:04-00:11, applying the corrected prior-ladenness bar after the E6 miss): red/black plain material, dark lenses — NO brand text, NO near-resolving letters/city/year on the temple arms or strap. Clean."},
+    "fort_distant_dark_mass": {"result": "PASS", "note": "S1 wide: the fort reads as a distant dark mass on the horizon, no architectural detail asserted."},
+    "face_until_goggles_seat": {"result": "PASS", "note": "face bare (S07 type) until the goggles are pulled down and seat; goggled thereafter."},
+    "G4_person_S07": "PASS",
+    "G6_grade": "PASS (deep aqua/dawn, warm cross-light, spray)",
+    "G7_final_beat_alive": "PASS (entry/swim at sunset, spray)",
+    "G8_one_film": "PASS"
+  },
+  "verdict": {"status": "PASS (USE) — all gates hold; goggles dense-scanned clean. Clean deliverable.", "confidence": 0.85}
+}

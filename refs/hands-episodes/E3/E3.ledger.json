@@ -1,0 +1,22 @@
+{
+  "run": "HANDS E3 — THE ENSEMBLE (overnight run, prop_vird2fwm), 30s Seedance 2.5, 6-ref cap",
+  "spec": "scenes/hands-remember-prompts.md @ 47f87a2, E3 block VERBATIM",
+  "measured_by": "empirica-videogen",
+  "model": "seedance_2_5 omni_reference — @Image1 S03a, @Image2 S03b, @Image3 S03c, @Image4 clubs SM_RV_8, @Image5 hoop SM_RV_7.sheet, @Image6 ball SM_RV_11.sheet; 30s/16:9/1080p/audio-on, one take",
+  "generated": "2026-09-07T22:17:07Z → ~22:25Z",
+  "clip": "E3_the-ensemble_30s.mp4",
+  "output": {"width": 1920, "height": 1080, "fps": 24, "duration_s": 30.041667, "frames": 721, "audio": "aac"},
+  "credits": {"spent": 270},
+  "gates": {
+    "G1_duration_cuts": {"result": "PASS", "note": "30.04s/721f; 7 cuts at 3.25/7.08/11.21/14.83/18.96/22.63/25.83 all within ~0.3s of stamps; 8 shots."},
+    "artifact_text_marks": {"result": "PASS", "note": "clubs (S2) text-free red/gold; the blue ball (S3) carries a FAINT UNREADABLE SCRIPT TRACE — which is exactly the guard's positive intent ('the ball's marks stay an unreadable trace'), NOT a zero-text object like E1/E2, so acceptable by design; the hoop rim (S4/S8) resolves nothing."},
+    "three_distinct_types": {"result": "PASS", "belief_conf": 0.8, "note": "three visibly distinct gymnasts in the group shots (S5-S6), each apparatus shot features one; never merged into a single face."},
+    "one_instance_each_apparatus": {"result": "PASS", "note": "one club taped (S2), one ball (S3), one hoop lifted (S4)."},
+    "hoop_to_carpet_ending": {"result": "PASS", "note": "S8: hoop lifted up into the doorway light, ring haloed, figure a silhouette stepping toward the carpet."},
+    "G4_person_sheet_types": "PASS",
+    "G6_grade": "PASS (cool pale-blue morning, dust motes in window light)",
+    "G7_final_beat_alive": "PASS (hoop lift into light, dust turning)",
+    "G8_one_film": "PASS"
+  },
+  "verdict": {"status": "PASS (USE) — all gates hold; the ball's unreadable-trace marks are by-design per the guard. Clean deliverable.", "confidence": 0.83}
+}

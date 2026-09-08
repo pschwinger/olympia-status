@@ -1,0 +1,20 @@
+{
+  "run": "HANDS E9 — THE SOFTBALLER (overnight run, prop_vird2fwm; amended @4433651)",
+  "spec": "scenes/hands-remember-prompts.md @ 4433651, E9 block VERBATIM (S3 ball glove-shielded, per amendment prop_rkiyjh5k)",
+  "measured_by": "empirica-videogen",
+  "model": "seedance_2_5 omni_reference — @Image1 S09, @Image2 SM_RV_20 glove, @Image3 SM_RV_21.sheet ball; 30s/16:9/1080p/audio-on",
+  "generated": "2026-09-07T23:36:56Z → ~23:44Z",
+  "clip": "E9_the-softballer_30s.mp4",
+  "output": {"width": 1920, "height": 1080, "fps": 24, "duration_s": 30.041667, "frames": 721, "audio": "aac"},
+  "credits": {"spent": 270},
+  "HEADLINE": "PARTIAL. Your ball amendment SUCCEEDED — S3's glove-shielded medium framing kept the softball off hero scale (no MIZUNO reconstruction; the ball seats into the glove, mostly cupped). BUT a NEW brand-text fail surfaced that the amendment did not cover: the GLOVE reconstructs 'EASTON' (+ 'LARGE BARREL 1300') LEGIBLY at the S2 macro. The glove ref (SM_RV_20) is RAW/branded and S2 was unchanged from 47f87a2 (the amendment only reframed S3). So the same macro-brand wall as E4, now on the glove instead of the ball.",
+  "gates": {
+    "ball_clean_yellow_amendment": {"result": "PASS (amendment worked)", "belief_conf": 0.8, "note": "S3 (glove-shielded medium): the yellow ball seats into the glove's pocket at arm's length, leather cupping most of the surface — no hero-brand reconstruction. S8 shows the ball caught in the glove medium-close, brand small/not hero'd. The framing fix beat the ball's brand prior — a POSITIVE confirmation that OFF-MACRO framing works where prompt-only reframes (E6) don't."},
+    "glove_brand_text": {"result": "FAIL", "belief_conf": 0.9, "note": "S2 macro reconstructs 'EASTON' + 'LARGE BARREL 1300' legibly on the glove (raw ref SM_RV_20). NOT covered by the amendment (which addressed only the ball). Fix: an S2 glove reframe (off-macro, parallel to the S3 ball fix) OR a treated/text-removed glove ref. NO retry fired — S2 is unchanged by the current prompt, so a retry would reproduce it (per E4/E6c); flagging for an S2 amendment instead."},
+    "jersey_visor_plain": {"result": "PASS", "note": "grey shirt + visor plain, no lettering."},
+    "one_ball_one_glove": {"result": "PASS"},
+    "G1_duration_cuts": {"result": "PASS", "note": "30.04s/721f, 8 shots (dark-to-bright field, few detector cuts)."},
+    "G4_person_S09": "PASS", "G6_grade": "PASS (warm daylight field, dugout shade)", "G7_final_beat_alive": "PASS (the catch in the glove)", "G8_one_film": "PASS"
+  },
+  "verdict": {"status": "PARTIAL — ball-amendment SUCCESS (off-macro framing beats the brand prior), but the GLOVE fails on EASTON at S2 macro (unaddressed by the amendment). Needs an S2 glove reframe or treated glove ref. No retry burned (unfixable by current prompt). Philipp's decision.", "confidence": 0.85}
+}

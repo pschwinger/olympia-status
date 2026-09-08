@@ -1,0 +1,18 @@
+{
+  "run": "HANDS E9 v2 — THE SOFTBALLER, glove off-macro retry (overnight run, retry-order prop_xoffcvkk)",
+  "spec": "scenes/hands-remember-prompts.md @ 0aa9fd2 (S2 glove reframed off-macro; inherits @4433651 S3 ball)",
+  "measured_by": "empirica-videogen",
+  "model": "seedance_2_5 omni_reference — @Image1 S09, @Image2 SM_RV_20 glove, @Image3 SM_RV_21.sheet ball; 30s/16:9/1080p/audio-on",
+  "generated": "retry ~2026-09-08T00:00Z",
+  "clip": "E9_the-softballer_30s_v2.mp4 (USE candidate — supersedes v1)",
+  "output": {"width": 1920, "height": 1080, "fps": 24, "duration_s": 30.041667, "frames": 721, "audio": "aac"},
+  "credits": {"spent": 540, "note": "270 v1 + 270 v2 retry; E9's one retry."},
+  "HEADLINE": "FIXED. The S2 off-macro reframe (@0aa9fd2: medium close, hands+glove at arm's length, 'every panel plain bare leather') KILLED the EASTON — dense glove scan shows only a small UNREADABLE smudge where the brand was, no legible wordmark. The ball (S3) stays glove-shielded from the prior amendment. So the OFF-MACRO fix beat the brand a THIRD time (E9 ball, now E9 glove), confirming it defeats BOTH the ref-brand route (E4) and the scene-prior route (this glove).",
+  "gates": {
+    "glove_brand_text": {"result": "PASS", "belief_conf": 0.85, "note": "S2 off-macro dense scan: hands+glove medium, worn tan leather, brand area = small unreadable smudge, NO legible 'EASTON'. The scene-prior brand did not reconstruct off-macro."},
+    "ball_clean_yellow": {"result": "PASS", "note": "S3 glove-shielded (inherited from @4433651)."},
+    "jersey_visor_plain": "PASS", "one_ball_one_glove": "PASS",
+    "G1_duration_cuts": "PASS (30.04s/721f)", "G4_person_S09": "PASS", "G6_grade": "PASS", "G7_final_beat_alive": "PASS", "G8_one_film": "PASS"
+  },
+  "verdict": {"status": "PASS (USE) — supersedes v1. Off-macro reframe killed the EASTON; ball stays shielded. The whole exposed set's fix is confirmed: OFF-MACRO framing.", "confidence": 0.85}
+}

@@ -1,0 +1,16 @@
+{
+  "run": "HANDS E6 v2 — THE TABLE TENNIS PLAYER, blade-palmares retry (overnight run, retry-order prop_4pdbyh7u)",
+  "spec": "scenes/hands-remember-prompts.md, E6 with rewritten S2 @ fa4232c (S01-v3 positive-spatial)",
+  "measured_by": "empirica-videogen",
+  "model": "seedance_2_5 omni_reference — @Image1 S06, @Image2 SM_RV_15.sheet; 30s/16:9/1080p/audio-on",
+  "generated": "retry ~2026-09-07T23:18Z",
+  "clip": "E6_the-table-tennis-player_30s_v2.mp4 (retry, documented FAIL)",
+  "output": {"width": 1920, "height": 1080, "fps": 24, "duration_s": 30.041667, "frames": 721, "audio": "aac"},
+  "credits": {"spent": 540, "note": "270 v1 (my over-called pass) + 270 v2 retry; E6's one retry now used."},
+  "HEADLINE": "RETRY ALSO FAILS the blade-palmares gate. The rewritten S2 @ fa4232c (positive-spatial, no city/year/palmares named, 'gestural traces far beneath the cloth blur') did NOT suppress it — the DENSE blade scan still shows structured text with near-resolving Games-city shapes ('Rio' readable, articulated word-lines) plus a small emblem top-left. ROOT CAUSE (matches E4): the S2 is still MACRO on the inscribed blade; at macro the ref's palmares reconstructs regardless of the prompt reframe. A prompt-only positive-spatial rewrite is NOT sufficient at macro — the same finding as the branded ball. THE FIX THAT WORKS is the one Philipp himself applied to E9: move the object OFF macro (medium, cloth covering most of the face) OR a text-removed blade ref OR deterministic.",
+  "gates": {
+    "blade_palmares_absent": {"result": "FAIL", "belief_conf": 0.8, "note": "near-resolving city/palmares shapes persist at the S2 macro despite the fa4232c reframe (evidence: E6c_blade_FAIL_scan.png). Prior-laden tokens present, not absent."},
+    "other_gates": "unchanged from v1 — all PASS (kit plain, red rubber clean, one ball/racket, person S06, grade, final rally alive, one film)."
+  },
+  "verdict": {"status": "DOCUMENTED FAIL (blade palmares) — retry exhausted. The prompt-only reframe can't beat a macro of the inscribed blade; needs the E9-style medium reframe (blade off-macro, cloth-covered) or a text-removed ref. Everything else in E6 is clean. Philipp's decision tomorrow.", "confidence": 0.8}
+}

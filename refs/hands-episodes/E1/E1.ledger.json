@@ -1,0 +1,37 @@
+{
+  "run": "HANDS E1 — THE LONG JUMPER (the format-prover), 30s Seedance 2.5, PASS 1 generation-only",
+  "proposal": "prop_tiezn27r7fhodcceoeygmgzu7i (storyboard); Philipp-authorized 'test it right now as it is' 2026-09-07 17:46",
+  "spec": "empirica-storyboard/scenes/hands-remember-prompts.md @ a58a34f, E1 block VERBATIM",
+  "measured_by": "empirica-videogen",
+  "model": "seedance_2_5 omni_reference, 30s, 16:9, 1080p, audio ON (diegetic), ONE take",
+  "generated": "2026-09-07T16:01:05Z → 16:08:18Z (~7.2 min)",
+  "clip": "E1_the-long-jumper_30s.mp4",
+  "output": {"width": 1920, "height": 1080, "fps": 24, "duration_s": 30.041667, "frames": 721, "audio": "aac, 30.05s (diegetic sound present)"},
+  "credits": {"spent": 270, "note": "same as video-only 30s — audio ON added no cost."},
+  "refs_bound": [
+    "@Image1 = refs/hands-sheets/S01.png (long-jumper person sheet, identity)",
+    "@Image2 = imagegen/assets/pretreated-refs/SM_RV_18.local.png (LOCALISED-defocus shoe — ink region blurred illegible, object sharp; NOT the raw text-bearing digitisation)"
+  ],
+  "HEADLINE": "ALL 8 GATES PASS. G2 (the shoe zero-text gate) passed WITHOUT the deterministic insert — positive-composition framing ('seen from the toe end, outer side walls turned away, every visible face plain worn white material') kept the inked quarter out of the hero close-ups (Shots 2-3), where campaign v2's localised-defocus + prose 'turned away' had FORGED Tentoglou's ink at the same scale. This is the format-prover: the seedance-25 + doctrine pipeline validates end-to-end in one live 30s generation.",
+  "gates": {
+    "G1_duration_and_cuts": {"result": "PASS", "belief_conf": 0.9, "measurement": "deterministic ffprobe 30.041667s / 721f / 24fps; 8 shots tile 0-30 (confirmed by eye in the contact sheet). Scene-cut detector (>0.3) found 5 cuts at 3.00, 6.71, 10.58, 13.75, 17.67 — all within ~0.4s of the stamps (3/7/11/14/18). The later shot transitions (6→7→8: runway/run-up/takeoff) are continuous-motion and below the 0.3 detector threshold, but the 8-shot structure is present visually."},
+    "G2_shoe_zero_text_identity": {"result": "PASS", "belief_conf": 0.85, "severity_if_failed": "HARD (real-athlete forgery)", "measurement": "DENSE every-frame scan of Shots 2-3 (00:03-00:11, ~0.35s spacing, 24 frames): ZERO reconstructed handwriting, ZERO '8.41'/numerals, ZERO signature scrawl on any visible shoe face. The inked quarter stayed turned away every frame. NOTE (storyboard's judgment, not a forgery): the shoe's REAL diagonal stripes are visible in Shot 2 (stripe-side toward camera) — a genuine object feature present in the certified digitisation, not fabricated; if the guard intends 'no brand emblem visible' that is a Shot-2 framing tweak (rotate to a plainer face), NOT a text forgery."},
+    "G3_empty_stadium": {"result": "PASS", "belief_conf": 0.9, "measurement": "DENSE every-frame scan of Shots 5-8 (00:14-00:30, ~0.7s spacing, 24 frames): vacant seats every frame, lone figure in the bowl, no crowd anywhere. The empty morning Olympiastadion reads as 'soft silent geometry' — the COVID-truth intent lands."},
+    "G4_person_S01_type": {"result": "PASS", "belief_conf": 0.8, "measurement": "consistent young man, short dark hair, blue singlet throughout call-room → lacing → tunnel → runway → takeoff. Internal identity consistency strong (matches the S01 sheet type by eye)."},
+    "G5_lacing_hands": {"result": "PASS", "belief_conf": 0.8, "measurement": "Shot 3 macro lacing hands read anatomically clean — five fingers, natural grip, no extra/deformed digits in the dense frames."},
+    "G6_opening_block_one_grade_halation_grain": {"result": "PASS", "belief_conf": 0.85, "measurement": "single consistent Bruised-Gold grade across all 8 shots (cold morning blue-grey field, terracotta track, lifted charcoal blacks), halation blooming on the bright stadium openings, fine grain present. The fixed opening film-stock paragraph rendered its look."},
+    "G7_final_beat_alive": {"result": "PASS", "belief_conf": 0.85, "measurement": "Shot 8 is live motion — the board strike, the rise, the sand burst and drifting dust through the closing frame. No freeze/still-hold on the final beat."},
+    "G8_one_film": {"result": "PASS", "belief_conf": 0.8, "measurement": "coherent narrative arc, consistent person + grade, diegetic audio ties it — reads as one film (belief)."}
+  },
+  "verdict": {
+    "status": "PASS (USE-CANDIDATE for pass 1) — all 8 gates pass. The format is proven: seedance-25 opening block + positive-composition doctrine + localised ref produced a clean, on-time, forgery-free 30s episode in one take. Philipp judges pass 1 before any insert-splice decision.",
+    "confidence": 0.85,
+    "measurement_basis": "Deterministic (ffprobe exact 721f/30.04s + AAC audio) + dense every-frame by-eye reads on the two safety-critical gates (G2 shoe text, G3 empty stadium) + contact-sheet reads for identity/grade/hands/final-beat."
+  },
+  "calibration": "videogen PREFLIGHT predicted G2 was AT RISK and would likely show a text trace at hero scale (grounded in the prior HARD finding that localised-defocus is necessary-but-not-sufficient at hero close-up). REFUTED: E1's positive-composition framing cleared it with no fabricated text. The update: at hero scale, FRAMING THE INKED SURFACE OUT (positive composition) succeeds where localised-defocus + prose-negation ('turned away') alone failed. n=1 — see the open repeatability question.",
+  "honest_notes": [
+    "REPEATABILITY (open): campaign v2 used the SAME localised ref and similar 'turned away' prose and FORGED the ink; E1 passed. n=1 each. Whether E1's positive-composition framing robustly prevents the forgery, or partly benefited from generation variance, is not settled by one take. The insert slot remains the deterministic guarantee if a repeat shows any trace.",
+    "STRIPES: the shoe's real diagonal stripes are visible (Shot 2). Real feature, not fabricated. Storyboard's call whether that trips the 'no emblem' guard; if so it is a framing tweak, not a forgery.",
+    "PASS 1 SCOPE: no insert splice, per the order. The real-ink deterministic insert (campaign-v3 pattern) can still replace 1.5s inside Shot 3 at a cut boundary if Philipp wants the authentic ink shown — but as generated, E1 needs no insert to pass G2."
+  ]
+}

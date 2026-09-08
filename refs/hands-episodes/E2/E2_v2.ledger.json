@@ -1,0 +1,27 @@
+{
+  "run": "HANDS E2 v2 — THE WEIGHTLIFTER 1976, buckle-closure fix (overnight run, prop_vird2fwm)",
+  "spec": "scenes/hands-remember-prompts.md @ 47f87a2, E2 block VERBATIM",
+  "supersedes_for_use": "E2_the-weightlifter-1976_30s.mp4 (v1) — v2 is the corrected USE candidate",
+  "measured_by": "empirica-videogen",
+  "model": "seedance_2_5 omni_reference (S02 + SM_RV_22.local), 30s/16:9/1080p/audio-on, one take",
+  "generated": "2026-09-07T22:05:42Z → ~22:13Z",
+  "clip": "E2_the-weightlifter-1976_30s_v2.mp4",
+  "output": {"width": 1920, "height": 1080, "fps": 24, "duration_s": 30.041667, "frames": 721, "audio": "aac"},
+  "credits": {"spent": 270},
+  "diff_from_v1": "ONLY S4 (buckle mechanism) + audio line. Belt signature-mark ACCEPTED by Philipp (no change). All other shots verbatim-identical.",
+  "correction_verdict": {
+    "S4_buckle_thread_seat_tuck": {"result": "PASS", "belief_conf": 0.85, "measurement": "dense S4 scan 00:11-00:15: the belt is threaded through an OLD PRONG-AND-HOLE ROLLER BUCKLE at the waist, the tongue seated and the end tucked — no click-buckle. Matches Philipp's correction. Audio de-clicked (strap-through-buckle + tongue-seating in the audio line)."}
+  },
+  "gates": {
+    "G1_duration_cuts": "PASS (30.04s/721f, 8 shots)",
+    "G2_belt_text": "ACCEPTED (Philipp ruled the illegible signature-mark acceptable; unchanged from v1)",
+    "G3_crowd_silhouette": "PASS (dark ranks, no signage)",
+    "discs_plain": "PASS (colored plates, no numerals)",
+    "G4_person_S02": "PASS",
+    "G5_hands": "PASS (chalk/belt-thread/grip/overhead)",
+    "G6_grade": "PASS (tungsten Bruised-Gold)",
+    "G7_final_beat": "PASS (overhead lift alive)",
+    "G8_one_film": "PASS"
+  },
+  "verdict": {"status": "PASS (USE) — S4 buckle corrected, belt accepted, all gates hold. Clean deliverable.", "confidence": 0.85}
+}

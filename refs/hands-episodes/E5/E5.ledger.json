@@ -1,0 +1,22 @@
+{
+  "run": "HANDS E5 — THE FENCER (overnight run, prop_vird2fwm), 30s Seedance 2.5",
+  "spec": "scenes/hands-remember-prompts.md @ 47f87a2, E5 block VERBATIM",
+  "measured_by": "empirica-videogen",
+  "model": "seedance_2_5 omni_reference — @Image1 S05, @Image2 SM_RV_13 épée, @Image3 SM_RV17 mask; 30s/16:9/1080p/audio-on",
+  "generated": "2026-09-07T22:51:19Z → ~22:59Z",
+  "clip": "E5_the-fencer_30s.mp4",
+  "output": {"width": 1920, "height": 1080, "fps": 24, "duration_s": 30.041667, "frames": 721, "audio": "aac"},
+  "credits": {"spent": 270},
+  "gates": {
+    "G1_duration_cuts": {"result": "PASS", "note": "30.04s/721f, 6 cuts near stamps, 8 shots."},
+    "mask_stays_on_person_guard": {"result": "PASS", "belief_conf": 0.85, "note": "mask lowers over the face at S5 (F10->F11); from S6 through the final lunge her face is behind the mesh, never bare again. Person-guard ally holds."},
+    "tip_lands_empty_no_opponent": {"result": "PASS", "note": "S6-S8: she is alone on the lit strip; en garde, advance, lunge — the tip extends into empty light, no opponent in frame."},
+    "one_epee_one_mask": {"result": "PASS"},
+    "text_clean": {"result": "PASS", "note": "metal épée + mesh mask + plain whites — no lettering/brand anywhere."},
+    "G4_person_S05": "PASS",
+    "G6_grade": "PASS (charcoal-black field, fencing-white, one hard strip of light, dust in the beam)",
+    "G7_final_beat_alive": "PASS (the lunge, blade bowing, light running the steel)",
+    "G8_one_film": "PASS"
+  },
+  "verdict": {"status": "PASS (USE) — all gates hold. Clean deliverable.", "confidence": 0.85}
+}

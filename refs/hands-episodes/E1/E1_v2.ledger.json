@@ -1,0 +1,37 @@
+{
+  "run": "HANDS E1 v2 — THE LONG JUMPER, correction loop (3 fixes), 30s Seedance 2.5",
+  "proposal": "prop_v6nro2ork5hjnmgmdaxeebkh7e (storyboard); Philipp pass-1 review, authorized 18:33",
+  "supersedes_for_use": "E1_the-long-jumper_30s.mp4 (v1) — v2 is the corrected USE candidate if the three fixes satisfy",
+  "spec": "empirica-storyboard/scenes/hands-remember-prompts.md @ 6ed094b, E1 block VERBATIM (diff vs a58a34f = exactly S1/S3/S8 + audio 'sand scatter' removed; all else byte-identical)",
+  "measured_by": "empirica-videogen",
+  "model": "seedance_2_5 omni_reference, 30s, 16:9, 1080p, audio ON (diegetic), ONE take",
+  "generated": "2026-09-07T18:06:53Z → 18:13:56Z (~7 min)",
+  "clip": "E1_the-long-jumper_30s_v2.mp4",
+  "output": {"width": 1920, "height": 1080, "fps": 24, "duration_s": 30.041667, "frames": 721, "audio": "aac, 30.05s"},
+  "credits": {"spent": 270, "note": "same refs (S01 + SM_RV_18.local) and params as v1."},
+  "context": "Late-start disclosure: this v2 order was accepted ~18:38 CEST but sat undelivered ~77 min because the videogen session dropped/restarted (MCP disconnect 18:15-19:55). Caught on resume catch-up poll, executed immediately. NOT a platform stall.",
+  "CORRECTION_VERDICTS": {
+    "S1_parted_lips_fogging_breath": {"result": "PASS (fog: MARGINAL)", "belief_conf": 0.8, "note": "Dense scan 00:00-00:03: the mouth clearly OPENS and he exhales through parted lips across the shot — the v1 closed-mouth defect is FIXED. The breath-fog itself is FAINT in the cold dim light — present-to-marginal, not pronounced. If you want the fog unmistakable, that is a lighting/emphasis note, not a re-do; the anatomy fix (mouth opens) is unambiguous."},
+    "S3_lacing_on_planted_foot_side": {"result": "PASS", "belief_conf": 0.9, "note": "Dense scan 00:07-00:11: SEATED, forearms braced on the knee, lacing the shoe ON the planted foot, side framing — exactly the fix (v1 held the shoe at face height). Natural lacing action, hands clean."},
+    "S8_midflight_ending_sand_free": {"result": "PASS", "belief_conf": 0.8, "note": "Dense scan 00:25-00:30: the foot strikes and LEAVES the takeoff board, the athlete rises out of frame — ends MID-FLIGHT, no landing shown. ZERO sand pit / sand burst; the only particulate is faint board-dust hanging in the sun (which the corrected prompt now permits). The v1 step-over-foul read is gone. Far distance is sunlit track/haze, not a sand pit."}
+  },
+  "gates": {
+    "G1_duration_and_cuts": {"result": "PASS", "belief_conf": 0.9, "measurement": "ffprobe 30.041667s / 721f / 24fps; 8 shots tile 0-30 (contact sheet). Detected cuts 3.13/6.63/13.96/17.96/21.88/25.67 within ~0.4s of stamps; the S3->S4 (~11s) transition fell below the 0.3 detector but is present by eye."},
+    "G2_shoe_zero_text_identity": {"result": "PASS", "belief_conf": 0.83, "severity_if_failed": "HARD", "measurement": "Dense every-frame scan of Shots 2-3. Despite S3's NEW side framing exposing more of the shoe's lateral face on the foot, NO fabricated handwriting/numerals appeared — the inked quarter stayed occluded/shadowed; only the shoe's real stripes + plain material show. The fresh hero-text risk of the side framing did NOT materialize."},
+    "G3_empty_stadium": {"result": "PASS", "belief_conf": 0.9, "measurement": "Shots 5-8 empty every frame (contact + S8 scan): vacant seats, lone figure, no crowd."},
+    "G4_person_S01_type": {"result": "PASS", "belief_conf": 0.8, "measurement": "consistent throughout."},
+    "G5_lacing_hands": {"result": "PASS", "belief_conf": 0.82, "measurement": "S3 lacing hands read anatomically clean, natural grip."},
+    "G6_opening_block_one_grade_halation_grain": {"result": "PASS", "belief_conf": 0.85, "measurement": "single Bruised-Gold grade, halation, grain — consistent across all 8 shots."},
+    "G7_final_beat_alive": {"result": "PASS", "belief_conf": 0.85, "measurement": "S8 is live motion (takeoff, legs cycling into flight); no freeze."},
+    "G8_one_film": {"result": "PASS", "belief_conf": 0.8, "measurement": "coherent arc, consistent person + grade + diegetic audio."}
+  },
+  "verdict": {
+    "status": "PASS (USE-CANDIDATE) — all 3 corrections landed and all 8 gates hold. The two anatomy/sport fixes (S3 laced-on-foot, S8 sand-free mid-flight) are unambiguous; S1's mouth-opens exhale is fixed with the breath-fog reading faint. G2 held even under S3's riskier side framing.",
+    "confidence": 0.85,
+    "measurement_basis": "Deterministic (ffprobe 721f/30.04s + AAC) + dense every-frame reads on the 3 correction ranges (S1 0-3s, S3 7-11s, S8 25-30s) and the safety gates (G2, G3)."
+  },
+  "honest_notes": [
+    "S1 FOG is the one soft spot: mouth-open exhale = fixed; visible vapor = faint. Judgment call whether that satisfies 'fogging in the cold air' or wants a brighter/colder emphasis pass.",
+    "G2 held under the new side framing — a useful second data point that positive composition ('every visible face plain worn white material') survives even when the shoe's lateral face is more exposed. Still not a controlled proof of robustness (see the repeatability unknown)."
+  ]
+}

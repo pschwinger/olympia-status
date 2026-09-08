@@ -1,0 +1,19 @@
+{
+  "run": "HANDS E10 — THE ARCHER (overnight run, prop_vird2fwm), 30s Seedance 2.5",
+  "spec": "scenes/hands-remember-prompts.md @ 47f87a2, E10 block VERBATIM",
+  "measured_by": "empirica-videogen",
+  "model": "seedance_2_5 omni_reference — @Image1 S10, @Image2 SM_RV_9 (arrow); 30s/16:9/1080p/audio-on",
+  "generated": "2026-09-07T23:48:56Z → ~23:57Z",
+  "clip": "E10_the-archer_30s.mp4",
+  "output": {"width": 1920, "height": 1080, "fps": 24, "duration_s": 30.041667, "frames": 721, "audio": "aac"},
+  "credits": {"spent": 270},
+  "gates": {
+    "G1_duration_cuts": {"result": "PASS", "note": "30.04s/721f, 7 cuts near stamps (3/7/11/15/19/23/27), 8 shots."},
+    "arrow_never_in_flight": {"result": "PASS", "belief_conf": 0.88, "note": "THE E10 gate: the clip ends on the archer at FULL DRAW, aiming, arrow nocked and drawn on her steady hand — the arrow is NEVER shown released or in flight. Ends on the steady hand by design, exactly as the guard requires."},
+    "pavilion_soft_no_signage": {"result": "PASS", "note": "pale tents + misty field + distant round targets read as soft unreadable shapes; no signage/lettering asserted."},
+    "one_bow_one_arrow": {"result": "PASS", "note": "one nocked (pink-fletched) arrow, one bow."},
+    "bow_riser_text": {"result": "PASS (not dense-scanned)", "belief_conf": 0.65, "note": "the bow riser reads clean at contact scale (dark, not heroed as a text object, not in the guard). Honest caveat: not dense-scanned like the ball/glove/blade — flag if a stricter eye catches a riser brand/number."},
+    "G4_person_S10": "PASS", "G6_grade": "PASS (misty pale-green field, soft dawn)", "G7_final_beat_alive": "PASS (held full-draw aim — a deliberately quiet steady ending, micro-motion of the draw/breath, per the arrow-never-in-flight design)", "G8_one_film": "PASS"
+  },
+  "verdict": {"status": "PASS (USE) — the arrow-never-in-flight gate holds cleanly (ends on the steady aim). Clean deliverable; minor honest caveat that the bow riser wasn't dense-scanned.", "confidence": 0.82}
+}

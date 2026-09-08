@@ -1,0 +1,21 @@
+{
+  "run": "HANDS E6 — THE TABLE TENNIS PLAYER (overnight run, prop_vird2fwm), 30s Seedance 2.5",
+  "spec": "scenes/hands-remember-prompts.md @ 47f87a2, E6 block VERBATIM (proceeds UNCHANGED per amendment prop_rkiyjh5k)",
+  "measured_by": "empirica-videogen",
+  "model": "seedance_2_5 omni_reference — @Image1 S06, @Image2 SM_RV_15.sheet (racket); 30s/16:9/1080p/audio-on",
+  "generated": "2026-09-07T23:02:15Z → ~23:10Z",
+  "clip": "E6_the-table-tennis-player_30s.mp4",
+  "output": {"width": 1920, "height": 1080, "fps": 24, "duration_s": 30.041667, "frames": 721, "audio": "aac"},
+  "credits": {"spent": 270},
+  "gates": {
+    "G1_duration_cuts": {"result": "PASS", "note": "30.04s/721f; 8 shots present by eye (dark low-motion content, so scene-detector only flagged 3 cuts; structure intact)."},
+    "blade_marks": {"result": "PASS (per amendment)", "belief_conf": 0.75, "note": "the wooden blade (S2, under the cloth) shows ATHLETE-HANDWRITING-class script — reads as handwriting, not cleanly legible words, and crucially NOT a brand wordmark (no BUTTERFLY/STIGA/etc. logo). Per amendment prop_rkiyjh5k this class is by-design acceptable (distinct from E4's MIKASA brand-fail). The red rubber face is clean."},
+    "kit_plain_no_lettering": {"result": "PASS", "note": "plain dark-blue shirt, no lettering."},
+    "one_ball_one_racket": {"result": "PASS"},
+    "G4_person_S06": "PASS",
+    "G6_grade": "PASS (dark hall, single spotlight, blade + ball catching light)",
+    "G7_final_beat_alive": "PASS (the return/lunge across the table, ball in flight)",
+    "G8_one_film": "PASS"
+  },
+  "verdict": {"status": "PASS (USE) — all gates hold; the blade's handwriting-class marks are acceptable by design per the amendment (not a brand wordmark). Clean deliverable.", "confidence": 0.8}
+}

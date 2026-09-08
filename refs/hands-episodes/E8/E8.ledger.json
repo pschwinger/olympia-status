@@ -1,0 +1,21 @@
+{
+  "run": "HANDS E8 — THE WRESTLER 1980 (overnight run, prop_vird2fwm), 30s Seedance 2.5",
+  "spec": "scenes/hands-remember-prompts.md @ 47f87a2, E8 block VERBATIM",
+  "measured_by": "empirica-videogen",
+  "model": "seedance_2_5 omni_reference — @Image1 S08, @Image2 SM_RV_19 (red boots); 30s/16:9/1080p/audio-on",
+  "generated": "2026-09-07T23:24:50Z → ~23:32Z",
+  "clip": "E8_the-wrestler-1980_30s.mp4",
+  "output": {"width": 1920, "height": 1080, "fps": 24, "duration_s": 30.041667, "frames": 721, "audio": "aac"},
+  "credits": {"spent": 270},
+  "gates": {
+    "G1_duration_cuts": {"result": "PASS", "note": "30.04s/721f, 6 cuts near stamps, 8 shots."},
+    "zero_symbols_HARD": {"result": "PASS (with one borderline note)", "belief_conf": 0.8, "note": "DENSE arena scan (00:15-30) + boots scan (00:07-11): bare concrete tunnel, dark geometric bowl, crowd + officials as SILHOUETTES only, lit mat = plain red/yellow COLOUR FIELDS (no logo/text), NO flags/banners/signage/lettering anywhere. BORDERLINE: the red boots carry a decorative GOLD STRIPE motif (Asics-style wave) — no wordmark/logo/flag/lettering, same class as E1's shoe stripes, but 'emblems' is named in the HARD guard so flagging it for Philipp's strict call."},
+    "crowd_dark_silhouette": {"result": "PASS", "note": "crowd + officials read as dark silhouettes around the lit mat."},
+    "one_pair_boots": {"result": "PASS"},
+    "G4_person_S08": "PASS",
+    "G6_grade": "PASS (deep umber, tungsten, concrete)",
+    "G7_final_beat_alive": "PASS (crouched ready stance, hands working, spotlit)",
+    "G8_one_film": "PASS"
+  },
+  "verdict": {"status": "PASS (USE) — the zero-symbols HARD gate holds (bare geometry, silhouette crowd, plain mat, no flags/lettering/logos). One borderline: the boots' decorative gold stripe (design motif, no wordmark) — Philipp's call if the emblem bar is strict.", "confidence": 0.8}
+}

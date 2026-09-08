@@ -1,0 +1,22 @@
+{
+  "run": "HANDS E4 — THE WATER POLO PLAYER (overnight run, prop_vird2fwm), 30s Seedance 2.5",
+  "spec": "scenes/hands-remember-prompts.md @ 47f87a2, E4 block VERBATIM",
+  "measured_by": "empirica-videogen",
+  "model": "seedance_2_5 omni_reference — @Image1 S04, @Image2 SM_RV_23.sheet.png; 30s/16:9/1080p/audio-on",
+  "generated": "take1 2026-09-07T22:29:19Z; take2(E4b retry) ~22:40Z",
+  "clip": "E4_the-water-polo-player_30s.mp4 (take 1, documented FAIL)",
+  "output": {"width": 1920, "height": 1080, "fps": 24, "duration_s": 30.041667, "frames": 721, "audio": "aac"},
+  "credits": {"spent": 540, "note": "270 take1 + 270 retry (E4b); one retry per the overnight rule, both failed the same gate."},
+  "HEADLINE": "HARD-FAIL on the ball-text gate — the water-polo ball renders 'MIKASA' LARGE and CLEARLY LEGIBLE at the S2 hero macro, in BOTH takes. This directly confirms recon finding 89e90524: the SM_RV_23.sheet.png treated ref is only SOFTENED, not text-suppressed — the brand wordmark is legible on the ref itself and reconstructs at hero scale. The guard ('ball panels stay clean colour fields, positive') did not hold at macro. Retry reproduced it (more prominent). Per the overnight rule: stopped after one retry, delivered as documented FAIL, continued the sequence.",
+  "gates": {
+    "ball_text_clean_colour_fields": {"result": "FAIL (HARD)", "belief_conf": 0.95, "note": "'MIKASA' legible at S2 macro in both takes (evidence: E4_ball_macro.png take1, E4b_ball_macro.png take2). Fix (Philipp's call): a properly TEXT-REMOVED ball ref (the .sheet is only softened), OR positive framing that keeps the branded face away, OR a deterministic macro over a cleaned still. Cannot be fixed by a verbatim retry — the brand is in the ref identity."},
+    "cap_number_free": {"result": "PASS", "note": "S1 plain dark cap, no number."},
+    "one_hand_ball_one_ball": {"result": "PASS", "note": "single ball, held clear in one palm (S6-S8)."},
+    "G1_duration_cuts": {"result": "PASS", "note": "30.04s/721f, 6 cuts detected near stamps, 8 shots."},
+    "G4_person_S04": "PASS",
+    "G6_grade": "PASS (deep aqua, white-glare, steam/spray)",
+    "G7_final_beat_alive": "PASS (release over the glare, spray hanging)",
+    "G8_one_film": "PASS"
+  },
+  "verdict": {"status": "DOCUMENTED FAIL (ball-text) — 7 of 8 gates pass; the branded ball is a HARD fail at hero macro in both takes. Needs a text-removed ball treatment (Philipp's decision). The rest of the episode is clean and reusable.", "confidence": 0.9}
+}
