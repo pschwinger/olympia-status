@@ -345,8 +345,19 @@ def build():
         body = (f'<video controls preload="metadata" src="{fn}" style="width:100%;max-width:820px;border-radius:10px;border:1px solid var(--hair);background:#000"></video>'
                 if exists else '<p class="muted" style="font-style:italic">Awaiting the FFP final cut — edited by FFP in Premiere Pro from the unit material. This slot fills when the cut is delivered.</p>')
         slots += f'<div class="card"><b>FFP FINAL — Unit {u} · {html.escape(d["title"])}</b>{body}</div>'
+    hands_eps = [("E01","The long jumper"),("E02","The weightlifter, 1976"),("E03","The ensemble"),("E04","The water polo player"),("E05","The fencer"),("E06","The table tennis player"),("E07","The marathon swimmer"),("E08","The wrestler, 1980"),("E09","The softballer"),("E10","The archer"),("E11","The judoka — finale")]
+    hands_grid = "".join(f'<div><video controls preload="metadata" src="board/media/v/hands/{c}.mp4" style="width:100%;border-radius:8px;border:1px solid var(--hair);background:#000"></video><p style="font-size:.85rem;color:var(--steel);margin-top:4px"><b>{c}</b> · {n}</p></div>' for c,n in hands_eps)
+    hands_html = f"""
+<p class="k">THE HANDS REMEMBER — the finished series</p>
+<h2>Eleven athletes, eleven objects, one ritual each</h2>
+<p class="muted">One ~30-second film per athlete type and museum object, produced serially with a review round after every episode. The assembled cut below plays all eleven in order — from the silent stadium to the crowded hall (EDIT · 11 sources, hard cuts; a woven version with generated transitions is planned). Every episode's prompt, measurements and verdicts are on its numbered card in the working room (#104–#114).</p>
+<video controls preload="metadata" src="board/media/v/hands/CUT_A_series.mp4" style="width:100%;max-width:880px;border-radius:12px;border:1px solid var(--hair);background:#000;display:block;margin-bottom:14px"></video>
+<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px;max-width:1200px">{hands_grid}</div>
+"""
     open(f"{ROOT}/selection.html","w").write(head("FFP Finals") + f"""
 <h1>FFP finals</h1>
+{hands_html}
+<p class="k" style="margin-top:26px">The unit finals</p>
 <p class="muted">One final film per unit, cut by FFP in Premiere Pro from the material on the unit pages. These are the versions of record for presentation; everything they were cut from stays visible on the unit pages and in the working room.</p>
 {slots}""" + FOOT)
 
