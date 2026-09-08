@@ -68,7 +68,8 @@ SEC2UNIT = {"u1a":1,"ab-kling":1,"crowning":1,"cutting":1,"beat1":1,"firstflame"
 KEY2UNIT = {"a1":1,"a2":1,"s6":1,"s3":1,"t-kot":1,"t-with":1,"t-without":1,"t-real":1,
             "a3":2,"a4":2,"s2":2,"t-torch":2,"fail-1896-s3":2,
             "a5":3,"s4":3,"a6":5,"s5":4,"s1b":4,
-            "v22-run3":1,"wreath-a":1,"part2-armA":1,"part2-armB":1,"cov30":1,"night-cut":1,"campaign-v3":1}
+            "v22-run3":1,"wreath-a":1,"part2-armA":1,"part2-armB":1,"cov30":1,"night-cut":1,"campaign-v3":1,
+            "hands-e1":4,"hands-e2":4,"hands-e3":4,"hands-e5":4,"hands-e7":4,"hands-e8":4,"hands-e9":4,"hands-e10":4,"hands-e11":1}
 def unit_of(sec, sh):
     k = sh["key"]
     if k in KEY2UNIT: return KEY2UNIT[k]
@@ -82,7 +83,8 @@ KEY2ART = {"a1":["SM_RV_16"],"s6":["SM_RV_16"],"t-with":["SM_RV_16"],"t-without"
            "a2":["SM_RV_1"],"s3":["SM_RV_1"],"a3":["SM_RV_6"],"fail-1896-s3":["SM_RV_6"],
            "a4":["SM_RV_12"],"s2":["SM_RV_12"],"t-torch":["SM_RV_12"],
            "a5":["SM_RV_14"],"s4":["SM_RV_14"],"b7":["SM_RV_8"],"b2":["SM_RV_18"],"s1b":["SM_RV_18"],"t-shoes-real":["SM_RV_18"],
-           "b4":["SM_RV_13"],"s5":["SM_RV_13"]}
+           "b4":["SM_RV_13"],"s5":["SM_RV_13"],
+           "hands-e1":["SM_RV_18"],"hands-e2":["SM_RV_22"],"hands-e3":["SM_RV_8","SM_RV_7","SM_RV_11"],"hands-e5":["SM_RV_13","SM_RV_17"],"hands-e7":["SM_RV_10"],"hands-e8":["SM_RV_19"],"hands-e9":["SM_RV_20","SM_RV_21"],"hands-e10":["SM_RV_9"],"hands-e11":["SM_RV_16"]}
 def arts_of(sec, sh):
     k=sh["key"]
     if k in KEY2ART: return KEY2ART[k]
