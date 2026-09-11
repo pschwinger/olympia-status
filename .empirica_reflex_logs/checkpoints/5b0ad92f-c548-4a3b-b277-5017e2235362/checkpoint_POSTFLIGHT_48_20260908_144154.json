@@ -1,0 +1,106 @@
+{
+  "session_id": "5b0ad92f-c548-4a3b-b277-5017e2235362",
+  "phase": "POSTFLIGHT",
+  "round": 48,
+  "timestamp": "2026-09-08T14:41:48.633087+00:00",
+  "vectors": {
+    "know": 0.95,
+    "do": 0.95,
+    "context": 0.95,
+    "clarity": 0.95,
+    "coherence": 0.95,
+    "signal": 0.94,
+    "density": 0.92,
+    "state": 0.95,
+    "change": 0.03,
+    "completion": 1.0,
+    "impact": 0.7,
+    "engagement": 0.94,
+    "uncertainty": 0.05
+  },
+  "overall_confidence": 0.95,
+  "meta": {
+    "reasoning": "Menu label renamed to Final Selection across all 38 pages + generator, rebuilt, pushed.",
+    "task_summary": "Menu label renamed to Final Selection across all 38 pages + generator, rebuilt, pushed.",
+    "postflight_confidence": 0.95,
+    "internal_consistency": "good",
+    "deltas": {
+      "know": 0.0,
+      "do": 0.0,
+      "context": 0.0,
+      "clarity": 0.0,
+      "coherence": 0.0,
+      "signal": 0.0,
+      "density": 0.0,
+      "state": 0.0,
+      "change": 0.01,
+      "completion": 0.9,
+      "impact": 0.0,
+      "engagement": 0.0,
+      "uncertainty": 0.0
+    },
+    "trajectory_issues": [],
+    "transaction_id": "03ae1c4c-6f3c-4cdc-ba53-894c1387910c",
+    "tool_call_count": 1,
+    "work_type": "code",
+    "phase_tool_counts": {
+      "noetic_tool_calls": 0,
+      "praxic_tool_calls": 1
+    },
+    "avg_turns_at_start": 3,
+    "context_shifts": null,
+    "entity_context": null,
+    "tool_trace": [
+      [
+        "Bash",
+        "cd",
+        "p"
+      ]
+    ],
+    "retrospective": {
+      "artifact_counts": {
+        "findings": 0,
+        "unknowns": 0,
+        "dead_ends": 0,
+        "mistakes": 0,
+        "assumptions": 0,
+        "decisions": 0
+      },
+      "claims": {
+        "declared": 1,
+        "held": 1,
+        "refuted": 0,
+        "untested": 0,
+        "gaps": []
+      },
+      "ser_ack_check": "skipped (no canonical_seat in project.yaml)",
+      "untriaged_notes": [
+        {
+          "text": "PARKED (Philipp 12:55): E6 blade-writing improvement later - the scrawl is unreadable (acceptable now); candidate paths for better: verified-accurate reproduction per the E4 owner ruling (the real palmares rendered correctly), or a deterministic insert of the real blade. Revisit after the trailer work.",
+          "tag": "idea"
+        },
+        {
+          "text": "PARKED (Philipp 13:19): weld Arm B (the ten generated seam bridges, ~400cr, prompts approved-ready in chat 13:16) - the weaving happens another time; seeds extracted at _WELD/seam-seeds/.",
+          "tag": "idea"
+        }
+      ],
+      "untriaged_notes_hint": "2 untriaged note(s)-to-self for this project. Promote any worth keeping to a finding/decision/goal, then `empirica note --clear`."
+    },
+    "coverage": null,
+    "git_commit_sha": "ea439fafc8583f35e6e8fa01a96e972e8103ace3",
+    "git_notes_ref": "empirica/session/5b0ad92f-c548-4a3b-b277-5017e2235362/POSTFLIGHT/48"
+  },
+  "epistemic_tags": {},
+  "git_state": {
+    "head_commit": "d8f0d824c3567fa5e7ec583dbaa9c90a4099293c",
+    "commits_since_last_checkpoint": [],
+    "uncommitted_changes": {
+      "files_modified": [],
+      "files_added": [],
+      "files_deleted": [],
+      "diff_stat": ""
+    }
+  },
+  "learning_delta": {},
+  "token_count": 348
+}

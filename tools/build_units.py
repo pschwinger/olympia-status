@@ -227,7 +227,7 @@ def render_card(sec, sh, prefix="board/"):
 
 
 CARDS = {  # artifact -> (card_key, scenario caption, note)
- "SM_RV_18":("c1","long jumper lacing at the board",""), "SM_RV_23":("c2","water polo shot","NOTE: the one pair the text rule cannot close - the pair holds (same person, same scene), but the ball's printed branding resists every treatment: the model's prior for this scene summons the brand with no help from the reference, and one attempt even INVENTED a near-brand wordmark. Shown as delivered, defect declared - the strongest evidence we have that some objects need deterministic treatment."),
+ "SM_RV_18":("c1","long jumper lacing at the board",""), "SM_RV_23":("c2","water polo shot","NOTE: closed under the restored standard (owner ruling, 2026-09-11): the ball's real printing is PRESENT but unreadable at viewing scale - the brief's own below-resolvability rule, which an interim stricter rule had overridden. The earlier attempt that INVENTED a near-brand wordmark remains the hard fail the text rule exists to prevent: accuracy and legibility are separate axes."),
  "SM_RV_8":("c3","clubs crossed overhead",""), "SM_RV_19":("c4","wrestler on the mat, 1980",""),
  "SM_RV_9":("c5","archer at full draw",""), "SM_RV_17":("c6","fencer en garde (with the epee)",""),
  "SM_RV_13":("c6","fencer en garde (with the mask)",""), "SM_RV_7":("c7","gymnast framed in the hoop",""),
