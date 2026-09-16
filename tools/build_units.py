@@ -102,6 +102,7 @@ SELECTED = ["night-cut","v22-run3","part2-armA","cov30","ff-master"]
 CSS = open(f"{ROOT}/tools/site.css").read() if os.path.exists(f"{ROOT}/tools/site.css") else ""
 NAV = """<div id="olynav" style="position:sticky;top:0;z-index:999;display:flex;gap:6px;flex-wrap:wrap;align-items:center;background:#1e2418;padding:8px 14px;border-bottom:1px solid #3a4030">
 <a href="index.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;background:#54682f;color:#fff">⌂ Home</a>
+<a href="pilot-1.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;background:#3d3350;color:#efe6ff">👗 Pilot 1</a>
 <a href="units.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;color:#cfd3c0">🏛 Units</a>
 <a href="artifacts.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;color:#cfd3c0">🏺 Artifacts</a>
 <a href="selection.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;color:#cfd3c0">★ Final Selection</a>
