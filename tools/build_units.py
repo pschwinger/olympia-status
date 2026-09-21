@@ -106,6 +106,7 @@ NAV = """<div id="olynav" style="position:sticky;top:0;z-index:999;display:flex;
 <a href="units.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;color:#cfd3c0">🏛 Units</a>
 <a href="artifacts.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;color:#cfd3c0">🏺 Artifacts</a>
 <a href="selection.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;color:#cfd3c0">★ Final Selection</a>
+<a href="initial-tests.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;color:#cfd3c0">🧪 Initial tests</a>
 <a href="casestudy.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;color:#cfd3c0">🔬 Method</a>
 <a href="board/review.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;color:#cfd3c0">🗄 Working room</a>
 <span style="margin-left:auto;font:600 10px 'IBM Plex Mono',monospace;letter-spacing:.1em;color:#8b8f80">OLYMPIA · REEVALUATE</span></div>"""
@@ -368,7 +369,24 @@ def build():
 <p class="muted">One final film per unit, cut by FFP in Premiere Pro from the material on the unit pages. These are the versions of record for presentation; everything they were cut from stays visible on the unit pages and in the working room.</p>
 {slots}""" + FOOT)
 
-    print(f"built: 5 unit pages ({sum(len(v) for v in by_unit.values())} unit-mapped cards), {len(by_art)} artifact pages, units/artifacts/selection indexes")
+    tests_html = """
+<h1>Initial tests</h1>
+<p class="muted">Where this started. These are early integration tests, kept unedited as a baseline against which the current work can be read. They predate the claim ledger, so nothing in them is a sourced historical assertion; they were made to answer a narrower question, which is whether digitised museum objects could carry a finished-looking frame at all.</p>
+
+<p class="k">TEST 1 · EXPORTED 28 JUNE 2025 · 1 MIN 34 SEC</p>
+<h2>Reevaluate Tests V2 &mdash; FFP Productions</h2>
+<p class="muted">Titled on screen as <i>integration examples 16:9 &amp; 9:16 of digitalized elements in Advertising or Social Media</i>. It opens on an <b>Original Elements</b> board showing the source objects side by side: a marble relief of a youth, an olive wreath, a small Herakles statuette photographed on a windowsill, and both faces of a bronze George I medal. The rest of the reel places those elements into finished compositions; the athlete raising a wreath beside a column, the same figure in a ruined colonnade at golden hour, the medal in close-up, and the statuette shot against a window.</p>
+
+<video controls preload="metadata" src="board/media/v/initial-tests/initial-test-01_v12_2025-06-28.mp4" style="width:100%;max-width:960px;border-radius:12px;border:1px solid var(--hair);background:#000;display:block;margin:14px 0"></video>
+
+<div class="musdoc">
+<p style="margin:0 0 8px"><b>How to read this against the current work.</b> Several of these objects are still in the registry; the George I medal is <b>SM_RV_1</b>, and it carries a correction of its own on its artifact page. What changed in the fifteen months since is not the rendering. It is that every frame now states what it claims, on whose authority, and what the record does not say. These tests make no such claims, which is the honest reason they sit in their own section rather than beside the finals.</p>
+<p style="margin:0"><b>Provenance.</b> Source file <code>export28.6.25_v12_tests reevaluate.mp4</code>, dated 28 June 2025, produced by FFP Productions. Re-encoded for web delivery at 1280&times;720, from 101 MB to 18 MB; the runtime is unchanged at 93.96 seconds and no frame was cut. The original is held outside this repository.</p>
+</div>
+"""
+    open(f"{ROOT}/initial-tests.html","w").write(head("Initial tests") + tests_html + FOOT)
+
+    print(f"built: 5 unit pages ({sum(len(v) for v in by_unit.values())} unit-mapped cards), {len(by_art)} artifact pages, units/artifacts/selection indexes, initial-tests")
 
 if __name__ == "__main__":
     build()
