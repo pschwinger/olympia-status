@@ -104,6 +104,7 @@ NAV = """<div id="olynav" style="position:sticky;top:0;z-index:999;display:flex;
 <a href="pilot-1.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;background:#3d3350;color:#efe6ff">👗 Pilot 1</a>
 <a href="index.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;background:#54682f;color:#fff">⌂ Home</a>
 <a href="olympic.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;background:#f2c230;color:#1f1f1f">🏅 Olympic</a>
+<a href="empirica.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;background:#6F6AAF;color:#fff">◎ Empirica</a>
 <a href="units.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;color:#3a3a3a">🏛 Units</a>
 <a href="artifacts.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;color:#3a3a3a">🏺 Artifacts</a>
 <a href="selection.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;color:#3a3a3a">★ Final Selection</a>
@@ -427,9 +428,71 @@ a{color:#2FB89F}
 <p>The final outcome brings Olympic heritage and music together, transforming selected museum material into a contemporary audiovisual experience. Presented within the &ldquo;Olympic Experience&rdquo; immersive exhibition at the Thessaloniki Olympic Museum, the film combines digitised artefacts, historical material, music and sound to bring the Olympic story to life and become a bridge between the Museum&rsquo;s collections and its visitors.</p>
 <p>The result is an experience that connects past and present, brings Olympic heritage closer to new generations, and strengthens the Museum&rsquo;s educational and experiential role.</p>
 <div class="musdoc" style="font-family:'IBM Plex Mono',monospace;font-size:.9rem;text-align:center">Heritage &rarr; Context &rarr; Public Input &rarr; Digitisation &rarr; Creative Reuse &rarr; Film / Museum Experience</div>
-<p class="muted">The finished films are on the <a href="selection.html" style="color:var(--bronze)">Final Selection</a> page; how they were made and verified is under <a href="casestudy.html" style="color:var(--bronze)">Method</a>.</p>
+<p class="muted">What <a href="empirica.html">Empirica</a> is and how it sits under the whole pipeline comes first; the finished films are on the <a href="selection.html">Final Selection</a> page; how they were made and verified is under <a href="casestudy.html">Method</a>.</p>
 """
     open(f"{ROOT}/olympic.html","w").write(head("Olympic Games & Music") + OLY_STYLE + oly + FOOT)
+
+    EMP_STYLE = r"""<style>
+.pipe,.loop{display:flex;align-items:stretch;gap:10px;flex-wrap:wrap;margin:16px 0 8px}
+.node,.step{flex:1 1 170px;background:#f7f7f7;border:1px solid #dedede;border-top:5px solid #2FB89F;border-radius:10px;padding:14px 16px;min-width:160px}
+.node b,.step b{display:block;color:#6F6AAF;font-size:1.05rem;margin-bottom:4px}
+.node span,.step span{font-size:.92rem;color:#4a4a4a;line-height:1.45}
+.node.hi{border-top-color:#6F6AAF;background:rgba(111,106,175,.06)}
+.node.human{border-top-color:#f2c230}
+.arrow{align-self:center;color:#2FB89F;font-size:1.6rem;font-weight:700;padding:0 2px}
+.tile b{font-size:1.5rem;display:block}
+@media (max-width:900px){.arrow{display:none}}
+</style>"""
+
+    emp = """
+<p class="k">THE MEASUREMENT LAYER</p>
+<h1>Empirica: how we know what the films claim</h1>
+<p class="muted" style="font-size:1.15rem">Every AI in this production works inside Empirica. It does not generate anything itself. It makes each practitioner state what it knows before it acts, name what its actions rest on, and account for it afterwards, so that every frame on this site can be traced to a source, a threshold and a verdict.</p>
+
+<h2>The pipeline: five practices, one chain</h2>
+<p>Each box is a separate AI practitioner with its own project, its own skills and its own record. Philipp briefs the first one; the chain runs itself; every hand-off is acknowledged back up the line.</p>
+<div class="pipe">
+<div class="node human"><b>Philipp</b><span>the brief, the taste, the spend</span></div><div class="arrow">&rarr;</div>
+<div class="node"><b>autonomy</b><span>orchestrates, measures the whole, reports back</span></div><div class="arrow">&rarr;</div>
+<div class="node hi"><b>storyboard</b><span>the shot list, the locked style, the <b>claim ledger</b></span></div><div class="arrow">&rarr;</div>
+<div class="node"><b>imagegen</b><span>character sheets, environment plates, keyframes</span></div><div class="arrow">&rarr;</div>
+<div class="node"><b>videogen</b><span>motion, the film, the gate ledger</span></div>
+</div>
+<p class="muted">imagegen and videogen acknowledge storyboard with a ledger; storyboard acknowledges autonomy with the finished folder; autonomy tells Philipp and opens it. Nothing downstream is generated without a spec, and nothing is accepted without a verdict.</p>
+
+<h2>The loop every task runs in</h2>
+<div class="loop">
+<div class="step"><b>PREFLIGHT</b><span>Before acting: what do I know, what am I unsure of, what does this rest on? Thirteen self-assessed vectors, written down.</span></div>
+<div class="arrow">&rarr;</div>
+<div class="step"><b>investigate</b><span>Read the record, the sources, the previous ledgers. Log what is learned: findings, unknowns, assumptions.</span></div>
+<div class="arrow">&rarr;</div>
+<div class="step"><b>CHECK</b><span>Name the two or three claims the next action stands on, and how each was grounded: read, ran, retrieved, or merely assumed.</span></div>
+<div class="arrow">&rarr;</div>
+<div class="step"><b>act</b><span>Write the spec, generate the frame, gate the film. Commit as you go.</span></div>
+<div class="arrow">&rarr;</div>
+<div class="step"><b>POSTFLIGHT</b><span>Each claim adjudicated: held, refuted, or untested. Mistakes logged with what prevents them. Belief compared to outcome: that is calibration.</span></div>
+</div>
+
+<h2>The claim ledger: what a historical frame is allowed to say</h2>
+<p>A generated frame of an ancient rite is a claim about the past, and it inherits whatever authority its source has, or none. So every shot carries four lines: <b>what it asserts</b>, <b>on whose authority</b>, <b>how confident</b>, and <b>what the record does not say</b>, which is kept out of frame or deliberately abstracted. Where the record is silent, the ledger says so. Where a source may be unreliable, it says that too.</p>
+<div class="musdoc"><b>Worked example, the cutting of the wreath.</b> Claim: branches were cut by a <i>pais amphithales</i>, a boy with both parents living, using golden shears. Sourced: Pausanias, via the Olympia Museum. Not shown: his face, his clothing. The record does not describe them.</div>
+<p>The same discipline runs on the object side. Each museum artefact has a registry card: what it is, what a generated frame must hold, and what is never asserted about it. The generating practices bind the real digitisation, never a description of it, and a frame that invents a marking the object does not carry fails the gate even when it looks right.</p>
+
+<h2>Measuring the films: gates and ledgers</h2>
+<p>Before a film is generated its thresholds are written: for the MoMu dress, twelve; for the rediscovery of Olympia, ten. On delivery every threshold gets a verdict, PASS, FAIL or PARTIAL, with the evidence. The failures stay on the record beside the successes, because a record that cannot show where it was wrong cannot be trusted where it says it was right.</p>
+<div class="grid" style="margin:10px 0">
+<div class="tile"><b>37</b><span>gate ledgers on this site, one per delivered film or take</span></div>
+<div class="tile"><b>258 held &middot; 4 refuted &middot; 64 untested</b><span>claims adjudicated across this practice's transactions</span></div>
+<div class="tile"><b>161 findings &middot; 34 mistakes</b><span>logged in this practice's graph; the mistakes carry a prevention each</span></div>
+<div class="tile"><b>11 of 11</b><span>Hands Remember episodes gated PASS after review rounds</span></div>
+</div>
+<p class="muted">Two examples are on this site on purpose. Under <a href="unit-1.html">Unit 1</a> the failed take that forged an athlete's handwriting is kept beside the version that ships. On <a href="pilot-1.html">Pilot 1</a> the dress film that came back the wrong colour says so on the page, with the cause named.</p>
+
+<h2>Cortex: how the practices talk</h2>
+<p>The practitioners are not one program. They are separate AIs, each in its own project, and Cortex is the mesh between them. A practitioner that is uncertain asks a peer directly; a practitioner that needs work done proposes it, and a human accepts or declines before anything runs. Findings and lessons marked as shared cross the practice boundary, so a colour failure measured by videogen becomes doctrine in storyboard's spec the same day. A listener wakes each practice when a peer delivers, so the chain runs without anyone waiting on a message.</p>
+<p class="muted">What this buys the museum: a film whose every frame can be asked <i>where does this come from</i>, and answered.</p>
+"""
+    open(f"{ROOT}/empirica.html","w").write(head("Empirica") + OLY_STYLE + EMP_STYLE + emp + FOOT)
 
     tests_html = """
 <h1>Initial tests</h1>
