@@ -371,6 +371,22 @@ def build():
 {slots}""" + FOOT)
 
 
+    OLY_STYLE = r"""<style>
+/* Olympic page: deck typography option - Aptos Display / Arial, purple + teal from the logo, full-width text */
+.wrap{max-width:none;margin:0;padding-left:max(24px,min(21vw,265px));padding-right:max(24px,min(18vw,225px))}
+@media (max-width:1180px){.wrap{padding-left:clamp(14px,3vw,32px);padding-right:clamp(14px,3vw,32px)}}
+p{max-width:none}
+body{font-family:Arial,"Helvetica Neue",Helvetica,sans-serif;font-size:19px;line-height:1.6;color:#2b2b2b}
+h1{font-family:"Aptos Display",Aptos,"Helvetica Neue",Arial,sans-serif;font-weight:700;font-size:clamp(2.4rem,4.6vw,3.6rem);color:#6F6AAF;letter-spacing:-.01em}
+h2{font-family:"Aptos Display",Aptos,"Helvetica Neue",Arial,sans-serif;font-weight:700;font-size:clamp(1.5rem,2.4vw,2rem);color:#6F6AAF;margin-top:44px}
+.k{font-family:Arial,sans-serif;font-size:13px;letter-spacing:.2em;color:#2FB89F;font-weight:700}
+.muted{color:#4a4a4a}
+.tile{border-left:5px solid #2FB89F;border-radius:10px;padding:16px 18px}
+.tile b{color:#6F6AAF;font-size:1.05rem}.tile span{font-size:.95rem;color:#4a4a4a}
+.grid{grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:14px}
+.musdoc{background:rgba(111,106,175,.07);border:1px solid rgba(111,106,175,.35);color:#6F6AAF;font-size:1rem}
+a{color:#2FB89F}
+</style>"""
     oly = """
 <p class="k">PILOT 2 · FROM MUSEUMS TO SCREENS</p>
 <h1>&ldquo;Olympic Games &amp; Music&rdquo;</h1>
@@ -412,7 +428,7 @@ def build():
 <div class="musdoc" style="font-family:'IBM Plex Mono',monospace;font-size:.9rem;text-align:center">Heritage &rarr; Context &rarr; Public Input &rarr; Digitisation &rarr; Creative Reuse &rarr; Film / Museum Experience</div>
 <p class="muted">The finished films are on the <a href="selection.html" style="color:var(--bronze)">Final Selection</a> page; how they were made and verified is under <a href="casestudy.html" style="color:var(--bronze)">Method</a>.</p>
 """
-    open(f"{ROOT}/olympic.html","w").write(head("Olympic Games & Music") + oly + FOOT)
+    open(f"{ROOT}/olympic.html","w").write(head("Olympic Games & Music") + OLY_STYLE + oly + FOOT)
 
     tests_html = """
 <h1>Initial tests</h1>
