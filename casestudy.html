@@ -52,10 +52,10 @@ td b{color:var(--ink)}
 .tbtn{font-family:"Archivo";font-size:.9rem;font-weight:600;padding:6px 16px;border:1px solid var(--hair);border-radius:8px;background:var(--surface);color:var(--steel);cursor:pointer}
 .tbtn.on{background:var(--olive);border-color:var(--olive);color:#fff}
 .pass{color:var(--good);font-weight:700}.fail{color:var(--flame);font-weight:700}.pend{color:var(--muted);font-style:italic}
-.vbars{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;margin-top:12px}
-.vb{background:var(--surface);border:1px solid var(--hair);border-radius:8px;padding:8px 10px;font-size:.8rem;color:var(--muted)}
-.vb b{display:block;color:var(--ink);font-family:"IBM Plex Mono",monospace;font-size:.95rem}
-.bar{height:4px;background:var(--surface-2);border-radius:2px;margin-top:5px}.bar i{display:block;height:4px;border-radius:2px;background:var(--olive)}
+.vbars{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin-top:12px}@media (max-width:900px){.vbars{grid-template-columns:repeat(3,1fr)}}
+.vb{background:var(--surface);border:1px solid var(--hair);border-radius:8px;padding:10px 12px;font-size:.8rem;color:var(--muted);display:flex;flex-direction:column;min-height:82px}.vb .scale{margin-top:auto}
+.vb b{display:block;color:var(--ink);font-family:"IBM Plex Mono",monospace;font-size:.9rem;white-space:nowrap}
+.vb .scale{display:flex;align-items:center;gap:6px;margin-top:6px;font-family:"IBM Plex Mono",monospace;font-size:.75rem;color:#6f6f6f}.bar{flex:1;height:12px;background:#e9e9e9;border:1px solid #d6d6d6;border-radius:6px;position:relative;overflow:hidden}.bar i{display:block;height:100%;border-radius:6px;background:#2FB89F}
 .callout{background:var(--surface);border:1px solid var(--hair);border-left:4px solid var(--bronze);border-radius:12px;padding:18px 22px;margin-top:16px;box-shadow:var(--shadow)}
 .status{background:var(--surface);border:1px solid var(--hair);border-left:4px solid var(--warn);border-radius:12px;padding:14px 20px;margin-top:20px;font-size:.95rem;color:var(--steel)}
 .foot{margin-top:70px;padding-top:16px;border-top:1px solid var(--hair);font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--muted)}
@@ -159,13 +159,14 @@ v2.2: Behind them labourers dressed as @Image2 keep moving: picks rise and fall,
 <h2>What the practitioner believed, on the record</h2>
 <p>Empirica opens every piece of work with a self-assessment (0 to 1) that is stored <i>before</i> the outcome is known. These are the actual numbers from this run's opening measurement — they cannot be edited after the fact:</p>
 <div class="vbars">
-<div class="vb"><b>know 0.85</b>domain understanding<div class="bar"><i style="width:85%"></i></div></div>
-<div class="vb"><b>do 0.88</b>ability to execute<div class="bar"><i style="width:88%"></i></div></div>
-<div class="vb"><b>context 0.88</b>surrounding state<div class="bar"><i style="width:88%"></i></div></div>
-<div class="vb"><b>clarity 0.85</b>path forward<div class="bar"><i style="width:85%"></i></div></div>
-<div class="vb"><b>signal 0.87</b>information quality<div class="bar"><i style="width:87%"></i></div></div>
-<div class="vb"><b>uncertainty 0.25</b>what is NOT known<div class="bar"><i style="width:25%"></i></div></div>
+<div class="vb"><b>know 0.85</b>domain understanding<div class="scale"><span>0</span><div class="bar"><i style="width:85%"></i></div><span>1</span></div></div>
+<div class="vb"><b>do 0.88</b>ability to execute<div class="scale"><span>0</span><div class="bar"><i style="width:88%"></i></div><span>1</span></div></div>
+<div class="vb"><b>context 0.88</b>surrounding state<div class="scale"><span>0</span><div class="bar"><i style="width:88%"></i></div><span>1</span></div></div>
+<div class="vb"><b>clarity 0.85</b>path forward<div class="scale"><span>0</span><div class="bar"><i style="width:85%"></i></div><span>1</span></div></div>
+<div class="vb"><b>signal 0.87</b>information quality<div class="scale"><span>0</span><div class="bar"><i style="width:87%"></i></div><span>1</span></div></div>
+<div class="vb"><b>uncertainty 0.25</b>what is NOT known<div class="scale"><span>0</span><div class="bar"><i style="width:25%"></i></div><span>1</span></div></div>
 </div>
+<p style="font-size:.85rem;color:var(--muted);margin-top:8px">Each bar runs from <b>0</b> (none) to <b>1</b> (complete). The green fill is the practitioner&rsquo;s own estimate, written before the run. For <i>uncertainty</i> the scale is inverted: a longer bar means <i>more</i> is unknown.</p>
 <p style="margin-top:14px">And a written prediction per quality gate — the honest odds, stated before spending:</p>
 <table id="gates">
 <tr><th>#</th><th>Gate (measured against the prompt)</th><th>Predicted</th><th>Run 1</th><th>Run 2</th><th>Run 3 (v2.2)</th></tr>
