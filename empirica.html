@@ -80,35 +80,70 @@ a{color:#2FB89F}
 .tile b{font-size:1.5rem;display:block}
 @media (max-width:900px){.arrow{display:none}}
 </style>
-<p class="k">THE MEASUREMENT LAYER</p>
-<h1>Empirica: how we know what the films claim</h1>
-<p class="muted" style="font-size:1.15rem">Every AI in this production works inside Empirica. It does not generate anything itself. It makes each practitioner state what it knows before it acts, name what its actions rest on, and account for it afterwards, so that every frame on this site can be traced to a source, a threshold and a verdict.</p>
+<p class="k">THE GUIDANCE SYSTEM</p>
+<h1>Empirica</h1>
+<p class="muted" style="font-size:1.15rem">In our production pipeline we use a guidance system for AI called Empirica. It makes every practitioner say what it knows, what it assumes, and what it checked, before a single frame is made.</p>
 
 <h2>Three things working together</h2>
-<p>Most tools give you one of these. This production runs on all three, joined up, so what one practitioner learns the next one can use.</p>
-<div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr));margin:10px 0">
-<div class="tile" style="border-left-color:#2FB89F"><b>Empirica &middot; the way of working</b><span>A careful method. The practitioner is honest about what it actually knows: it says when it <b>checked</b> something and when it is only <b>assuming</b>; it will not call a job done unless it really is; if it is unsure it says so, in writing, and never quietly fills the gap with a guess.</span></div>
-<div class="tile" style="border-left-color:#6F6AAF"><b>Cortex &middot; the shared memory</b><span>Where everything is kept and shared between the practices: decisions, findings, open questions, the messages and files that move between storyboard, imagegen and videogen. Not documents you open; a memory the whole chain works from.</span></div>
-<div class="tile" style="border-left-color:#f2c230"><b>Claude &middot; the practitioner</b><span>The part you talk to, steered in plain language. Each practice is its own seat with its own skills. It forgets each conversation, which is exactly why the shared memory exists.</span></div>
+<svg viewBox="0 0 900 330" role="img" aria-label="Three overlapping circles: Empirica, Cortex, Claude" style="max-width:820px;display:block;margin:6px auto 0">
+<g font-family="Arial,Helvetica,sans-serif">
+<circle cx="330" cy="130" r="112" fill="#2FB89F" fill-opacity=".18" stroke="#2FB89F" stroke-width="2.5"/>
+<circle cx="570" cy="130" r="112" fill="#6F6AAF" fill-opacity=".18" stroke="#6F6AAF" stroke-width="2.5"/>
+<circle cx="450" cy="230" r="112" fill="#f2c230" fill-opacity=".22" stroke="#f2c230" stroke-width="2.5"/>
+<text x="270" y="118" font-size="26" font-weight="700" fill="#1f8a76">Empirica</text>
+<text x="255" y="146" font-size="14" fill="#2b2b2b">the way of working</text>
+<text x="548" y="118" font-size="26" font-weight="700" fill="#6F6AAF">Cortex</text>
+<text x="535" y="146" font-size="14" fill="#2b2b2b">the shared memory</text>
+<text x="410" y="262" font-size="26" font-weight="700" fill="#a8790a">Claude</text>
+<text x="392" y="290" font-size="14" fill="#2b2b2b">the practitioner</text>
+<text x="450" y="176" font-size="13" font-weight="700" fill="#2b2b2b" text-anchor="middle">one production</text>
+</g></svg>
+<div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin:6px 0 0">
+<div class="tile" style="border-left-color:#2FB89F"><b>Empirica</b><span>says <b>checked</b> or <b>assumed</b>, never guesses quietly</span></div>
+<div class="tile" style="border-left-color:#6F6AAF"><b>Cortex</b><span>decisions, findings, messages, shared across all practices</span></div>
+<div class="tile" style="border-left-color:#f2c230"><b>Claude</b><span>one seat per practice, steered in plain language</span></div>
 </div>
-<div class="loop" style="margin-top:18px">
-<div class="step" style="border-top-color:#f2c230"><b>1 &middot; You start</b><span>Philipp briefs a scene. The tools and the record are already there.</span></div><div class="arrow">&rarr;</div>
-<div class="step"><b>2 &middot; It checks</b><span>Before acting it reads what is known: the sources, the registry card, the last ledger.</span></div><div class="arrow">&rarr;</div>
-<div class="step" style="border-top-color:#6F6AAF"><b>3 &middot; It works</b><span>The spec, the frames, the film, the gate.</span></div><div class="arrow">&rarr;</div>
-<div class="step"><b>4 &middot; It keeps</b><span>What was learned, what failed and why, so the next scene starts better.</span></div>
-</div>
-<p class="muted">The point is not any single step. It is the circle: what one practice learns, the next can find.</p>
 
-<h2>The pipeline: five practices, one chain</h2>
-<p>Each box is a separate AI practitioner with its own project, its own skills and its own record. Philipp briefs the first one; the chain runs itself; every hand-off is acknowledged back up the line.</p>
-<div class="pipe">
-<div class="node human"><b>Philipp</b><span>the brief, the taste, the spend</span></div><div class="arrow">&rarr;</div>
-<div class="node"><b>autonomy</b><span>orchestrates, measures the whole, reports back</span></div><div class="arrow">&rarr;</div>
-<div class="node hi"><b>storyboard</b><span>the shot list, the locked style, the <b>claim ledger</b></span></div><div class="arrow">&rarr;</div>
-<div class="node"><b>imagegen</b><span>character sheets, environment plates, keyframes</span></div><div class="arrow">&rarr;</div>
-<div class="node"><b>videogen</b><span>motion, the film, the gate ledger</span></div>
-</div>
-<p class="muted">imagegen and videogen acknowledge storyboard with a ledger; storyboard acknowledges autonomy with the finished folder; autonomy tells Philipp and opens it. Nothing downstream is generated without a spec, and nothing is accepted without a verdict.</p>
+<h2>The circle</h2>
+<svg viewBox="0 0 900 360" role="img" aria-label="Four steps in a circle: you start, it checks, it works, it keeps" style="max-width:820px;display:block;margin:6px auto 0">
+<defs><marker id="ah" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#2FB89F"/></marker></defs>
+<g font-family="Arial,Helvetica,sans-serif">
+<path d="M450,60 A120,120 0 0 1 570,180" fill="none" stroke="#2FB89F" stroke-width="3" marker-end="url(#ah)"/>
+<path d="M570,180 A120,120 0 0 1 450,300" fill="none" stroke="#2FB89F" stroke-width="3" marker-end="url(#ah)"/>
+<path d="M450,300 A120,120 0 0 1 330,180" fill="none" stroke="#2FB89F" stroke-width="3" marker-end="url(#ah)"/>
+<path d="M330,180 A120,120 0 0 1 450,60" fill="none" stroke="#2FB89F" stroke-width="3" marker-end="url(#ah)"/>
+<g><rect x="360" y="22" width="180" height="58" rx="10" fill="#fff" stroke="#f2c230" stroke-width="3"/><text x="450" y="46" font-size="15" font-weight="700" fill="#a8790a" text-anchor="middle">1 · YOU START</text><text x="450" y="67" font-size="13" fill="#2b2b2b" text-anchor="middle">Philipp briefs a scene</text></g>
+<g><rect x="600" y="151" width="200" height="58" rx="10" fill="#fff" stroke="#2FB89F" stroke-width="3"/><text x="700" y="175" font-size="15" font-weight="700" fill="#1f8a76" text-anchor="middle">2 · IT CHECKS</text><text x="700" y="196" font-size="13" fill="#2b2b2b" text-anchor="middle">sources, registry, last ledger</text></g>
+<g><rect x="360" y="280" width="180" height="58" rx="10" fill="#fff" stroke="#6F6AAF" stroke-width="3"/><text x="450" y="304" font-size="15" font-weight="700" fill="#6F6AAF" text-anchor="middle">3 · IT WORKS</text><text x="450" y="325" font-size="13" fill="#2b2b2b" text-anchor="middle">spec, frames, film, gate</text></g>
+<g><rect x="100" y="151" width="200" height="58" rx="10" fill="#fff" stroke="#2FB89F" stroke-width="3"/><text x="200" y="175" font-size="15" font-weight="700" fill="#1f8a76" text-anchor="middle">4 · IT KEEPS</text><text x="200" y="196" font-size="13" fill="#2b2b2b" text-anchor="middle">what failed and why</text></g>
+<text x="450" y="186" font-size="14" font-weight="700" fill="#6F6AAF" text-anchor="middle">what one practice learns,</text>
+<text x="450" y="206" font-size="14" font-weight="700" fill="#6F6AAF" text-anchor="middle">the next can find</text>
+</g></svg>
+
+<h2>The pipeline</h2>
+<svg viewBox="0 0 1000 330" role="img" aria-label="Pipeline: Philipp to autonomy to storyboard to imagegen to videogen, acknowledgements returning, Cortex and Empirica as layers beneath" style="max-width:1000px;display:block;margin:6px auto 0">
+<defs><marker id="af" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#2b2b2b"/></marker><marker id="ab" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#6F6AAF"/></marker></defs>
+<g font-family="Arial,Helvetica,sans-serif">
+<g><rect x="15" y="40" width="170" height="74" rx="10" fill="#fff" stroke="#f2c230" stroke-width="3"/><text x="100" y="70" font-size="18" font-weight="700" fill="#a8790a" text-anchor="middle">Philipp</text><text x="100" y="94" font-size="12.5" fill="#2b2b2b" text-anchor="middle">brief · taste · spend</text></g>
+<g><rect x="215" y="40" width="170" height="74" rx="10" fill="#fff" stroke="#2FB89F" stroke-width="3"/><text x="300" y="70" font-size="18" font-weight="700" fill="#1f8a76" text-anchor="middle">autonomy</text><text x="300" y="94" font-size="12.5" fill="#2b2b2b" text-anchor="middle">orchestrates · measures</text></g>
+<g><rect x="415" y="40" width="170" height="74" rx="10" fill="#f3f1fa" stroke="#6F6AAF" stroke-width="3"/><text x="500" y="70" font-size="18" font-weight="700" fill="#6F6AAF" text-anchor="middle">storyboard</text><text x="500" y="94" font-size="12.5" fill="#2b2b2b" text-anchor="middle">shot list · claim ledger</text></g>
+<g><rect x="615" y="40" width="170" height="74" rx="10" fill="#fff" stroke="#2FB89F" stroke-width="3"/><text x="700" y="70" font-size="18" font-weight="700" fill="#1f8a76" text-anchor="middle">imagegen</text><text x="700" y="94" font-size="12.5" fill="#2b2b2b" text-anchor="middle">sheets · plates · keyframes</text></g>
+<g><rect x="815" y="40" width="170" height="74" rx="10" fill="#fff" stroke="#2FB89F" stroke-width="3"/><text x="900" y="70" font-size="18" font-weight="700" fill="#1f8a76" text-anchor="middle">videogen</text><text x="900" y="94" font-size="12.5" fill="#2b2b2b" text-anchor="middle">film · gate ledger</text></g>
+<path d="M187,77 L211,77" stroke="#2b2b2b" stroke-width="2.5" marker-end="url(#af)"/>
+<path d="M387,77 L411,77" stroke="#2b2b2b" stroke-width="2.5" marker-end="url(#af)"/>
+<path d="M587,77 L611,77" stroke="#2b2b2b" stroke-width="2.5" marker-end="url(#af)"/>
+<path d="M787,77 L811,77" stroke="#2b2b2b" stroke-width="2.5" marker-end="url(#af)"/>
+<path d="M900,116 L900,150 L500,150 L500,118" fill="none" stroke="#6F6AAF" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#ab)"/>
+<path d="M700,116 L700,140 L520,140 L520,118" fill="none" stroke="#6F6AAF" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#ab)"/>
+<path d="M480,116 L480,160 L300,160 L300,118" fill="none" stroke="#6F6AAF" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#ab)"/>
+<path d="M280,116 L280,170 L100,170 L100,118" fill="none" stroke="#6F6AAF" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#ab)"/>
+<text x="600" y="188" font-size="12.5" fill="#6F6AAF" text-anchor="middle">acknowledgements, each with a ledger</text>
+<rect x="15" y="210" width="970" height="44" rx="8" fill="#6F6AAF" fill-opacity=".12" stroke="#6F6AAF" stroke-width="2"/>
+<text x="500" y="238" font-size="15" font-weight="700" fill="#6F6AAF" text-anchor="middle">CORTEX · the shared memory and the messages between the practices</text>
+<rect x="15" y="266" width="970" height="44" rx="8" fill="#2FB89F" fill-opacity=".12" stroke="#2FB89F" stroke-width="2"/>
+<text x="500" y="294" font-size="15" font-weight="700" fill="#1f8a76" text-anchor="middle">EMPIRICA · the way of working under every seat</text>
+</g></svg>
+<p class="muted">Nothing downstream is generated without a spec. Nothing is accepted without a verdict.</p>
 
 <h2>The loop every task runs in</h2>
 <div class="loop">
