@@ -511,7 +511,7 @@ a{color:#2FB89F}
 
 <h2>How it sits under this production</h2>
 <h2>The pipeline</h2>
-<svg viewBox="0 0 1000 330" role="img" aria-label="Pipeline: producer to autonomy to storyboard to imagegen to videogen, acknowledgements returning, Cortex and Empirica as layers beneath" style="max-width:1000px;display:block;margin:6px auto 0">
+<svg viewBox="0 -12 1000 342" role="img" aria-label="Pipeline: producer to autonomy to storyboard to imagegen to videogen, acknowledgements returning, Cortex and Empirica as layers beneath" style="max-width:1000px;display:block;margin:6px auto 0">
 <defs><marker id="af" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#2b2b2b"/></marker><marker id="ab" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#6F6AAF"/></marker></defs>
 <g font-family="Arial,Helvetica,sans-serif">
 <g><rect x="15" y="40" width="170" height="74" rx="10" fill="#fff" stroke="#f2c230" stroke-width="3"/><text x="100" y="70" font-size="18" font-weight="700" fill="#a8790a" text-anchor="middle">producer</text><text x="100" y="94" font-size="12.5" fill="#2b2b2b" text-anchor="middle">the brief, the taste, the spend</text></g>
@@ -519,6 +519,7 @@ a{color:#2FB89F}
 <g><rect x="415" y="40" width="170" height="74" rx="10" fill="#f3f1fa" stroke="#6F6AAF" stroke-width="3"/><text x="500" y="70" font-size="18" font-weight="700" fill="#6F6AAF" text-anchor="middle">storyboard</text><text x="500" y="94" font-size="12.5" fill="#2b2b2b" text-anchor="middle">shot list · claim ledger</text></g>
 <g><rect x="615" y="40" width="170" height="74" rx="10" fill="#fff" stroke="#2FB89F" stroke-width="3"/><text x="700" y="70" font-size="18" font-weight="700" fill="#1f8a76" text-anchor="middle">imagegen</text><text x="700" y="94" font-size="12.5" fill="#2b2b2b" text-anchor="middle">sheets · plates · keyframes</text></g>
 <g><rect x="815" y="40" width="170" height="74" rx="10" fill="#fff" stroke="#2FB89F" stroke-width="3"/><text x="900" y="70" font-size="18" font-weight="700" fill="#1f8a76" text-anchor="middle">videogen</text><text x="900" y="94" font-size="12.5" fill="#2b2b2b" text-anchor="middle">film · gate ledger</text></g>
+<path d="M540,38 L540,14 L900,14 L900,36" fill="none" stroke="#2b2b2b" stroke-width="2.5" marker-end="url(#af)"/><text x="720" y="10" font-size="11.5" fill="#2b2b2b" text-anchor="middle">storyboard dispatches videogen with the keyframes</text>
 <path d="M187,77 L211,77" stroke="#2b2b2b" stroke-width="2.5" marker-end="url(#af)"/>
 <path d="M387,77 L411,77" stroke="#2b2b2b" stroke-width="2.5" marker-end="url(#af)"/>
 <path d="M587,77 L611,77" stroke="#2b2b2b" stroke-width="2.5" marker-end="url(#af)"/>
