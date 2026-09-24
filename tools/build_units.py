@@ -105,11 +105,11 @@ NAV = """<div id="olynav" style="position:sticky;top:0;z-index:999;display:flex;
 <a href="index.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;background:#54682f;color:#fff">⌂ Home</a>
 <a href="olympic.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;background:#f2c230;color:#1f1f1f">🏅 Olympic</a>
 <a href="empirica.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;background:#6F6AAF;color:#fff">◎ Empirica</a>
+<a href="casestudy.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;background:#2FB89F;color:#fff">🔬 Method</a>
 <a href="units.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;color:#3a3a3a">🏛 Units</a>
 <a href="artifacts.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;color:#3a3a3a">🏺 Artifacts</a>
 <a href="selection.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;color:#3a3a3a">★ Final Selection</a>
 <a href="initial-tests.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;color:#3a3a3a">🧪 Initial tests</a>
-<a href="casestudy.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;color:#3a3a3a">🔬 Method</a>
 <a href="board/review.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;color:#3a3a3a">🗄 Working room</a>
 <span style="margin-left:auto;display:flex;align-items:center;gap:10px"><span style="font:600 10px 'IBM Plex Mono',monospace;letter-spacing:.1em;color:#7a7a7a">OLYMPIA · REEVALUATE</span><img src="board/media/brand/reevaluate-logo.png" alt="REEVALUATE" style="height:38px;width:auto"></span></div><style>body{position:relative}.wrap{position:relative;z-index:1}body::before{content:"";position:fixed;left:0;top:52px;width:min(20vw,250px);height:calc(100vh - 52px);background:url(board/media/brand/circuit-left.png) no-repeat left top/contain;pointer-events:none;z-index:0}body::after{content:"";position:fixed;right:0;bottom:0;width:min(17vw,210px);height:100vh;background:url(board/media/brand/circuit-right.png) no-repeat left top/contain;transform:rotate(180deg);pointer-events:none;z-index:0}@media (max-width:1180px){body::before,body::after{display:none}}</style>"""
 
@@ -550,11 +550,6 @@ a{color:#2FB89F}
 <p>The practitioners are not one program. They are separate AIs, each in its own project, and Cortex is the mesh between them. A practitioner that is uncertain asks a peer directly; a practitioner that needs work done proposes it, and a human accepts or declines before anything runs. Findings and lessons marked as shared cross the practice boundary, so a colour failure measured by videogen becomes doctrine in storyboard's spec the same day. A listener wakes each practice when a peer delivers, so the chain runs without anyone waiting on a message.</p>
 <p class="muted">What this buys the museum: a film whose every frame can be asked <i>where does this come from</i>, and answered.</p>
 <div class="musdoc" style="margin-top:40px;font-size:1.05rem">In our production pipeline we use a guidance system for AI called <b>Empirica</b>. The finished films are on the <a href="selection.html">Final Selection</a> page; how they were made and verified is under <a href="casestudy.html">Method</a>.</div>
-<div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:18px">
-<a class="tile" href="olympic.html" style="flex:1 1 220px;border-left-color:#f2c230"><b>&larr; Back</b><span>Olympic: the pilot and the five chapters</span></a>
-<a class="tile" href="selection.html" style="flex:1 1 220px"><b>Final Selection &rarr;</b><span>the finished films</span></a>
-<a class="tile" href="casestudy.html" style="flex:1 1 220px;border-left-color:#6F6AAF"><b>Method &rarr;</b><span>how they were made and verified</span></a>
-</div>
 """
     open(f"{ROOT}/empirica.html","w").write(head("Empirica") + OLY_STYLE + EMP_STYLE + emp + FOOT)
 
