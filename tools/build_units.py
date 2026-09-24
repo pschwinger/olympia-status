@@ -101,8 +101,9 @@ SELECTED = ["night-cut","v22-run3","part2-armA","cov30","ff-master"]
 # ---------- html ----------
 CSS = open(f"{ROOT}/tools/site.css").read() if os.path.exists(f"{ROOT}/tools/site.css") else ""
 NAV = """<div id="olynav" style="position:sticky;top:0;z-index:999;display:flex;gap:6px;flex-wrap:wrap;align-items:center;background:#ffffff;padding:8px 14px;border-bottom:1px solid #e3e3e3">
-<a href="index.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;background:#54682f;color:#fff">⌂ Home</a>
 <a href="pilot-1.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;background:#3d3350;color:#efe6ff">👗 Pilot 1</a>
+<a href="index.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;background:#54682f;color:#fff">⌂ Home</a>
+<a href="olympic.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;background:#f2c230;color:#1f1f1f">🏅 Olympic</a>
 <a href="units.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;color:#3a3a3a">🏛 Units</a>
 <a href="artifacts.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;color:#3a3a3a">🏺 Artifacts</a>
 <a href="selection.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;color:#3a3a3a">★ Final Selection</a>
@@ -368,6 +369,50 @@ def build():
 <p class="k" style="margin-top:26px">The unit finals</p>
 <p class="muted">One final film per unit, cut by FFP in Premiere Pro from the material on the unit pages. These are the versions of record for presentation; everything they were cut from stays visible on the unit pages and in the working room.</p>
 {slots}""" + FOOT)
+
+
+    oly = """
+<p class="k">PILOT 2 · FROM MUSEUMS TO SCREENS</p>
+<h1>&ldquo;Olympic Games &amp; Music&rdquo;</h1>
+<p class="muted" style="font-size:1.05rem">Leveraging digitised cultural-heritage artefacts for creative and sustainable advertising. Partners: <b>Olympic Museum of Thessaloniki</b>, <b>SPK / Ethnological Museum of Berlin</b>, <b>FFP Productions</b>.</p>
+
+<h2>What is Pilot 2?</h2>
+<p>Pilot 2 of REEVALUATE is a collaborative initiative between the Olympic Museum of Thessaloniki, the Ethnological Museum of Berlin and FFP Productions of Austria, combining cultural-heritage expertise with digital tools and creative production. The pilot focuses on the relationship between the Olympic Games, sports and music, bringing together historical artefacts, photographs, documents, sports objects and audio material, while exploring how Olympic and musical heritage can be digitised, enriched and creatively reused.</p>
+
+<h2>How can digitised museum collections become new creative experiences?</h2>
+<p class="muted">The pilot combines:</p>
+<div class="grid" style="margin:10px 0 6px">
+<div class="tile"><b>Olympic heritage</b><span>Historical artefacts</span></div>
+<div class="tile"><b>Music and sound archives</b><span>Audio material from the collections</span></div>
+<div class="tile"><b>Digital content</b><span>3D scanning and digitisation</span></div>
+<div class="tile"><b>Expert contextualisation</b><span>Curators and historians</span></div>
+<div class="tile"><b>Public participation</b><span>Campaigns that guided the selection</span></div>
+<div class="tile"><b>Creative storytelling</b><span>Historical research and content development</span></div>
+</div>
+<p class="muted"><b>From preserving the past &rarr; to experiencing it today.</b></p>
+
+<h2>Providing the content, expertise and museum setting</h2>
+<p>The Thessaloniki Olympic Museum selected material from its collection that reflects the history, evolution and values of the Olympic Movement. Museum curators and historians contribute their expertise by providing historical context, developing the narrative and enriching the information connected to each asset.</p>
+<p>At the same time, the public was actively involved through dedicated campaigns designed to identify which artefacts attracted the greatest interest. This feedback helped guide the selection of objects for 3D digitisation and for their inclusion as key elements of the final creative production and its storytelling. The selected material is then organised and made accessible through the REEVALUATE platforms, supporting its further use in creative and media production.</p>
+<p class="muted">The objects themselves, with what each film must hold and what is never asserted about them, are on the <a href="artifacts.html" style="color:var(--bronze)">Artifacts</a> page.</p>
+
+<h2>One film. Five chapters. One Olympic journey.</h2>
+<p>The film follows five thematic units, developed by the Olympic Museum of Thessaloniki together with the Ethnological Museum of Berlin (SPK), providing a rich curatorial narrative spanning antiquity to the present day in one continuous narrative.</p>
+<div class="grid" style="margin:10px 0 6px">
+<a class="tile" href="unit-1.html"><b>1 &middot; From Discovery to Revival</b><span>Olympia lost and found again: the excavations of 1829 and 1875</span></a>
+<a class="tile" href="unit-2.html"><b>2 &middot; The First Modern Games</b><span>The Revival and the Olympic symbols</span></a>
+<a class="tile" href="unit-3.html"><b>3 &middot; The Mesolympic Games</b><span>Athens 1906</span></a>
+<a class="tile" href="unit-4.html"><b>4 &middot; Olympic Values through Sports &amp; Music</b><span>The Hands Remember: eleven athletes, eleven objects</span></a>
+<a class="tile" href="unit-5.html"><b>5 &middot; International Olympic Day</b><span>A global movement</span></a>
+</div>
+
+<h2>The outcome</h2>
+<p>The final outcome brings Olympic heritage and music together, transforming selected museum material into a contemporary audiovisual experience. Presented within the &ldquo;Olympic Experience&rdquo; immersive exhibition at the Thessaloniki Olympic Museum, the film combines digitised artefacts, historical material, music and sound to bring the Olympic story to life and become a bridge between the Museum&rsquo;s collections and its visitors.</p>
+<p>The result is an experience that connects past and present, brings Olympic heritage closer to new generations, and strengthens the Museum&rsquo;s educational and experiential role.</p>
+<div class="musdoc" style="font-family:'IBM Plex Mono',monospace;font-size:.9rem;text-align:center">Heritage &rarr; Context &rarr; Public Input &rarr; Digitisation &rarr; Creative Reuse &rarr; Film / Museum Experience</div>
+<p class="muted">The finished films are on the <a href="selection.html" style="color:var(--bronze)">Final Selection</a> page; how they were made and verified is under <a href="casestudy.html" style="color:var(--bronze)">Method</a>.</p>
+"""
+    open(f"{ROOT}/olympic.html","w").write(head("Olympic Games & Music") + oly + FOOT)
 
     tests_html = """
 <h1>Initial tests</h1>
