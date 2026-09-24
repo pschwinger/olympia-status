@@ -100,21 +100,21 @@ SELECTED = ["night-cut","v22-run3","part2-armA","cov30","ff-master"]
 
 # ---------- html ----------
 CSS = open(f"{ROOT}/tools/site.css").read() if os.path.exists(f"{ROOT}/tools/site.css") else ""
-NAV = """<div id="olynav" style="position:sticky;top:0;z-index:999;display:flex;gap:6px;flex-wrap:wrap;align-items:center;background:#1e2418;padding:8px 14px;border-bottom:1px solid #3a4030">
+NAV = """<div id="olynav" style="position:sticky;top:0;z-index:999;display:flex;gap:6px;flex-wrap:wrap;align-items:center;background:#ffffff;padding:8px 14px;border-bottom:1px solid #e3e3e3">
 <a href="index.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;background:#54682f;color:#fff">⌂ Home</a>
 <a href="pilot-1.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;background:#3d3350;color:#efe6ff">👗 Pilot 1</a>
-<a href="units.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;color:#cfd3c0">🏛 Units</a>
-<a href="artifacts.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;color:#cfd3c0">🏺 Artifacts</a>
-<a href="selection.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;color:#cfd3c0">★ Final Selection</a>
-<a href="initial-tests.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;color:#cfd3c0">🧪 Initial tests</a>
-<a href="casestudy.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;color:#cfd3c0">🔬 Method</a>
-<a href="board/review.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;color:#cfd3c0">🗄 Working room</a>
-<span style="margin-left:auto;font:600 10px 'IBM Plex Mono',monospace;letter-spacing:.1em;color:#8b8f80">OLYMPIA · REEVALUATE</span></div>"""
+<a href="units.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;color:#3a3a3a">🏛 Units</a>
+<a href="artifacts.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;color:#3a3a3a">🏺 Artifacts</a>
+<a href="selection.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;color:#3a3a3a">★ Final Selection</a>
+<a href="initial-tests.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;color:#3a3a3a">🧪 Initial tests</a>
+<a href="casestudy.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;color:#3a3a3a">🔬 Method</a>
+<a href="board/review.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;color:#3a3a3a">🗄 Working room</a>
+<span style="margin-left:auto;display:flex;align-items:center;gap:10px"><span style="font:600 10px 'IBM Plex Mono',monospace;letter-spacing:.1em;color:#7a7a7a">OLYMPIA · REEVALUATE</span><img src="board/media/brand/reevaluate-logo.png" alt="REEVALUATE" style="height:38px;width:auto"></span></div><style>body{position:relative}.wrap{position:relative;z-index:1}body::before{content:"";position:fixed;left:0;top:52px;width:min(20vw,250px);height:calc(100vh - 52px);background:url(board/media/brand/circuit-left.png) no-repeat left top/contain;pointer-events:none;z-index:0}body::after{content:"";position:fixed;right:0;bottom:0;width:min(17vw,210px);height:100vh;background:url(board/media/brand/circuit-right.png) no-repeat left top/contain;transform:rotate(180deg);pointer-events:none;z-index:0}@media (max-width:1180px){body::before,body::after{display:none}}</style>"""
 
 STYLE = """<style>
-:root{--bg:#edeee6;--surface:#f6f6f1;--surface-2:#e7e9df;--ink:#191c15;--steel:#454a3c;--muted:#6d7261;--hair:#d3d5c8;--olive:#54682f;--bronze:#a06a24;--good:#3f7a4c;--flame:#ba5a1e}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#13150e;--surface:#1a1d14;--surface-2:#20241a;--ink:#dce0d2;--steel:#a7ad98;--muted:#7f846d;--hair:#282c1f;--olive:#9fb56b;--bronze:#cf9748;--good:#77b183;--flame:#d9743a}}
-:root[data-theme="dark"]{--bg:#13150e;--surface:#1a1d14;--surface-2:#20241a;--ink:#dce0d2;--steel:#a7ad98;--muted:#7f846d;--hair:#282c1f;--olive:#9fb56b;--bronze:#cf9748;--good:#77b183;--flame:#d9743a}
+:root{--bg:#ffffff;--surface:#f7f7f7;--surface-2:#efefef;--ink:#1f1f1f;--steel:#474747;--muted:#6f6f6f;--hair:#dedede;--olive:#54682f;--bronze:#a06a24;--good:#3f7a4c;--flame:#ba5a1e}
+
+
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Archivo,system-ui,sans-serif;font-size:15.5px;line-height:1.55}
 .wrap{max-width:1060px;margin:0 auto;padding:clamp(20px,3vw,44px) clamp(14px,3vw,32px) 90px}
 h1{font-family:Fraunces,serif;font-weight:500;font-size:clamp(1.8rem,4.5vw,2.7rem);line-height:1.06;margin:0 0 8px}
