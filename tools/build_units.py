@@ -456,7 +456,7 @@ a{color:#2FB89F}
 <li>It tells you when it <b>checked</b> something versus when it&rsquo;s only <b>assuming</b>.</li><li>It won&rsquo;t call a job &ldquo;done&rdquo; unless it really is.</li><li>If it&rsquo;s unsure, it says so &mdash; it never quietly fills in a guess.</li><li>That honesty is what lets you trust the answers.</li></ul></div>
 <div class="card3" style="border-top-color:#f2c230"><span class="role">The shared memory</span><h3>Cortex</h3><p>Where everything is kept and shared &mdash; not documents you open, a memory the whole company works from.</p><ul>
 <li>Keeps decisions, useful facts, open questions and contacts.</li><li>Gives each person their tools the moment they sign in.</li><li>Carries messages and files between people.</li><li>Runs the scheduled jobs &mdash; like the weekly report &mdash; on its own.</li></ul></div>
-<div class="card3" style="border-top-color:#6F6AAF"><span class="role">The assistant</span><h3>Claude</h3><p>The part you talk to &mdash; in chat, on your desktop, wherever you open it.</p><ul>
+<div class="card3" style="border-top-color:#6F6AAF"><span class="role">The assistant (any model)</span><h3>Claude</h3><p>The part you talk to &mdash; in chat, on your desktop, wherever you open it.</p><ul>
 <li>You steer it by talking, in plain language.</li><li>It reads from and writes to the shared memory for you.</li><li>It forgets each conversation &mdash; which is exactly why the shared memory exists.</li><li>Same you, whichever way you open it.</li></ul></div>
 </div>
 
