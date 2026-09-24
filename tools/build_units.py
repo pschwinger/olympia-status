@@ -102,10 +102,10 @@ SELECTED = ["night-cut","v22-run3","part2-armA","cov30","ff-master"]
 CSS = open(f"{ROOT}/tools/site.css").read() if os.path.exists(f"{ROOT}/tools/site.css") else ""
 NAV = """<div id="olynav" style="position:sticky;top:0;z-index:999;display:flex;gap:6px;flex-wrap:wrap;align-items:center;background:#ffffff;padding:8px 14px;border-bottom:1px solid #e3e3e3">
 <a href="pilot-1.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;background:#3d3350;color:#efe6ff">👗 Pilot 1</a>
-<a href="index.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;background:#54682f;color:#fff">⌂ Home</a>
 <a href="olympic.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;background:#f2c230;color:#1f1f1f">🏅 Olympic</a>
 <a href="empirica.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;background:#6F6AAF;color:#fff">◎ Empirica</a>
 <a href="casestudy.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;background:#2FB89F;color:#fff">🔬 Method</a>
+<a href="index.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;background:#54682f;color:#fff">⌂ Home</a>
 <a href="units.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;color:#3a3a3a">🏛 Units</a>
 <a href="artifacts.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;color:#3a3a3a">🏺 Artifacts</a>
 <a href="selection.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;color:#3a3a3a">★ Final Selection</a>
@@ -428,7 +428,7 @@ a{color:#2FB89F}
 <p>The final outcome brings Olympic heritage and music together, transforming selected museum material into a contemporary audiovisual experience. Presented within the &ldquo;Olympic Experience&rdquo; immersive exhibition at the Thessaloniki Olympic Museum, the film combines digitised artefacts, historical material, music and sound to bring the Olympic story to life and become a bridge between the Museum&rsquo;s collections and its visitors.</p>
 <p>The result is an experience that connects past and present, brings Olympic heritage closer to new generations, and strengthens the Museum&rsquo;s educational and experiential role.</p>
 <div class="musdoc" style="font-family:'IBM Plex Mono',monospace;font-size:.9rem;text-align:center">Heritage &rarr; Context &rarr; Public Input &rarr; Digitisation &rarr; Creative Reuse &rarr; Film / Museum Experience</div>
-<p class="muted">In our production pipeline we use a guidance system for AI called <a href="empirica.html"><b>Empirica</b></a>. The finished films are on the <a href="selection.html">Final Selection</a> page; how they were made and verified is under <a href="casestudy.html">Method</a>.</p>
+<div class="musdoc" style="margin-top:40px;font-size:1.05rem">In our production pipeline we use a guidance system for AI called <a href="empirica.html"><b>Empirica</b></a>. The finished films are on the <a href="selection.html">Final Selection</a> page; how they were made and verified is under <a href="casestudy.html">Method</a>.<div style="margin-top:10px"><a href="empirica.html" style="font-weight:700;color:#6F6AAF;text-decoration:none">Next &rarr; Empirica</a></div></div>
 """
     open(f"{ROOT}/olympic.html","w").write(head("Olympic Games & Music") + OLY_STYLE + oly + FOOT)
 
@@ -567,7 +567,7 @@ a{color:#2FB89F}
 <h2>Cortex: how the practices talk</h2>
 <p>The practitioners are not one program. They are separate AIs, each in its own project, and Cortex is the mesh between them. A practitioner that is uncertain asks a peer directly; a practitioner that needs work done proposes it, and a human accepts or declines before anything runs. Findings and lessons marked as shared cross the practice boundary, so a colour failure measured by videogen becomes doctrine in storyboard's spec the same day. A listener wakes each practice when a peer delivers, so the chain runs without anyone waiting on a message.</p>
 <p class="muted">What this buys the museum: a film whose every frame can be asked <i>where does this come from</i>, and answered.</p>
-<div class="musdoc" style="margin-top:40px;font-size:1.05rem">In our production pipeline we use a guidance system for AI called <b>Empirica</b>. The finished films are on the <a href="selection.html">Final Selection</a> page; how they were made and verified is under <a href="casestudy.html">Method</a>.</div>
+<div class="musdoc" style="margin-top:40px;font-size:1.05rem">In our production pipeline we use a guidance system for AI called <a href="empirica.html"><b>Empirica</b></a>. The finished films are on the <a href="selection.html">Final Selection</a> page; how they were made and verified is under <a href="casestudy.html">Method</a>.<div style="margin-top:10px"><a href="casestudy.html" style="font-weight:700;color:#6F6AAF;text-decoration:none">Next &rarr; Method</a></div></div>
 """
     open(f"{ROOT}/empirica.html","w").write(head("Empirica") + OLY_STYLE + EMP_STYLE + emp + FOOT)
 
