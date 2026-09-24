@@ -445,51 +445,59 @@ a{color:#2FB89F}
 </style>"""
 
     emp = """
-<p class="k">THE GUIDANCE SYSTEM</p>
-<h1>Empirica</h1>
-<p class="muted" style="font-size:1.15rem">In our production pipeline we use a guidance system for AI called Empirica. It makes every practitioner say what it knows, what it assumes, and what it checked, before a single frame is made.</p>
+<p class="k">THE SYSTEM BEHIND THE PRODUCTION</p>
+<h1>Cortex &mdash; how it works</h1>
+<p class="muted" style="font-size:1.05rem;margin-top:-4px">In plain terms: what it is, and what you get out of it.</p>
+<p style="font-size:1.2rem;max-width:68ch">Think of it as <b>three things working together</b> &mdash; a careful way of working, a shared memory for the whole company, and the assistant you actually talk to. Most tools give you one of the three. This gives you all three, joined up &mdash; so what one person learns, the next person can use.</p>
 
-<h2>Three things working together</h2>
-<svg viewBox="0 0 900 330" role="img" aria-label="Three overlapping circles: Empirica, Cortex, Claude" style="max-width:820px;display:block;margin:6px auto 0">
-<g font-family="Arial,Helvetica,sans-serif">
-<circle cx="330" cy="130" r="112" fill="#2FB89F" fill-opacity=".18" stroke="#2FB89F" stroke-width="2.5"/>
-<circle cx="570" cy="130" r="112" fill="#6F6AAF" fill-opacity=".18" stroke="#6F6AAF" stroke-width="2.5"/>
-<circle cx="450" cy="230" r="112" fill="#f2c230" fill-opacity=".22" stroke="#f2c230" stroke-width="2.5"/>
-<text x="270" y="118" font-size="26" font-weight="700" fill="#1f8a76">Empirica</text>
-<text x="255" y="146" font-size="14" fill="#2b2b2b">the way of working</text>
-<text x="548" y="118" font-size="26" font-weight="700" fill="#6F6AAF">Cortex</text>
-<text x="535" y="146" font-size="14" fill="#2b2b2b">the shared memory</text>
-<text x="410" y="262" font-size="26" font-weight="700" fill="#a8790a">Claude</text>
-<text x="392" y="290" font-size="14" fill="#2b2b2b">the practitioner</text>
-<text x="450" y="176" font-size="13" font-weight="700" fill="#2b2b2b" text-anchor="middle">one production</text>
-</g></svg>
-<div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin:6px 0 0">
-<div class="tile" style="border-left-color:#2FB89F"><b>Empirica</b><span>says <b>checked</b> or <b>assumed</b>, never guesses quietly</span></div>
-<div class="tile" style="border-left-color:#6F6AAF"><b>Cortex</b><span>decisions, findings, messages, shared across all practices</span></div>
-<div class="tile" style="border-left-color:#f2c230"><b>Claude</b><span>one seat per practice, steered in plain language</span></div>
+<h2>The three parts</h2>
+<div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin:10px 0">
+<div class="card3" style="border-top-color:#2FB89F"><span class="role">The way of working</span><h3>Empirica</h3><p>A careful method. The assistant is honest about what it actually knows.</p><ul>
+<li>It tells you when it <b>checked</b> something versus when it&rsquo;s only <b>assuming</b>.</li><li>It won&rsquo;t call a job &ldquo;done&rdquo; unless it really is.</li><li>If it&rsquo;s unsure, it says so &mdash; it never quietly fills in a guess.</li><li>That honesty is what lets you trust the answers.</li></ul></div>
+<div class="card3" style="border-top-color:#f2c230"><span class="role">The shared memory</span><h3>Cortex</h3><p>Where everything is kept and shared &mdash; not documents you open, a memory the whole company works from.</p><ul>
+<li>Keeps decisions, useful facts, open questions and contacts.</li><li>Gives each person their tools the moment they sign in.</li><li>Carries messages and files between people.</li><li>Runs the scheduled jobs &mdash; like the weekly report &mdash; on its own.</li></ul></div>
+<div class="card3" style="border-top-color:#6F6AAF"><span class="role">The assistant</span><h3>Claude</h3><p>The part you talk to &mdash; in chat, on your desktop, wherever you open it.</p><ul>
+<li>You steer it by talking, in plain language.</li><li>It reads from and writes to the shared memory for you.</li><li>It forgets each conversation &mdash; which is exactly why the shared memory exists.</li><li>Same you, whichever way you open it.</li></ul></div>
 </div>
 
-<h2>The circle</h2>
-<svg viewBox="0 0 900 360" role="img" aria-label="Four steps in a circle: you start, it checks, it works, it keeps" style="max-width:820px;display:block;margin:6px auto 0">
-<defs><marker id="ah" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#2FB89F"/></marker></defs>
+<h2>How a piece of work flows</h2>
+<svg viewBox="0 0 1000 300" role="img" aria-label="A four-step circle: you start, it checks first, it does the work, it keeps what matters, then feeds back into the next start." style="max-width:1000px;display:block;margin:6px auto 0">
+<defs><marker id="ar" markerWidth="9" markerHeight="9" refX="7" refY="3.2" orient="auto"><path d="M0,0 L7,3.2 L0,6.4 z" fill="#9a9a9a"/></marker></defs>
 <g font-family="Arial,Helvetica,sans-serif">
-<path d="M450,60 A120,120 0 0 1 570,180" fill="none" stroke="#2FB89F" stroke-width="3" marker-end="url(#ah)"/>
-<path d="M570,180 A120,120 0 0 1 450,300" fill="none" stroke="#2FB89F" stroke-width="3" marker-end="url(#ah)"/>
-<path d="M450,300 A120,120 0 0 1 330,180" fill="none" stroke="#2FB89F" stroke-width="3" marker-end="url(#ah)"/>
-<path d="M330,180 A120,120 0 0 1 450,60" fill="none" stroke="#2FB89F" stroke-width="3" marker-end="url(#ah)"/>
-<g><rect x="360" y="22" width="180" height="58" rx="10" fill="#fff" stroke="#f2c230" stroke-width="3"/><text x="450" y="46" font-size="15" font-weight="700" fill="#a8790a" text-anchor="middle">1 · YOU START</text><text x="450" y="67" font-size="13" fill="#2b2b2b" text-anchor="middle">Philipp briefs a scene</text></g>
-<g><rect x="600" y="151" width="200" height="58" rx="10" fill="#fff" stroke="#2FB89F" stroke-width="3"/><text x="700" y="175" font-size="15" font-weight="700" fill="#1f8a76" text-anchor="middle">2 · IT CHECKS</text><text x="700" y="196" font-size="13" fill="#2b2b2b" text-anchor="middle">sources, registry, last ledger</text></g>
-<g><rect x="360" y="280" width="180" height="58" rx="10" fill="#fff" stroke="#6F6AAF" stroke-width="3"/><text x="450" y="304" font-size="15" font-weight="700" fill="#6F6AAF" text-anchor="middle">3 · IT WORKS</text><text x="450" y="325" font-size="13" fill="#2b2b2b" text-anchor="middle">spec, frames, film, gate</text></g>
-<g><rect x="100" y="151" width="200" height="58" rx="10" fill="#fff" stroke="#2FB89F" stroke-width="3"/><text x="200" y="175" font-size="15" font-weight="700" fill="#1f8a76" text-anchor="middle">4 · IT KEEPS</text><text x="200" y="196" font-size="13" fill="#2b2b2b" text-anchor="middle">what failed and why</text></g>
-<text x="450" y="186" font-size="14" font-weight="700" fill="#6F6AAF" text-anchor="middle">what one practice learns,</text>
-<text x="450" y="206" font-size="14" font-weight="700" fill="#6F6AAF" text-anchor="middle">the next can find</text>
+<g><rect x="14" y="66" width="205" height="104" rx="10" fill="#fff" stroke="#2FB89F" stroke-width="2.5"/><text x="34" y="96" fill="#1f8a76" font-size="12" font-weight="700" letter-spacing="1.6">1 · YOU START</text><text x="34" y="124" fill="#1f1f1f" font-size="16">You open a conversation</text><text x="34" y="148" fill="#5a5a5a" font-size="13">your tools are already there</text></g>
+<g><rect x="262" y="66" width="205" height="104" rx="10" fill="#fff" stroke="#f2c230" stroke-width="2.5"/><text x="282" y="96" fill="#a8790a" font-size="12" font-weight="700" letter-spacing="1.6">2 · IT CHECKS</text><text x="282" y="124" fill="#1f1f1f" font-size="16">Before acting</text><text x="282" y="148" fill="#5a5a5a" font-size="13">it looks at what&rsquo;s known</text></g>
+<g><rect x="510" y="66" width="205" height="104" rx="10" fill="#fff" stroke="#6F6AAF" stroke-width="2.5"/><text x="530" y="96" fill="#6F6AAF" font-size="12" font-weight="700" letter-spacing="1.6">3 · IT WORKS</text><text x="530" y="124" fill="#1f1f1f" font-size="16">The actual work</text><text x="530" y="148" fill="#5a5a5a" font-size="13">reports, records, messages</text></g>
+<g><rect x="758" y="66" width="205" height="104" rx="10" fill="#fff" stroke="#2FB89F" stroke-width="2.5"/><text x="778" y="96" fill="#1f8a76" font-size="12" font-weight="700" letter-spacing="1.6">4 · IT KEEPS</text><text x="778" y="124" fill="#1f1f1f" font-size="16">What matters</text><text x="778" y="148" fill="#5a5a5a" font-size="13">so next time is better</text></g>
+<path d="M225,118 L256,118" stroke="#9a9a9a" stroke-width="1.6" marker-end="url(#ar)"/><path d="M473,118 L504,118" stroke="#9a9a9a" stroke-width="1.6" marker-end="url(#ar)"/><path d="M721,118 L752,118" stroke="#9a9a9a" stroke-width="1.6" marker-end="url(#ar)"/>
+<path d="M860,176 L860,228 Q860,240 848,240 L129,240 Q117,240 117,228 L117,182" fill="none" stroke="#9a9a9a" stroke-width="1.6" stroke-dasharray="4 4" marker-end="url(#ar)"/>
+<text x="488" y="266" fill="#5a5a5a" font-size="13" text-anchor="middle">Next conversation, next person, next team &mdash; the same memory answers.</text>
 </g></svg>
+<div class="pull">The point isn&rsquo;t any single step &mdash; it&rsquo;s the circle. What one person learns or decides, the next person can find.</div>
 
+<h2>What you get, by size</h2>
+<div class="scale"><div class="scalehead"><span class="num" style="background:#2FB89F">01</span><h3>One person</h3></div><p class="claim">It stops starting from scratch &mdash; and it stops sounding equally sure about things it checked and things it assumed.</p><table>
+<tr><td>Nothing restarts from zero</td><td>Your tools and the way you like to work are there every time you open it. Nothing to install, nothing to paste in.</td></tr>
+<tr><td>&ldquo;Done&rdquo; really means done</td><td>For anything with several steps, it works out what &ldquo;finished&rdquo; looks like first &mdash; then checks it against that, so nothing is called done when it isn&rsquo;t.</td></tr>
+<tr><td>It&rsquo;s honest when unsure</td><td>If it&rsquo;s guessing, it says so, in writing. It never quietly fills a gap to look more confident than it is.</td></tr>
+<tr><td>It fits how you work</td><td>A short first chat sets how independently it acts and when it checks in with you. Changeable any time.</td></tr></table></div>
+<div class="scale"><div class="scalehead"><span class="num" style="background:#f2c230;color:#1f1f1f">02</span><h3>A team working together</h3></div><p class="claim">Handing work over that carries itself &mdash; no status meeting, no shared spreadsheet that someone forgets to update.</p><table>
+<tr><td>Work lands when its owner accepts it</td><td>You send a to-do list to a colleague; their assistant presents it, and on their &ldquo;yes&rdquo; it becomes their own list of tasks &mdash; and you&rsquo;re told it was accepted.</td></tr>
+<tr><td>Progress you can ask for</td><td>&ldquo;Where does the team stand on the list I sent?&rdquo; is answered from the system itself, not from someone remembering to update a status column.</td></tr>
+<tr><td>Files travel with the work</td><td>Spreadsheets and images arrive as the original; longer documents arrive as readable text. Nothing is lost quietly along the way.</td></tr>
+<tr><td>Honest timing</td><td>A message lands the next time the other person looks &mdash; usually within the hour in work time. It&rsquo;s stated plainly, never over-promised.</td></tr></table></div>
+<div class="scale"><div class="scalehead"><span class="num" style="background:#6F6AAF">03</span><h3>The whole company</h3></div><p class="claim">Improve something once and everyone gets it &mdash; and who-sees-what becomes a setting someone owns, not an accident of who was in the room.</p><table>
+<tr><td>Improve it once, everyone gets it</td><td>A tool improved centrally reaches every seat at once &mdash; no re-rolling it out person by person.</td></tr>
+<tr><td>Ask for a change, and it becomes company-wide</td><td>&ldquo;Change this so that&hellip;&rdquo; is noted, confirmed by a person, and then live for everyone. What one person needs becomes a shared capability.</td></tr>
+<tr><td>Who-sees-what is a setting</td><td>Access can be narrowed to teams, controlled by an admin &mdash; not left to chance.</td></tr>
+<tr><td>The important jobs don&rsquo;t depend on you</td><td>The weekly report and the daily sync run on the server, with every laptop shut. Company output never waits on whose machine is awake.</td></tr>
+<tr><td>One health view for everything</td><td>A single check covers the whole company &mdash; are the scheduled jobs running, is everyone set up &mdash; which no one seat can see on its own.</td></tr></table></div>
+
+<h2>How it sits under this production</h2>
 <h2>The pipeline</h2>
-<svg viewBox="0 0 1000 330" role="img" aria-label="Pipeline: Philipp to autonomy to storyboard to imagegen to videogen, acknowledgements returning, Cortex and Empirica as layers beneath" style="max-width:1000px;display:block;margin:6px auto 0">
+<svg viewBox="0 0 1000 330" role="img" aria-label="Pipeline: producer to autonomy to storyboard to imagegen to videogen, acknowledgements returning, Cortex and Empirica as layers beneath" style="max-width:1000px;display:block;margin:6px auto 0">
 <defs><marker id="af" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#2b2b2b"/></marker><marker id="ab" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#6F6AAF"/></marker></defs>
 <g font-family="Arial,Helvetica,sans-serif">
-<g><rect x="15" y="40" width="170" height="74" rx="10" fill="#fff" stroke="#f2c230" stroke-width="3"/><text x="100" y="70" font-size="18" font-weight="700" fill="#a8790a" text-anchor="middle">Philipp</text><text x="100" y="94" font-size="12.5" fill="#2b2b2b" text-anchor="middle">brief · taste · spend</text></g>
+<g><rect x="15" y="40" width="170" height="74" rx="10" fill="#fff" stroke="#f2c230" stroke-width="3"/><text x="100" y="70" font-size="18" font-weight="700" fill="#a8790a" text-anchor="middle">producer</text><text x="100" y="94" font-size="12.5" fill="#2b2b2b" text-anchor="middle">the brief, the taste, the spend</text></g>
 <g><rect x="215" y="40" width="170" height="74" rx="10" fill="#fff" stroke="#2FB89F" stroke-width="3"/><text x="300" y="70" font-size="18" font-weight="700" fill="#1f8a76" text-anchor="middle">autonomy</text><text x="300" y="94" font-size="12.5" fill="#2b2b2b" text-anchor="middle">orchestrates · measures</text></g>
 <g><rect x="415" y="40" width="170" height="74" rx="10" fill="#f3f1fa" stroke="#6F6AAF" stroke-width="3"/><text x="500" y="70" font-size="18" font-weight="700" fill="#6F6AAF" text-anchor="middle">storyboard</text><text x="500" y="94" font-size="12.5" fill="#2b2b2b" text-anchor="middle">shot list · claim ledger</text></g>
 <g><rect x="615" y="40" width="170" height="74" rx="10" fill="#fff" stroke="#2FB89F" stroke-width="3"/><text x="700" y="70" font-size="18" font-weight="700" fill="#1f8a76" text-anchor="middle">imagegen</text><text x="700" y="94" font-size="12.5" fill="#2b2b2b" text-anchor="middle">sheets · plates · keyframes</text></g>
