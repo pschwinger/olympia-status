@@ -243,27 +243,10 @@ v2.2: Behind them labourers dressed as @Image2 keep moving: picks rise and fall,
 <p class="k">6 · The runs</p>
 <h2>Iterations</h2>
 <div class="status" id="runstatus"><b>Run 1 measured (2026-09-06 00:21):</b> <b>8 of 10 gates passed</b>, one failed, one partial — below the 90% bar, <i>as the pre-run prediction said it would be</i> (expected 7.5). Cost: 180 credits. The prediction was sharp where it mattered: the gate given the lowest odds (G9, the working crew, 0.60) is the one that failed; the second-lowest of the content gates (G4, 0.70) is the partial. Everything predicted at 0.75+ passed.</div>
-<h2 style="margin-top:28px">Run 1 — both takes, identical prompt</h2>
-<div id="takebar" style="display:flex;gap:8px;margin:10px 0 8px">
-<button class="tbtn on" data-src="casestudy_media/run1_take1.mp4" data-info="<b>Take 1</b> · 180 credits · 8/10 gates + 1 partial · cuts at 3.92 / 10.08 / 13.67 / 16.71 s (max 0.33 s off the script) · generated 00:11">Take 1</button>
-<button class="tbtn" data-src="casestudy_media/run1_take2.mp4" data-info="<b>Take 2</b> · 180 credits · identical verdicts on all 10 gates · cuts at 4.13 / 10.04 / 13.54 / 16.92 s (max 0.46 s off) · fresh seed, near-identical compositions">Take 2</button>
-</div>
-<video id="takevid" controls preload="metadata" src="casestudy_media/run1_take1.mp4" style="width:100%;max-width:880px;border-radius:12px;border:1px solid var(--hair);background:#000"></video>
-<p id="takeinfo" style="font-size:.9rem;color:var(--steel);max-width:880px;margin-top:8px"><b>Take 1</b> · 180 credits · 8/10 gates + 1 partial · cuts at 3.92 / 10.08 / 13.67 / 16.71 s (max 0.33 s off the script) · generated 00:11</p>
-<script>
-document.querySelectorAll('#takebar .tbtn').forEach(function(b){b.addEventListener('click',function(){
-  document.querySelectorAll('#takebar .tbtn').forEach(function(x){x.classList.remove('on');});
-  b.classList.add('on');
-  var v=document.getElementById('takevid'); v.src=b.dataset.src; v.load();
-  document.getElementById('takeinfo').innerHTML=b.dataset.info;
-});});
-</script>
-<div class="callout" style="border-left-color:var(--flame)"><b>What actually failed, in plain words:</b> the new aerial opening came out as a beautiful but <i>static</i> river image — the model anchored so hard on the museum's river photograph that it reproduced it instead of flying over it, and the excavation never appears. And the background crew in the wide shot stands posed like figures in an 1875 photograph instead of working. The close-ups (the levering bar, the hand on the fluting, the archaeologist removing his hat) all animate properly. Pattern worth keeping: <b>wide shots bound to still references reproduce the stillness; close-ups with one clear action move correctly.</b></div>
-<div class="callout"><b>Take 2 (identical prompt, fresh seed): 10 of 10 gates agree with take 1.</b> Both failures reproduced exactly — they are <b>deterministic, not dice</b>. That is the variance measurement: on this model, an identical prompt buys you nearly the same film twice (only cut timings drift by fractions of a second). So a re-roll cannot fix these misses; only a better prompt — or a different method — can. Cost of both takes: 360 credits.</div>
-<div class="callout" style="border-left-color:var(--good)"><b>Run 3 (v2.2): 9 of 10 gates, and the river is gone.</b> The grammar correction fixed both deterministic failures: the aerial now genuinely flies (the excavation grows from small to large as the camera descends) and the crew works from the first frame. <b>The one failure is visible in the film itself: G8, the Alpheios river, is no longer in Shot 1.</b> Demoting the river to a secondary clause is what freed the camera, and the same edit pushed the river out of the frame entirely. That is scored as a FAIL, not excused: the ledger reads &ldquo;the river is NOT visibly present.&rdquo; Whether it returns is one surgical line and one more take (180 credits), and that is the producer&rsquo;s call, not a correction the loop makes on its own. Third generation, 180 credits, 540 total for the loop.</div>
-<h2 style="margin-top:28px">Run 3 — the corrected take</h2>
-<video controls preload="metadata" src="casestudy_media/run3_v22.mp4" style="width:100%;max-width:880px;border-radius:12px;border:1px solid var(--hair);background:#000"></video>
-<p style="font-size:.9rem;color:var(--steel);max-width:880px;margin-top:8px"><b>The loop, closed:</b> predicted 7.5/10 before spending → measured 8/10 twice (failures deterministic) → one prompt-structural correction → <b>9/10, the 90% bar met on the third generation.</b> Every belief, rule, failure and fix on this page is traceable to a ledger.</p>
+<h2 style="margin-top:28px">Run 1, take 1 &mdash; the reviewer&rsquo;s pick</h2>
+<video controls preload="metadata" src="casestudy_media/run1_take1.mp4" style="width:100%;max-width:880px;border-radius:12px;border:1px solid var(--hair);background:#000"></video>
+<p style="font-size:.9rem;color:var(--steel);max-width:880px;margin-top:8px"><b>Take 1</b> &middot; 180 credits &middot; 8/10 gates + 1 partial &middot; cuts at 3.92 / 10.08 / 13.67 / 16.71 s (max 0.33 s off the script)</p>
+<div class="callout" style="border-left-color:#6F6AAF"><b>Where the gate and the reviewer disagreed, on the record.</b> The gate scored the aerial opening as a static river image (G8 passed on a technicality; the design intent was marked failed) and sent the loop into two more generations. The corrected take reached 9 of 10 gates, but the correction pushed the Alpheios river out of the frame altogether. On review the producer chose this take: the river is in the shot and it moves, and the flight over it reads. The loop allows exactly that, <i>correct and re-run until the bar is met, or the reviewer accepts earlier</i>. The gate table above stays as measured; the choice is recorded here beside it. Both of the later takes remain on the <a href="unit-1.html">Unit 1</a> page with their ledgers.</div>
 </section>
 
 <section>
