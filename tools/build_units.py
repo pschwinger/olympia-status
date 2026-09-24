@@ -446,7 +446,7 @@ a{color:#2FB89F}
 
     emp = """
 <p class="k">THE SYSTEM BEHIND THE PRODUCTION</p>
-<h1>Cortex &mdash; how it works</h1>
+<h1>Empirica &amp; Empirica Cortex &mdash; how it works</h1>
 <p class="muted" style="font-size:1.05rem;margin-top:-4px">In plain terms: what it is, and what you get out of it.</p>
 <p style="font-size:1.2rem;max-width:68ch">Think of it as <b>three things working together</b> &mdash; a careful way of working, a shared memory for the whole company, and the assistant you actually talk to. Most tools give you one of the three. This gives you all three, joined up &mdash; so what one person learns, the next person can use.</p>
 
