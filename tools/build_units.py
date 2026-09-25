@@ -219,7 +219,6 @@ BAR = """<div class="bar"><span class="jump"><input id="jn" placeholder="#nr"><b
 def head(title):
     return f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="robots" content="noindex,nofollow">
 <title>{html.escape(title)}</title><meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
 </head><body>{NAV}{STYLE}<div class="wrap">"""
 
 FOOT = """<div id="lb"><span class="x">✕ close</span><img src="" alt=""></div><p class="foot">REEVALUATE · every claim traceable to a ledger · full archive in the <a href="board/review.html" style="color:var(--bronze)">working room</a></p></div>""" + JS + "</body></html>"
