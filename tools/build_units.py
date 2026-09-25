@@ -156,6 +156,23 @@ img.thumb{max-width:100%;border-radius:8px;border:1px solid var(--hair)}
 #lb img{max-width:94vw;max-height:92vh;border-radius:10px}
 #lb .x{position:fixed;top:14px;right:18px;font:700 26px Archivo;color:#fff;background:rgba(0,0,0,.5);border:1px solid #666;border-radius:10px;padding:2px 14px;cursor:pointer}
 .foot{margin-top:60px;padding-top:14px;border-top:1px solid var(--hair);font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted)}
+/* deck typography for every generated page (rollout T2, 2026-09-25) */
+.wrap{max-width:none;margin:0;padding-left:max(24px,min(21vw,265px));padding-right:max(24px,min(18vw,225px))}
+@media (max-width:1180px){.wrap{padding-left:clamp(14px,3vw,32px);padding-right:clamp(14px,3vw,32px)}}
+body{font-family:Arial,"Helvetica Neue",Helvetica,sans-serif;font-size:18px;line-height:1.6;color:#2b2b2b}
+p{max-width:none}
+h1{font-family:"Aptos Display",Aptos,"Helvetica Neue",Arial,sans-serif;font-weight:700;color:#6F6AAF;font-size:clamp(2.4rem,4.6vw,3.6rem);letter-spacing:-.01em}
+h2{font-family:"Aptos Display",Aptos,"Helvetica Neue",Arial,sans-serif;font-weight:700;color:#6F6AAF;font-size:clamp(1.5rem,2.4vw,2rem)}
+h3{font-family:"Aptos Display",Aptos,"Helvetica Neue",Arial,sans-serif;color:#6F6AAF}
+.k{font-family:Arial,sans-serif;font-size:13px;letter-spacing:.2em;color:#2FB89F;font-weight:700}
+.muted{color:#4a4a4a}
+.tile{border-left:5px solid #2FB89F}.tile b{color:#6F6AAF}
+.card b{color:#1f1f1f}.num{background:#6F6AAF}
+.vers button.on{background:#6F6AAF;border-color:#6F6AAF}
+.bar button{background:#6F6AAF}
+.meta a,.foot a{color:#2FB89F}
+.musdoc{background:rgba(111,106,175,.07);border:1px solid rgba(111,106,175,.35)}
+.mtag{background:rgba(47,184,159,.12);color:#1f8a76;border-color:rgba(47,184,159,.5)}
 </style>"""
 
 JS = """<script>
