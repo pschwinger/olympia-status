@@ -111,6 +111,7 @@ NAV = """<div id="olynav" style="position:sticky;top:0;z-index:999;display:flex;
 <a href="selection.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;color:#3a3a3a">★ Final Selection</a>
 <a href="initial-tests.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;color:#3a3a3a">🧪 Initial tests</a>
 <a href="board/review.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;color:#3a3a3a">🗄 Working room</a>
+<a href="spk.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;background:#8a2b2b;color:#fff">🎞 SPK</a>
 <span style="margin-left:auto;display:flex;align-items:center;gap:10px"><span style="font:600 10px 'IBM Plex Mono',monospace;letter-spacing:.1em;color:#7a7a7a">OLYMPIA · REEVALUATE</span><img src="board/media/brand/reevaluate-logo.png" alt="REEVALUATE" style="height:38px;width:auto"></span></div><style>body{position:relative}.wrap{position:relative;z-index:1}body::before{content:"";position:fixed;left:0;top:52px;width:min(20vw,250px);height:calc(100vh - 52px);background:url(board/media/brand/circuit-left.png) no-repeat left top/contain;pointer-events:none;z-index:0}body::after{content:"";position:fixed;right:0;bottom:0;width:min(17vw,210px);height:100vh;background:url(board/media/brand/circuit-right.png) no-repeat left top/contain;transform:rotate(180deg);pointer-events:none;z-index:0}@media (max-width:1180px){body::before,body::after{display:none}}</style>"""
 
 STYLE = """<style>
@@ -570,6 +571,23 @@ a{color:#2FB89F}
 <div class="musdoc" style="margin-top:40px;font-size:1.05rem">In our production pipeline we use a guidance system for AI called <a href="empirica.html"><b>Empirica</b></a>. The finished films are on the <a href="selection.html">Final Selection</a> page; how they were made and verified is under <a href="casestudy.html">Method</a>.<div style="margin-top:10px"><a href="casestudy.html" style="font-weight:700;color:#6F6AAF;text-decoration:none">Next &rarr; Method</a></div></div>
 """
     open(f"{ROOT}/empirica.html","w").write(head("Empirica") + OLY_STYLE + EMP_STYLE + emp + FOOT)
+
+
+    spk = """
+<p class="k">REEVALUATE &middot; FROM MUSEUMS TO SCREENS</p>
+<h1>Music and Sports in Olympia</h1>
+<p class="muted" style="font-size:1.25rem;margin-top:-4px"><i>An Ode to Cultural Heritage in Transformation</i></p>
+<p style="font-size:1.1rem;max-width:70ch">Framework for safe, open, collaborative and inclusive digitization and management of cultural heritage.</p>
+<video controls preload="metadata" poster="board/media/v/spk/SPK_poster.jpg" src="board/media/v/spk/SPK_music-and-sports-in-olympia.mp4" style="width:100%;max-width:1200px;border-radius:12px;border:1px solid var(--hair);background:#000;display:block;margin:18px 0 12px"></video>
+<p style="font-size:1.05rem;max-width:72ch">A film-essay of Berlin&rsquo;s Media Department, of the Ethnologisches Museum and the Museum f&uuml;r Asiatische Kunst, Staatliche Museen zu Berlin.</p>
+<p style="font-size:1.05rem"><b>Film by Dr. Deniza Popova and Alexander Sahm</b><br>Berlin, 22.09.2026</p>
+<div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin:16px 0">
+<div class="tile" style="border-left-color:#6F6AAF"><b>Ethnologisches Museum und Museum f&uuml;r Asiatische Kunst</b><span>Staatliche Museen zu Berlin</span></div>
+<div class="tile" style="border-left-color:#2FB89F"><b>Funded by the European Union</b><span>REEVALUATE</span></div>
+</div>
+<p class="muted" style="font-size:.95rem">3 min 40 s &middot; 1080p &middot; the film plays from this page without an internet connection.</p>
+"""
+    open(f"{ROOT}/spk.html","w").write(head("SPK - Music and Sports in Olympia") + OLY_STYLE + spk + FOOT)
 
     tests_html = """
 <h1>Initial tests</h1>
