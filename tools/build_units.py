@@ -100,18 +100,20 @@ SELECTED = ["night-cut","v22-run3","part2-armA","cov30","ff-master"]
 
 # ---------- html ----------
 CSS = open(f"{ROOT}/tools/site.css").read() if os.path.exists(f"{ROOT}/tools/site.css") else ""
-NAV = """<div id="olynav" style="position:sticky;top:0;z-index:999;display:flex;gap:6px;flex-wrap:wrap;align-items:center;background:#ffffff;padding:8px 14px;border-bottom:1px solid #e3e3e3">
-<a href="pilot-1.html" style="text-decoration:none;font:700 13px Arial,Helvetica,sans-serif;padding:6px 12px;border-radius:7px;background:#3d3350;color:#efe6ff">👗 Pilot 1</a>
-<a href="olympic.html" style="text-decoration:none;font:700 13px Arial,Helvetica,sans-serif;padding:6px 12px;border-radius:7px;background:#f2c230;color:#1f1f1f">🏅 Olympic</a>
-<a href="initial-tests.html" style="text-decoration:none;font:700 13px Arial,Helvetica,sans-serif;padding:6px 12px;border-radius:7px;background:#e8a33d;color:#1f1f1f">🧪 Initial tests</a>
-<a href="empirica.html" style="text-decoration:none;font:700 13px Arial,Helvetica,sans-serif;padding:6px 12px;border-radius:7px;background:#6F6AAF;color:#fff">◎ Empirica</a>
-<a href="casestudy.html" style="text-decoration:none;font:700 13px Arial,Helvetica,sans-serif;padding:6px 12px;border-radius:7px;background:#2FB89F;color:#fff">🔬 Method</a>
-<a href="index.html" style="text-decoration:none;font:700 13px Arial,Helvetica,sans-serif;padding:6px 12px;border-radius:7px;background:#54682f;color:#fff">⌂ Home</a>
-<a href="units.html" style="text-decoration:none;font:700 13px Arial,Helvetica,sans-serif;padding:6px 12px;border-radius:7px;color:#3a3a3a">🏛 Units</a>
-<a href="artifacts.html" style="text-decoration:none;font:700 13px Arial,Helvetica,sans-serif;padding:6px 12px;border-radius:7px;color:#3a3a3a">🏺 Artifacts</a>
-<a href="selection.html" style="text-decoration:none;font:700 13px Arial,Helvetica,sans-serif;padding:6px 12px;border-radius:7px;color:#3a3a3a">★ Final Selection</a>
-<a href="board/review.html" style="text-decoration:none;font:700 13px Arial,Helvetica,sans-serif;padding:6px 12px;border-radius:7px;color:#3a3a3a">🗄 Working room</a>
-<a href="spk.html" style="text-decoration:none;font:700 13px Arial,Helvetica,sans-serif;padding:6px 12px;border-radius:7px;background:#8a2b2b;color:#fff">🎞 SPK</a>
+NAV = """<div id="olynav" style="position:sticky;top:0;z-index:999;display:flex;gap:4px;flex-wrap:wrap;align-items:center;background:#ffffff;padding:8px 14px;border-bottom:1px solid #e3e3e3">
+<a href="pilot-1.html" style="text-decoration:none;font:700 12px Arial,Helvetica,sans-serif;padding:5px 9px;border-radius:7px;background:#3d3350;color:#efe6ff">👗 Pilot 1</a>
+<a href="olympic.html" style="text-decoration:none;font:700 12px Arial,Helvetica,sans-serif;padding:5px 9px;border-radius:7px;background:#f2c230;color:#1f1f1f">🏅 Olympic</a>
+<a href="initial-tests.html" style="text-decoration:none;font:700 12px Arial,Helvetica,sans-serif;padding:5px 9px;border-radius:7px;background:#e8a33d;color:#1f1f1f">🧪 Initial tests</a>
+<a href="empirica.html" style="text-decoration:none;font:700 12px Arial,Helvetica,sans-serif;padding:5px 9px;border-radius:7px;background:#6F6AAF;color:#fff">◎ Empirica</a>
+<a href="casestudy.html" style="text-decoration:none;font:700 12px Arial,Helvetica,sans-serif;padding:5px 9px;border-radius:7px;background:#2FB89F;color:#fff">🔬 Method</a>
+<a href="index.html" style="text-decoration:none;font:700 12px Arial,Helvetica,sans-serif;padding:5px 9px;border-radius:7px;background:#54682f;color:#fff">⌂ Home</a>
+<a href="results.html" style="text-decoration:none;font:700 12px Arial,Helvetica,sans-serif;padding:5px 9px;border-radius:7px;background:#1f8a76;color:#fff">📊 Results</a>
+<a href="conclusion.html" style="text-decoration:none;font:700 12px Arial,Helvetica,sans-serif;padding:5px 9px;border-radius:7px;background:#2b2b2b;color:#fff">✔ Conclusion</a>
+<a href="units.html" style="text-decoration:none;font:700 12px Arial,Helvetica,sans-serif;padding:5px 9px;border-radius:7px;color:#3a3a3a">🏛 Units</a>
+<a href="artifacts.html" style="text-decoration:none;font:700 12px Arial,Helvetica,sans-serif;padding:5px 9px;border-radius:7px;color:#3a3a3a">🏺 Artifacts</a>
+<a href="selection.html" style="text-decoration:none;font:700 12px Arial,Helvetica,sans-serif;padding:5px 9px;border-radius:7px;color:#3a3a3a">★ Final Selection</a>
+<a href="board/review.html" style="text-decoration:none;font:700 12px Arial,Helvetica,sans-serif;padding:5px 9px;border-radius:7px;color:#3a3a3a">🗄 Working room</a>
+<a href="spk.html" style="text-decoration:none;font:700 12px Arial,Helvetica,sans-serif;padding:5px 9px;border-radius:7px;background:#8a2b2b;color:#fff">🎞 SPK</a>
 <span style="margin-left:auto;display:flex;align-items:center;gap:10px"><span style="font:700 11px Arial,Helvetica,sans-serif;letter-spacing:.14em;color:#7a7a7a">OLYMPIA · REEVALUATE</span><img src="board/media/brand/reevaluate-logo.png" alt="REEVALUATE" style="height:38px;width:auto"></span></div><style>body{position:relative}.wrap{position:relative;z-index:1}body::before{content:"";position:fixed;left:0;top:52px;width:min(20vw,250px);height:calc(100vh - 52px);background:url(board/media/brand/circuit-left.png) no-repeat left top/contain;pointer-events:none;z-index:0}body::after{content:"";position:fixed;right:0;bottom:0;width:min(17vw,210px);height:100vh;background:url(board/media/brand/circuit-right.png) no-repeat left top/contain;transform:rotate(180deg);pointer-events:none;z-index:0}@media (max-width:1180px){body::before,body::after{display:none}}</style>"""
 
 STYLE = """<style>
@@ -604,6 +606,95 @@ a{color:#2FB89F}
 <p class="muted" style="font-size:.95rem">3 min 40 s &middot; 1080p &middot; the film plays from this page without an internet connection.</p>
 """
     open(f"{ROOT}/spk.html","w").write(head("SPK - Music and Sports in Olympia") + OLY_STYLE + spk + FOOT)
+
+
+    res = """
+<p class="k">RESULTS</p>
+<h1>Faster. More efficient. More trustworthy.</h1>
+<p class="muted" style="font-size:1.15rem">Not as claims: as measurements, taken while the work was done. Every number below sits in a ledger or a commit on this site.</p>
+
+<div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin:18px 0">
+<div class="tile" style="border-left-color:#f2c230;padding:20px 22px"><span class="k" style="color:#a8790a;margin:0 0 8px;display:block">FASTER</span>
+<b style="font-size:2.2rem;line-height:1.1;display:block">5 shots in one generation</b><span style="font-size:1rem;display:block;margin-top:8px">A 20-second, five-shot scene comes back as one take, cuts landing within half a second of the script. A 20-second film generates in about five minutes. The eleven-episode series ran as one overnight slate. The dress pilot went from research to two finished films in one afternoon.</span></div>
+<div class="tile" style="border-left-color:#2FB89F;padding:20px 22px"><span class="k" style="margin:0 0 8px;display:block">MORE EFFICIENT</span>
+<b style="font-size:2.2rem;line-height:1.1;display:block">9 credits per second</b><span style="font-size:1rem;display:block;margin-top:8px">Cost is linear and known before spending. The overnight batch delivered 24 ship-safe clips for 499.5 of 4,500 budgeted credits, because deterministic moves over the real digitisations cost nothing. A scene that missed its bar was fixed by changing the prompt, not by re-rolling: identical prompts give near-identical films, so repeats buy nothing.</span></div>
+<div class="tile" style="border-left-color:#6F6AAF;padding:20px 22px"><span class="k" style="color:#6F6AAF;margin:0 0 8px;display:block">MORE TRUSTWORTHY</span>
+<b style="font-size:2.2rem;line-height:1.1;display:block">Every frame answers &ldquo;where from?&rdquo;</b><span style="font-size:1rem;display:block;margin-top:8px">37 gate ledgers, one per delivered take. 258 claims held, 4 refuted, 64 marked untested rather than assumed. 34 mistakes logged with what prevents each. The failures are published beside the successes: the take that forged an athlete&rsquo;s handwriting, the dress that came back the wrong colour, the river that disappeared.</span></div>
+</div>
+
+<h2>What makes it work together</h2>
+<svg viewBox="0 0 1000 330" role="img" aria-label="Three layers: museum artifacts, REEVALUATE enablers, the Empirica system, producing verified films" style="max-width:1000px;display:block;margin:6px auto 0">
+<defs><marker id="rd" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#2b2b2b"/></marker></defs>
+<g font-family="Arial,Helvetica,sans-serif">
+<rect x="15" y="20" width="300" height="200" rx="12" fill="#fff" stroke="#f2c230" stroke-width="3"/>
+<text x="165" y="52" font-size="17" font-weight="700" fill="#a8790a" text-anchor="middle">THE ARTIFACTS</text>
+<text x="165" y="80" font-size="13" fill="#2b2b2b" text-anchor="middle">23 museum objects, digitised</text>
+<text x="165" y="100" font-size="13" fill="#2b2b2b" text-anchor="middle">each with a registry card:</text>
+<text x="165" y="120" font-size="13" fill="#2b2b2b" text-anchor="middle">what it is, what a frame must hold,</text>
+<text x="165" y="140" font-size="13" fill="#2b2b2b" text-anchor="middle">what is never asserted</text>
+<text x="165" y="170" font-size="12" fill="#6f6f6f" text-anchor="middle">archival sources with licences,</text>
+<text x="165" y="188" font-size="12" fill="#6f6f6f" text-anchor="middle">curatorial context from the museums</text>
+<rect x="350" y="20" width="300" height="200" rx="12" fill="#fff" stroke="#2FB89F" stroke-width="3"/>
+<text x="500" y="52" font-size="17" font-weight="700" fill="#1f8a76" text-anchor="middle">THE ENABLERS</text>
+<text x="500" y="80" font-size="13" fill="#2b2b2b" text-anchor="middle">REEVALUATE platform: assets and downloads</text>
+<text x="500" y="100" font-size="13" fill="#2b2b2b" text-anchor="middle">Contextual validation: violence classifier</text>
+<text x="500" y="120" font-size="13" fill="#2b2b2b" text-anchor="middle">3D digitisation: Gaussian-splat scan received</text>
+<text x="500" y="150" font-size="12" fill="#6f6f6f" text-anchor="middle">tested: platform downloads (ongoing),</text>
+<text x="500" y="168" font-size="12" fill="#6f6f6f" text-anchor="middle">validation with a controlled film pair;</text>
+<text x="500" y="186" font-size="12" fill="#6f6f6f" text-anchor="middle">3D scan not yet used in a film</text>
+<rect x="685" y="20" width="300" height="200" rx="12" fill="#f3f1fa" stroke="#6F6AAF" stroke-width="3"/>
+<text x="835" y="52" font-size="17" font-weight="700" fill="#6F6AAF" text-anchor="middle">THE SYSTEM</text>
+<text x="835" y="80" font-size="13" fill="#2b2b2b" text-anchor="middle">Empirica: every task measured</text>
+<text x="835" y="100" font-size="13" fill="#2b2b2b" text-anchor="middle">Cortex: five practices, one memory</text>
+<text x="835" y="120" font-size="13" fill="#2b2b2b" text-anchor="middle">Claim ledger per shot, gate ledger per film</text>
+<text x="835" y="150" font-size="12" fill="#6f6f6f" text-anchor="middle">nothing generated without a spec,</text>
+<text x="835" y="168" font-size="12" fill="#6f6f6f" text-anchor="middle">nothing accepted without a verdict,</text>
+<text x="835" y="186" font-size="12" fill="#6f6f6f" text-anchor="middle">every failure kept on the record</text>
+<path d="M165,222 L165,262 L500,262" fill="none" stroke="#2b2b2b" stroke-width="2"/><path d="M835,222 L835,262 L500,262" fill="none" stroke="#2b2b2b" stroke-width="2"/><path d="M500,222 L500,278" fill="none" stroke="#2b2b2b" stroke-width="2" marker-end="url(#rd)"/>
+<rect x="300" y="284" width="400" height="40" rx="8" fill="#6F6AAF"/><text x="500" y="310" font-size="15" font-weight="700" fill="#fff" text-anchor="middle">FILMS WITH A PROVENANCE CHAIN INTACT</text>
+</g></svg>
+<p class="muted">The artifacts give the films something true to show. The enablers make the objects usable and the output checkable. The system makes sure nothing between the two is invented, and says so when it is.</p>
+
+<h2>The numbers, on the record</h2>
+<div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:12px 0">
+<div class="tile"><b style="font-size:1.7rem;display:block">23 / 23</b><span>objects on registry cards</span></div>
+<div class="tile"><b style="font-size:1.7rem;display:block">11 / 11</b><span>series episodes gated PASS</span></div>
+<div class="tile"><b style="font-size:1.7rem;display:block">37</b><span>gate ledgers published</span></div>
+<div class="tile"><b style="font-size:1.7rem;display:block">258 / 4 / 64</b><span>claims held / refuted / untested</span></div>
+<div class="tile"><b style="font-size:1.7rem;display:block">34</b><span>mistakes logged, each with a prevention</span></div>
+<div class="tile"><b style="font-size:1.7rem;display:block">499.5</b><span>of 4,500 credits for the overnight batch</span></div>
+<div class="tile"><b style="font-size:1.7rem;display:block">540</b><span>credits for the three-generation 1a loop</span></div>
+<div class="tile"><b style="font-size:1.7rem;display:block">0</b><span>credits for a deterministic move over a real digitisation</span></div>
+</div>
+<p class="muted" style="font-size:.95rem">Counts taken 2026-09-24/25 from this practice&rsquo;s record and the ledgers on this site. They will move; the method of counting will not.</p>
+""" + """<div class="musdoc" style="margin-top:40px;font-size:1.05rem">In our production pipeline we use a guidance system for AI called <a href="empirica.html"><b>Empirica</b></a>. The finished films are on the <a href="selection.html">Final Selection</a> page; how they were made and verified is under <a href="casestudy.html">Method</a>.<div style="margin-top:10px"><a href="conclusion.html" style="font-weight:700;color:#6F6AAF;text-decoration:none">Next &rarr; Conclusion</a></div></div>"""
+    open(f"{ROOT}/results.html","w").write(head("Results") + OLY_STYLE + res + FOOT)
+
+    con = """
+<p class="k">CONCLUSION</p>
+<h1>What this pilot showed</h1>
+<div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin:18px 0">
+<div class="tile" style="border-left-color:#f2c230;padding:20px 22px"><b style="font-size:1.3rem;display:block;margin-bottom:8px">Digitised collections can carry a film</b><span style="font-size:1rem">Twenty-three museum objects, the real digitisations bound into the frames, five chapters from the rediscovery of Olympia to the present day, one dress from Antwerp to prove the method travels.</span></div>
+<div class="tile" style="border-left-color:#2FB89F;padding:20px 22px"><b style="font-size:1.3rem;display:block;margin-bottom:8px">Provenance can survive generation</b><span style="font-size:1rem">Every shot states what it claims, on whose authority, and what the record does not say. Where a model invented, the gate caught it and the failed take stays published beside the fix. That is the answer to &ldquo;you are going to invent things about our collection.&rdquo;</span></div>
+<div class="tile" style="border-left-color:#6F6AAF;padding:20px 22px"><b style="font-size:1.3rem;display:block;margin-bottom:8px">Measured work compounds</b><span style="font-size:1rem">Beliefs written before spending, graded after; mistakes logged with preventions; rules born from failures and reused the same day across practices. The second scene was cheaper and safer than the first because the first was measured.</span></div>
+</div>
+
+<h2>What it means for a museum</h2>
+<p style="font-size:1.1rem;max-width:80ch">A film whose every frame can be asked <i>where does this come from</i>, and answered. Objects that appear as themselves, with their own markings and their own wear, never re-drawn. A record that shows its failures, which is the only kind of record a curator can trust with a collection.</p>
+
+<h2>What comes next</h2>
+<div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin:12px 0">
+<div class="tile"><b>The trailer</b><span>one cut from the assets on this site, as discussed with the consortium</span></div>
+<div class="tile"><b>The enablers, closed out</b><span>the validation readout, the platform downloads, the 3D scan in a film</span></div>
+<div class="tile"><b>The rights lines</b><span>collected for every digitisation before the link travels beyond the project</span></div>
+<div class="tile"><b>The reviewer&rsquo;s open calls</b><span>the river, the dress colour, the retakes: each one line and one take</span></div>
+</div>
+
+<div class="musdoc" style="margin-top:36px;font-size:1.15rem;text-align:center;padding:22px">Heritage &rarr; Context &rarr; Public Input &rarr; Digitisation &rarr; Creative Reuse &rarr; Film &middot; <b>with the chain intact.</b></div>
+<p class="muted" style="text-align:center;margin-top:18px"><b>Olympic Museum of Thessaloniki &middot; Staatliche Museen zu Berlin &middot; FFP Productions</b><br>REEVALUATE &middot; Funded by the European Union</p>
+<div style="text-align:center;margin-top:16px"><a href="olympic.html" style="font-weight:700;color:#6F6AAF;text-decoration:none">&larr; Back to the start</a></div>
+"""
+    open(f"{ROOT}/conclusion.html","w").write(head("Conclusion") + OLY_STYLE + con + FOOT)
 
     tests_html = """
 <h1>Initial tests</h1>
