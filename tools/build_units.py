@@ -103,13 +103,13 @@ CSS = open(f"{ROOT}/tools/site.css").read() if os.path.exists(f"{ROOT}/tools/sit
 NAV = """<div id="olynav" style="position:sticky;top:0;z-index:999;display:flex;gap:6px;flex-wrap:wrap;align-items:center;background:#ffffff;padding:8px 14px;border-bottom:1px solid #e3e3e3">
 <a href="pilot-1.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;background:#3d3350;color:#efe6ff">👗 Pilot 1</a>
 <a href="olympic.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;background:#f2c230;color:#1f1f1f">🏅 Olympic</a>
+<a href="initial-tests.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;background:#e8a33d;color:#1f1f1f">🧪 Initial tests</a>
 <a href="empirica.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;background:#6F6AAF;color:#fff">◎ Empirica</a>
 <a href="casestudy.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;background:#2FB89F;color:#fff">🔬 Method</a>
 <a href="index.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;background:#54682f;color:#fff">⌂ Home</a>
 <a href="units.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;color:#3a3a3a">🏛 Units</a>
 <a href="artifacts.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;color:#3a3a3a">🏺 Artifacts</a>
 <a href="selection.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;color:#3a3a3a">★ Final Selection</a>
-<a href="initial-tests.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;color:#3a3a3a">🧪 Initial tests</a>
 <a href="board/review.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;color:#3a3a3a">🗄 Working room</a>
 <a href="spk.html" style="text-decoration:none;font:600 12px Archivo,system-ui;padding:5px 10px;border-radius:7px;background:#8a2b2b;color:#fff">🎞 SPK</a>
 <span style="margin-left:auto;display:flex;align-items:center;gap:10px"><span style="font:600 10px 'IBM Plex Mono',monospace;letter-spacing:.1em;color:#7a7a7a">OLYMPIA · REEVALUATE</span><img src="board/media/brand/reevaluate-logo.png" alt="REEVALUATE" style="height:38px;width:auto"></span></div><style>body{position:relative}.wrap{position:relative;z-index:1}body::before{content:"";position:fixed;left:0;top:52px;width:min(20vw,250px);height:calc(100vh - 52px);background:url(board/media/brand/circuit-left.png) no-repeat left top/contain;pointer-events:none;z-index:0}body::after{content:"";position:fixed;right:0;bottom:0;width:min(17vw,210px);height:100vh;background:url(board/media/brand/circuit-right.png) no-repeat left top/contain;transform:rotate(180deg);pointer-events:none;z-index:0}@media (max-width:1180px){body::before,body::after{display:none}}</style>"""
@@ -429,7 +429,7 @@ a{color:#2FB89F}
 <p>The final outcome brings Olympic heritage and music together, transforming selected museum material into a contemporary audiovisual experience. Presented within the &ldquo;Olympic Experience&rdquo; immersive exhibition at the Thessaloniki Olympic Museum, the film combines digitised artefacts, historical material, music and sound to bring the Olympic story to life and become a bridge between the Museum&rsquo;s collections and its visitors.</p>
 <p>The result is an experience that connects past and present, brings Olympic heritage closer to new generations, and strengthens the Museum&rsquo;s educational and experiential role.</p>
 <div class="musdoc" style="font-family:'IBM Plex Mono',monospace;font-size:.9rem;text-align:center">Heritage &rarr; Context &rarr; Public Input &rarr; Digitisation &rarr; Creative Reuse &rarr; Film / Museum Experience</div>
-<div class="musdoc" style="margin-top:40px;font-size:1.05rem">In our production pipeline we use a guidance system for AI called <a href="empirica.html"><b>Empirica</b></a>. The finished films are on the <a href="selection.html">Final Selection</a> page; how they were made and verified is under <a href="casestudy.html">Method</a>.<div style="margin-top:10px"><a href="empirica.html" style="font-weight:700;color:#6F6AAF;text-decoration:none">Next &rarr; Empirica</a></div></div>
+<div class="musdoc" style="margin-top:40px;font-size:1.05rem">In our production pipeline we use a guidance system for AI called <a href="empirica.html"><b>Empirica</b></a>. The finished films are on the <a href="selection.html">Final Selection</a> page; how they were made and verified is under <a href="casestudy.html">Method</a>.<div style="margin-top:10px"><a href="initial-tests.html" style="font-weight:700;color:#6F6AAF;text-decoration:none">Next &rarr; Initial tests</a></div></div>
 """
     open(f"{ROOT}/olympic.html","w").write(head("Olympic Games & Music") + OLY_STYLE + oly + FOOT)
 
@@ -604,7 +604,7 @@ a{color:#2FB89F}
 <p style="margin:0"><b>Provenance.</b> Source file <code>export28.6.25_v12_tests reevaluate.mp4</code>, dated 28 June 2025, produced by FFP Productions. Re-encoded for web delivery at 1280&times;720, from 101 MB to 18 MB; the runtime is unchanged at 93.96 seconds and no frame was cut. The original is held outside this repository.</p>
 </div>
 """
-    open(f"{ROOT}/initial-tests.html","w").write(head("Initial tests") + tests_html + FOOT)
+    open(f"{ROOT}/initial-tests.html","w").write(head("Initial tests") + OLY_STYLE + tests_html + """<div class="musdoc" style="margin-top:40px;font-size:1.05rem">In our production pipeline we use a guidance system for AI called <a href="empirica.html"><b>Empirica</b></a>. The finished films are on the <a href="selection.html">Final Selection</a> page; how they were made and verified is under <a href="casestudy.html">Method</a>.<div style="margin-top:10px"><a href="empirica.html" style="font-weight:700;color:#6F6AAF;text-decoration:none">Next &rarr; Empirica</a></div></div>""" + FOOT)
 
     print(f"built: 5 unit pages ({sum(len(v) for v in by_unit.values())} unit-mapped cards), {len(by_art)} artifact pages, units/artifacts/selection indexes, initial-tests")
 
