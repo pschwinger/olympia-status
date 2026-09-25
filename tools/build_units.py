@@ -107,7 +107,6 @@ NAV = """<div id="olynav" style="position:sticky;top:0;z-index:999;display:flex;
 <a href="empirica.html" style="text-decoration:none;font:700 12px Arial,Helvetica,sans-serif;padding:5px 9px;border-radius:7px;background:#6F6AAF;color:#fff">◎ Empirica</a>
 <a href="casestudy.html" style="text-decoration:none;font:700 12px Arial,Helvetica,sans-serif;padding:5px 9px;border-radius:7px;background:#2FB89F;color:#fff">🔬 Method</a>
 <a href="index.html" style="text-decoration:none;font:700 12px Arial,Helvetica,sans-serif;padding:5px 9px;border-radius:7px;background:#54682f;color:#fff">⌂ Home</a>
-<a href="results.html" style="text-decoration:none;font:700 12px Arial,Helvetica,sans-serif;padding:5px 9px;border-radius:7px;background:#1f8a76;color:#fff">📊 Results</a>
 <a href="conclusion.html" style="text-decoration:none;font:700 12px Arial,Helvetica,sans-serif;padding:5px 9px;border-radius:7px;background:#2b2b2b;color:#fff">✔ Conclusion</a>
 <a href="units.html" style="text-decoration:none;font:700 12px Arial,Helvetica,sans-serif;padding:5px 9px;border-radius:7px;color:#3a3a3a">🏛 Units</a>
 <a href="artifacts.html" style="text-decoration:none;font:700 12px Arial,Helvetica,sans-serif;padding:5px 9px;border-radius:7px;color:#3a3a3a">🏺 Artifacts</a>
@@ -608,11 +607,28 @@ a{color:#2FB89F}
     open(f"{ROOT}/spk.html","w").write(head("SPK - Music and Sports in Olympia") + OLY_STYLE + spk + FOOT)
 
 
-    res = """
-<p class="k">RESULTS</p>
-<h1>Faster. More efficient. More trustworthy.</h1>
-<p class="muted" style="font-size:1.15rem">Not as claims: as measurements, taken while the work was done. Every number below sits in a ledger or a commit on this site.</p>
 
+    con = """
+<p class="k">CONCLUSION</p>
+<h1>What this pilot showed</h1>
+<div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin:18px 0">
+<div class="tile" style="border-left-color:#f2c230;padding:20px 22px"><b style="font-size:1.3rem;display:block;margin-bottom:8px">Digitised collections can carry a film</b><span style="font-size:1rem">Twenty-three museum objects, the real digitisations bound into the frames, five chapters from the rediscovery of Olympia to the present day, one dress from Antwerp to prove the method travels.</span></div>
+<div class="tile" style="border-left-color:#2FB89F;padding:20px 22px"><b style="font-size:1.3rem;display:block;margin-bottom:8px">Provenance can survive generation</b><span style="font-size:1rem">Every shot states what it claims, on whose authority, and what the record does not say. Where a model invented, the gate caught it and the failed take stays published beside the fix. That is the answer to &ldquo;you are going to invent things about our collection.&rdquo;</span></div>
+<div class="tile" style="border-left-color:#6F6AAF;padding:20px 22px"><b style="font-size:1.3rem;display:block;margin-bottom:8px">Measured work compounds</b><span style="font-size:1rem">Beliefs written before spending, graded after; mistakes logged with preventions; rules born from failures and reused the same day across practices. The second scene was cheaper and safer than the first because the first was measured.</span></div>
+</div>
+
+<h2>How this helps you</h2>
+<div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin:12px 0 18px">
+<div class="tile" style="border-left-color:#f2c230"><b>Your metadata was the ground truth</b><span>The institutions&rsquo; own records set what each object is and what may be said about it. The films inherited that, and nothing else.</span></div>
+<div class="tile" style="border-left-color:#2FB89F"><b>We checked before we produced</b><span>Rules, references and predictions were written and verified before credits were spent. The money went into generations that could pass, not into re-rolls.</span></div>
+<div class="tile" style="border-left-color:#6F6AAF"><b>The models improved, and we say so</b><span>Part of the drop in failures is the technology itself getting better between the first tests and the last films. The record does not claim that for the method.</span></div>
+<div class="tile" style="border-left-color:#2b2b2b"><b>The pipeline made the difference</b><span>Combining many assets, objects, references, sheets and shots, into one finished product came out cheaper, faster and more accurate because every hand-off was specified, measured and kept.</span></div>
+</div>
+<h2>What it means for a museum</h2>
+<p style="font-size:1.1rem;max-width:80ch">A film whose every frame can be asked <i>where does this come from</i>, and answered. Objects that appear as themselves, with their own markings and their own wear, never re-drawn. A record that shows its failures, which is the only kind of record a curator can trust with a collection.</p>
+
+<h2 style="margin-top:44px">The results: faster, more efficient, more trustworthy</h2>
+<p class="muted" style="font-size:1.05rem">Not as claims: as measurements, taken while the work was done. Every number below sits in a ledger or a commit on this site.</p>
 <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin:18px 0">
 <div class="tile" style="border-left-color:#f2c230;padding:20px 22px"><span class="k" style="color:#a8790a;margin:0 0 8px;display:block">FASTER</span>
 <b style="font-size:2.2rem;line-height:1.1;display:block">5 shots in one generation</b><span style="font-size:1rem;display:block;margin-top:8px">A 20-second, five-shot scene comes back as one take, cuts landing within half a second of the script. A 20-second film generates in about five minutes. The eleven-episode series ran as one overnight slate. The dress pilot went from research to two finished films in one afternoon.</span></div>
@@ -667,28 +683,6 @@ a{color:#2FB89F}
 <div class="tile"><b style="font-size:1.7rem;display:block">0</b><span>credits for a deterministic move over a real digitisation</span></div>
 </div>
 <p class="muted" style="font-size:.95rem">Counts taken 2026-09-24/25 from this practice&rsquo;s record and the ledgers on this site. They will move; the method of counting will not.</p>
-""" + """<div class="musdoc" style="margin-top:40px;font-size:1.05rem">In our production pipeline we use a guidance system for AI called <a href="empirica.html"><b>Empirica</b></a>. The finished films are on the <a href="selection.html">Final Selection</a> page; how they were made and verified is under <a href="casestudy.html">Method</a>.<div style="margin-top:10px"><a href="conclusion.html" style="font-weight:700;color:#6F6AAF;text-decoration:none">Next &rarr; Conclusion</a></div></div>"""
-    open(f"{ROOT}/results.html","w").write(head("Results") + OLY_STYLE + res + FOOT)
-
-    con = """
-<p class="k">CONCLUSION</p>
-<h1>What this pilot showed</h1>
-<div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin:18px 0">
-<div class="tile" style="border-left-color:#f2c230;padding:20px 22px"><b style="font-size:1.3rem;display:block;margin-bottom:8px">Digitised collections can carry a film</b><span style="font-size:1rem">Twenty-three museum objects, the real digitisations bound into the frames, five chapters from the rediscovery of Olympia to the present day, one dress from Antwerp to prove the method travels.</span></div>
-<div class="tile" style="border-left-color:#2FB89F;padding:20px 22px"><b style="font-size:1.3rem;display:block;margin-bottom:8px">Provenance can survive generation</b><span style="font-size:1rem">Every shot states what it claims, on whose authority, and what the record does not say. Where a model invented, the gate caught it and the failed take stays published beside the fix. That is the answer to &ldquo;you are going to invent things about our collection.&rdquo;</span></div>
-<div class="tile" style="border-left-color:#6F6AAF;padding:20px 22px"><b style="font-size:1.3rem;display:block;margin-bottom:8px">Measured work compounds</b><span style="font-size:1rem">Beliefs written before spending, graded after; mistakes logged with preventions; rules born from failures and reused the same day across practices. The second scene was cheaper and safer than the first because the first was measured.</span></div>
-</div>
-
-<h2>How this helps you</h2>
-<div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin:12px 0 18px">
-<div class="tile" style="border-left-color:#f2c230"><b>Your metadata was the ground truth</b><span>The institutions&rsquo; own records set what each object is and what may be said about it. The films inherited that, and nothing else.</span></div>
-<div class="tile" style="border-left-color:#2FB89F"><b>We checked before we produced</b><span>Rules, references and predictions were written and verified before credits were spent. The money went into generations that could pass, not into re-rolls.</span></div>
-<div class="tile" style="border-left-color:#6F6AAF"><b>The models improved, and we say so</b><span>Part of the drop in failures is the technology itself getting better between the first tests and the last films. The record does not claim that for the method.</span></div>
-<div class="tile" style="border-left-color:#2b2b2b"><b>The pipeline made the difference</b><span>Combining many assets, objects, references, sheets and shots, into one finished product came out cheaper, faster and more accurate because every hand-off was specified, measured and kept.</span></div>
-</div>
-<h2>What it means for a museum</h2>
-<p style="font-size:1.1rem;max-width:80ch">A film whose every frame can be asked <i>where does this come from</i>, and answered. Objects that appear as themselves, with their own markings and their own wear, never re-drawn. A record that shows its failures, which is the only kind of record a curator can trust with a collection.</p>
-
 <h2>What comes next</h2>
 <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin:12px 0">
 <div class="tile"><b>The trailer</b><span>one cut from the assets on this site, as discussed with the consortium</span></div>
